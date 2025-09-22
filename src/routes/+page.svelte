@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Navbar from '../components/Navbar.svelte';
 	import Hero from '../components/Hero.svelte';
 	import About from '../components/About.svelte';
 	import Experience from '../components/Experience.svelte';
@@ -15,6 +16,8 @@
 		content="Machine Learning and Backend Engineer specializing in Python, Java, Go and Typescript, and modern AI technologies."
 	/>
 </svelte:head>
+
+<Navbar />
 
 <main class="space-y-16 sm:space-y-20 md:space-y-24">
 	<Hero />
