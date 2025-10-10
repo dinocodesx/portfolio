@@ -5,7 +5,8 @@
 		{ name: 'Home', href: '/' },
 		{ name: 'Blogs', href: '/blogs' },
 		{ name: 'Talks', href: '/talks' },
-		{ name: 'Projects', href: '/projects' }
+		{ name: 'Projects', href: '/projects' },
+		{ name: 'Resume', href: '/resume' }
 	];
 
 	let mobileMenuOpen = false;

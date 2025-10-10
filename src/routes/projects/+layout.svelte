@@ -14,6 +14,6 @@
 	/>
 </svelte:head>
 
-<div class="space-y-8">
+<div class="mt-8 space-y-8 lg:mt-12">
 	{@render children()}
 </div>
