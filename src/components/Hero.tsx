@@ -4,9 +4,7 @@ export default function Hero() {
       {/* Full viewport grid background */}
       <div className="absolute inset-0 grid grid-cols-5 grid-rows-3">
         {/* Top-left corner */}
-        <div className="relative border-r border-b border-white/10">
-          <div className="absolute top-8 left-8 w-3 h-3 bg-white rounded-full"></div>
-        </div>
+        <div className="relative border-r border-b border-white/10"></div>
 
         {/* Top-left-center */}
         <div className="relative border-r border-b border-white/10"></div>
@@ -20,9 +18,7 @@ export default function Hero() {
         <div className="relative border-r border-b border-white/10"></div>
 
         {/* Top-right corner */}
-        <div className="relative border-b border-white/10">
-          <div className="absolute top-8 right-8 w-3 h-3 bg-white rounded-full"></div>
-        </div>
+        <div className="relative border-b border-white/10"></div>
 
         {/* Middle-left */}
         <div className="relative border-r border-b border-white/10">
@@ -40,7 +36,8 @@ export default function Hero() {
               letterSpacing: "0.002em",
             }}
           >
-            @dinocodesx.
+            <span className="text-blue-600">@</span>
+            dinocodesx.
           </h1>
         </div>
 
@@ -50,9 +47,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom-left corner */}
-        <div className="relative border-r border-white/10">
-          <div className="absolute bottom-8 left-8 w-3 h-3 bg-white rounded-full"></div>
-        </div>
+        <div className="relative border-r border-white/10"></div>
 
         {/* Bottom-left-center */}
         <div className="relative border-r border-white/10"></div>
@@ -66,9 +61,7 @@ export default function Hero() {
         <div className="relative border-r border-white/10"></div>
 
         {/* Bottom-right corner */}
-        <div className="relative border-white/10">
-          <div className="absolute bottom-8 right-8 w-3 h-3 bg-white rounded-full"></div>
-        </div>
+        <div className="relative border-white/10"></div>
       </div>
     </section>
   );
