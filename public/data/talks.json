@@ -1,0 +1,13 @@
+[
+	{
+		"id": 1,
+		"title": "Machine Learning in Production: Best Practices",
+		"description": "A comprehensive talk about deploying ML models in production environments, covering MLOps, monitoring, and scaling strategies.",
+		"date": "2024-03-15",
+		"venue": "Tech Conference 2024",
+		"type": "Conference",
+		"slides": "#",
+		"video": "#",
+		"tags": ["Machine Learning", "MLOps", "Production"]
+	}
+]

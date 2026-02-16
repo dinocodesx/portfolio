@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"title": "Content Writer and Social Media Admin",
+		"organization": "GDG Cloud Kolkata",
+		"duration": "2024 - Present",
+		"description": "Organized the biggest technical event for Cloud Technologies and modern AI-LLMs in India, 20+ speakers and 800+ attendees, while focusing on social media management and content creation."
+	},
+	{
+		"id": 2,
+		"title": "Ex- Lead Organizer",
+		"organization": "GDG On Campus AOT",
+		"duration": "2024 - 2025",
+		"description": "Became our college's Google Developer Group On Campus AOT Lead and organized College and State level events focusing on Cloud Technologies and AI."
+	},
+	{
+		"id": 3,
+		"title": "Tech Team Member",
+		"organization": "Hack4Bengal",
+		"duration": "2024 - 2025",
+		"description": "Part of the Team which organized West Bengal's biggest offline hackathon. 36h of offline hackathon focusing on managing the website, event logistics and participant engagement."
+	}
+]

@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"title": "Apertre Website",
+		"description": "Website for an Open Source Event, hosting more than 5000 active users daily, and using GitHub API for tracting PRs and Issues for points.",
+		"technologies": ["NextJS", "NestJS", "TypeScript", "Prisma", "Vercel", "Postgres", "Redis"],
+		"github": "https://github.com/apertre",
+		"live": "https://s2apertre.resourcio.in/"
+	},
+	{
+		"id": 2,
+		"title": "Student Chapter Website",
+		"description": "Building Student Chapter of Electrical Engineering's website for hosting events, using Monorepo to have multiple applications.",
+		"technologies": ["NextJS", "TailwindCSS", "TypeScript", "TurboRepo", "Vercel"],
+		"github": "https://github.com/iei-scee-aot/sceeaot-web",
+		"live": "https://www.sceeaot.in/"
+	},
+	{
+		"id": 3,
+		"title": "Redis from scratch using Go",
+		"description": "Built a Redis clone in Go supporting commands, memory management, protocol compliance, and object-oriented principles.",
+		"technologies": ["Go", "Linux", "TCP", "Memory"],
+		"github": "https://github.com/dinocodesx/goredis"
+	},
+	{
+		"id": 4,
+		"title": "Containers from scratch using Go",
+		"description": "Building a container form scratch using Go-Lang to do low level system manipulation and modification.",
+		"technologies": ["Go", "Linux", "Memory"],
+		"github": "https://github.com/dinocodesx/containers-from-scratch"
+	},
+	{
+		"id": 5,
+		"title": "Attention is All You Need",
+		"description": "This repository contains the implementation of the seminal paper `Attention is All You Need` by Vaswani et al. (2017), which introduced the Transformer architecture.",
+		"technologies": ["Python", "HuggingFace", "Transformer", "PyTorch"],
+		"github": "https://github.com/dinocodesx/attention-is-all-you-need"
+	},
+	{
+		"id": 6,
+		"title": "E-commerce Application using Spring Microservice",
+		"description": "Designed microservices-based e-commerce platform with scalable distributed multi-tier architecture, and optimized backend.",
+		"technologies": ["Java", "Spring", "Spring Boot", "DGS", "Postgres", "Mongo", "Docker"],
+		"github": "https://github.com/dinocodesx/spring-microservice"
+	}
+]

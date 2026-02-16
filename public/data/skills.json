@@ -1,0 +1,45 @@
+[
+	{
+		"category": "Backend",
+		"skills": [
+			{ "name": "Node • Express • Hono" },
+			{ "name": "Django • FastAPI • Flask" },
+			{ "name": "Spring-Boot • Kotlin" },
+			{ "name": "Postgres • MySQL • MongoDB" },
+			{ "name": "REST • GraphQL • Sockets" },
+			{ "name": "Laravel • ASP.NET" }
+		]
+	},
+	{
+		"category": "Devops",
+		"skills": [
+			{ "name": "Git-Actions • CI-CD" },
+			{ "name": "Docker • Kubernetes" },
+			{ "name": "AWS • GCP • Azure" },
+			{ "name": "Terraform • Ansible" },
+			{ "name": "Nginx • Apache • Kafka" },
+			{ "name": "Prometheus • Grafana" }
+		]
+	},
+	{
+		"category": "AI/ML",
+		"skills": [
+			{ "name": "TensorFlow • PyTorch" },
+			{ "name": "Scikit-learn • Pandas" },
+			{ "name": "OpenCV • NLTK • SpaCy" },
+			{ "name": "HuggingFace • Transformers" },
+			{ "name": "MLflow • Kubeflow" }
+		]
+	},
+	{
+		"category": "Systems Programming",
+		"skills": [
+			{ "name": "Go • C • C++" },
+			{ "name": "Linux • System Calls" },
+			{ "name": "Networking • Protocols" },
+			{ "name": "Memory Management" },
+			{ "name": "Distributed Systems" },
+			{ "name": "System Design" }
+		]
+	}
+]
