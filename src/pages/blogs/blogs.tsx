@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import blogsData from "../../../public/data/blogs.json";
+import blogsData from "../../assets/data/blogs.json";
 
 interface Blog {
   id: number;

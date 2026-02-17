@@ -1,4 +1,4 @@
-import linksData from "../../../public/data/links.json";
+import linksData from "../../assets/data/links.json";
 
 function Links() {
   return (

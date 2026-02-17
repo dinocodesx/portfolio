@@ -1,4 +1,4 @@
-import talksData from "../../../public/data/talks.json";
+import talksData from "../../assets/data/talks.json";
 
 interface Talk {
   id: number;
