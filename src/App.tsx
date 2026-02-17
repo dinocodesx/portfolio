@@ -1,27 +1,15 @@
-import { useState } from "react";
-import Hero from "./components/Hero";
-import LoadingScreen from "./components/Loading_Screen.tsx";
-import CutSection from "./components/ui/Cut_Section.tsx";
-import Music from "./components/Music.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/home";
+import Links from "./pages/links/links";
 
 function App() {
-  const [showLoading, setShowLoading] = useState(() => {
-    const hasSeenLoading = localStorage.getItem("hasSeenLoading");
-    return !hasSeenLoading;
-  });
-
-  const handleLoadingComplete = () => {
-    localStorage.setItem("hasSeenLoading", "true");
-    setShowLoading(false);
-  };
-
   return (
-    <>
-      {showLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
-      <Hero />
-      <CutSection />
-      <Music />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/links" element={<Links />} />
+      </Routes>
+    </Router>
   );
 }
 
