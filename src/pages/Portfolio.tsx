@@ -205,9 +205,15 @@ export function Portfolio() {
 
         {/* Blogs Section */}
         <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium">
-            Blogs
-          </h2>
+          <Link
+            to="/blogs"
+            className="text-white/40 hover:text-white transition-colors flex items-center justify-between"
+          >
+            <h2 className="text-xs uppercase tracking-widest font-medium">
+              Blogs
+            </h2>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
           <div className="flex flex-col space-y-8">
             <Blogs
               title="Building a RAG Pipeline from Scratch with PyTorch and Transformers"
@@ -273,9 +279,15 @@ export function Portfolio() {
 
         {/* Talks Section */}
         <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium">
-            Talks
-          </h2>
+          <Link
+            to="/talks"
+            className="text-white/40 hover:text-white transition-colors flex items-center justify-between"
+          >
+            <h2 className="text-xs uppercase tracking-widest font-medium">
+              Talks
+            </h2>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
           <div className="space-y-6">
             <Talks
               title="Machine Learning in Production: Best Practices"
