@@ -2,49 +2,7 @@ import { motion } from "motion/react";
 import { ArrowLeft, Play, Calendar, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
-
-const TALKS_DATA = [
-  {
-    id: 1,
-    title: "Building Scalable Backends with Go",
-    event: "GopherCon India",
-    date: "March 2026",
-    location: "Pune, India",
-    description:
-      "A deep dive into building high-performance, concurrent backend systems using Go's standard library and minimalist frameworks.",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "The Future of Open Source Contribution",
-    event: "Open Source Summit",
-    date: "February 2026",
-    location: "Remote",
-    description:
-      "Discussing the evolution of community-driven development and how tools like the GitHub API are enabling better tracking and recognition.",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Minimalism in Web Engineering",
-    event: "Web Directions",
-    date: "January 2026",
-    location: "Sydney, AU",
-    description:
-      "Why reducing complexity in your tech stack leads to better performance, maintainability, and user experience.",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Architecting for Performance",
-    event: "React India",
-    date: "December 2025",
-    location: "Goa, India",
-    description:
-      "Strategies for optimizing React applications, from code-splitting to efficient state management and motion design.",
-    link: "#",
-  },
-];
+import { TALKS_DATA } from "../constants/data";
 
 export function Talks() {
   return (

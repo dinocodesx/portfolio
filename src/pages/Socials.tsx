@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
-import { SOCIAL_LINKS } from "../Links";
+import { SOCIAL_LINKS } from "../constants/data";
 import { Socials } from "../components/Socials";
 
 export function Social() {

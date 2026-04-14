@@ -2,57 +2,8 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
+import { BLOGS_DATA } from "../constants/data";
 
-const BLOGS_DATA = [
-  {
-    id: 1,
-    title: "The Art of Minimalist Design",
-    date: "March 2026",
-    excerpt:
-      "Exploring why less is often more in modern web interfaces and how to achieve it. We dive into the psychology of whitespace and the power of intentional constraint.",
-    readTime: "5 min read",
-  },
-  {
-    id: 2,
-    title: "Building with Motion",
-    date: "February 2026",
-    excerpt:
-      "How subtle animations can transform user experience from static to magical. Learn the principles of physics-based motion and when to use (and not use) transitions.",
-    readTime: "8 min read",
-  },
-  {
-    id: 3,
-    title: "Typography in the Browser",
-    date: "January 2026",
-    excerpt:
-      "A deep dive into fluid typography and vertical rhythm for the modern web. Understanding how to create a harmonious reading experience across all devices.",
-    readTime: "6 min read",
-  },
-  {
-    id: 4,
-    title: "The Future of CSS",
-    date: "December 2025",
-    excerpt:
-      "Looking ahead at container queries, layers, and the evolution of styling. How the latest CSS features are changing the way we build layouts.",
-    readTime: "7 min read",
-  },
-  {
-    id: 5,
-    title: "React Server Components: A New Era",
-    date: "November 2025",
-    excerpt:
-      "Understanding the shift in how we think about data fetching and component rendering in the modern React ecosystem.",
-    readTime: "10 min read",
-  },
-  {
-    id: 6,
-    title: "Designing for Accessibility",
-    date: "October 2025",
-    excerpt:
-      "Why accessibility is not a feature, but a fundamental requirement. Practical tips for building inclusive web experiences.",
-    readTime: "4 min read",
-  },
-];
 
 export function Blogs() {
   return (
