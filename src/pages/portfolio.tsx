@@ -47,25 +47,21 @@ export function Portfolio() {
           <h1 className="text-white font-medium">Debarshee Chakraborty</h1>
           <div className="space-y-6 text-[15px] leading-relaxed">
             <p>
-              <span className="italic text-white">Crafting interfaces.</span>{" "}
+              <span className="italic text-white hover:underline underline-offset-4">
+                Crafting interfaces.
+              </span>{" "}
               Junior Software Engineer from Kolkata, India. I especially love to
               tinker with low level system design and{" "}
-              <a
-                href="#"
-                className="text-white hover:underline underline-offset-4 italic"
-              >
+              <span className="text-white hover:underline underline-offset-4 italic">
                 how the world works.
-              </a>
+              </span>
             </p>
             <p>
               I have previosly worked on Backend development, mainly with Java
               and Typescript Frameworks like{" "}
-              <a
-                href="#"
-                className="text-white hover:underline underline-offset-4 italic"
-              >
+              <span className="text-white hover:underline underline-offset-4 italic">
                 NestJS, and Spring Boot.
-              </a>{" "}
+              </span>{" "}
               Check out my work on github and my{" "}
               <Link
                 to="/resume"
@@ -194,7 +190,7 @@ export function Portfolio() {
               Building with intention. I spend my time guiltlessly exploring the
               space between hardware and high-level software, driven by the
               philosophy that{" "}
-              <span className="italic text-white">
+              <span className="italic text-white hover:underline underline-offset-4">
                 everything around me is someone's life work.
               </span>
             </p>
