@@ -9,7 +9,12 @@ import { Blogs } from "../components/Blogs";
 import { Experiences } from "../components/Experiences";
 import { SkillCategory } from "../components/Skills";
 import { Talks } from "../components/Talks";
-import { EXPERIENCE_DATA, SKILLS_DATA } from "../constants/data";
+import {
+  EXPERIENCE_DATA,
+  SKILLS_DATA,
+  TALKS_DATA,
+  BLOGS_DATA,
+} from "../constants/data";
 
 export function Portfolio() {
   const [time, setTime] = useState<string>("");
@@ -149,12 +154,9 @@ export function Portfolio() {
             <ArrowUpRight className="w-4 h-4" />
           </Link>
           <div className="flex flex-col space-y-8">
-            <Blogs
-              title="Building a RAG Pipeline from Scratch with PyTorch and Transformers"
-              date="October 2024"
-              excerpt="Exploring why less is often more in modern web interfaces and how to achieve it."
-              link="https://python.plainenglish.io/building-a-rag-pipeline-from-scratch-with-pytorch-and-transformers-b52e5504cde2"
-            />
+            {BLOGS_DATA.map((blog) => (
+              <Blogs key={blog.id} {...blog} />
+            ))}
           </div>
         </motion.section>
 
@@ -223,18 +225,9 @@ export function Portfolio() {
             <ArrowUpRight className="w-4 h-4" />
           </Link>
           <div className="space-y-6">
-            <Talks
-              title="Machine Learning in Production: Best Practices"
-              date="April 20, 2025"
-              location="Academy of Technology . Hooghly, WB"
-              link="#"
-            />
-            <Talks
-              title="Gemini Genkit API"
-              date="October 21, 2025"
-              location="MCKV Institute of Engineering . Howrah, WB"
-              link="https://github.com/dinocodesx/gemini-genkit-api"
-            />
+            {TALKS_DATA.map((talk) => (
+              <Talks key={talk.id} {...talk} />
+            ))}
           </div>
         </motion.section>
 

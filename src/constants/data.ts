@@ -40,46 +40,42 @@ export const EXPERIENCE_DATA = [
 
 export const SKILLS_DATA = [
   {
-    category: "Expert in",
-    skills: [
-      { name: "Node" },
-      { name: "Express" },
-      { name: "React" },
-      { name: "Next.js" },
-      { name: "TypeScript" },
-      { name: "PostgreSQL" },
-    ],
-  },
-  {
-    category: "Proficient",
+    category: "Backend & Distributed Systems",
     skills: [
       { name: "Go" },
-      { name: "Hono" },
-      { name: "FastAPI" },
+      { name: "Java (Spring Boot)" },
+      { name: "Python (FastAPI/Django)" },
+      { name: "Node.js (NestJS)" },
+      { name: "Microservices" },
+      { name: "gRPC" },
+      { name: "REST APIs" },
+      { name: "Kafka" },
+      { name: "Message Queues" },
+    ],
+  },
+  {
+    category: "Cloud & Platform Engineering",
+    skills: [
+      { name: "AWS (EC2, S3, RDS, Lambda)" },
+      { name: "Azure" },
       { name: "Docker" },
+      { name: "Kubernetes (K8s)" },
+      { name: "Terraform (IaC)" },
+      { name: "GitHub Actions (CI/CD)" },
+      { name: "Linux (Bash)" },
+      { name: "Google Cloud" },
+      { name: "Git" },
+    ],
+  },
+  {
+    category: "Data & Observability",
+    skills: [
+      { name: "PostgreSQL (Query Optimization)" },
       { name: "MongoDB" },
       { name: "Redis" },
-    ],
-  },
-  {
-    category: "Tooling",
-    skills: [
-      { name: "Git" },
-      { name: "GitHub Actions" },
-      { name: "Terraform" },
-      { name: "AWS" },
-      { name: "GCP" },
-      { name: "Kubernetes" },
-    ],
-  },
-  {
-    category: "Design",
-    skills: [
-      { name: "Tailwind CSS" },
-      { name: "Motion" },
-      { name: "Figma" },
-      { name: "Shadcn UI" },
-      { name: "Radix UI" },
+      { name: "Prometheus" },
+      { name: "Grafana" },
+      { name: "OpenTelemetry (Telemetry/Monitoring)" },
     ],
   },
 ];
@@ -162,94 +158,35 @@ export const PROJECTS_DATA = [
 export const BLOGS_DATA = [
   {
     id: 1,
-    title: "The Art of Minimalist Design",
-    date: "March 2026",
+    title: "Building a RAG Pipeline from Scratch with PyTorch and Transformers",
+    date: "October 2024",
     excerpt:
-      "Exploring why less is often more in modern web interfaces and how to achieve it. We dive into the psychology of whitespace and the power of intentional constraint.",
+      "Exploring why less is often more in modern web interfaces and how to achieve it.",
     readTime: "5 min read",
-  },
-  {
-    id: 2,
-    title: "Building with Motion",
-    date: "February 2026",
-    excerpt:
-      "How subtle animations can transform user experience from static to magical. Learn the principles of physics-based motion and when to use (and not use) transitions.",
-    readTime: "8 min read",
-  },
-  {
-    id: 3,
-    title: "Typography in the Browser",
-    date: "January 2026",
-    excerpt:
-      "A deep dive into fluid typography and vertical rhythm for the modern web. Understanding how to create a harmonious reading experience across all devices.",
-    readTime: "6 min read",
-  },
-  {
-    id: 4,
-    title: "The Future of CSS",
-    date: "December 2025",
-    excerpt:
-      "Looking ahead at container queries, layers, and the evolution of styling. How the latest CSS features are changing the way we build layouts.",
-    readTime: "7 min read",
-  },
-  {
-    id: 5,
-    title: "React Server Components: A New Era",
-    date: "November 2025",
-    excerpt:
-      "Understanding the shift in how we think about data fetching and component rendering in the modern React ecosystem.",
-    readTime: "10 min read",
-  },
-  {
-    id: 6,
-    title: "Designing for Accessibility",
-    date: "October 2025",
-    excerpt:
-      "Why accessibility is not a feature, but a fundamental requirement. Practical tips for building inclusive web experiences.",
-    readTime: "4 min read",
+    link: "https://python.plainenglish.io/building-a-rag-pipeline-from-scratch-with-pytorch-and-transformers-b52e5504cde2",
   },
 ];
 
 export const TALKS_DATA = [
   {
     id: 1,
-    title: "Building Scalable Backends with Go",
-    event: "GopherCon India",
-    date: "March 2026",
-    location: "Pune, India",
+    title: "Machine Learning in Production: Best Practices",
+    event: "Guest Lecture",
+    date: "April 20, 2025",
+    location: "Academy of Technology . Hooghly, WB",
     description:
-      "A deep dive into building high-performance, concurrent backend systems using Go's standard library and minimalist frameworks.",
+      "A comprehensive discussion on the best practices for deploying and maintaining machine learning models in production environments.",
     link: "#",
   },
   {
     id: 2,
-    title: "The Future of Open Source Contribution",
-    event: "Open Source Summit",
-    date: "February 2026",
-    location: "Remote",
+    title: "Gemini Genkit API",
+    event: "Workshop",
+    date: "October 21, 2025",
+    location: "MCKV Institute of Engineering . Howrah, WB",
     description:
-      "Discussing the evolution of community-driven development and how tools like the GitHub API are enabling better tracking and recognition.",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Minimalism in Web Engineering",
-    event: "Web Directions",
-    date: "January 2026",
-    location: "Sydney, AU",
-    description:
-      "Why reducing complexity in your tech stack leads to better performance, maintainability, and user experience.",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Architecting for Performance",
-    event: "React India",
-    date: "December 2025",
-    location: "Goa, India",
-    description:
-      "Strategies for optimizing React applications, from code-splitting to efficient state management and motion design.",
-    link: "#",
+      "Hands-on workshop exploring the Gemini Genkit API and how to leverage it for building advanced AI applications.",
+    link: "https://github.com/dinocodesx/gemini-genkit-api",
   },
 ];
 
