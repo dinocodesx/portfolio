@@ -243,7 +243,7 @@ export function Portfolio() {
               .
             </p>
             <Link
-              to="/socials"
+              to="/links"
               className="inline-flex items-center gap-2 text-white hover:underline underline-offset-4 text-[15px]"
             >
               View all socials <ArrowUpRight className="w-4 h-4 opacity-50" />
