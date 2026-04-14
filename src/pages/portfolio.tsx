@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
@@ -11,6 +12,28 @@ import { Talks } from "../components/Talks";
 import { EXPERIENCE_DATA, SKILLS_DATA } from "../constants/data";
 
 export function Portfolio() {
+  const [time, setTime] = useState<string>("");
+  const [isHoveringTime, setIsHoveringTime] = useState(false);
+
+  useEffect(() => {
+    const updateKolkataTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      };
+      const formatter = new Intl.DateTimeFormat("en-GB", options);
+      setTime(formatter.format(now));
+    };
+
+    updateKolkataTime();
+    const interval = setInterval(updateKolkataTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
       <motion.main
@@ -105,14 +128,6 @@ export function Portfolio() {
               <WritingLink
                 title="React Hook Getter Pattern"
                 description="Simple, efficient React state hook in 50 lines."
-              />
-              <WritingLink
-                title="Redesign 2021"
-                description="Return to simplicity."
-              />
-              <WritingLink
-                title="All writing"
-                description="Infrequent thoughts on design and code."
               />
             </div>
           </div>*/}
@@ -255,8 +270,14 @@ export function Portfolio() {
       {/* Footer */}
       <footer className="w-full max-w-2xl mt-32 flex justify-between items-center text-[11px] uppercase tracking-widest opacity-50">
         <p>Let's connect and create something extraordinary.</p>
-        <div className="flex items-center gap-2">
-          <span>2026</span>
+        <div
+          className="flex items-center gap-2 cursor-help transition-all duration-300"
+          onMouseEnter={() => setIsHoveringTime(true)}
+          onMouseLeave={() => setIsHoveringTime(false)}
+        >
+          <span className="tabular-nums">
+            {isHoveringTime ? `${time} IST` : "2026"}
+          </span>
           <div className="w-3 h-3 border border-current rounded-full flex items-center justify-center">
             <div className="w-1 h-1 bg-current rounded-full" />
           </div>
