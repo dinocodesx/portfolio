@@ -5,6 +5,7 @@ import { Projects } from "./pages/projects";
 import { Blogs } from "./pages/blogs";
 import { Talks } from "./pages/talks";
 import { Social } from "./pages/socials";
+import { Resume } from "./pages/resume";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/talks" element={<Talks />} />
         <Route path="/links" element={<Social />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
   );

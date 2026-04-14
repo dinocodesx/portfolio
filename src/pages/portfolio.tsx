@@ -48,24 +48,32 @@ export function Portfolio() {
           <div className="space-y-6 text-[15px] leading-relaxed">
             <p>
               <span className="italic text-white">Crafting interfaces.</span>{" "}
-              Fullstack Software Engineer from Kolkata, India.{" "}
-              {/*<a
-                href="#"
-                className="text-white hover:underline underline-offset-4"
-              >
-                Linear
-              </a>*/}
-            </p>
-            {/*<p>
-              In the past I've developed the{" "}
+              Junior Software Engineer from Kolkata, India. I especially love to
+              tinker with low level system design and{" "}
               <a
                 href="#"
+                className="text-white hover:underline underline-offset-4 italic"
+              >
+                how the world works.
+              </a>
+            </p>
+            <p>
+              I have previosly worked on Backend development, mainly with Java
+              and Typescript Frameworks like{" "}
+              <a
+                href="#"
+                className="text-white hover:underline underline-offset-4 italic"
+              >
+                NestJS, and Spring Boot.
+              </a>{" "}
+              Check out my work on github and my{" "}
+              <Link
+                to="/resume"
                 className="text-white hover:underline underline-offset-4"
               >
-                Vercel
-              </a>{" "}
-              design system, website, and dashboard.
-            </p>*/}
+                Resume.
+              </Link>
+            </p>
           </div>
         </motion.section>
 
@@ -82,7 +90,7 @@ export function Portfolio() {
             <div className="space-y-1">
               <h3 className="text-white font-medium">OAlpaca Studio</h3>
               <p className="text-sm leading-relaxed">
-                Memory and Canvas based interface for LLM chating and memory
+                Memory and Canvas based interface for LLM chating and context
                 management.
               </p>
             </div>
