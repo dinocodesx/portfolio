@@ -47,24 +47,24 @@ const UI_DATA = {
   ],
   elements: [
     {
-      title: "Chats",
-      description: "Custom player controls and keyboard shortcuts.",
-      link: "/chats",
-    },
-    {
-      title: "Search",
-      description: "Modal combobox with compound API.",
-      link: "/search",
-    },
-    {
       title: "Buttons",
       description: "Windows and animated sidebars.",
-      link: "/buttons",
+      link: "/button-craft",
     },
     {
       title: "Dropdown",
       description: "Dropdown menu with animated transitions.",
-      link: "/dropdown",
+      link: "/dropdown-craft",
+    },
+    {
+      title: "Chats",
+      description: "Custom player controls and keyboard shortcuts.",
+      link: "/chat-craft",
+    },
+    {
+      title: "Search",
+      description: "Modal combobox with compound API.",
+      link: "/searchbar-craft",
     },
   ],
 };

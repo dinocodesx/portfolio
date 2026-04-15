@@ -8,6 +8,11 @@ import { Social } from "./pages/Socials";
 import { Resume } from "./pages/Resume";
 import { Meet } from "./pages/Meet";
 import { UI } from "./pages/Ui";
+import { UserInput } from "./pages/ui/UserInput";
+import { ButtonCraft } from "./pages/ui/ButtonCraft";
+import { ChatBubbleCraft } from "./pages/ui/ChatBubbleCraft";
+import { SearchBarCraft } from "./pages/ui/SearchBarCraft";
+import { DropdownCraft } from "./pages/ui/DropdownCraft";
 
 export default function App() {
   return (
@@ -22,6 +27,11 @@ export default function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/meet" element={<Meet />} />
         <Route path="/ui" element={<UI />} />
+        <Route path="/user-input" element={<UserInput />} />
+        <Route path="/button-craft" element={<ButtonCraft />} />
+        <Route path="/dropdown-craft" element={<DropdownCraft />} />
+        <Route path="/chat-craft" element={<ChatBubbleCraft />} />
+        <Route path="/searchbar-craft" element={<SearchBarCraft />} />
       </Routes>
     </Router>
   );
