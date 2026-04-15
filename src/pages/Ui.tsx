@@ -18,9 +18,9 @@ const UI_DATA = {
   ],
   components: [
     {
-      title: "User Input",
+      title: "LLM Chat Input",
       description: "Better blur with backdrop-filter and SVG filters.",
-      link: "/user-input",
+      link: "/chat-input",
     },
     {
       title: "Sidebar",
@@ -42,22 +42,22 @@ const UI_DATA = {
     {
       title: "Buttons",
       description: "Windows and animated sidebars.",
-      link: "/button-craft",
+      link: "/button",
     },
     {
       title: "Dropdown",
       description: "Dropdown menu with animated transitions.",
-      link: "/dropdown-craft",
+      link: "/dropdown",
     },
     {
       title: "Chats",
       description: "Custom player controls and keyboard shortcuts.",
-      link: "/chat-craft",
+      link: "/chat",
     },
     {
-      title: "Search",
+      title: "Command Palette",
       description: "Modal combobox with compound API.",
-      link: "/searchbar-craft",
+      link: "/command-palette",
     },
   ],
 };

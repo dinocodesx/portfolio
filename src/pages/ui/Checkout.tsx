@@ -439,7 +439,7 @@ export function Checkout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32 bg-[#0A0A0A]">
+    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
       <motion.main
         variants={containerVariants}
         initial="hidden"
@@ -478,17 +478,19 @@ export function Checkout() {
               </p>
             </motion.div>
 
-            {/* Preview Area - Expanded to 60% width on large screens */}
+            {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full lg:w-[60vw] lg:ml-[calc(-30vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-[40px] flex items-center justify-center p-4 md:p-12 lg:p-12 overflow-hidden"
+              className="relative w-full min-h-150 md:min-h-125 bg-[#0A0A0A] border border-white/5 rounded-3xl flex items-center justify-center p-4 md:p-8 overflow-hidden"
             >
-              <CheckoutComponent
-                isProcessing={isProcessing}
-                isComplete={isComplete}
-                handlePayment={handlePayment}
-                setIsComplete={setIsComplete}
-              />
+              <div className="w-full max-w-4xl origin-center scale-[0.85] md:scale-[0.8]">
+                <CheckoutComponent
+                  isProcessing={isProcessing}
+                  isComplete={isComplete}
+                  handlePayment={handlePayment}
+                  setIsComplete={setIsComplete}
+                />
+              </div>
             </motion.div>
 
             <motion.div

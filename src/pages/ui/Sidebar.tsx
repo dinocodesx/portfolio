@@ -26,7 +26,7 @@ function Tooltip({
   const [show, setShow] = useState(false);
   return (
     <div
-      className="relative flex items-center"
+      className="relative flex items-center justify-center w-full"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
@@ -152,7 +152,9 @@ export function SidebarCraft() {
                     {/* Create Folder Action */}
                     <div className="px-1">
                       <Tooltip text="Create Folder">
-                        <button className="flex items-center gap-3 w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/40 hover:text-white transition-all border border-dashed border-white/5 hover:border-white/10">
+                        <button
+                          className={`flex items-center ${isCollapsed ? "justify-center" : "gap-3"} w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/40 hover:text-white transition-all border border-dashed border-white/5 hover:border-white/10`}
+                        >
                           <Plus className="w-4 h-4 shrink-0" />
                           {!isCollapsed && <span>Create Folder</span>}
                         </button>
@@ -171,7 +173,9 @@ export function SidebarCraft() {
 
                       <div className="space-y-0.5">
                         <Tooltip text="Research">
-                          <button className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors group">
+                          <button
+                            className={`flex items-center ${isCollapsed ? "justify-center" : "justify-between"} w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors group`}
+                          >
                             <div className="flex items-center gap-3">
                               <Folder className="w-4 h-4 text-blue-400/50 shrink-0" />
                               {!isCollapsed && <span>Research</span>}
@@ -184,7 +188,9 @@ export function SidebarCraft() {
                           </button>
                         </Tooltip>
                         <Tooltip text="Project X">
-                          <button className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors group">
+                          <button
+                            className={`flex items-center ${isCollapsed ? "justify-center" : "justify-between"} w-full px-3 py-2 rounded-lg hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors group`}
+                          >
                             <div className="flex items-center gap-3">
                               <Folder className="w-4 h-4 text-blue-400/50 shrink-0" />
                               {!isCollapsed && <span>Project X</span>}
@@ -211,7 +217,9 @@ export function SidebarCraft() {
 
                       <div className="space-y-0.5">
                         <Tooltip text="Performance optimization">
-                          <button className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/5 text-[13px] text-white transition-colors">
+                          <button
+                            className={`flex items-center ${isCollapsed ? "justify-center" : "gap-3"} w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/5 text-[13px] text-white transition-colors`}
+                          >
                             <MessageSquare className="w-4 h-4 text-blue-400 shrink-0" />
                             {!isCollapsed && (
                               <span className="truncate">
@@ -222,7 +230,9 @@ export function SidebarCraft() {
                         </Tooltip>
 
                         <Tooltip text="AI design patterns">
-                          <button className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors">
+                          <button
+                            className={`flex items-center ${isCollapsed ? "justify-center" : "gap-3"} w-full px-3 py-2.5 rounded-xl hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors`}
+                          >
                             <MessageSquare className="w-4 h-4 opacity-30 shrink-0" />
                             {!isCollapsed && (
                               <span className="truncate">
@@ -233,7 +243,9 @@ export function SidebarCraft() {
                         </Tooltip>
 
                         <Tooltip text="React state management">
-                          <button className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors">
+                          <button
+                            className={`flex items-center ${isCollapsed ? "justify-center" : "gap-3"} w-full px-3 py-2.5 rounded-xl hover:bg-white/5 text-[13px] text-white/60 hover:text-white transition-colors`}
+                          >
                             <MessageSquare className="w-4 h-4 opacity-30 shrink-0" />
                             {!isCollapsed && (
                               <span className="truncate">
@@ -247,12 +259,10 @@ export function SidebarCraft() {
                   </div>
 
                   {/* History Button (Moved above footer) */}
-                  <div
-                    className={`py-2 border-t border-white/5 ${isCollapsed ? "flex justify-center" : "px-3"}`}
-                  >
+                  <div className="py-2 px-3 border-t border-white/5 w-full">
                     <Tooltip text="View History">
                       <button
-                        className={`flex items-center justify-between rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 text-[13px] text-white/60 hover:text-white transition-all group ${isCollapsed ? "p-2" : "w-full px-3 py-2"}`}
+                        className={`flex items-center ${isCollapsed ? "justify-center" : "justify-between"} w-full px-3 py-2 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 text-[13px] text-white/60 hover:text-white transition-all group`}
                       >
                         <div className="flex items-center gap-3">
                           <Clock className="w-4 h-4 opacity-50 shrink-0" />

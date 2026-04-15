@@ -24,8 +24,8 @@ const Meet = lazy(() =>
   import("./pages/Meet").then((m) => ({ default: m.Meet })),
 );
 const UI = lazy(() => import("./pages/Ui").then((m) => ({ default: m.UI })));
-const UserInput = lazy(() =>
-  import("./pages/ui/UserInput").then((m) => ({ default: m.UserInput })),
+const LLMChatInput = lazy(() =>
+  import("./pages/ui/LLMChatInput").then((m) => ({ default: m.LLMChatInput })),
 );
 const ButtonCraft = lazy(() =>
   import("./pages/ui/ButtonCraft").then((m) => ({ default: m.ButtonCraft })),
@@ -40,9 +40,9 @@ const ChatBubbleCraft = lazy(() =>
     default: m.ChatBubbleCraft,
   })),
 );
-const SearchBarCraft = lazy(() =>
-  import("./pages/ui/SearchBarCraft").then((m) => ({
-    default: m.SearchBarCraft,
+const CommandPalette = lazy(() =>
+  import("./pages/ui/CommandPalette").then((m) => ({
+    default: m.CommandPalette,
   })),
 );
 const SidebarCraft = lazy(() =>
@@ -83,11 +83,11 @@ export default function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/meet" element={<Meet />} />
           <Route path="/ui" element={<UI />} />
-          <Route path="/user-input" element={<UserInput />} />
-          <Route path="/button-craft" element={<ButtonCraft />} />
-          <Route path="/dropdown-craft" element={<DropdownCraft />} />
-          <Route path="/chat-craft" element={<ChatBubbleCraft />} />
-          <Route path="/searchbar-craft" element={<SearchBarCraft />} />
+          <Route path="/chat-input" element={<LLMChatInput />} />
+          <Route path="/button" element={<ButtonCraft />} />
+          <Route path="/dropdown" element={<DropdownCraft />} />
+          <Route path="/chat" element={<ChatBubbleCraft />} />
+          <Route path="/command-palette" element={<CommandPalette />} />
           <Route path="/sidebar" element={<SidebarCraft />} />
           <Route path="/multipage-form" element={<MultiStepForm />} />
           <Route path="/checkout" element={<Checkout />} />

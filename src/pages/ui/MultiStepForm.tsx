@@ -89,7 +89,7 @@ export function MultiStepForm() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32 bg-[#0A0A0A]">
+    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
       <motion.main
         variants={containerVariants}
         initial="hidden"
@@ -132,7 +132,7 @@ export function MultiStepForm() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full min-h-125 bg-[#0D0D0D] border border-white/5 rounded-4xl flex items-center justify-center p-6 md:p-12 overflow-hidden"
+              className="relative w-full min-h-125 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-6 md:p-12 overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 {!isComplete ? (

@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../../constants/animations";
 
-export function SearchBarCraft() {
+export function CommandPalette() {
   const [searchValue, setSearchValue] = useState("");
 
   return (
@@ -38,7 +38,7 @@ export function SearchBarCraft() {
           <div className="space-y-12">
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-white font-medium text-3xl tracking-tight">
-                Search Interfaces
+                Command Palette
               </h1>
               <p className="text-white/40 text-lg">April 2026</p>
             </motion.div>
@@ -98,9 +98,6 @@ export function SearchBarCraft() {
                     </button>
                   </div>
                 </div>
-                <span className="text-[10px] text-white/20 uppercase tracking-widest">
-                  Command Palette
-                </span>
               </div>
             </motion.div>
 
