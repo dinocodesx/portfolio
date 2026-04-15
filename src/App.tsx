@@ -59,6 +59,9 @@ const Checkout = lazy(() =>
 const MobileChat = lazy(() =>
   import("./pages/ui/MobileChat").then((m) => ({ default: m.MobileChat })),
 );
+const MobileAuth = lazy(() =>
+  import("./pages/ui/MobileAuth").then((m) => ({ default: m.MobileAuth })),
+);
 const NotFound = lazy(() =>
   import("./pages/NotFound").then((m) => ({ default: m.NotFound })),
 );
@@ -92,6 +95,7 @@ export default function App() {
           <Route path="/multipage-form" element={<MultiStepForm />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/mobile-chat" element={<MobileChat />} />
+          <Route path="/mobile-auth" element={<MobileAuth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

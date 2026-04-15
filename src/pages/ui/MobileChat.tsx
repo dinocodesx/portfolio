@@ -5,49 +5,20 @@ import {
   MoreHorizontal,
   Send,
   Mic,
-  Wifi,
-  Battery,
-  Signal,
-  Sparkles,
-  Gamepad2,
-  Users,
-  Search,
   ChevronLeft,
   X,
   Menu,
   MessageSquare,
+  Sparkles,
+  Gamepad2,
+  Users,
+  Search,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { IPhoneMockup } from "../../components/mockup/IPhoneMockup";
 import { containerVariants, itemVariants } from "../../constants/animations";
 
 // --- Components ---
-
-function IPhoneMockup({ children }: { children: ReactNode }) {
-  return (
-    <div className="relative mx-auto w-70 h-142.5 bg-[#1a1a1a] rounded-[48px] border-[7px] border-[#2a2a2a] shadow-[0_0_0_2px_#3a3a3a,0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
-      {/* Dynamic Island */}
-      <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-50 flex items-center justify-end px-2.5">
-        <div className="w-1 h-1 bg-[#1a1a1a] rounded-full" />
-      </div>
-
-      {/* Status Bar */}
-      <div className="absolute top-0 left-0 w-full h-10 flex items-center justify-between px-6 z-40 text-white/90">
-        <span className="text-[11px] font-semibold">9:41</span>
-        <div className="flex items-center gap-1">
-          <Signal className="w-3 h-3" />
-          <Wifi className="w-3 h-3" />
-          <Battery className="w-3.5 h-3.5" />
-        </div>
-      </div>
-
-      {/* Screen Content */}
-      <div className="w-full h-full bg-black relative">{children}</div>
-
-      {/* Home Indicator */}
-      <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full z-50" />
-    </div>
-  );
-}
 
 const AIHome: React.FC<{ onStartChat: () => void }> = ({ onStartChat }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -372,7 +343,7 @@ export function MobileChat() {
   const [view, setView] = useState<"home" | "chat">("home");
 
   return (
-    <div className="min-h-screen bg-[#050505] flex flex-col items-center justify-center p-4 py-16 md:py-24">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 py-16 md:py-24">
       <motion.main
         variants={containerVariants}
         initial="hidden"
@@ -386,8 +357,8 @@ export function MobileChat() {
               to="/ui"
               className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-base"
             >
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              UI
+              <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              Craft
             </Link>
           </motion.div>
 

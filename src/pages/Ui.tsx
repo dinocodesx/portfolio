@@ -8,12 +8,12 @@ const UI_DATA = {
     {
       title: "Chat Ui",
       description: "Smooth chats page build with semantic react.",
-      link: "/chat",
+      link: "/mobile-chat",
     },
     {
       title: "User Login",
       description: "Smooth chats page build with semantic react.",
-      link: "/login",
+      link: "/mobile-auth",
     },
   ],
   components: [
