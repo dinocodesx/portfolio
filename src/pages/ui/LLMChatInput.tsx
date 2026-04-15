@@ -74,7 +74,7 @@ export function LLMChatInput() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12"
+              className="relative w-full min-h-100 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12"
             >
               <div className="w-full max-w-2xl space-y-4">
                 {/* Chat Input Component */}

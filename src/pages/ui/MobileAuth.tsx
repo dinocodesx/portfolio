@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import {
-  ChevronLeft,
+  ArrowLeft,
   Github,
   Apple,
   ArrowRight,
@@ -142,7 +142,6 @@ const AuthScreen: React.FC = () => {
 
       <div className="mt-auto text-center pb-4">
         <p className="text-[9px] text-white/20 leading-relaxed">
-          By continuing, you agree to Syncra's <br />
           <span className="underline">Terms of Service</span> and{" "}
           <span className="underline">Privacy Policy</span>
         </p>
@@ -169,23 +168,25 @@ export function MobileAuth() {
               to="/ui"
               className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-base"
             >
-              <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              Craft
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              UI
             </Link>
           </motion.div>
 
           {/* Content */}
           <div className="space-y-8">
-            <motion.div variants={itemVariants} className="space-y-3">
-              <h1 className="text-white font-medium text-2xl tracking-tight">
-                Mobile Auth Flow
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h1 className="text-white font-medium text-3xl tracking-tight">
+                Button Varieties
               </h1>
-              <p className="text-white/40 text-base">Onboarding Experience</p>
+              <p className="text-white/40 text-lg">
+                Onboarding Experience . April 2026
+              </p>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl text-sm"
+              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
             >
               <p>
                 A seamless{" "}
@@ -208,7 +209,7 @@ export function MobileAuth() {
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl text-sm"
+              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
             >
               <p>
                 The flow utilizes{" "}

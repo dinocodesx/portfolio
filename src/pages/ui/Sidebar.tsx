@@ -19,14 +19,16 @@ import { containerVariants, itemVariants } from "../../constants/animations";
 function Tooltip({
   children,
   text,
+  className = "w-full",
 }: {
   children: React.ReactNode;
   text: string;
+  className?: string;
 }) {
   const [show, setShow] = useState(false);
   return (
     <div
-      className="relative flex items-center justify-center w-full"
+      className={`relative flex items-center justify-center ${className}`}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
@@ -96,7 +98,7 @@ export function SidebarCraft() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full aspect-16/18 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
+              className="relative w-full min-h-125 md:min-h-150 lg:min-h-0 lg:aspect-16/18 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
             >
               <div className="flex flex-col items-center gap-4 h-full">
                 <motion.div
@@ -112,7 +114,7 @@ export function SidebarCraft() {
                       className={`flex ${isCollapsed ? "flex-col gap-2" : "items-center gap-1"}`}
                     >
                       {!isCollapsed && (
-                        <Tooltip text="New Chat">
+                        <Tooltip text="New Chat" className="w-auto">
                           <button className="p-1.5 hover:bg-white/5 rounded-lg text-white/40 hover:text-white transition-colors">
                             <MessageSquare className="w-4 h-4" />
                           </button>
@@ -284,18 +286,18 @@ export function SidebarCraft() {
                         <User className="w-4 h-4" />
                       </div>
                       {!isCollapsed && (
-                        <div className="flex flex-col">
-                          <span className="text-[12px] font-medium text-white leading-none">
+                        <div className="flex flex-col pt-1">
+                          <span className="text-[12px] font-medium text-white leading-none whitespace-nowrap">
                             Guest User
                           </span>
-                          <span className="text-[10px] text-white/40">
+                          <span className="text-[10px] text-white/40 whitespace-nowrap">
                             Free Plan
                           </span>
                         </div>
                       )}
                     </div>
                     {!isCollapsed && (
-                      <Tooltip text="Settings">
+                      <Tooltip text="Settings" className="w-auto shrink-0">
                         <button className="p-2 hover:bg-white/5 rounded-lg text-white/40 hover:text-white transition-colors">
                           <Settings className="w-4 h-4" />
                         </button>
@@ -303,9 +305,6 @@ export function SidebarCraft() {
                     )}
                   </div>
                 </motion.div>
-                <span className="text-[10px] text-white/20 uppercase tracking-widest">
-                  Conversational Architecture
-                </span>
               </div>
             </motion.div>
 

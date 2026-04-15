@@ -65,7 +65,7 @@ export function DropdownCraft() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col md:flex-row items-center justify-center gap-12 p-8 md:p-12 overflow-hidden"
+              className="relative w-full min-h-100 md:min-h-150 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col md:flex-row items-center justify-center gap-12 p-8 md:p-12 overflow-hidden"
             >
               {/* 1. Minimalist Selector */}
               <div className="flex flex-col items-center gap-4">

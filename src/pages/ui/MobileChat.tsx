@@ -357,25 +357,25 @@ export function MobileChat() {
               to="/ui"
               className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-base"
             >
-              <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              Craft
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              UI
             </Link>
           </motion.div>
 
           {/* Content */}
           <div className="space-y-8">
-            <motion.div variants={itemVariants} className="space-y-3">
-              <h1 className="text-white font-medium text-2xl tracking-tight">
-                Mobile AI Chat
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h1 className="text-white font-medium text-3xl tracking-tight">
+                Button Varieties
               </h1>
-              <p className="text-white/40 text-base">
-                Syncra Mobile Experience
+              <p className="text-white/40 text-lg">
+                Syncra Mobile Experience . April 2026
               </p>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl text-sm"
+              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
             >
               <p>
                 A high-fidelity <span className="text-white">mobile-first</span>{" "}
@@ -403,7 +403,7 @@ export function MobileChat() {
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl text-sm"
+              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
             >
               <p>
                 The mockup features a{" "}

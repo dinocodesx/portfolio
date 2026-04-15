@@ -57,7 +57,7 @@ export function CommandPalette() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col items-center justify-center gap-20 p-8 md:p-12 overflow-hidden"
+              className="relative w-full min-h-100 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col items-center justify-center gap-20 p-8 md:p-12 overflow-hidden"
             >
               {/* 2. Command Palette Style */}
               <div className="flex flex-col items-center gap-6 w-full max-w-lg">

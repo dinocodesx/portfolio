@@ -71,7 +71,7 @@ export function ButtonCraft() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
+              className="relative w-full min-h-150 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
             >
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center w-full max-w-2xl">
                 {/* 1. Primary Solid */}
