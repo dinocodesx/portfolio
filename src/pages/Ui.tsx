@@ -8,18 +8,17 @@ const UI_DATA = {
   pages: [
     {
       title: "Chat Ui",
-      description:
-        "Smooth chats page build with semantic react and tailwindcss",
+      description: "Smooth chats page build with semantic react.",
       link: "/chat",
     },
     {
       title: "User Login",
-      description: "",
+      description: "Smooth chats page build with semantic react.",
       link: "/login",
     },
     {
       title: "Checkout",
-      description: "",
+      description: "Smooth chats page build with semantic react.",
       link: "/checkout",
     },
   ],

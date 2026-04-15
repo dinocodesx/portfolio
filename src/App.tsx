@@ -10,9 +10,9 @@ import { Meet } from "./pages/Meet";
 import { UI } from "./pages/Ui";
 import { UserInput } from "./pages/ui/UserInput";
 import { ButtonCraft } from "./pages/ui/ButtonCraft";
+import { DropdownCraft } from "./pages/ui/DropdownCraft";
 import { ChatBubbleCraft } from "./pages/ui/ChatBubbleCraft";
 import { SearchBarCraft } from "./pages/ui/SearchBarCraft";
-import { DropdownCraft } from "./pages/ui/DropdownCraft";
 
 export default function App() {
   return (
