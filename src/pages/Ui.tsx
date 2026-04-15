@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
-import { li } from "motion/react-client";
 
 const UI_DATA = {
   pages: [

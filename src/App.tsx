@@ -15,6 +15,7 @@ import { ChatBubbleCraft } from "./pages/ui/ChatBubbleCraft";
 import { SearchBarCraft } from "./pages/ui/SearchBarCraft";
 import { SidebarCraft } from "./pages/ui/Sidebar";
 import { MultiStepForm } from "./pages/ui/MultiStepForm";
+import { Checkout } from "./pages/ui/Checkout";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/searchbar-craft" element={<SearchBarCraft />} />
         <Route path="/sidebar" element={<SidebarCraft />} />
         <Route path="/multipage-form" element={<MultiStepForm />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   );
