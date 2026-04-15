@@ -1,14 +1,11 @@
-export function Talks({
-  title,
-  date,
-  location,
-  link,
-}: {
+export interface TalkProps {
   title: string;
   date: string;
   location: string;
   link: string;
-}) {
+}
+
+export function Talks({ title, date, location, link }: TalkProps) {
   return (
     <a href={link} className="group block space-y-1">
       <div className="flex justify-between items-baseline gap-4">

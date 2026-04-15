@@ -1,4 +1,15 @@
-export const EXPERIENCE_DATA = [
+export interface Experience {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  duration: string;
+  description: string;
+  achievements: Record<string, string>;
+  technologies: string[];
+}
+
+export const EXPERIENCE_DATA: Experience[] = [
   {
     id: 1,
     title: "Backend Developer",
@@ -38,7 +49,16 @@ export const EXPERIENCE_DATA = [
   },
 ];
 
-export const SKILLS_DATA = [
+export interface Skill {
+  name: string;
+}
+
+export interface SkillCategory {
+  category: string;
+  skills: Skill[];
+}
+
+export const SKILLS_DATA: SkillCategory[] = [
   {
     category: "Backend & Distributed Systems",
     skills: [
@@ -80,7 +100,16 @@ export const SKILLS_DATA = [
   },
 ];
 
-export const PROJECTS_DATA = [
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  technologies: string[];
+  github?: string;
+  live?: string;
+}
+
+export const PROJECTS_DATA: Project[] = [
   {
     id: 1,
     title: "Apertre Website",
@@ -155,7 +184,16 @@ export const PROJECTS_DATA = [
   },
 ];
 
-export const BLOGS_DATA = [
+export interface Blog {
+  id: number;
+  title: string;
+  date: string;
+  excerpt: string;
+  readTime: string;
+  link: string;
+}
+
+export const BLOGS_DATA: Blog[] = [
   {
     id: 1,
     title: "Building a RAG Pipeline from Scratch with PyTorch and Transformers",
@@ -167,7 +205,17 @@ export const BLOGS_DATA = [
   },
 ];
 
-export const TALKS_DATA = [
+export interface Talk {
+  id: number;
+  title: string;
+  event: string;
+  date: string;
+  location: string;
+  description: string;
+  link: string;
+}
+
+export const TALKS_DATA: Talk[] = [
   {
     id: 1,
     title: "Machine Learning in Production: Best Practices",
@@ -190,7 +238,15 @@ export const TALKS_DATA = [
   },
 ];
 
-export const SOCIAL_LINKS = [
+export interface SocialLink {
+  id: number;
+  name: string;
+  url: string;
+  description: string;
+  icon: string;
+}
+
+export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: 1,
     name: "Portfolio Website",

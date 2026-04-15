@@ -1,14 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 
-export function Projects({
-  title,
-  description,
-  link,
-}: {
+export interface ProjectProps {
   title: string;
   description: string;
   link?: string;
-}) {
+}
+
+export function Projects({ title, description, link }: ProjectProps) {
   const content = (
     <>
       <div className="flex items-center gap-1">

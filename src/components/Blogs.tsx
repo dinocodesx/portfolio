@@ -1,14 +1,11 @@
-export function Blogs({
-  title,
-  date,
-  excerpt,
-  link,
-}: {
+export interface BlogProps {
   title: string;
   date: string;
   excerpt: string;
   link: string;
-}) {
+}
+
+export function Blogs({ title, date, excerpt, link }: BlogProps) {
   return (
     <a href={link} className="group block space-y-1">
       <div className="flex justify-between items-baseline gap-4">

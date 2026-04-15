@@ -1,11 +1,4 @@
-export function Experiences({
-  title,
-  company,
-  duration,
-  description,
-  achievements,
-  technologies,
-}: {
+export interface ExperienceProps {
   title: string;
   company: string;
   duration: string;
@@ -13,7 +6,16 @@ export function Experiences({
   achievements: Record<string, string>;
   technologies: string[];
   [key: string]: any;
-}) {
+}
+
+export function Experiences({
+  title,
+  company,
+  duration,
+  description,
+  achievements,
+  technologies,
+}: ExperienceProps) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-baseline gap-4">

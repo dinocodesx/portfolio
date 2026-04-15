@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { Portfolio } from "./pages/portfolio";
-import { Projects } from "./pages/projects";
-import { Blogs } from "./pages/blogs";
-import { Talks } from "./pages/talks";
-import { Social } from "./pages/socials";
-import { Resume } from "./pages/resume";
-import { Meet } from "./pages/meet";
+import { Portfolio } from "./pages/Portfolio";
+import { Projects } from "./pages/Projects";
+import { Blogs } from "./pages/Blogs";
+import { Talks } from "./pages/Talks";
+import { Social } from "./pages/Socials";
+import { Resume } from "./pages/Resume";
+import { Meet } from "./pages/Meet";
 
 export default function App() {
   return (

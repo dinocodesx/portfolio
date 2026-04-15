@@ -1,11 +1,10 @@
-export function SkillCategory({
-  category,
-  skills,
-}: {
+export interface SkillCategoryProps {
   category: string;
   skills: { name: string }[];
   [key: string]: any;
-}) {
+}
+
+export function SkillCategory({ category, skills }: SkillCategoryProps) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-y-2">
       <span className="text-[14px] text-white/40 w-full sm:w-32 shrink-0">

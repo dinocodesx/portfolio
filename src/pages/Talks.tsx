@@ -17,6 +17,7 @@ export function Talks() {
           <Link
             to="/"
             className="p-2 rounded-full hover:bg-white/5 transition-colors group"
+            aria-label="Go back to portfolio"
           >
             <ArrowLeft className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
           </Link>
