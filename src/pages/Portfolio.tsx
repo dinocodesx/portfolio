@@ -14,6 +14,7 @@ import {
   SKILLS_DATA,
   TALKS_DATA,
   BLOGS_DATA,
+  PROJECTS_DATA,
 } from "../constants/data";
 
 export function Portfolio() {
@@ -95,6 +96,20 @@ export function Portfolio() {
                 management.
               </p>
             </div>
+            <div className="space-y-1">
+              <Link
+                to="/ui"
+                className="text-white/40 hover:text-white transition-colors flex items-center justify-start"
+              >
+                <h2 className="text-white uppercase tracking-widest font-medium">
+                  UI
+                </h2>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <p className="text-sm leading-relaxed">
+                A Collection of UI components for building LLM chat apps.
+              </p>
+            </div>
           </div>
 
           {/* Projects */}
@@ -110,21 +125,9 @@ export function Portfolio() {
             </Link>
 
             <div className="space-y-4">
-              <Projects
-                title="Simple Local Rag"
-                description="Retrieval-Augmented Generation (RAG) pipeline using PyTorch and Gemma-7B."
-                link="https://github.com/dinocodesx/simple-local-rag"
-              />
-              <Projects
-                title="Redis from scratch using Go"
-                description="Building my own redis like key-value database using go lang cause why not.."
-                link="https://github.com/dinocodesx/goredis"
-              />
-              <Projects
-                title="Containers from scratch using Go"
-                description="Building a container form scratch using Go-Lang to do low level system manipulation and modification."
-                link="https://github.com/dinocodesx/containers-from-scratch"
-              />
+              {PROJECTS_DATA.slice(0, 3).map((project) => (
+                <Projects key={project.id} {...project} />
+              ))}
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 export interface ExperienceProps {
   title: string;
   company: string;
+  location: string;
   duration: string;
   description: string;
   achievements: Record<string, string>;
@@ -11,6 +12,7 @@ export interface ExperienceProps {
 export function Experiences({
   title,
   company,
+  location,
   duration,
   description,
   achievements,
@@ -21,7 +23,9 @@ export function Experiences({
       <div className="flex justify-between items-baseline gap-4">
         <div>
           <h3 className="text-white font-medium">{title}</h3>
-          <p className="text-sm opacity-50">{company}</p>
+          <p className="text-sm opacity-50">
+            {company} · {location}
+          </p>
         </div>
         <span className="text-[10px] uppercase tracking-wider opacity-50 whitespace-nowrap">
           {duration}

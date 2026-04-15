@@ -7,6 +7,7 @@ import { Talks } from "./pages/Talks";
 import { Social } from "./pages/Socials";
 import { Resume } from "./pages/Resume";
 import { Meet } from "./pages/Meet";
+import { UI } from "./pages/Ui";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/links" element={<Social />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/meet" element={<Meet />} />
+        <Route path="/ui" element={<UI />} />
       </Routes>
     </Router>
   );

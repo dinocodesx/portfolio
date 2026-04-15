@@ -13,7 +13,7 @@ export function Projects({ title, description, link }: ProjectProps) {
         <h3 className="text-white font-medium group-hover:underline underline-offset-4">
           {title}
         </h3>
-        <ArrowUpRight className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
+        <ArrowUpRight className="w-4 h-4 group-hover:opacity-100 transition-opacity" />
       </div>
       <p className="text-sm leading-relaxed">{description}</p>
     </>

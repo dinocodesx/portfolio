@@ -2,10 +2,12 @@ export interface TalkProps {
   title: string;
   date: string;
   location: string;
+  event: string;
   link: string;
+  description: string;
 }
 
-export function Talks({ title, date, location, link }: TalkProps) {
+export function Talks({ title, date, location, event, link }: TalkProps) {
   return (
     <a href={link} className="group block space-y-1">
       <div className="flex justify-between items-baseline gap-4">
@@ -16,7 +18,9 @@ export function Talks({ title, date, location, link }: TalkProps) {
           {date}
         </span>
       </div>
-      <p className="text-sm opacity-50">{location}</p>
+      <p className="text-sm opacity-50">
+        {event} · {location}
+      </p>
     </a>
   );
 }
