@@ -233,11 +233,12 @@ export function Portfolio() {
               React application.
             </p>
             <p>
-              Enjoying deep, dark, boring dance music: songs that set the pace
-              in the first ten seconds and maintain it for the next ten minutes.{" "}
-              <span className="text-white">Deep</span> is a curation of my
-              favorites. Soothed by the inherent energy of drum and bass—
-              <span className="text-white">Drum</span> has my favorites.
+              Driven by the relentless, tactical, high-stakes drama of the
+              pitch: matches that set the intensity in the first ten seconds and
+              maintain it for the full ninety minutes.{" "}
+              <span className="text-white">Tactical</span> is a curation of my
+              favorites. Fueled by the raw, kinetic adrenaline of the stadium—
+              <span className="text-white">Pitch</span> has my top highlights.
             </p>
           </div>
         </motion.section>

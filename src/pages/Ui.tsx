@@ -7,56 +7,56 @@ const UI_DATA = {
   apps: [
     {
       title: "Chat Ui",
-      description: "Smooth chats page build with semantic react.",
+      description: "A fluid messaging interface designed using semantic.",
       link: "/mobile-chat",
     },
     {
       title: "User Login",
-      description: "Smooth chats page build with semantic react.",
+      description: "A sleek authentication portal built with a focus.",
       link: "/mobile-auth",
     },
   ],
   components: [
     {
       title: "LLM Chat Input",
-      description: "Better blur with backdrop-filter and SVG filters.",
+      description: "A simple text entry field for LLM chat apps.",
       link: "/chat-input",
     },
     {
       title: "Sidebar",
-      description: "Roadmap timeline from Linear with pure CSS.",
+      description: "A structural navigation component for managing.",
       link: "/sidebar",
     },
     {
       title: "Checkout",
-      description: "Filtering pattern from Spotify on iOS.",
+      description: "A Stripe inspired cart checkout interface.",
       link: "/checkout",
     },
     {
       title: "MultiPage Form",
-      description: "Naturally overflowing collection of images.",
+      description: "A simple form for collecting structured data.",
       link: "/multipage-form",
     },
   ],
   elements: [
     {
       title: "Buttons",
-      description: "Windows and animated sidebars.",
+      description: "8 button variations for all your UI needs.",
       link: "/button",
     },
     {
       title: "Dropdown",
-      description: "Dropdown menu with animated transitions.",
+      description: "Smooth dropdown menu with animated transitions.",
       link: "/dropdown",
     },
     {
       title: "Chats",
-      description: "Custom player controls and keyboard shortcuts.",
+      description: "Clean chat interface with animated bubbles.",
       link: "/chat",
     },
     {
       title: "Command Palette",
-      description: "Modal combobox with compound API.",
+      description: "A powerful modal search and action tool built in.",
       link: "/command-palette",
     },
   ],
