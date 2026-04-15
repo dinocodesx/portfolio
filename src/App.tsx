@@ -70,35 +70,27 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Suspense
-        fallback={
-          <div className="min-h-screen flex items-center justify-center text-white/50">
-            Loading...
-          </div>
-        }
-      >
-        <Routes>
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/talks" element={<Talks />} />
-          <Route path="/links" element={<Social />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/meet" element={<Meet />} />
-          <Route path="/ui" element={<UI />} />
-          <Route path="/chat-input" element={<LLMChatInput />} />
-          <Route path="/button" element={<ButtonCraft />} />
-          <Route path="/dropdown" element={<DropdownCraft />} />
-          <Route path="/chat" element={<ChatBubbleCraft />} />
-          <Route path="/command-palette" element={<CommandPalette />} />
-          <Route path="/sidebar" element={<SidebarCraft />} />
-          <Route path="/multipage-form" element={<MultiStepForm />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/mobile-chat" element={<MobileChat />} />
-          <Route path="/mobile-auth" element={<MobileAuth />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/talks" element={<Talks />} />
+        <Route path="/links" element={<Social />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/meet" element={<Meet />} />
+        <Route path="/ui" element={<UI />} />
+        <Route path="/chat-input" element={<LLMChatInput />} />
+        <Route path="/button" element={<ButtonCraft />} />
+        <Route path="/dropdown" element={<DropdownCraft />} />
+        <Route path="/chat" element={<ChatBubbleCraft />} />
+        <Route path="/command-palette" element={<CommandPalette />} />
+        <Route path="/sidebar" element={<SidebarCraft />} />
+        <Route path="/multipage-form" element={<MultiStepForm />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/mobile-chat" element={<MobileChat />} />
+        <Route path="/mobile-auth" element={<MobileAuth />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }
