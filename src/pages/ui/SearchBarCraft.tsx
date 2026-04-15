@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+import { motion } from "motion/react";
 import {
   ArrowLeft,
   Search,
   Command,
-  X,
   Sparkles,
   History,
   ArrowRight,
@@ -13,7 +12,6 @@ import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../../constants/animations";
 
 export function SearchBarCraft() {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
   return (

@@ -12,13 +12,13 @@ import {
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../../constants/animations";
 
+const models = ["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Llama 3"];
+
 export function UserInput() {
   const [inputValue, setInputValue] = useState("");
   const [selectedModel, setSelectedModel] = useState("GPT-4o");
   const [showFileOptions, setShowFileOptions] = useState(false);
   const [showModelDropdown, setShowModelDropdown] = useState(false);
-
-  const models = ["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Llama 3"];
 
   return (
     <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">

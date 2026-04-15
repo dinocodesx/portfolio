@@ -104,11 +104,13 @@ export function SidebarCraft() {
                   className="h-200 bg-[#111] border border-white/10 rounded-xl flex flex-col shadow-2xl overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
                 >
                   {/* Header */}
-                  <div className="p-4 flex items-center justify-between border-b border-white/5">
-                    <div className="flex items-center gap-2">
-                      <Command className="w-4 h-4 text-blue-500" />
-                    </div>
-                    <div className="flex items-center gap-1">
+                  <div
+                    className={`flex ${isCollapsed ? "flex-col items-center py-4 gap-4" : "items-center justify-between p-4"} border-b border-white/5`}
+                  >
+                    <Command className="w-4 h-4 text-blue-500 shrink-0" />
+                    <div
+                      className={`flex ${isCollapsed ? "flex-col gap-2" : "items-center gap-1"}`}
+                    >
                       {!isCollapsed && (
                         <Tooltip text="New Chat">
                           <button className="p-1.5 hover:bg-white/5 rounded-lg text-white/40 hover:text-white transition-colors">
@@ -128,15 +130,20 @@ export function SidebarCraft() {
                   </div>
 
                   {/* Search */}
-                  <div className="px-4 py-4">
+                  <div
+                    className={`py-4 ${isCollapsed ? "flex justify-center" : "px-4"}`}
+                  >
                     <div className="relative group">
-                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/20 group-focus-within:text-white/60 transition-colors" />
-                      <input
-                        type="text"
-                        placeholder={isCollapsed ? "" : "Search chats..."}
-                        disabled={isCollapsed}
-                        className="w-full bg-white/5 border border-white/5 rounded-lg py-1.5 pl-9 pr-3 text-[12px] text-white outline-none focus:border-white/10 transition-all placeholder:text-white/20 disabled:cursor-default"
+                      <Search
+                        className={`${isCollapsed ? "static" : "absolute left-3 top-1/2 -translate-y-1/2"} w-3.5 h-3.5 text-white/20 group-focus-within:text-white/60 transition-colors`}
                       />
+                      {!isCollapsed && (
+                        <input
+                          type="text"
+                          placeholder="Search chats..."
+                          className="w-full bg-white/5 border border-white/5 rounded-lg py-1.5 pl-9 pr-3 text-[12px] text-white outline-none focus:border-white/10 transition-all placeholder:text-white/20"
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -240,9 +247,13 @@ export function SidebarCraft() {
                   </div>
 
                   {/* History Button (Moved above footer) */}
-                  <div className="px-3 py-2 border-t border-white/5">
+                  <div
+                    className={`py-2 border-t border-white/5 ${isCollapsed ? "flex justify-center" : "px-3"}`}
+                  >
                     <Tooltip text="View History">
-                      <button className="flex items-center justify-between w-full px-3 py-2 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 text-[13px] text-white/60 hover:text-white transition-all group">
+                      <button
+                        className={`flex items-center justify-between rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 text-[13px] text-white/60 hover:text-white transition-all group ${isCollapsed ? "p-2" : "w-full px-3 py-2"}`}
+                      >
                         <div className="flex items-center gap-3">
                           <Clock className="w-4 h-4 opacity-50 shrink-0" />
                           {!isCollapsed && <span>View History</span>}
@@ -255,7 +266,9 @@ export function SidebarCraft() {
                   </div>
 
                   {/* Footer */}
-                  <div className="mt-auto p-4 border-t border-white/5 flex items-center justify-between bg-[#0D0D0D]">
+                  <div
+                    className={`mt-auto border-t border-white/5 flex ${isCollapsed ? "flex-col items-center py-4 gap-4" : "items-center justify-between p-4"} bg-[#0D0D0D]`}
+                  >
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 shrink-0">
                         <User className="w-4 h-4" />

@@ -15,11 +15,6 @@ const UI_DATA = {
       description: "Smooth chats page build with semantic react.",
       link: "/login",
     },
-    {
-      title: "Checkout",
-      description: "Smooth chats page build with semantic react.",
-      link: "/checkout",
-    },
   ],
   components: [
     {
@@ -33,14 +28,14 @@ const UI_DATA = {
       link: "/sidebar",
     },
     {
-      title: "Payment Cards",
+      title: "Checkout",
       description: "Filtering pattern from Spotify on iOS.",
-      link: "/payment-cards",
+      link: "/checkout",
     },
     {
       title: "MultiPage Form",
       description: "Naturally overflowing collection of images.",
-      link: "/multi-page-form",
+      link: "/multipage-form",
     },
   ],
   elements: [

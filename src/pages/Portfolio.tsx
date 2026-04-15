@@ -19,7 +19,7 @@ import {
   BUILDING_DATA,
 } from "../constants/data";
 
-export function Portfolio() {
+function FooterTime() {
   const [time, setTime] = useState<string>("");
   const [isHoveringTime, setIsHoveringTime] = useState(false);
 
@@ -43,6 +43,23 @@ export function Portfolio() {
   }, []);
 
   return (
+    <div
+      className="flex items-center gap-2 cursor-help transition-all duration-300"
+      onMouseEnter={() => setIsHoveringTime(true)}
+      onMouseLeave={() => setIsHoveringTime(false)}
+    >
+      <span className="tabular-nums">
+        {isHoveringTime ? `${time} IST` : "2026"}
+      </span>
+      <div className="w-3 h-3 border border-current rounded-full flex items-center justify-center">
+        <div className="w-1 h-1 bg-current rounded-full" />
+      </div>
+    </div>
+  );
+}
+
+export function Portfolio() {
+  return (
     <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
       <motion.main
         variants={containerVariants}
@@ -65,7 +82,7 @@ export function Portfolio() {
               </span>
             </p>
             <p>
-              I have previosly worked on Backend development, mainly with{" "}
+              I have previously worked on Backend development, mainly with{" "}
               <span className="text-white hover:underline underline-offset-4 italic">
                 Golang, Typescript and Java
               </span>{" "}
@@ -73,7 +90,23 @@ export function Portfolio() {
               <span className="text-white hover:underline underline-offset-4 italic">
                 Gin, Express(NestJS), and Spring Boot.
               </span>{" "}
-              Check out my work on github and my{" "}
+              Check out my work on{" "}
+              <Link
+                to="www.github.com/dinocodesx"
+                className="text-white hover:underline underline-offset-4"
+              >
+                Github
+                {/*<ArrowUpRight className="w-4 h-4" />*/}
+              </Link>
+              , connect with me on{" "}
+              <Link
+                to="/links"
+                className="text-white hover:underline underline-offset-4"
+              >
+                Socials
+                {/*<ArrowUpRight className="w-4 h-4" />*/}
+              </Link>{" "}
+              and see my{" "}
               <Link
                 to="/resume"
                 className="text-white hover:underline underline-offset-4"
@@ -263,18 +296,7 @@ export function Portfolio() {
       {/* Footer */}
       <footer className="w-full max-w-2xl mt-32 flex justify-between items-center text-[11px] uppercase tracking-widest opacity-50">
         <p>Let's connect and create something extraordinary.</p>
-        <div
-          className="flex items-center gap-2 cursor-help transition-all duration-300"
-          onMouseEnter={() => setIsHoveringTime(true)}
-          onMouseLeave={() => setIsHoveringTime(false)}
-        >
-          <span className="tabular-nums">
-            {isHoveringTime ? `${time} IST` : "2026"}
-          </span>
-          <div className="w-3 h-3 border border-current rounded-full flex items-center justify-center">
-            <div className="w-1 h-1 bg-current rounded-full" />
-          </div>
-        </div>
+        <FooterTime />
       </footer>
     </div>
   );

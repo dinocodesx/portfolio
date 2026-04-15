@@ -6,8 +6,9 @@ import {
   Check,
   ArrowRight,
   Play,
-  Download,
   Plus,
+  Trash2,
+  CheckCircle2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../../constants/animations";
@@ -146,6 +147,28 @@ export function ButtonCraft() {
                   </button>
                   <span className="text-[10px] text-white/20 uppercase tracking-widest">
                     Fab
+                  </span>
+                </div>
+
+                {/* 7. Delete (Destructive) */}
+                <div className="space-y-3 flex flex-col items-center">
+                  <button className="flex items-center gap-2 px-6 py-2.5 bg-red-500/10 border border-red-500/20 text-red-500 font-medium rounded-full hover:bg-red-500 hover:text-white transition-all active:scale-95 text-sm group">
+                    <Trash2 className="w-4 h-4 group-hover:animate-bounce" />
+                    Delete
+                  </button>
+                  <span className="text-[10px] text-white/20 uppercase tracking-widest">
+                    Destructive
+                  </span>
+                </div>
+
+                {/* 8. Complete (Success) */}
+                <div className="space-y-3 flex flex-col items-center">
+                  <button className="flex items-center gap-2 px-6 py-2.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium rounded-full hover:bg-emerald-500 hover:text-white transition-all active:scale-95 text-sm group">
+                    <CheckCircle2 className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                    Complete
+                  </button>
+                  <span className="text-[10px] text-white/20 uppercase tracking-widest">
+                    Success
                   </span>
                 </div>
               </div>
