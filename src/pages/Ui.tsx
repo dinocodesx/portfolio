@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
 
 const UI_DATA = {
-  pages: [
+  apps: [
     {
       title: "Chat Ui",
       description: "Smooth chats page build with semantic react.",
@@ -98,9 +98,9 @@ export function UI() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
               {/* Motion Column */}
               <motion.div variants={itemVariants} className="space-y-12">
-                <h2 className="text-white/40 text-sm font-medium">Pages</h2>
+                <h2 className="text-white/40 text-sm font-medium">App UIs</h2>
                 <div className="space-y-10">
-                  {UI_DATA.pages.map((item, i) => (
+                  {UI_DATA.apps.map((item, i) => (
                     <Link
                       to={item.link}
                       key={i}

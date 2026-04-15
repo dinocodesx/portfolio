@@ -9,12 +9,14 @@ import { Blogs } from "../components/Blogs";
 import { Experiences } from "../components/Experiences";
 import { SkillCategory } from "../components/Skills";
 import { Talks } from "../components/Talks";
+import { Building } from "../components/Building";
 import {
   EXPERIENCE_DATA,
   SKILLS_DATA,
   TALKS_DATA,
   BLOGS_DATA,
   PROJECTS_DATA,
+  BUILDING_DATA,
 } from "../constants/data";
 
 export function Portfolio() {
@@ -59,14 +61,17 @@ export function Portfolio() {
               Junior Software Engineer from Kolkata, India. I especially love to
               tinker with low level system design and{" "}
               <span className="text-white hover:underline underline-offset-4 italic">
-                how the world works.
+                how the world of technology works.
               </span>
             </p>
             <p>
-              I have previosly worked on Backend development, mainly with Java
-              and Typescript Frameworks like{" "}
+              I have previosly worked on Backend development, mainly with{" "}
               <span className="text-white hover:underline underline-offset-4 italic">
-                NestJS, and Spring Boot.
+                Golang, Typescript and Java
+              </span>{" "}
+              with frameworks like{" "}
+              <span className="text-white hover:underline underline-offset-4 italic">
+                Gin, Express(NestJS), and Spring Boot.
               </span>{" "}
               Check out my work on github and my{" "}
               <Link
@@ -74,6 +79,7 @@ export function Portfolio() {
                 className="text-white hover:underline underline-offset-4"
               >
                 Resume.
+                {/*<ArrowUpRight className="w-4 h-4" />*/}
               </Link>
             </p>
           </div>
@@ -86,29 +92,16 @@ export function Portfolio() {
         >
           {/* Building */}
           <div className="space-y-4">
-            <h2 className="text-xs uppercase tracking-widest font-medium">
-              Building
-            </h2>
-            <div className="space-y-1">
-              <h3 className="text-white font-medium">OAlpaca Studio</h3>
-              <p className="text-sm leading-relaxed">
-                Memory and Canvas based interface for LLM chating and context
-                management.
-              </p>
+            <div className="text-white/40 flex items-center justify-between">
+              <h2 className="text-xs uppercase tracking-widest font-medium">
+                Building
+              </h2>
+              <div className="w-4 h-4" />
             </div>
-            <div className="space-y-1">
-              <Link
-                to="/ui"
-                className="text-white/40 hover:text-white transition-colors flex items-center justify-start"
-              >
-                <h2 className="text-white uppercase tracking-widest font-medium">
-                  UI
-                </h2>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-              <p className="text-sm leading-relaxed">
-                A Collection of UI components for building LLM chat apps.
-              </p>
+            <div className="space-y-4">
+              {BUILDING_DATA.map((building) => (
+                <Building key={building.id} {...building} />
+              ))}
             </div>
           </div>
 

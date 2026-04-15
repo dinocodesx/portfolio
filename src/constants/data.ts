@@ -100,6 +100,29 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
 ];
 
+export interface Building {
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const BUILDING_DATA: Building[] = [
+  {
+    id: 1,
+    title: "OAlpaca Studio",
+    description:
+      "Memory and Canvas based interface for LLM chating and context management.",
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "UI",
+    description: "A Collection of UI components for building LLM chat apps.",
+    link: "/ui",
+  },
+];
+
 export interface Project {
   id: number;
   title: string;
@@ -112,9 +135,9 @@ export interface Project {
 export const PROJECTS_DATA: Project[] = [
   {
     id: 1,
-    title: "Apertre Website",
+    title: "Apertre S2 Website",
     description:
-      "Website for an Open Source Event, hosting more than 5000 active users daily, and using GitHub API for tracting PRs and Issues for points.",
+      "Hosting more than 5000 active users daily, and using GitHub API for tracting PRs and Issues.",
     technologies: [
       "NextJS",
       "NestJS",
@@ -125,13 +148,13 @@ export const PROJECTS_DATA: Project[] = [
       "Redis",
     ],
     github: "https://github.com/apertre",
-    live: "https://s2apertre.resourcio.in/",
+    live: "https://s2.apertre.resourcio.in",
   },
   {
     id: 2,
     title: "Student Chapter Website",
     description:
-      "Building Student Chapter of Electrical Engineering's website for hosting events, using Monorepo to have multiple applications.",
+      "Student Chapter of Electrical Engineering's website for hosting events.",
     technologies: [
       "NextJS",
       "TailwindCSS",
@@ -146,7 +169,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 3,
     title: "Redis from scratch using Go",
     description:
-      "Built a Redis clone in Go supporting commands, memory management, protocol compliance, and object-oriented principles.",
+      "Memory management, protocol compliance, and object-oriented principles.",
     technologies: ["Go", "Linux", "TCP", "Memory"],
     github: "https://github.com/dinocodesx/goredis",
   },

@@ -1,29 +1,28 @@
 import { ArrowUpRight } from "lucide-react";
 
-export interface ProjectProps {
+export interface BuildingProps {
+  id?: number;
   title: string;
   description: string;
-  github?: string;
-  live?: string;
+  link?: string;
 }
 
-export function Projects({ title, description, github, live }: ProjectProps) {
-  const primaryLink = live || github;
+export function Building({ title, description, link }: BuildingProps) {
   const content = (
     <>
       <div className="flex items-center gap-1">
         <h3 className="text-white font-medium group-hover:underline underline-offset-4">
           {title}
         </h3>
-        <ArrowUpRight className="w-4 h-4 group-hover:opacity-100 transition-opacity" />
+        <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
       </div>
       <p className="text-sm leading-relaxed">{description}</p>
     </>
   );
 
-  return primaryLink ? (
+  return link ? (
     <a
-      href={primaryLink}
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
       className="group cursor-pointer block"
