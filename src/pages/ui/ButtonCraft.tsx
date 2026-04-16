@@ -27,7 +27,7 @@ export function ButtonCraft() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
+    <div className="min-h-screen flex flex-col items-center p-2 py-24 md:py-32">
       <motion.main
         variants={containerVariants}
         initial="hidden"
