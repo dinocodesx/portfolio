@@ -42,7 +42,6 @@ export default function App() {
         <Route path="/multipage-form" element={<MultiStepForm />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/mobile-chat" element={<MobileChat />} />
-        <Route path="/mobile-auth" element={<MobileAuth />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
