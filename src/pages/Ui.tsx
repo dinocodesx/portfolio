@@ -6,14 +6,9 @@ import { containerVariants, itemVariants } from "../constants/animations";
 const UI_DATA = {
   apps: [
     {
-      title: "Chat Ui",
-      description: "A fluid messaging interface designed using semantic.",
+      title: "LLM Mobile Chat App",
+      description: "A fluid ai chat interface designed using semantic.",
       link: "/mobile-chat",
-    },
-    {
-      title: "User Login",
-      description: "A sleek authentication portal built with a focus.",
-      link: "/mobile-auth",
     },
   ],
   components: [

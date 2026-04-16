@@ -1,70 +1,24 @@
-import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 
-const Portfolio = lazy(() =>
-  import("./pages/Portfolio").then((m) => ({ default: m.Portfolio })),
-);
-const Projects = lazy(() =>
-  import("./pages/Projects").then((m) => ({ default: m.Projects })),
-);
-const Blogs = lazy(() =>
-  import("./pages/Blogs").then((m) => ({ default: m.Blogs })),
-);
-const Talks = lazy(() =>
-  import("./pages/Talks").then((m) => ({ default: m.Talks })),
-);
-const Social = lazy(() =>
-  import("./pages/Socials").then((m) => ({ default: m.Social })),
-);
-const Resume = lazy(() =>
-  import("./pages/Resume").then((m) => ({ default: m.Resume })),
-);
-const Meet = lazy(() =>
-  import("./pages/Meet").then((m) => ({ default: m.Meet })),
-);
-const UI = lazy(() => import("./pages/Ui").then((m) => ({ default: m.UI })));
-const LLMChatInput = lazy(() =>
-  import("./pages/ui/LLMChatInput").then((m) => ({ default: m.LLMChatInput })),
-);
-const ButtonCraft = lazy(() =>
-  import("./pages/ui/ButtonCraft").then((m) => ({ default: m.ButtonCraft })),
-);
-const DropdownCraft = lazy(() =>
-  import("./pages/ui/DropdownCraft").then((m) => ({
-    default: m.DropdownCraft,
-  })),
-);
-const ChatBubbleCraft = lazy(() =>
-  import("./pages/ui/ChatBubbleCraft").then((m) => ({
-    default: m.ChatBubbleCraft,
-  })),
-);
-const CommandPalette = lazy(() =>
-  import("./pages/ui/CommandPalette").then((m) => ({
-    default: m.CommandPalette,
-  })),
-);
-const SidebarCraft = lazy(() =>
-  import("./pages/ui/Sidebar").then((m) => ({ default: m.SidebarCraft })),
-);
-const MultiStepForm = lazy(() =>
-  import("./pages/ui/MultiStepForm").then((m) => ({
-    default: m.MultiStepForm,
-  })),
-);
-const Checkout = lazy(() =>
-  import("./pages/ui/Checkout").then((m) => ({ default: m.Checkout })),
-);
-const MobileChat = lazy(() =>
-  import("./pages/ui/MobileChat").then((m) => ({ default: m.MobileChat })),
-);
-const MobileAuth = lazy(() =>
-  import("./pages/ui/MobileAuth").then((m) => ({ default: m.MobileAuth })),
-);
-const NotFound = lazy(() =>
-  import("./pages/NotFound").then((m) => ({ default: m.NotFound })),
-);
+import { Portfolio } from "./pages/Portfolio";
+import { Projects } from "./pages/Projects";
+import { Blogs } from "./pages/Blogs";
+import { Talks } from "./pages/Talks";
+import { Social } from "./pages/Socials";
+import { Resume } from "./pages/Resume";
+import { Meet } from "./pages/Meet";
+import { UI } from "./pages/Ui";
+import { LLMChatInput } from "./pages/ui/LLMChatInput";
+import { ButtonCraft } from "./pages/ui/ButtonCraft";
+import { DropdownCraft } from "./pages/ui/DropdownCraft";
+import { ChatBubbleCraft } from "./pages/ui/ChatBubbleCraft";
+import { CommandPalette } from "./pages/ui/CommandPalette";
+import { SidebarCraft } from "./pages/ui/Sidebar";
+import { MultiStepForm } from "./pages/ui/MultiStepForm";
+import { Checkout } from "./pages/ui/Checkout";
+import { MobileChat } from "./pages/ui/MobileChat";
+import { NotFound } from "./pages/NotFound";
 
 export default function App() {
   return (
