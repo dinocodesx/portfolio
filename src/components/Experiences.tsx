@@ -32,7 +32,7 @@ export function Experiences({
         </span>
       </div>
 
-      <p className="text-sm leading-relaxed">{description}</p>
+      {/*<p className="text-sm leading-relaxed">{description}</p>
 
       <ul className="space-y-2">
         {Object.values(achievements).map((achievement, index) => (
@@ -52,7 +52,7 @@ export function Experiences({
             {tech.replace(",", "")}
           </span>
         ))}
-      </div>
+      </div>*/}
     </div>
   );
 }

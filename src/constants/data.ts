@@ -60,42 +60,36 @@ export interface SkillCategory {
 
 export const SKILLS_DATA: SkillCategory[] = [
   {
-    category: "Backend & Distributed Systems",
+    category: "Backend",
     skills: [
-      { name: "Go" },
-      { name: "Java (Spring Boot)" },
-      { name: "Python (FastAPI/Django)" },
-      { name: "Node.js (NestJS)" },
-      { name: "Microservices" },
+      { name: "Spring Boot" },
+      { name: "FastAPI" },
+      { name: "NestJS" },
       { name: "gRPC" },
-      { name: "REST APIs" },
       { name: "Kafka" },
       { name: "Message Queues" },
     ],
   },
   {
-    category: "Cloud & Platform Engineering",
+    category: "Cloud & Platform",
     skills: [
-      { name: "AWS (EC2, S3, RDS, Lambda)" },
-      { name: "Azure" },
+      { name: "AWS" },
       { name: "Docker" },
-      { name: "Kubernetes (K8s)" },
-      { name: "Terraform (IaC)" },
-      { name: "GitHub Actions (CI/CD)" },
+      { name: "Kubernetes" },
+      { name: "Terraform" },
       { name: "Linux (Bash)" },
       { name: "Google Cloud" },
-      { name: "Git" },
     ],
   },
   {
-    category: "Data & Observability",
+    category: "Observability",
     skills: [
-      { name: "PostgreSQL (Query Optimization)" },
+      { name: "PostgreSQL" },
       { name: "MongoDB" },
       { name: "Redis" },
       { name: "Prometheus" },
       { name: "Grafana" },
-      { name: "OpenTelemetry (Telemetry/Monitoring)" },
+      { name: "OpenTelemetry" },
     ],
   },
 ];

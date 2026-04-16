@@ -72,22 +72,20 @@ export function Portfolio() {
           <h1 className="text-white font-medium">Debarshee Chakraborty</h1>
           <div className="space-y-6 text-[15px] leading-relaxed">
             <p>
-              <span className="italic text-white hover:underline underline-offset-4">
-                Crafting interfaces.
-              </span>{" "}
-              Junior Software Engineer from Kolkata, India. I especially love to
-              tinker with low level system design and{" "}
-              <span className="text-white hover:underline underline-offset-4 italic">
+              <span className="italic text-white">Crafting interfaces.</span>{" "}
+              Junior Software Engineer from Kolkata, India. I love to tinker
+              with low level system design and{" "}
+              <span className="text-white italic">
                 how the world of technology works.
               </span>
             </p>
             <p>
               I have previously worked on Backend development, mainly with{" "}
-              <span className="text-white hover:underline underline-offset-4 italic">
+              <span className="text-white italic">
                 Golang, Typescript and Java
               </span>{" "}
               with frameworks like{" "}
-              <span className="text-white hover:underline underline-offset-4 italic">
+              <span className="text-white italic">
                 Gin, Express(NestJS), and Spring Boot.
               </span>{" "}
               Check out my work on{" "}
@@ -190,11 +188,11 @@ export function Portfolio() {
         </motion.section>
 
         {/* Experience Section */}
-        <motion.section variants={itemVariants} className="space-y-8">
+        <motion.section variants={itemVariants} className="space-y-4">
           <h2 className="text-xs uppercase tracking-widest font-medium">
             Experience
           </h2>
-          <div className="space-y-12">
+          <div className="space-y-4">
             {EXPERIENCE_DATA.map((exp) => (
               <Experiences key={exp.id} {...exp} />
             ))}
@@ -214,7 +212,7 @@ export function Portfolio() {
         </motion.section>
 
         {/* Now Section */}
-        <motion.section variants={itemVariants} className="space-y-8">
+        {/*<motion.section variants={itemVariants} className="space-y-8">
           <h2 className="text-xs uppercase tracking-widest font-medium">Now</h2>
           <div className="space-y-6 text-[15px] leading-relaxed">
             <p>
@@ -241,7 +239,7 @@ export function Portfolio() {
               <span className="text-white">Pitch</span> has my top highlights.
             </p>
           </div>
-        </motion.section>
+        </motion.section>*/}
 
         {/* Talks Section */}
         <motion.section variants={itemVariants} className="space-y-8">
