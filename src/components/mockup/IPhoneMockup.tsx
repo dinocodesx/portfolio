@@ -7,7 +7,7 @@ interface IPhoneMockupProps {
 
 export function IPhoneMockup({ children }: IPhoneMockupProps) {
   return (
-    <div className="relative mx-auto w-70 h-142.5 bg-[#1a1a1a] rounded-[48px] border-[7px] border-[#2a2a2a] shadow-[0_0_0_2px_#3a3a3a,0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+    <div className="relative mx-auto w-70 h-142.5 bg-[#1a1a1a] rounded-[36px] border-[7px] border-[#2a2a2a] shadow-[0_0_0_2px_#3a3a3a,0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
       {/* Dynamic Island */}
       <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-50 flex items-center justify-end px-2.5">
         <div className="w-1 h-1 bg-[#1a1a1a] rounded-full" />
