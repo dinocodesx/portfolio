@@ -2,6 +2,7 @@ import React, { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowLeft,
+  ArrowRight,
   MoreHorizontal,
   Send,
   Mic,
@@ -13,6 +14,12 @@ import {
   Gamepad2,
   Users,
   Search,
+  ChevronRight,
+  Plus,
+  Github,
+  Apple,
+  EyeOff,
+  Eye,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { IPhoneMockup } from "../../components/mockup/IPhoneMockup";
@@ -337,6 +344,303 @@ const Key: React.FC<{ char: string }> = ({ char }) => {
   );
 };
 
+const AIVoice: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="w-full h-full relative overflow-hidden"
+    >
+      {/* Animated Gradient Background */}
+      <motion.div
+        animate={{
+          background: [
+            "radial-gradient(circle at 20% 30%, #2a52be 0%, #1a2a6c 50%, #000 100%)",
+            "radial-gradient(circle at 80% 70%, #2a52be 0%, #1a2a6c 50%, #000 100%)",
+            "radial-gradient(circle at 20% 30%, #2a52be 0%, #1a2a6c 50%, #000 100%)",
+          ],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-0"
+      />
+
+      {/* Header */}
+      <div className="absolute top-14 left-0 w-full text-center z-30">
+        <p className="text-white/60 text-[11px] font-medium tracking-wide">
+          Voice chat is active
+        </p>
+      </div>
+
+      {/* 3D-ish Dismorfed Sphere (Blob) */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative">
+          {/* Outer Glow */}
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0 bg-blue-500/30 blur-3xl rounded-full"
+          />
+
+          {/* The Blob */}
+          <motion.div
+            animate={{
+              borderRadius: [
+                "40% 60% 70% 30% / 40% 50% 60% 50%",
+                "60% 40% 30% 70% / 50% 60% 40% 60%",
+                "40% 60% 70% 30% / 40% 50% 60% 50%",
+              ],
+              scale: [1, 1.05, 0.95, 1.02, 1],
+              rotate: [0, 90, 180, 270, 360],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-32 h-32 bg-linear-to-br from-blue-400 via-blue-600 to-blue-900 shadow-[inset_-10px_-10px_20px_rgba(0,0,0,0.5),0_0_40px_rgba(59,130,246,0.5)] relative z-10"
+          />
+
+          {/* Inner Light/Reflection */}
+          <motion.div
+            animate={{
+              borderRadius: [
+                "40% 60% 70% 30% / 40% 50% 60% 50%",
+                "60% 40% 30% 70% / 50% 60% 40% 60%",
+                "40% 60% 70% 30% / 40% 50% 60% 50%",
+              ],
+              x: [-5, 5, -5],
+              y: [-5, 5, -5],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-4 left-4 w-12 h-12 bg-white/20 blur-md z-20"
+          />
+        </div>
+      </div>
+
+      {/* Close Button */}
+      <div className="absolute bottom-12 left-0 w-full flex justify-center z-30">
+        <button
+          onClick={onBack}
+          className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all active:scale-90"
+        >
+          <X className="w-5 h-5" />
+        </button>
+      </div>
+    </motion.div>
+  );
+};
+
+const AIChatHistory: React.FC<{ onSelectChat: () => void }> = ({
+  onSelectChat,
+}) => {
+  const chats = [
+    { id: 1, title: "Motivation letter template", time: "1 hour ago" },
+    { id: 2, title: "Weekly dinner planning", time: "21 hours ago" },
+    { id: 3, title: "Seven-day healthy meal plan", time: "21 hours ago" },
+    { id: 4, title: "Birthday surprise ideas", time: "Yesterday" },
+    { id: 5, title: "React motion tutorial", time: "2 days ago" },
+    { id: 6, title: "Travel itinerary for Japan", time: "1 week ago" },
+    { id: 7, title: "Home workout routine", time: "1 week ago" },
+    { id: 8, title: "Budgeting spreadsheet tips", time: "2 weeks ago" },
+    { id: 9, title: "Best hiking trails nearby", time: "2 weeks ago" },
+    { id: 10, title: "JavaScript closure explanation", time: "3 weeks ago" },
+    { id: 11, title: "Gift ideas for coworkers", time: "1 month ago" },
+    { id: 12, title: "Morning meditation guide", time: "1 month ago" },
+    { id: 13, title: "Project proposal draft", time: "1 month ago" },
+    { id: 14, title: "Gardening for beginners", time: "2 months ago" },
+    { id: 15, title: "Interview prep questions", time: "2 months ago" },
+    { id: 16, title: "Car maintenance checklist", time: "3 months ago" },
+    { id: 17, title: "Book recommendations 2024", time: "3 months ago" },
+    { id: 18, title: "Learning Python roadmap", time: "4 months ago" },
+    { id: 19, title: "Apartment hunting notes", time: "5 months ago" },
+    { id: 20, title: "New Year's resolutions", time: "1 year ago" },
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="w-full h-full bg-[#0a0a0b] flex flex-col"
+    >
+      {/* Header */}
+      <div className="pt-12 pb-4 px-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <button className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center text-white/60 hover:text-white transition-colors">
+            <Menu className="w-4 h-4" />
+          </button>
+          <h2 className="text-white text-sm font-semibold tracking-tight">
+            Chats
+          </h2>
+        </div>
+        <div className="flex items-center gap-2">
+          <button className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center text-white/60 hover:text-white transition-colors">
+            <Search className="w-4 h-4" />
+          </button>
+          <button className="w-8 h-8 bg-[#0055ff] rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-500/20 active:scale-90 transition-transform">
+            <Plus className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* Chat List */}
+      <div className="flex-1 overflow-y-auto px-4 py-2 space-y-4 scrollbar-hide">
+        {chats.map((chat) => (
+          <div
+            key={chat.id}
+            className="flex justify-between items-center group cursor-pointer active:opacity-60 transition-opacity py-1"
+            onClick={onSelectChat}
+          >
+            <div className="space-y-0.5">
+              <h3 className="text-white text-[13px] font-medium leading-tight">
+                {chat.title}
+              </h3>
+              <p className="text-white/30 text-[11px]">{chat.time}</p>
+            </div>
+            <ChevronRight className="w-4 h-4 text-white/20 group-hover:text-white/40 transition-colors" />
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+// --- Auth Components ---
+const GoogleIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+    <path
+      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+      fill="#4285F4"
+    />
+    <path
+      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+      fill="#34A853"
+    />
+    <path
+      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+      fill="#FBBC05"
+    />
+    <path
+      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+      fill="#EA4335"
+    />
+  </svg>
+);
+
+const AuthScreen: React.FC = () => {
+  const [mode, setMode] = useState<"login" | "register">("login");
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <div className="w-full h-full bg-[#0a0a0b] flex flex-col p-6 pt-32">
+      <div className="flex flex-col items-center mb-10">
+        <h2 className="text-white text-xl font-semibold tracking-tight">
+          Syncra AI
+        </h2>
+        <p className="text-white/40 text-[11px] mt-1">
+          {mode === "login"
+            ? "Welcome back to the future"
+            : "Start your journey today"}
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        {/* Social Auth */}
+        <div className="grid grid-cols-3 gap-2">
+          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
+            <GoogleIcon />
+          </button>
+          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
+            <Apple className="w-4 h-4 text-white" />
+          </button>
+          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
+            <Github className="w-4 h-4 text-white" />
+          </button>
+        </div>
+
+        <div className="relative flex items-center py-2">
+          <div className="grow border-t border-white/5"></div>
+          <span className="shrink mx-4 text-[9px] text-white/20 uppercase tracking-widest font-bold">
+            or email
+          </span>
+          <div className="grow border-t border-white/5"></div>
+        </div>
+
+        {/* Form */}
+        <div className="space-y-2.5">
+          {mode === "register" && (
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
+              />
+            </div>
+          )}
+          <div className="relative">
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
+            />
+          </div>
+          <div className="relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 pr-10 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
+            />
+            <button
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/20 hover:text-white/40 transition-colors"
+            >
+              {showPassword ? (
+                <EyeOff className="w-3.5 h-3.5" />
+              ) : (
+                <Eye className="w-3.5 h-3.5" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        <button className="w-full h-11 bg-blue-600 text-white rounded-xl text-xs font-semibold mt-4 hover:bg-blue-500 transition-colors active:scale-[0.98] flex items-center justify-center gap-2">
+          {mode === "login" ? "Sign In" : "Create Account"}
+          <ArrowRight className="w-3.5 h-3.5" />
+        </button>
+
+        <div className="text-center mt-6">
+          <button
+            onClick={() => setMode(mode === "login" ? "register" : "login")}
+            className="text-[11px] text-white/40 hover:text-white transition-colors"
+          >
+            {mode === "login" ? (
+              <>
+                Don't have an account?{" "}
+                <span className="text-blue-500 font-medium">Sign Up</span>
+              </>
+            ) : (
+              <>
+                Already have an account?{" "}
+                <span className="text-blue-500 font-medium">Sign In</span>
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-auto text-center pb-4">
+        <p className="text-[9px] text-white/20 leading-relaxed">
+          <span className="underline">Terms of Service</span> and{" "}
+          <span className="underline">Privacy Policy</span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
 // --- Main Page ---
 
 export function MobileChat() {
@@ -366,7 +670,7 @@ export function MobileChat() {
           <div className="space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-white font-medium text-3xl tracking-tight">
-                Button Varieties
+                LLM Mobile Chat App
               </h1>
               <p className="text-white/40 text-lg">
                 Syncra Mobile Experience . April 2026
@@ -375,20 +679,26 @@ export function MobileChat() {
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
+              className="space-y-6 text-white/60 leading-relaxed max-w-2xl"
             >
-              <p>
-                A high-fidelity <span className="text-white">mobile-first</span>{" "}
-                AI interface. Designed for one-handed use with deep gradients,
-                glassmorphism, and smooth transitions that mimic native iOS
-                behavior.
-              </p>
+              <div className="space-y-4">
+                <h3 className="text-white font-medium text-xl tracking-tight">
+                  Mobile-First AI Chat
+                </h3>
+                <p>
+                  This design prioritizes accessibility, responsiveness, and
+                  fluid navigation. It uses deep gradients and subtle
+                  glassmorphism to create a native, premium feel, focusing on
+                  genuine mobile interaction models and ergonomic thumb-reach
+                  optimization.
+                </p>
+              </div>
             </motion.div>
 
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full lg:w-[50vw] lg:ml-[calc(-25vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 overflow-hidden"
+              className="relative w-full lg:w-[50vw] lg:ml-[calc(-25vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 overflow-hidden mb-12"
             >
               <IPhoneMockup>
                 <AnimatePresence mode="wait">
@@ -403,15 +713,85 @@ export function MobileChat() {
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-white/60 leading-relaxed max-w-2xl"
+              className="space-y-6 text-white/60 leading-relaxed max-w-2xl"
             >
-              <p>
-                The mockup features a{" "}
-                <span className="text-white">Dynamic Island</span> and a custom
-                iOS-style keyboard. The interaction model prioritizes
-                accessibility, with primary actions located in the lower third
-                of the screen for optimal thumb reach.
-              </p>
+              <div className="space-y-4">
+                <h3 className="text-white font-medium text-xl tracking-tight">
+                  App Authentication
+                </h3>
+                <p>
+                  A seamless authentication experience for mobile. Features
+                  integrated social login providers, clear state transitions
+                  between login and registration, and a focus on high-density
+                  input fields for smaller screens.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Auth Preview Area */}
+            <motion.div
+              variants={itemVariants}
+              className="relative w-full lg:w-[50vw] lg:ml-[calc(-25vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 overflow-hidden"
+            >
+              <IPhoneMockup>
+                <AuthScreen />
+              </IPhoneMockup>
+            </motion.div>
+
+            {/* Voice Preview Area */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-6 pt-12 text-white/60 leading-relaxed max-w-2xl"
+            >
+              <div className="space-y-4">
+                <h3 className="text-white font-medium text-2xl tracking-tight">
+                  Multimodal & Voice Interactions
+                </h3>
+                <p>
+                  The app supports multimodal inputs, including images and
+                  document analysis. The Voice Interaction view replaces
+                  traditional chat bubbles with a dynamic, abstract orb that
+                  responds to speech patterns, offering a seamless, hands-free
+                  experience.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="relative w-full lg:w-[50vw] lg:ml-[calc(-25vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 overflow-hidden"
+            >
+              <IPhoneMockup>
+                <AIVoice onBack={() => {}} />
+              </IPhoneMockup>
+            </motion.div>
+
+            {/* Chat History Preview Area */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-6 pt-12 text-white/60 leading-relaxed max-w-2xl"
+            >
+              <div className="space-y-4">
+                <h3 className="text-white font-medium text-2xl tracking-tight">
+                  History & Continuity
+                </h3>
+                <p>
+                  The Chat History view acts as an operational hub for
+                  organizing and retrieving past interactions. It features a
+                  clean layout, deep search functionality, and full state
+                  retention, allowing users to seamlessly resume previous
+                  conversations.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="relative w-full lg:w-[50vw] lg:ml-[calc(-25vw+50%)] min-h-175 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 overflow-hidden"
+            >
+              <IPhoneMockup>
+                <AIChatHistory onSelectChat={() => {}} />
+              </IPhoneMockup>
             </motion.div>
           </div>
         </div>
