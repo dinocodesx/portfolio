@@ -2,7 +2,6 @@ import React, { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowLeft,
-  ArrowRight,
   MoreHorizontal,
   Send,
   Mic,
@@ -18,8 +17,6 @@ import {
   Plus,
   Github,
   Apple,
-  EyeOff,
-  Eye,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { IPhoneMockup } from "../../components/mockup/IPhoneMockup";
@@ -531,9 +528,6 @@ const GoogleIcon = () => (
 );
 
 const AuthScreen: React.FC = () => {
-  const [mode, setMode] = useState<"login" | "register">("login");
-  const [showPassword, setShowPassword] = useState(false);
-
   return (
     <div className="w-full h-full bg-[#0a0a0b] flex flex-col p-6 pt-32">
       <div className="flex flex-col items-center mb-10">
@@ -541,97 +535,22 @@ const AuthScreen: React.FC = () => {
           Syncra AI
         </h2>
         <p className="text-white/40 text-[11px] mt-1">
-          {mode === "login"
-            ? "Welcome back to the future"
-            : "Start your journey today"}
+          Welcome back to the future
         </p>
       </div>
 
-      <div className="space-y-3">
-        {/* Social Auth */}
-        <div className="grid grid-cols-3 gap-2">
-          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
-            <GoogleIcon />
-          </button>
-          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
-            <Apple className="w-4 h-4 text-white" />
-          </button>
-          <button className="flex items-center justify-center h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
-            <Github className="w-4 h-4 text-white" />
-          </button>
-        </div>
-
-        <div className="relative flex items-center py-2">
-          <div className="grow border-t border-white/5"></div>
-          <span className="shrink mx-4 text-[9px] text-white/20 uppercase tracking-widest font-bold">
-            or email
-          </span>
-          <div className="grow border-t border-white/5"></div>
-        </div>
-
-        {/* Form */}
-        <div className="space-y-2.5">
-          {mode === "register" && (
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
-              />
-            </div>
-          )}
-          <div className="relative">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
-            />
-          </div>
-          <div className="relative">
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              className="w-full h-11 bg-white/5 border border-white/10 rounded-xl px-4 pr-10 text-white text-xs outline-none focus:border-blue-500/50 transition-colors placeholder:text-white/20"
-            />
-            <button
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/20 hover:text-white/40 transition-colors"
-            >
-              {showPassword ? (
-                <EyeOff className="w-3.5 h-3.5" />
-              ) : (
-                <Eye className="w-3.5 h-3.5" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        <button className="w-full h-11 bg-blue-600 text-white rounded-xl text-xs font-semibold mt-4 hover:bg-blue-500 transition-colors active:scale-[0.98] flex items-center justify-center gap-2">
-          {mode === "login" ? "Sign In" : "Create Account"}
-          <ArrowRight className="w-3.5 h-3.5" />
+      <div className="mt-auto w-full space-y-3 mb-6">
+        <button className="w-full flex items-center justify-center gap-3 h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors text-white text-xs font-medium">
+          <GoogleIcon />
+          Sign in with Google
         </button>
-
-        <div className="text-center mt-6">
-          <button
-            onClick={() => setMode(mode === "login" ? "register" : "login")}
-            className="text-[11px] text-white/40 hover:text-white transition-colors"
-          >
-            {mode === "login" ? (
-              <>
-                Don't have an account?{" "}
-                <span className="text-blue-500 font-medium">Sign Up</span>
-              </>
-            ) : (
-              <>
-                Already have an account?{" "}
-                <span className="text-blue-500 font-medium">Sign In</span>
-              </>
-            )}
-          </button>
-        </div>
+        <button className="w-full flex items-center justify-center gap-3 h-11 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors text-white text-xs font-medium">
+          <Apple className="w-4 h-4 text-white" />
+          Sign in with Apple
+        </button>
       </div>
 
-      <div className="mt-auto text-center pb-4">
+      <div className="text-center pb-4">
         <p className="text-[9px] text-white/20 leading-relaxed">
           <span className="underline">Terms of Service</span> and{" "}
           <span className="underline">Privacy Policy</span>
