@@ -17,6 +17,8 @@ import {
   Plus,
   Github,
   Apple,
+  Settings,
+  Star,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { IPhoneMockup } from "../../components/mockup/IPhoneMockup";
@@ -41,93 +43,98 @@ const AIHome: React.FC<{ onStartChat: () => void }> = ({ onStartChat }) => {
       {/* Sidebar Overlay */}
       <AnimatePresence>
         {isSidebarOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsSidebarOpen(false)}
-              className="absolute inset-0 bg-black/60 z-60"
-            />
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute top-0 left-0 w-[80%] h-full bg-[#121212] z-70 p-6 pt-16 border-r border-white/5 flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-white font-medium text-sm">Menu</span>
-                <button
-                  onClick={() => setIsSidebarOpen(false)}
-                  className="text-white/40 hover:text-white"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+          <motion.div
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsSidebarOpen(false)}
+            className="absolute inset-0 bg-black/60 z-[60]"
+          />
+        )}
+        {isSidebarOpen && (
+          <motion.div
+            key="sidebar"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="absolute top-0 left-0 w-[80%] h-full bg-[#121212] z-[70] pl-5 pr-4 pt-12 pb-6 border-r border-white/5 flex flex-col rounded-l-3xl"
+          >
+            <div className="flex items-center justify-between mb-8 pr-2">
+              <span className="text-white font-medium text-base tracking-tight">
+                Menu
+              </span>
+              <button
+                onClick={() => setIsSidebarOpen(false)}
+                className="text-white/40 hover:text-white transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              <div className="flex-1 overflow-y-auto space-y-8 scrollbar-hide">
-                <nav className="space-y-4">
-                  {[
-                    {
-                      label: "Syncra Pro",
-                      icon: <Sparkles className="w-4 h-4" />,
-                    },
-                    {
-                      label: "Settings",
-                      icon: <MoreHorizontal className="w-4 h-4" />,
-                    },
-                    { label: "Profile", icon: <Users className="w-4 h-4" /> },
-                  ].map((item) => (
+            <div className="flex-1 overflow-y-auto space-y-6 scrollbar-hide">
+              <nav className="space-y-2">
+                {[
+                  {
+                    label: "Chats",
+                    icon: <MessageSquare className="w-4 h-4" />,
+                  },
+                  {
+                    label: "Settings",
+                    icon: <Settings className="w-4 h-4" />,
+                  },
+                  {
+                    label: "Starred Chats",
+                    icon: <Star className="w-4 h-4" />,
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-3 text-white/60 hover:text-white cursor-pointer py-1.5 text-[13px] transition-colors font-medium"
+                  >
+                    <span className="text-white/30">{item.icon}</span>
+                    {item.label}
+                  </div>
+                ))}
+              </nav>
+
+              <div className="space-y-2 pt-1">
+                <h3 className="text-white/30 text-[9px] uppercase tracking-widest font-bold ml-1">
+                  Recent Chats
+                </h3>
+                <div className="space-y-0.5">
+                  {chatHistory.map((chat, i) => (
                     <div
-                      key={item.label}
-                      className="flex items-center gap-3 text-white/60 hover:text-white cursor-pointer py-2 text-xs transition-colors"
+                      key={i}
+                      className="flex items-center gap-2.5 text-white/50 hover:text-white cursor-pointer py-2 px-2 -ml-1 rounded-xl hover:bg-white/5 text-[11px] transition-all group"
                     >
-                      <span className="text-white/30">{item.icon}</span>
-                      {item.label}
+                      <MessageSquare className="w-3.5 h-3.5 text-white/20 group-hover:text-white/50 transition-colors shrink-0" />
+                      <span className="truncate">{chat}</span>
                     </div>
                   ))}
-                </nav>
-
-                <div className="space-y-4">
-                  <h3 className="text-white/20 text-[10px] uppercase tracking-widest font-bold">
-                    Recent Chats
-                  </h3>
-                  <div className="space-y-1">
-                    {chatHistory.map((chat, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 text-white/50 hover:text-white cursor-pointer py-2.5 px-3 rounded-xl hover:bg-white/5 text-[11px] transition-all group"
-                      >
-                        <MessageSquare className="w-3.5 h-3.5 text-white/20 group-hover:text-blue-500 transition-colors" />
-                        <span className="truncate">{chat}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="mt-auto pt-6 border-t border-white/5">
-                <div className="flex items-center gap-3 p-2 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="w-8 h-8 rounded-full overflow-hidden border border-white/10">
-                    <img
-                      src="https://picsum.photos/seed/chris/100/100"
-                      alt="User"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-white text-[11px] font-medium truncate">
-                      Chris Anderson
-                    </p>
-                    <p className="text-white/40 text-[9px] truncate">
-                      Free Plan
-                    </p>
-                  </div>
+            <div className="mt-auto pt-4 border-t border-white/5">
+              <div className="flex items-center gap-3 p-2 rounded-xl bg-white/5 border border-white/10">
+                <div className="w-8 h-8 rounded-full overflow-hidden border border-white/10">
+                  <img
+                    src="https://picsum.photos/seed/chris/100/100"
+                    alt="User"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-white text-[11px] font-medium truncate">
+                    Chris Anderson
+                  </p>
+                  <p className="text-white/40 text-[9px] truncate">Free Plan</p>
                 </div>
               </div>
-            </motion.div>
-          </>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -566,7 +573,7 @@ export function MobileChat() {
   const [view, setView] = useState<"home" | "chat">("home");
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 py-16 md:py-24">
+    <div className="min-h-screen flex flex-col items-center justify-center p-2 py-8 md:py-12">
       <motion.main
         variants={containerVariants}
         initial="hidden"
