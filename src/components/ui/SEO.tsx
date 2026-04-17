@@ -63,6 +63,16 @@ export const SEO = ({
         }
         canonicalTag.setAttribute('href', canonical);
 
+        // Favicon
+        let faviconTag = document.querySelector('link[rel="icon"]');
+        if (!faviconTag) {
+            faviconTag = document.createElement('link');
+            faviconTag.setAttribute('rel', 'icon');
+            faviconTag.setAttribute('type', 'image/png');
+            document.head.appendChild(faviconTag);
+        }
+        faviconTag.setAttribute('href', '/assets/favicon.png');
+
     }, [title, description, keywords, ogImage, ogType, canonical]);
 
     return null; // This component doesn't render anything to the UI
