@@ -1,16 +1,9 @@
 import { motion } from "motion/react";
-import {
-  ArrowLeft,
-  Download,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Github,
-  Globe,
-} from "lucide-react";
+import { ArrowLeft, Download, Mail, MapPin, Linkedin, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../constants/animations";
+import { itemVariants } from "../constants/animations";
+import { PageLayout } from "../components/ui/PageLayout";
+import { PrintStyles } from "../components/PrintStyles";
 
 const RESUME_DATA = {
   name: "Debarshee Chakraborty",
@@ -96,198 +89,169 @@ const RESUME_DATA = {
   ],
 };
 
+/** Reusable section heading for the Resume page. */
+function ResumeSectionHeading({ title }: { title: string }) {
+  return (
+    <h2 className="text-xs uppercase tracking-widest font-medium text-white/40">
+      {title}
+    </h2>
+  );
+}
+
 export function Resume() {
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-24 md:py-32">
-      <motion.main
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full max-w-2xl space-y-16"
-      >
-        {/* Header */}
-        <motion.div variants={itemVariants} className="space-y-8">
-          <div className="flex items-center justify-between">
-            <Link
-              to="/"
-              className="p-2 -ml-2 rounded-full hover:bg-white/5 transition-colors group"
-              aria-label="Go back to portfolio"
-            >
-              <ArrowLeft className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
-            </Link>
+    <PageLayout className="space-y-16">
+      {/* Header */}
+      <motion.div variants={itemVariants} className="space-y-8">
+        <div className="flex items-center justify-between">
+          <Link
+            to="/"
+            className="p-2 -ml-2 rounded-full hover:bg-white/5 transition-colors group"
+            aria-label="Go back to portfolio"
+          >
+            <ArrowLeft className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
+          </Link>
+          <a
+            href="/resume.pdf"
+            download="resume.pdf"
+            className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-white/40 hover:text-white transition-colors"
+          >
+            <Download className="w-3 h-3" />
+            Download PDF
+          </a>
+        </div>
+
+        <div className="space-y-4">
+          <h1 className="text-3xl font-medium text-white tracking-tight">
+            {RESUME_DATA.name}
+          </h1>
+          <p className="text-white/60">{RESUME_DATA.title}</p>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] text-white/40">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-3.5 h-3.5" />
+              {RESUME_DATA.contact.location}
+            </div>
             <a
-              href="/resume.pdf"
-              download="resume.pdf"
-              className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-white/40 hover:text-white transition-colors"
+              href={`mailto:${RESUME_DATA.contact.email}`}
+              className="flex items-center gap-2 hover:text-white transition-colors"
             >
-              <Download className="w-3 h-3" />
-              Download PDF
+              <Mail className="w-3.5 h-3.5" />
+              Email
+            </a>
+            <a
+              href={RESUME_DATA.contact.linkedin}
+              className="flex items-center gap-2 hover:text-white transition-colors"
+            >
+              <Linkedin className="w-3.5 h-3.5" />
+              LinkedIn
+            </a>
+            <a
+              href={RESUME_DATA.contact.github}
+              className="flex items-center gap-2 hover:text-white transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+              GitHub
             </a>
           </div>
+        </div>
+      </motion.div>
 
-          <div className="space-y-4">
-            <h1 className="text-3xl font-medium text-white tracking-tight">
-              {RESUME_DATA.name}
-            </h1>
-            <p className="text-white/60">{RESUME_DATA.title}</p>
-
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] text-white/40">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5" />
-                {RESUME_DATA.contact.location}
-              </div>
-              <a
-                href={`mailto:${RESUME_DATA.contact.email}`}
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                <Mail className="w-3.5 h-3.5" />
-                Email
-              </a>
-              <a
-                href={RESUME_DATA.contact.linkedin}
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-3.5 h-3.5" />
-                LinkedIn
-              </a>
-              <a
-                href={RESUME_DATA.contact.github}
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                <Github className="w-3.5 h-3.5" />
-                GitHub
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Experience */}
-        <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium text-white/40">
-            Experience
-          </h2>
-          <div className="space-y-12">
-            {RESUME_DATA.experience.map((exp, i) => (
-              <div key={i} className="space-y-4">
-                <div className="flex justify-between items-baseline gap-4">
-                  <h3 className="text-white font-medium">{exp.role}</h3>
-                  <span className="text-[11px] uppercase tracking-wider text-white/40 whitespace-nowrap">
-                    {exp.duration}
-                  </span>
-                </div>
-                <p className="text-sm text-white/60">{exp.company}</p>
-                <ul className="space-y-2">
-                  {exp.points.map((point, j) => (
-                    <li
-                      key={j}
-                      className="text-[14px] text-white/50 leading-relaxed flex gap-3"
-                    >
-                      <span className="text-white/20 mt-1.5 text-[10px]">
-                        ●
-                      </span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-[12px] text-white/30 italic">
-                  Stack: {exp.tech}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Skills */}
-        <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium text-white/40">
-            Skills
-          </h2>
-          <div className="grid gap-6">
-            {RESUME_DATA.skills.map((skill, i) => (
-              <div key={i} className="space-y-2">
-                <h3 className="text-[11px] uppercase tracking-widest text-white/30">
-                  {skill.category}
-                </h3>
-                <p className="text-[14px] text-white/70 leading-relaxed">
-                  {skill.items}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Projects */}
-        <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium text-white/40">
-            Selected Projects
-          </h2>
-          <div className="grid gap-8">
-            {RESUME_DATA.projects.map((project, i) => (
-              <div key={i} className="space-y-2">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="text-white font-medium">{project.title}</h3>
-                </div>
-                <p className="text-[14px] text-white/60 leading-relaxed">
-                  {project.description}
-                </p>
-                <p className="text-[12px] text-white/30 uppercase tracking-wider">
-                  {project.tech}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Education */}
-        <motion.section variants={itemVariants} className="space-y-8">
-          <h2 className="text-xs uppercase tracking-widest font-medium text-white/40">
-            Education
-          </h2>
-          <div className="space-y-6">
-            {RESUME_DATA.education.map((edu, i) => (
-              <div
-                key={i}
-                className="flex justify-between items-baseline gap-4"
-              >
-                <div>
-                  <h3 className="text-white font-medium">{edu.school}</h3>
-                  <p className="text-sm text-white/60">{edu.degree}</p>
-                </div>
+      {/* Experience */}
+      <motion.section variants={itemVariants} className="space-y-8">
+        <ResumeSectionHeading title="Experience" />
+        <div className="space-y-12">
+          {RESUME_DATA.experience.map((exp, i) => (
+            <div key={i} className="space-y-4">
+              <div className="flex justify-between items-baseline gap-4">
+                <h3 className="text-white font-medium">{exp.role}</h3>
                 <span className="text-[11px] uppercase tracking-wider text-white/40 whitespace-nowrap">
-                  {edu.duration}
+                  {exp.duration}
                 </span>
               </div>
-            ))}
-          </div>
-        </motion.section>
+              <p className="text-sm text-white/60">{exp.company}</p>
+              <ul className="space-y-2">
+                {exp.points.map((point, j) => (
+                  <li
+                    key={j}
+                    className="text-[14px] text-white/50 leading-relaxed flex gap-3"
+                  >
+                    <span className="text-white/20 mt-1.5 text-[10px]">●</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-[12px] text-white/30 italic">
+                Stack: {exp.tech}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
 
-        {/* Footer */}
-        <motion.footer
-          variants={itemVariants}
-          className="pt-16 border-t border-white/5 flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-white/20"
-        >
-          <p>Built with precision.</p>
-          <p>© 2026</p>
-        </motion.footer>
-      </motion.main>
+      {/* Skills */}
+      <motion.section variants={itemVariants} className="space-y-8">
+        <ResumeSectionHeading title="Skills" />
+        <div className="grid gap-6">
+          {RESUME_DATA.skills.map((skill, i) => (
+            <div key={i} className="space-y-2">
+              <h3 className="text-[11px] uppercase tracking-widest text-white/30">
+                {skill.category}
+              </h3>
+              <p className="text-[14px] text-white/70 leading-relaxed">
+                {skill.items}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
 
-      {/* Print Styles */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @media print {
-          body { background: white !important; color: black !important; }
-          .min-h-screen { padding: 0 !important; }
-          main { max-width: 100% !important; }
-          button, a svg, .group svg { display: none !important; }
-          h1, h2, h3, p, span, li { color: black !important; }
-          .text-white\\/40, .text-white\\/60, .text-white\\/30, .text-white\\/20 { color: #666 !important; }
-          .border-white\\/5 { border-color: #eee !important; }
-          a { text-decoration: none !important; color: black !important; }
-        }
-      `,
-        }}
-      />
-    </div>
+      {/* Selected Projects */}
+      <motion.section variants={itemVariants} className="space-y-8">
+        <ResumeSectionHeading title="Selected Projects" />
+        <div className="grid gap-8">
+          {RESUME_DATA.projects.map((project, i) => (
+            <div key={i} className="space-y-2">
+              <h3 className="text-white font-medium">{project.title}</h3>
+              <p className="text-[14px] text-white/60 leading-relaxed">
+                {project.description}
+              </p>
+              <p className="text-[12px] text-white/30 uppercase tracking-wider">
+                {project.tech}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Education */}
+      <motion.section variants={itemVariants} className="space-y-8">
+        <ResumeSectionHeading title="Education" />
+        <div className="space-y-6">
+          {RESUME_DATA.education.map((edu, i) => (
+            <div key={i} className="flex justify-between items-baseline gap-4">
+              <div>
+                <h3 className="text-white font-medium">{edu.school}</h3>
+                <p className="text-sm text-white/60">{edu.degree}</p>
+              </div>
+              <span className="text-[11px] uppercase tracking-wider text-white/40 whitespace-nowrap">
+                {edu.duration}
+              </span>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Footer */}
+      <motion.footer
+        variants={itemVariants}
+        className="pt-16 border-t border-white/5 flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-white/20"
+      >
+        <p>Built with precision.</p>
+        <p>© 2026</p>
+      </motion.footer>
+
+      <PrintStyles />
+    </PageLayout>
   );
 }

@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { LinkCard } from "./ui/LinkCard";
 
 export interface ProjectProps {
   title: string;
@@ -8,29 +8,8 @@ export interface ProjectProps {
 }
 
 export function Projects({ title, description, github, live }: ProjectProps) {
-  const primaryLink = live || github;
-  const content = (
-    <>
-      <div className="flex items-center gap-1">
-        <h3 className="text-white font-medium group-hover:underline underline-offset-4">
-          {title}
-        </h3>
-        <ArrowUpRight className="w-4 h-4 group-hover:opacity-100 transition-opacity" />
-      </div>
-      <p className="text-sm leading-relaxed">{description}</p>
-    </>
-  );
-
-  return primaryLink ? (
-    <a
-      href={primaryLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group cursor-pointer block"
-    >
-      {content}
-    </a>
-  ) : (
-    <div className="group cursor-pointer block">{content}</div>
+  const link = live || github;
+  return (
+    <LinkCard title={title} description={description} link={link} dimArrow={false} />
   );
 }
