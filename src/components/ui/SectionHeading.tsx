@@ -20,7 +20,7 @@ export function SectionHeading({ title, href }: SectionHeadingProps) {
     return (
       <Link
         to={href}
-        className="text-white/40 hover:text-white transition-colors flex items-center justify-between"
+        className="text-white/40 hover:text-white transition-colors flex items-center justify-start"
       >
         {label}
         <ArrowUpRight className="w-4 h-4" />
@@ -29,7 +29,7 @@ export function SectionHeading({ title, href }: SectionHeadingProps) {
   }
 
   return (
-    <div className="text-white/40 flex items-center justify-between">
+    <div className="text-white/40 flex items-center justify-start">
       {label}
       {/* Spacer keeps alignment consistent with linked headings */}
       <div className="w-4 h-4" />

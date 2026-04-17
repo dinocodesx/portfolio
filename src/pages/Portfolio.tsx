@@ -31,7 +31,7 @@ export function Portfolio() {
         <h1 className="text-white font-medium">Debarshee Chakraborty</h1>
         <div className="space-y-6 text-[15px] leading-relaxed">
           <p>
-            <span className="italic text-white">Crafting interfaces.</span>{" "}
+            <span className="italic text-white">Architecting Systems.</span>{" "}
             Junior Software Engineer from Kolkata, India. I love to tinker with
             low level system design and{" "}
             <span className="text-white italic">
@@ -78,9 +78,9 @@ export function Portfolio() {
         className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
       >
         {/* Building */}
-        <div className="space-y-4">
+        <div className="space-y-8">
           <SectionHeading title="Building" />
-          <div className="space-y-4">
+          <div className="space-y-8">
             <Building
               title="OAlpaca Studio"
               description="Memory and Canvas based interface for LLM chating."
@@ -95,9 +95,9 @@ export function Portfolio() {
         </div>
 
         {/* Projects */}
-        <div className="space-y-4">
+        <div className="space-y-8">
           <SectionHeading title="Projects" href="/projects" />
-          <div className="space-y-4">
+          <div className="space-y-8">
             <Projects
               title="Apertre S2 Website"
               description="5000+ daily users — GitHub API for PR and issue tracking."
@@ -118,9 +118,9 @@ export function Portfolio() {
         </div>
 
         {/* Case Studies */}
-        <div className="space-y-4">
+        <div className="space-y-8">
           <SectionHeading title="Case Studies" href="/system-designs" />
-          <div className="space-y-4">
+          <div className="space-y-8">
             <Projects
               title="URL Shortener"
               description="Case study on working of Bitly's URL shortener system."
