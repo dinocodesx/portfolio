@@ -28,7 +28,7 @@ const UI_DATA = {
       link: "/checkout",
     },
     {
-      title: "Progressive Onboarding",
+      title: "User Onboarding",
       description: "A simple form for collecting structured data.",
       link: "/multipage-form",
     },
