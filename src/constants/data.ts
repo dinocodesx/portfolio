@@ -105,8 +105,7 @@ export const BUILDING_DATA: Building[] = [
   {
     id: 1,
     title: "OAlpaca Studio",
-    description:
-      "Memory and Canvas based interface for LLM chating and context management.",
+    description: "Memory and Canvas based interface for LLM chating.",
     link: "https://github.com/dinocodesx/oalpaca-studio",
   },
   {
@@ -116,6 +115,72 @@ export const BUILDING_DATA: Building[] = [
     link: "/ui",
   },
 ];
+
+export interface UIItem {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export interface UIData {
+  apps: UIItem[];
+  components: UIItem[];
+  elements: UIItem[];
+}
+
+export const UI_DATA: UIData = {
+  apps: [
+    {
+      title: "LLM Mobile Chat App",
+      description: "A fluid ai chat interface designed using semantic.",
+      link: "/mobile-chat",
+    },
+  ],
+  components: [
+    {
+      title: "LLM Chat Input",
+      description: "A simple text entry field for LLM chat apps.",
+      link: "/chat-input",
+    },
+    {
+      title: "Sidebar Architectures",
+      description: "A structural navigation component for managing.",
+      link: "/sidebar",
+    },
+    {
+      title: "Checkout Flow",
+      description: "A Stripe inspired cart checkout interface.",
+      link: "/checkout",
+    },
+    {
+      title: "User Onboarding",
+      description: "A simple form for collecting structured data.",
+      link: "/multipage-form",
+    },
+  ],
+  elements: [
+    {
+      title: "Button Varieties",
+      description: "8 button variations for all your UI needs.",
+      link: "/button",
+    },
+    {
+      title: "Dropdown Patterns",
+      description: "Smooth dropdown menu with animated transitions.",
+      link: "/dropdown",
+    },
+    {
+      title: "Chat Bubbles",
+      description: "Clean chat interface with animated bubbles.",
+      link: "/chat",
+    },
+    {
+      title: "Command Palette",
+      description: "A powerful modal search and action tool built in.",
+      link: "/command-palette",
+    },
+  ],
+};
 
 export interface Project {
   id: number;
@@ -146,6 +211,29 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 2,
+    title: "Redis from scratch",
+    description: "Fast memory caching from scratch using Go.",
+    technologies: ["Go", "Linux", "TCP", "Memory"],
+    github: "https://github.com/dinocodesx/goredis",
+  },
+  {
+    id: 3,
+    title: "You Need Attention",
+    description:
+      "This repository contains the implementation of the seminal paper `Attention is All You Need` by Vaswani et al. (2017), which introduced the Transformer architecture.",
+    technologies: ["Python", "HuggingFace", "Transformer", "PyTorch"],
+    github: "https://github.com/dinocodesx/attention-is-all-you-need",
+  },
+  {
+    id: 4,
+    title: "Containers from scratch using Go",
+    description:
+      "Building a container form scratch using Go-Lang to do low level system manipulation and modification.",
+    technologies: ["Go", "Linux", "Memory"],
+    github: "https://github.com/dinocodesx/containers-from-scratch",
+  },
+  {
+    id: 5,
     title: "Student Chapter Website",
     description:
       "Student Chapter of Electrical Engineering's website for hosting events.",
@@ -158,30 +246,6 @@ export const PROJECTS_DATA: Project[] = [
     ],
     github: "https://github.com/iei-scee-aot/sceeaot-web",
     live: "https://www.sceeaot.in/",
-  },
-  {
-    id: 3,
-    title: "Redis from scratch using Go",
-    description:
-      "Memory management, protocol compliance, and object-oriented principles.",
-    technologies: ["Go", "Linux", "TCP", "Memory"],
-    github: "https://github.com/dinocodesx/goredis",
-  },
-  {
-    id: 4,
-    title: "Containers from scratch using Go",
-    description:
-      "Building a container form scratch using Go-Lang to do low level system manipulation and modification.",
-    technologies: ["Go", "Linux", "Memory"],
-    github: "https://github.com/dinocodesx/containers-from-scratch",
-  },
-  {
-    id: 5,
-    title: "Attention is All You Need",
-    description:
-      "This repository contains the implementation of the seminal paper `Attention is All You Need` by Vaswani et al. (2017), which introduced the Transformer architecture.",
-    technologies: ["Python", "HuggingFace", "Transformer", "PyTorch"],
-    github: "https://github.com/dinocodesx/attention-is-all-you-need",
   },
   {
     id: 6,
@@ -305,5 +369,44 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: "https://medium.com/@dinocodesx",
     description: "Read my latest blogs on ML and tech",
     icon: "M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12z",
+  },
+];
+
+export interface CaseStudy {
+  id: number;
+  title: string;
+  description: string;
+  /** Optional link to a blog post, GitHub writeup, or Notion doc */
+  link?: string;
+}
+
+export const CASE_STUDIES_DATA: CaseStudy[] = [
+  {
+    id: 1,
+    title: "Design a URL Shortener",
+    description:
+      "High-availability URL shortener handling 100M redirects/day — Base62 encoding, Redis caching, and consistent hashing for horizontal scaling.",
+    link: "/system-designs/url-shortener",
+  },
+  {
+    id: 2,
+    title: "Design a Distributed Message Queue",
+    description:
+      "Kafka-inspired message queue with at-least-once delivery, consumer groups, and partition-based parallelism.",
+    link: "/system-designs/message-queue",
+  },
+  {
+    id: 3,
+    title: "Design a Rate Limiter",
+    description:
+      "Token bucket vs sliding window deep-dive, with a distributed Redis implementation across multiple API gateway instances.",
+    link: "/system-designs/rate-limiter",
+  },
+  {
+    id: 4,
+    title: "Design a Notification Service",
+    description:
+      "Event-driven fan-out service for push, email, and SMS — priority queues and idempotent delivery at 10M subscribers.",
+    link: "/system-designs/notification-service",
   },
 ];

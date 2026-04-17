@@ -19,6 +19,11 @@ import { MultiStepForm } from "./pages/ui/MultiStepForm";
 import { Checkout } from "./pages/ui/Checkout";
 import { MobileChat } from "./pages/ui/MobileChat";
 import { NotFound } from "./pages/NotFound";
+import { SystemDesign } from "./pages/SystemDesign";
+import { URLShortener } from "./pages/system-designs/URLShortener";
+import { MessageQueue } from "./pages/system-designs/MessageQueue";
+import { RateLimiter } from "./pages/system-designs/RateLimiter";
+import { NotificationService } from "./pages/system-designs/NotificationService";
 
 export default function App() {
   return (
@@ -42,6 +47,11 @@ export default function App() {
         <Route path="/multipage-form" element={<MultiStepForm />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/mobile-chat" element={<MobileChat />} />
+        <Route path="/system-designs" element={<SystemDesign />} />
+        <Route path="/system-designs/url-shortener" element={<URLShortener />} />
+        <Route path="/system-designs/message-queue" element={<MessageQueue />} />
+        <Route path="/system-designs/rate-limiter" element={<RateLimiter />} />
+        <Route path="/system-designs/notification-service" element={<NotificationService />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

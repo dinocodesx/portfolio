@@ -5,60 +5,7 @@ import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { UICategoryColumn } from "../components/ui/UICategoryColumn";
 import { SEO } from "../components/ui/SEO";
-
-const UI_DATA = {
-  apps: [
-    {
-      title: "LLM Mobile Chat App",
-      description: "A fluid ai chat interface designed using semantic.",
-      link: "/mobile-chat",
-    },
-  ],
-  components: [
-    {
-      title: "LLM Chat Input",
-      description: "A simple text entry field for LLM chat apps.",
-      link: "/chat-input",
-    },
-    {
-      title: "Sidebar Architectures",
-      description: "A structural navigation component for managing.",
-      link: "/sidebar",
-    },
-    {
-      title: "Checkout Flow",
-      description: "A Stripe inspired cart checkout interface.",
-      link: "/checkout",
-    },
-    {
-      title: "User Onboarding",
-      description: "A simple form for collecting structured data.",
-      link: "/multipage-form",
-    },
-  ],
-  elements: [
-    {
-      title: "Button Varieties",
-      description: "8 button variations for all your UI needs.",
-      link: "/button",
-    },
-    {
-      title: "Dropdown Patterns",
-      description: "Smooth dropdown menu with animated transitions.",
-      link: "/dropdown",
-    },
-    {
-      title: "Chat Bubbles",
-      description: "Clean chat interface with animated bubbles.",
-      link: "/chat",
-    },
-    {
-      title: "Command Palette",
-      description: "A powerful modal search and action tool built in.",
-      link: "/command-palette",
-    },
-  ],
-};
+import { UI_DATA } from "../constants/data";
 
 export function UI() {
   return (

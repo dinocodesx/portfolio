@@ -17,14 +17,12 @@ import {
   SKILLS_DATA,
   TALKS_DATA,
   BLOGS_DATA,
-  PROJECTS_DATA,
-  BUILDING_DATA,
 } from "../constants/data";
 
 export function Portfolio() {
   return (
     <PageLayout className="space-y-20">
-      <SEO 
+      <SEO
         title="Debarshee Chakraborty | Software Engineer"
         description="Junior Software Engineer from Kolkata specialized in Backend development, Distributed Systems, and Low-level system design. Crafting interfaces and exploring technology."
       />
@@ -34,8 +32,8 @@ export function Portfolio() {
         <div className="space-y-6 text-[15px] leading-relaxed">
           <p>
             <span className="italic text-white">Crafting interfaces.</span>{" "}
-            Junior Software Engineer from Kolkata, India. I love to tinker
-            with low level system design and{" "}
+            Junior Software Engineer from Kolkata, India. I love to tinker with
+            low level system design and{" "}
             <span className="text-white italic">
               how the world of technology works.
             </span>
@@ -74,26 +72,70 @@ export function Portfolio() {
         </div>
       </motion.section>
 
-      {/* Building & Projects Grid */}
+      {/* Building, Projects & Case Studies Grid */}
       <motion.section
         variants={itemVariants}
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8"
+        className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
       >
+        {/* Building */}
         <div className="space-y-4">
           <SectionHeading title="Building" />
           <div className="space-y-4">
-            {BUILDING_DATA.map((building) => (
-              <Building key={building.id} {...building} />
-            ))}
+            <Building
+              title="OAlpaca Studio"
+              description="Memory and Canvas based interface for LLM chating."
+              link="https://github.com/dinocodesx/oalpaca-studio"
+            />
+            <Building
+              title="UI"
+              description="A Collection of UI components for building LLM chat apps."
+              link="/ui"
+            />
           </div>
         </div>
 
+        {/* Projects */}
         <div className="space-y-4">
           <SectionHeading title="Projects" href="/projects" />
           <div className="space-y-4">
-            {PROJECTS_DATA.slice(0, 3).map((project) => (
-              <Projects key={project.id} {...project} />
-            ))}
+            <Projects
+              title="Apertre S2 Website"
+              description="5000+ daily users — GitHub API for PR and issue tracking."
+              github="https://github.com/apertre"
+              live="https://s2.apertre.resourcio.in"
+            />
+            <Projects
+              title="Redis from scratch"
+              description="Fast memory caching from scratch using Go."
+              github="https://github.com/dinocodesx/goredis"
+            />
+            <Projects
+              title="You Need Attention"
+              description="Implementation of the Transformer paper."
+              github="https://github.com/dinocodesx/attention-is-all-you-need"
+            />
+          </div>
+        </div>
+
+        {/* Case Studies */}
+        <div className="space-y-4">
+          <SectionHeading title="Case Studies" href="/system-designs" />
+          <div className="space-y-4">
+            <Projects
+              title="URL Shortener"
+              description="Case study on working of Bitly's URL shortener system."
+              live="/system-designs/url-shortener"
+            />
+            <Projects
+              title="Message Queue"
+              description="Kafka-inspired queue with at-least-once delivery."
+              live="/system-designs/message-queue"
+            />
+            <Projects
+              title="Design a Rate Limiter"
+              description="Token bucket vs sliding window."
+              live="/system-designs/rate-limiter"
+            />
           </div>
         </div>
       </motion.section>
