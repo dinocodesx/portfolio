@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "motion/react";
 import { Loader2 } from "lucide-react";
 import { containerVariants, itemVariants } from "../constants/animations";
+import { SEO } from "../components/ui/SEO";
 
 export function Meet() {
   useEffect(() => {
@@ -15,6 +16,10 @@ export function Meet() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6">
+      <SEO 
+        title="Joining Meeting... | Debarshee Chakraborty"
+        description="Redirecting you to Google Meet for a scheduled meeting with Debarshee Chakraborty."
+      />
       <motion.main
         variants={containerVariants}
         initial="hidden"

@@ -11,6 +11,7 @@ import { Building } from "../components/Building";
 import { PageLayout } from "../components/ui/PageLayout";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { FooterTime } from "../components/FooterTime";
+import { SEO } from "../components/ui/SEO";
 import {
   EXPERIENCE_DATA,
   SKILLS_DATA,
@@ -23,6 +24,10 @@ import {
 export function Portfolio() {
   return (
     <PageLayout className="space-y-20">
+      <SEO 
+        title="Debarshee Chakraborty | Software Engineer"
+        description="Junior Software Engineer from Kolkata specialized in Backend development, Distributed Systems, and Low-level system design. Crafting interfaces and exploring technology."
+      />
       {/* Header */}
       <motion.section variants={itemVariants} className="space-y-8">
         <h1 className="text-white font-medium">Debarshee Chakraborty</h1>

@@ -3,11 +3,16 @@ import { Github, ExternalLink } from "lucide-react";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { PageHeader } from "../components/ui/PageHeader";
+import { SEO } from "../components/ui/SEO";
 import { PROJECTS_DATA } from "../constants/data";
 
 export function Projects() {
   return (
     <PageLayout>
+      <SEO 
+        title="Projects | Debarshee Chakraborty"
+        description="A showcase of technical projects ranging from distributed systems in Go to cloud-native applications and AI experiments."
+      />
       <PageHeader title="Projects" />
 
       <div className="space-y-16">

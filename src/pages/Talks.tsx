@@ -3,11 +3,16 @@ import { Play, Calendar, MapPin } from "lucide-react";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { PageHeader } from "../components/ui/PageHeader";
+import { SEO } from "../components/ui/SEO";
 import { TALKS_DATA } from "../constants/data";
 
 export function Talks() {
   return (
     <PageLayout>
+      <SEO 
+        title="Talks | Debarshee Chakraborty"
+        description="Public speaking and workshops by Debarshee Chakraborty. Exploring Machine Learning, GenAI, and technical best practices."
+      />
       <PageHeader title="Talks" />
 
       <div className="space-y-16">

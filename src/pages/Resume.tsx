@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { PrintStyles } from "../components/PrintStyles";
+import { SEO } from "../components/ui/SEO";
 
 const RESUME_DATA = {
   name: "Debarshee Chakraborty",
@@ -101,6 +102,10 @@ function ResumeSectionHeading({ title }: { title: string }) {
 export function Resume() {
   return (
     <PageLayout className="space-y-16">
+      <SEO 
+        title="Resume | Debarshee Chakraborty"
+        description="Professional resume of Debarshee Chakraborty. Specializing in Backend development, Distributed Systems, and Platform Engineering."
+      />
       {/* Header */}
       <motion.div variants={itemVariants} className="space-y-8">
         <div className="flex items-center justify-between">

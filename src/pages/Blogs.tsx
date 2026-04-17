@@ -2,11 +2,16 @@ import { motion } from "motion/react";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { PageHeader } from "../components/ui/PageHeader";
+import { SEO } from "../components/ui/SEO";
 import { BLOGS_DATA } from "../constants/data";
 
 export function Blogs() {
   return (
     <PageLayout>
+      <SEO 
+        title="Blogs | Debarshee Chakraborty"
+        description="Reading list and technical blog posts by Debarshee Chakraborty. Deep dives into backend systems, machine learning, and software engineering."
+      />
       <PageHeader title="Blogs" />
 
       <div className="space-y-16">

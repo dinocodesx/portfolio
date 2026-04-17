@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
 import { UICategoryColumn } from "../components/ui/UICategoryColumn";
+import { SEO } from "../components/ui/SEO";
 
 const UI_DATA = {
   apps: [
@@ -62,6 +63,10 @@ const UI_DATA = {
 export function UI() {
   return (
     <PageLayout maxWidth="max-w-4xl" className="space-y-16">
+      <SEO 
+        title="UI Lab | Debarshee Chakraborty"
+        description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
+      />
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
         <motion.div variants={itemVariants}>
           <Link
