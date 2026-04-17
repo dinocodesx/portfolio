@@ -75,7 +75,7 @@ export function Portfolio() {
       {/* Building, Projects & Case Studies Grid */}
       <motion.section
         variants={itemVariants}
-        className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8"
       >
         {/* Building */}
         <div className="space-y-8">
@@ -106,35 +106,13 @@ export function Portfolio() {
             />
             <Projects
               title="Redis from scratch"
-              description="Fast memory caching from scratch using Go."
+              description="Fast memory caching from scratch using Go from scratch."
               github="https://github.com/dinocodesx/goredis"
             />
             <Projects
-              title="You Need Attention"
-              description="Implementation of the Transformer paper."
+              title="Attention is all you need"
+              description="Implementation of the Transformer paper from scratch."
               github="https://github.com/dinocodesx/attention-is-all-you-need"
-            />
-          </div>
-        </div>
-
-        {/* Case Studies */}
-        <div className="space-y-8">
-          <SectionHeading title="Case Studies" href="/system-designs" />
-          <div className="space-y-8">
-            <Projects
-              title="URL Shortener"
-              description="Case study on working of Bitly's URL shortener system."
-              live="/system-designs/url-shortener"
-            />
-            <Projects
-              title="Message Queue"
-              description="Kafka-inspired queue with at-least-once delivery."
-              live="/system-designs/message-queue"
-            />
-            <Projects
-              title="Design a Rate Limiter"
-              description="Token bucket vs sliding window."
-              live="/system-designs/rate-limiter"
             />
           </div>
         </div>
