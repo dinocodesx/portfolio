@@ -18,34 +18,34 @@ const UI_DATA = {
       link: "/chat-input",
     },
     {
-      title: "Sidebar",
+      title: "Sidebar Architectures",
       description: "A structural navigation component for managing.",
       link: "/sidebar",
     },
     {
-      title: "Checkout",
+      title: "Checkout Flow",
       description: "A Stripe inspired cart checkout interface.",
       link: "/checkout",
     },
     {
-      title: "MultiPage Form",
+      title: "Progressive Onboarding",
       description: "A simple form for collecting structured data.",
       link: "/multipage-form",
     },
   ],
   elements: [
     {
-      title: "Buttons",
+      title: "Button Varieties",
       description: "8 button variations for all your UI needs.",
       link: "/button",
     },
     {
-      title: "Dropdown",
+      title: "Dropdown Patterns",
       description: "Smooth dropdown menu with animated transitions.",
       link: "/dropdown",
     },
     {
-      title: "Chats",
+      title: "Chat Bubbles",
       description: "Clean chat interface with animated bubbles.",
       link: "/chat",
     },
