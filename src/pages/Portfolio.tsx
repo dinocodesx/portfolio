@@ -2,15 +2,15 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { Projects } from "../components/Projects";
-import { Blogs } from "../components/Blogs";
-import { Experiences } from "../components/Experiences";
-import { SkillCategory } from "../components/Skills";
-import { Talks } from "../components/Talks";
-import { Building } from "../components/Building";
+import { Projects } from "../features/portfolio/components/Projects";
+import { Blogs } from "../features/portfolio/components/Blogs";
+import { Experiences } from "../features/portfolio/components/Experiences";
+import { SkillCategory } from "../features/portfolio/components/Skills";
+import { Talks } from "../features/portfolio/components/Talks";
+import { Building } from "../features/portfolio/components/Building";
 import { PageLayout } from "../components/ui/PageLayout";
 import { SectionHeading } from "../components/ui/SectionHeading";
-import { FooterTime } from "../components/FooterTime";
+import { FooterTime } from "../components/layout/FooterTime";
 import { SEO } from "../components/ui/SEO";
 import {
   EXPERIENCE_DATA,
@@ -47,9 +47,16 @@ export function Portfolio() {
             <span className="text-white italic">
               Gin, Express(NestJS), and Spring Boot.
             </span>{" "}
-            Check out my work on{" "}
+            Learn more{" "}
             <Link
-              to="www.github.com/dinocodesx"
+              to="/about"
+              className="text-white hover:underline underline-offset-4"
+            >
+              About me
+            </Link>
+            , check out my work on{" "}
+            <Link
+              to="https://github.com/dinocodesx"
               className="text-white hover:underline underline-offset-4"
             >
               Github

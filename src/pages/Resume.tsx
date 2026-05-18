@@ -3,7 +3,7 @@ import { ArrowLeft, Download, Mail, MapPin, Linkedin, Github } from "lucide-reac
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/ui/PageLayout";
-import { PrintStyles } from "../components/PrintStyles";
+import { PrintStyles } from "../components/layout/PrintStyles";
 import { SEO } from "../components/ui/SEO";
 
 const RESUME_DATA = {

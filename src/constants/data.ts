@@ -132,52 +132,77 @@ export const UI_DATA: UIData = {
   apps: [
     {
       title: "LLM Mobile Chat App",
-      description: "A fluid ai chat interface designed using semantic.",
-      link: "/mobile-chat",
+      description: "A fluid AI chat interface designed with semantic tokens.",
+      link: "/ui/mobile-chat",
+    },
+    {
+      title: "Floating Navbar",
+      description: "Context-aware navigation with smooth state transitions.",
+      link: "/ui/navbar",
     },
   ],
   components: [
     {
-      title: "LLM Chat Input",
-      description: "A simple text entry field for LLM chat apps.",
-      link: "/chat-input",
+      title: "Syncra Web Experience",
+      description: "A high-fidelity desktop chat interface.",
+      link: "/ui/web-chat",
     },
     {
       title: "Sidebar Architectures",
-      description: "A structural navigation component for managing.",
-      link: "/sidebar",
+      description: "A structural navigation component for managing dashboard states.",
+      link: "/ui/sidebar",
+    },
+    {
+      title: "Fluid Accordion",
+      description: "Tactile content expansion with spatial continuity.",
+      link: "/ui/accordion",
     },
     {
       title: "Checkout Flow",
-      description: "A Stripe inspired cart checkout interface.",
-      link: "/checkout",
+      description: "A Stripe-inspired cart checkout interface.",
+      link: "/ui/checkout",
     },
     {
       title: "User Onboarding",
       description: "A simple form for collecting structured data.",
-      link: "/multipage-form",
+      link: "/ui/multipage-form",
+    },
+    {
+      title: "Alert Systems",
+      description: "Critical communication patterns for system status.",
+      link: "/ui/alert",
     },
   ],
   elements: [
     {
       title: "Button Varieties",
       description: "8 button variations for all your UI needs.",
-      link: "/button",
+      link: "/ui/button",
     },
     {
       title: "Dropdown Patterns",
       description: "Smooth dropdown menu with animated transitions.",
-      link: "/dropdown",
+      link: "/ui/dropdown",
     },
     {
       title: "Chat Bubbles",
       description: "Clean chat interface with animated bubbles.",
-      link: "/chat",
+      link: "/ui/chat",
+    },
+    {
+      title: "Toast Notifications",
+      description: "Sleek pop-up notifications with progress bars.",
+      link: "/ui/toast",
+    },
+    {
+      title: "Label Varieties",
+      description: "Semantic indicators for status and categorization.",
+      link: "/ui/label",
     },
     {
       title: "Command Palette",
-      description: "A powerful modal search and action tool built in.",
-      link: "/command-palette",
+      description: "A powerful modal search and action tool built-in.",
+      link: "/ui/command-palette",
     },
   ],
 };
@@ -196,7 +221,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 1,
     title: "Apertre S2 Website",
     description:
-      "Hosting more than 5000 active users daily, and using GitHub API for tracting PRs and Issues.",
+      "Hosting more than 5000 active users daily, and using GitHub API for tracking PRs and Issues.",
     technologies: [
       "NextJS",
       "NestJS",
@@ -228,7 +253,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 4,
     title: "Containers from scratch using Go",
     description:
-      "Building a container form scratch using Go-Lang to do low level system manipulation and modification.",
+      "Building a container from scratch using Go to do low level system manipulation and modification.",
     technologies: ["Go", "Linux", "Memory"],
     github: "https://github.com/dinocodesx/containers-from-scratch",
   },
