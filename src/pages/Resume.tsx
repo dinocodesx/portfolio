@@ -1,10 +1,17 @@
 import { motion } from "motion/react";
-import { ArrowLeft, Download, Mail, MapPin, Linkedin, Github } from "lucide-react";
+import {
+  ArrowLeft,
+  Download,
+  Mail,
+  MapPin,
+  Linkedin,
+  Github,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/ui/PageLayout";
-import { PrintStyles } from "../components/PrintStyles";
-import { SEO } from "../components/ui/SEO";
+import { PageLayout } from "../components/layout/PageLayout";
+import { PrintStyles } from "../components/portfolio/PrintStyles";
+import { SEO } from "../components/layout/SEO";
 
 const RESUME_DATA = {
   name: "Debarshee Chakraborty",
@@ -102,7 +109,7 @@ function ResumeSectionHeading({ title }: { title: string }) {
 export function Resume() {
   return (
     <PageLayout className="space-y-16">
-      <SEO 
+      <SEO
         title="Resume | Debarshee Chakraborty"
         description="Professional resume of Debarshee Chakraborty. Specializing in Backend development, Distributed Systems, and Platform Engineering."
       />

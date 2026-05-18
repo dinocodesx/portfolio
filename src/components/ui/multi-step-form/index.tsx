@@ -13,7 +13,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../constants/animations";
+import { containerVariants, itemVariants } from "../../../constants/animations";
 
 type FormData = {
   fullName: string;

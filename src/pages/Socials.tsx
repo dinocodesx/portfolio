@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 import { itemVariants } from "../constants/animations";
 import { SOCIAL_LINKS } from "../constants/data";
-import { Socials } from "../components/Socials";
-import { PageLayout } from "../components/ui/PageLayout";
-import { SEO } from "../components/ui/SEO";
+import { Socials } from "../components/portfolio/Socials";
+import { PageLayout } from "../components/layout/PageLayout";
+import { SEO } from "../components/layout/SEO";
 
 export function Social() {
   return (
     <PageLayout maxWidth="max-w-md">
-      <SEO 
+      <SEO
         title="Connect | Debarshee Chakraborty"
         description="Connect with Debarshee Chakraborty on GitHub, LinkedIn, Twitter, and more. Let's build something extraordinary together."
       />

@@ -1,4 +1,4 @@
-import { LinkCard } from "./ui/LinkCard";
+import { LinkCard } from "../layout/LinkCard";
 
 export interface ProjectProps {
   title: string;
@@ -10,6 +10,11 @@ export interface ProjectProps {
 export function Projects({ title, description, github, live }: ProjectProps) {
   const link = live || github;
   return (
-    <LinkCard title={title} description={description} link={link} dimArrow={false} />
+    <LinkCard
+      title={title}
+      description={description}
+      link={link}
+      dimArrow={false}
+    />
   );
 }

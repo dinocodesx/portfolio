@@ -1,4 +1,4 @@
-import { LinkCard } from "./ui/LinkCard";
+import { LinkCard } from "../layout/LinkCard";
 
 export interface BuildingProps {
   id?: number;
