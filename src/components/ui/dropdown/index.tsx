@@ -15,7 +15,7 @@ import {
   Link2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../constants/animations";
+import { containerVariants, itemVariants } from "../../../constants/animations";
 
 export function DropdownCraft() {
   const [showMinimal, setShowMinimal] = useState(false);

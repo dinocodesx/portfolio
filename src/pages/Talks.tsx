@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { ArrowLeft, Play, Calendar, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/ui/PageLayout";
-import { SEO } from "../components/ui/SEO";
+import { PageLayout } from "../components/layout/PageLayout";
+import { SEO } from "../components/layout/SEO";
 import { TALKS_DATA } from "../constants/data";
 
 export function Talks() {
@@ -54,7 +54,9 @@ export function Talks() {
                   <h2 className="text-white font-medium text-lg leading-tight">
                     {talk.title}
                   </h2>
-                  <p className="text-white/40 text-sm font-medium">{talk.event}</p>
+                  <p className="text-white/40 text-sm font-medium">
+                    {talk.event}
+                  </p>
                 </div>
 
                 <p className="text-[14px] text-white/60 leading-relaxed max-w-xl">

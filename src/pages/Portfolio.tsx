@@ -2,16 +2,16 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { Projects } from "../components/Projects";
-import { Blogs } from "../components/Blogs";
-import { Experiences } from "../components/Experiences";
-import { SkillCategory } from "../components/Skills";
-import { Talks } from "../components/Talks";
-import { Building } from "../components/Building";
-import { PageLayout } from "../components/ui/PageLayout";
-import { SectionHeading } from "../components/ui/SectionHeading";
-import { FooterTime } from "../components/FooterTime";
-import { SEO } from "../components/ui/SEO";
+import { Projects } from "../components/portfolio/Projects";
+import { Blogs } from "../components/portfolio/Blog";
+import { Experiences } from "../components/portfolio/Experiences";
+import { SkillCategory } from "../components/portfolio/Skills";
+import { Talks } from "../components/portfolio/Talks";
+import { Building } from "../components/portfolio/Building";
+import { PageLayout } from "../components/layout/PageLayout";
+import { SectionHeading } from "../components/layout/SectionHeading";
+import { FooterTime } from "../components/portfolio/FooterTime";
+import { SEO } from "../components/layout/SEO";
 import {
   EXPERIENCE_DATA,
   SKILLS_DATA,
@@ -36,7 +36,14 @@ export function Portfolio() {
             low level system design and{" "}
             <span className="text-white italic">
               how the world of technology works.
-            </span>
+            </span>{" "}
+            Get to know more{" "}
+            <Link
+              to="/about"
+              className="text-white hover:underline underline-offset-4"
+            >
+              about me and my background.
+            </Link>
           </p>
           <p>
             I have previously worked on Backend development, mainly with{" "}

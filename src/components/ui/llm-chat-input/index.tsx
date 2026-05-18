@@ -10,7 +10,7 @@ import {
   Link as LinkIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../constants/animations";
+import { containerVariants, itemVariants } from "../../../constants/animations";
 
 const models = ["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Llama 3"];
 

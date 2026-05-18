@@ -2,12 +2,12 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../constants/animations";
-import { SEO } from "../components/ui/SEO";
+import { SEO } from "../components/layout/SEO";
 
 export function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24 md:py-32">
-      <SEO 
+      <SEO
         title="404 - Page Not Found | Debarshee Chakraborty"
         description="The page you are looking for does not exist."
       />

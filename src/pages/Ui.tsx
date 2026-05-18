@@ -2,15 +2,15 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/ui/PageLayout";
-import { UICategoryColumn } from "../components/ui/UICategoryColumn";
-import { SEO } from "../components/ui/SEO";
+import { PageLayout } from "../components/layout/PageLayout";
+import { UICategoryColumn } from "../components/layout/UICategoryColumn";
+import { SEO } from "../components/layout/SEO";
 import { UI_DATA } from "../constants/data";
 
 export function UI() {
   return (
     <PageLayout maxWidth="max-w-4xl" className="space-y-16">
-      <SEO 
+      <SEO
         title="UI Lab | Debarshee Chakraborty"
         description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
       />

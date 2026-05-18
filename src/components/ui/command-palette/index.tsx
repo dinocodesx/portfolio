@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../constants/animations";
+import { containerVariants, itemVariants } from "../../../constants/animations";
 
 export function CommandPalette() {
   const [searchValue, setSearchValue] = useState("");

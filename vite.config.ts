@@ -15,5 +15,18 @@ export default defineConfig(({ mode }) => {
     server: {
       hmr: process.env.DISABLE_HMR !== "true",
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "vendor-react": ["react", "react-dom", "react-router-dom"],
+            "vendor-motion": ["motion"],
+            "vendor-icons": ["lucide-react"],
+            "vendor-genai": ["@google/genai"],
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000,
+    },
   };
 });

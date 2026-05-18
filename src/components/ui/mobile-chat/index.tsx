@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { IPhoneMockup } from "../../components/mockup/IPhoneMockup";
-import { containerVariants, itemVariants } from "../../constants/animations";
+import { IPhoneMockup } from "../../../components/mockup/IPhoneMockup";
+import { containerVariants, itemVariants } from "../../../constants/animations";
 
 // --- Components ---
-import AIHome from "../../components/mobile-chat/AIHome";
-import AIChat from "../../components/mobile-chat/AIChat";
-import AIVoice from "../../components/mobile-chat/AIVoice";
-import AIChatHistory from "../../components/mobile-chat/AIChatHistory";
-import AuthScreen from "../../components/mobile-chat/AuthScreen";
+import AIHome from "../../../components/mobile-chat/AIHome";
+import AIChat from "../../../components/mobile-chat/AIChat";
+import AIVoice from "../../../components/mobile-chat/AIVoice";
+import AIChatHistory from "../../../components/mobile-chat/AIChatHistory";
+import AuthScreen from "../../../components/mobile-chat/AuthScreen";
 
 export function MobileChat() {
   const [view, setView] = useState<"home" | "chat">("home");

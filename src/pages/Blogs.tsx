@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/ui/PageLayout";
-import { SEO } from "../components/ui/SEO";
+import { PageLayout } from "../components/layout/PageLayout";
+import { SEO } from "../components/layout/SEO";
 import { BLOGS_DATA } from "../constants/data";
 
 export function Blogs() {
