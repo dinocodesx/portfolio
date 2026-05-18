@@ -94,7 +94,7 @@ export function MultiStepForm() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="w-full max-w-5xl space-y-16"
+        className="w-full max-w-4xl space-y-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
           {/* Sidebar */}
@@ -111,15 +111,15 @@ export function MultiStepForm() {
           {/* Content */}
           <div className="space-y-12">
             <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-white font-medium text-3xl tracking-tight">
+              <h1 className="text-white font-medium text-2xl tracking-tight">
                 Progressive Onboarding
               </h1>
-              <p className="text-white/40 text-lg">April 2026</p>
+              <p className="text-white/40 text-base">April 2026</p>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="space-y-6 text-white/60 leading-relaxed max-w-2xl"
+              className="space-y-6 text-white/60 leading-relaxed max-w-2xl text-[15px]"
             >
               <p>
                 A <span className="text-white">multi-step authentication</span>{" "}
@@ -132,7 +132,7 @@ export function MultiStepForm() {
             {/* Preview Area */}
             <motion.div
               variants={itemVariants}
-              className="relative w-full min-h-125 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-6 md:p-12 overflow-hidden"
+              className="relative w-full min-h-110 bg-[#0A0A0A] border border-white/5 rounded-4xl flex items-center justify-center p-4 md:p-8 overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 {!isComplete ? (
@@ -141,16 +141,16 @@ export function MultiStepForm() {
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 1.02 }}
-                    className="w-full max-w-md bg-[#111] border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl space-y-8"
+                    className="w-full max-w-sm bg-[#111] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl space-y-6"
                   >
                     {/* Progress Header */}
                     <div className="space-y-4">
                       <div className="flex justify-between items-end">
                         <div className="space-y-1">
-                          <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">
+                          <p className="text-white/20 text-[9px] font-bold uppercase tracking-[0.2em]">
                             Step {step} of 3
                           </p>
-                          <h2 className="text-white font-medium text-xl">
+                          <h2 className="text-white font-medium text-lg">
                             {step === 1 && "Create Account"}
                             {step === 2 && "Personal Details"}
                             {step === 3 && "Final Review"}
@@ -171,8 +171,8 @@ export function MultiStepForm() {
                       </div>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="relative min-h-60">
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      <div className="relative min-h-56">
                         <AnimatePresence mode="wait" custom={direction}>
                           <motion.div
                             key={step}
@@ -186,16 +186,16 @@ export function MultiStepForm() {
                               damping: 20,
                               stiffness: 100,
                             }}
-                            className="space-y-4"
+                            className="space-y-3.5"
                           >
                             {step === 1 && (
                               <>
-                                <div className="space-y-2">
-                                  <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                <div className="space-y-1.5">
+                                  <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                     Full Name
                                   </label>
                                   <div className="relative">
-                                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+                                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/20" />
                                     <input
                                       required
                                       type="text"
@@ -206,16 +206,16 @@ export function MultiStepForm() {
                                           fullName: e.target.value,
                                         })
                                       }
-                                      className="w-full h-12 bg-white/3 border border-white/10 rounded-xl pl-11 pr-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                      className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl pl-10.5 pr-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                     />
                                   </div>
                                 </div>
-                                <div className="space-y-2">
-                                  <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                <div className="space-y-1.5">
+                                  <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                     Email Address
                                   </label>
                                   <div className="relative">
-                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/20" />
                                     <input
                                       required
                                       type="email"
@@ -224,13 +224,13 @@ export function MultiStepForm() {
                                       onChange={(e) =>
                                         updateFields({ email: e.target.value })
                                       }
-                                      className="w-full h-12 bg-white/3 border border-white/10 rounded-xl pl-11 pr-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                      className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl pl-10.5 pr-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                     />
                                   </div>
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
-                                  <div className="space-y-2">
-                                    <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                <div className="grid grid-cols-2 gap-3">
+                                  <div className="space-y-1.5">
+                                    <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                       Password
                                     </label>
                                     <input
@@ -243,11 +243,11 @@ export function MultiStepForm() {
                                           password: e.target.value,
                                         })
                                       }
-                                      className="w-full h-12 bg-white/3 border border-white/10 rounded-xl px-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                      className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl px-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                     />
                                   </div>
-                                  <div className="space-y-2">
-                                    <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                  <div className="space-y-1.5">
+                                    <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                       Confirm
                                     </label>
                                     <input
@@ -260,7 +260,7 @@ export function MultiStepForm() {
                                           confirmPassword: e.target.value,
                                         })
                                       }
-                                      className="w-full h-12 bg-white/3 border border-white/10 rounded-xl px-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                      className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl px-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                     />
                                   </div>
                                 </div>
@@ -269,12 +269,12 @@ export function MultiStepForm() {
 
                             {step === 2 && (
                               <>
-                                <div className="space-y-2">
-                                  <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                <div className="space-y-1.5">
+                                  <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                     Residential Address
                                   </label>
                                   <div className="relative">
-                                    <MapPin className="absolute left-4 top-4 w-4 h-4 text-white/20" />
+                                    <MapPin className="absolute left-4 top-3.5 w-3.5 h-3.5 text-white/20" />
                                     <textarea
                                       required
                                       placeholder="Street address, City, State"
@@ -284,13 +284,13 @@ export function MultiStepForm() {
                                           address: e.target.value,
                                         })
                                       }
-                                      className="w-full min-h-25 bg-white/3 border border-white/10 rounded-xl pl-11 pr-4 py-3 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10 resize-none"
+                                      className="w-full min-h-20 bg-white/3 border border-white/10 rounded-xl pl-10.5 pr-4 py-2.5 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10 resize-none"
                                     />
                                   </div>
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
-                                  <div className="space-y-2">
-                                    <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                <div className="grid grid-cols-2 gap-3">
+                                  <div className="space-y-1.5">
+                                    <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                       Pin Code
                                     </label>
                                     <input
@@ -301,15 +301,15 @@ export function MultiStepForm() {
                                       onChange={(e) =>
                                         updateFields({ pin: e.target.value })
                                       }
-                                      className="w-full h-12 bg-white/3 border border-white/10 rounded-xl px-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                      className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl px-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                     />
                                   </div>
-                                  <div className="space-y-2">
-                                    <label className="text-white/40 text-[11px] uppercase tracking-wider font-semibold ml-1">
+                                  <div className="space-y-1.5">
+                                    <label className="text-white/40 text-[10px] uppercase tracking-wider font-semibold ml-1">
                                       Mobile Number
                                     </label>
                                     <div className="relative">
-                                      <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+                                      <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/20" />
                                       <input
                                         required
                                         type="tel"
@@ -320,7 +320,7 @@ export function MultiStepForm() {
                                             mobile: e.target.value,
                                           })
                                         }
-                                        className="w-full h-12 bg-white/3 border border-white/10 rounded-xl pl-11 pr-4 text-white outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
+                                        className="w-full h-10.5 bg-white/3 border border-white/10 rounded-xl pl-10.5 pr-4 text-white text-[13px] outline-none focus:border-blue-500/50 transition-all placeholder:text-white/10"
                                       />
                                     </div>
                                   </div>
@@ -329,15 +329,15 @@ export function MultiStepForm() {
                             )}
 
                             {step === 3 && (
-                              <div className="space-y-6 py-4">
-                                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl space-y-3">
-                                  <div className="flex items-center gap-3">
-                                    <ShieldCheck className="w-5 h-5 text-blue-500" />
-                                    <span className="text-white font-medium text-sm">
+                              <div className="space-y-5 py-2">
+                                <div className="p-3.5 bg-white/5 border border-white/10 rounded-2xl space-y-2.5">
+                                  <div className="flex items-center gap-2.5">
+                                    <ShieldCheck className="w-4.5 h-4.5 text-blue-500" />
+                                    <span className="text-white font-medium text-[13px]">
                                       Terms of Service
                                     </span>
                                   </div>
-                                  <p className="text-white/40 text-xs leading-relaxed">
+                                  <p className="text-white/40 text-[11px] leading-relaxed">
                                     By completing this registration, you agree
                                     to our Terms of Service and Privacy Policy.
                                     We'll use your data to provide a
@@ -357,10 +357,10 @@ export function MultiStepForm() {
                                         })
                                       }
                                     />
-                                    <div className="w-5 h-5 border border-white/10 rounded bg-white/5 peer-checked:bg-blue-500 peer-checked:border-blue-500 transition-all" />
-                                    <CheckCircle2 className="absolute w-3.5 h-3.5 text-white opacity-0 peer-checked:opacity-100 transition-opacity" />
+                                    <div className="w-4.5 h-4.5 border border-white/10 rounded bg-white/5 peer-checked:bg-blue-500 peer-checked:border-blue-500 transition-all" />
+                                    <CheckCircle2 className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity" />
                                   </div>
-                                  <span className="text-[13px] text-white/40 group-hover:text-white/60 transition-colors leading-snug">
+                                  <span className="text-[12px] text-white/40 group-hover:text-white/60 transition-colors leading-snug">
                                     I have read and agree to the terms and
                                     conditions of the service.
                                   </span>
@@ -371,31 +371,31 @@ export function MultiStepForm() {
                         </AnimatePresence>
                       </div>
 
-                      <div className="flex gap-3 pt-4">
+                      <div className="flex gap-3 pt-2">
                         {step > 1 && (
                           <button
                             type="button"
                             onClick={handleBack}
-                            className="flex-1 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white/60 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+                            className="flex-1 h-10.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 text-white/60 hover:text-white hover:bg-white/10 transition-all text-[13px] font-medium"
                           >
-                            <ChevronLeft className="w-4 h-4" />
+                            <ChevronLeft className="w-3.5 h-3.5" />
                             Back
                           </button>
                         )}
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-2 h-12 bg-white text-black rounded-xl font-semibold text-sm overflow-hidden group disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                          className="flex-2 h-10.5 bg-white text-black rounded-xl font-semibold text-[13px] overflow-hidden group disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         >
                           {isSubmitting ? (
-                            <div className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin" />
+                            <div className="w-3.5 h-3.5 border-2 border-black/20 border-t-black rounded-full animate-spin" />
                           ) : (
                             <>
                               {step === 3
                                 ? "Complete Registration"
                                 : "Continue"}
                               {step < 3 && (
-                                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                               )}
                             </>
                           )}

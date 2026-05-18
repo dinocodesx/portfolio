@@ -9,6 +9,9 @@ import { Talks } from "./pages/Talks";
 import { Social } from "./pages/Socials";
 import { Resume } from "./pages/Resume";
 import { Meet } from "./pages/Meet";
+import { GlobalCommandPalette } from "./components/layout/CommandPalette";
+import { NotFound } from "./pages/NotFound";
+
 import { UI } from "./pages/Ui";
 import { LLMChatInput } from "./components/ui/llm-chat-input";
 import { ButtonCraft } from "./components/ui/button";
@@ -18,13 +21,18 @@ import { CommandPalette } from "./components/ui/command-palette";
 import { SidebarCraft } from "./components/ui/sidebar";
 import { MultiStepForm } from "./components/ui/multi-step-form";
 import { Checkout } from "./components/ui/checkout";
+import { Toast } from "./components/ui/toast";
+import { Label } from "./components/ui/label";
+import { AlertShowcase } from "./components/ui/alert";
+import { AccordionCraft } from "./components/ui/accordion";
+import { NavbarCraft } from "./components/ui/navbar";
 import { MobileChat } from "./components/ui/mobile-chat";
-import { NotFound } from "./pages/NotFound";
 
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <GlobalCommandPalette />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
@@ -46,14 +54,15 @@ export default function App() {
           <Route path="checkout" element={<Checkout />} />
           <Route path="mobile-chat" element={<MobileChat />} />
 
-          {/*<Route path="toast" element={<Toast />} />
+          <Route path="toast" element={<Toast />} />
           <Route path="label" element={<Label />} />
-          <Route path="alert" element={<Alert />} />
+          <Route path="alert" element={<AlertShowcase />} />
           <Route path="accordion" element={<AccordionCraft />} />
-          <Route path="navbar" element={<NavbarCraft />} />*/}
+          <Route path="navbar" element={<NavbarCraft />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 }
+

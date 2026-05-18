@@ -4,7 +4,6 @@ import { itemVariants } from "../../constants/animations";
 
 interface UIItem {
   title: string;
-  description: string;
   link: string;
 }
 
@@ -31,9 +30,6 @@ export function UICategoryColumn({ heading, items }: UICategoryColumnProps) {
             <h3 className="text-white font-medium group-hover:underline underline-offset-4 decoration-white/30">
               {item.title}
             </h3>
-            <p className="text-white/40 text-[14px] leading-relaxed">
-              {item.description}
-            </p>
           </Link>
         ))}
       </div>

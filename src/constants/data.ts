@@ -118,7 +118,6 @@ export const BUILDING_DATA: Building[] = [
 
 export interface UIItem {
   title: string;
-  description: string;
   link: string;
 }
 
@@ -132,52 +131,63 @@ export const UI_DATA: UIData = {
   apps: [
     {
       title: "LLM Mobile Chat App",
-      description: "A fluid ai chat interface designed using semantic.",
-      link: "/mobile-chat",
+      link: "/ui/mobile-chat",
     },
   ],
   components: [
     {
       title: "LLM Chat Input",
-      description: "A simple text entry field for LLM chat apps.",
-      link: "/chat-input",
+      link: "/ui/chat-input",
     },
     {
       title: "Sidebar Architectures",
-      description: "A structural navigation component for managing.",
-      link: "/sidebar",
+      link: "/ui/sidebar",
     },
     {
       title: "Checkout Flow",
-      description: "A Stripe inspired cart checkout interface.",
-      link: "/checkout",
+      link: "/ui/checkout",
     },
     {
       title: "User Onboarding",
-      description: "A simple form for collecting structured data.",
-      link: "/multipage-form",
+      link: "/ui/multipage-form",
+    },
+    {
+      title: "Navigation Bar",
+      link: "/ui/navbar",
+    },
+    {
+      title: "Accessible Accordions",
+      link: "/ui/accordion",
     },
   ],
   elements: [
     {
       title: "Button Varieties",
-      description: "8 button variations for all your UI needs.",
-      link: "/button",
+      link: "/ui/button",
     },
     {
       title: "Dropdown Patterns",
-      description: "Smooth dropdown menu with animated transitions.",
-      link: "/dropdown",
+      link: "/ui/dropdown",
     },
     {
       title: "Chat Bubbles",
-      description: "Clean chat interface with animated bubbles.",
-      link: "/chat",
+      link: "/ui/chat",
     },
     {
       title: "Command Palette",
-      description: "A powerful modal search and action tool built in.",
-      link: "/command-palette",
+      link: "/ui/command-palette",
+    },
+    {
+      title: "System Alerts",
+      link: "/ui/alert",
+    },
+    {
+      title: "Toast Notifications",
+      link: "/ui/toast",
+    },
+    {
+      title: "Dynamic Labels",
+      link: "/ui/label",
     },
   ],
 };
