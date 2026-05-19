@@ -125,17 +125,11 @@ export interface UIItem {
 }
 
 export const UI_DATA: UIItem[] = [
-  // {
-  //   title: "LLM Mobile Chat App",
-  //   link: "/ui/mobile-chat",
-  //   description: "A complete mobile-first chat experience with real-time feedback loops and model selection.",
-  //   label: "Featured",
-  //   gridSpan: 3,
-  // },
   {
     title: "LLM Chat Input",
     link: "/ui/chat-input",
-    description: "Smart textarea with auto-resize, file attachments, and token count indicators.",
+    description:
+      "Smart textarea with auto-resize, file attachments, and token count indicators.",
     gridSpan: 2,
   },
   {
@@ -211,6 +205,76 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 2,
   },
 ];
+
+export interface SpotifyPlaylist {
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+  coverImage: string;
+}
+
+export interface SpotifyArtist {
+  id: number;
+  name: string;
+  genre: string;
+  link: string;
+  image: string;
+}
+
+export interface SpotifyData {
+  playlists: SpotifyPlaylist[];
+  artists: SpotifyArtist[];
+}
+
+export const SPOTIFY_DATA: SpotifyData = {
+  playlists: [
+    {
+      id: 1,
+      title: "Focus Flow",
+      description: "Deep work and systems engineering rhythms.",
+      link: "https://open.spotify.com/playlist/37i9dQZF1DWZeKHA6V9etM",
+      coverImage: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      id: 2,
+      title: "Late Night Go",
+      description: "Atmospheric beats for low-level hacking.",
+      link: "https://open.spotify.com/playlist/37i9dQZF1DX8Ueb9CidzhR",
+      coverImage: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
+    },
+    {
+      id: 3,
+      title: "Technical Soundtracks",
+      description: "Ambient scores from seminal sci-fi and tech films.",
+      link: "https://open.spotify.com/playlist/37i9dQZF1DX5Ejj07X7zQT",
+      coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+    },
+  ],
+  artists: [
+    {
+      id: 1,
+      name: "Hans Zimmer",
+      genre: "Cinematic / Score",
+      link: "https://open.spotify.com/artist/0YC192i3ZhyFO9mSPSMhC2",
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      id: 2,
+      name: "Ludovico Einaudi",
+      genre: "Modern Classical",
+      link: "https://open.spotify.com/artist/2uFUBicSJLZ7YPs9A99u2r",
+      image: "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
+    },
+    {
+      id: 3,
+      name: "Olafur Arnalds",
+      genre: "Ambient / Neoclassical",
+      link: "https://open.spotify.com/artist/7pne966Q96I6H8OQ8T76zS",
+      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+    },
+  ],
+};
 
 export interface Project {
   id: number;

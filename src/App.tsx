@@ -1,35 +1,34 @@
-import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
 import { ScrollToTop } from "./components/portfolio/ScrollToTop";
 import { GlobalCommandPalette } from "./components/layout/CommandPalette";
 
-// Lazy load pages
-const Portfolio = lazy(() => import("./pages/Portfolio").then(m => ({ default: m.Portfolio })));
-const About = lazy(() => import("./pages/About").then(m => ({ default: m.About })));
-const Projects = lazy(() => import("./pages/Projects").then(m => ({ default: m.Projects })));
-const Blogs = lazy(() => import("./pages/Blogs").then(m => ({ default: m.Blogs })));
-const Talks = lazy(() => import("./pages/Talks").then(m => ({ default: m.Talks })));
-const Social = lazy(() => import("./pages/Socials").then(m => ({ default: m.Social })));
-const Resume = lazy(() => import("./pages/Resume").then(m => ({ default: m.Resume })));
-const Meet = lazy(() => import("./pages/Meet").then(m => ({ default: m.Meet })));
-const NotFound = lazy(() => import("./pages/NotFound").then(m => ({ default: m.NotFound })));
+// Direct imports (No Lazy Loading)
+import { Portfolio } from "./pages/Portfolio";
+import { About } from "./pages/About";
+import { Projects } from "./pages/Projects";
+import { Blogs } from "./pages/Blogs";
+import { Talks } from "./pages/Talks";
+import { Social } from "./pages/Socials";
+import { Spotify } from "./pages/Spotify";
+import { Resume } from "./pages/Resume";
+import { Meet } from "./pages/Meet";
+import { NotFound } from "./pages/NotFound";
 
-// Lazy load UI components
-const UI = lazy(() => import("./pages/Ui").then(m => ({ default: m.UI })));
-const LLMChatInput = lazy(() => import("./components/ui/llm-chat-input").then(m => ({ default: m.LLMChatInput })));
-const ButtonCraft = lazy(() => import("./components/ui/button").then(m => ({ default: m.ButtonCraft })));
-const DropdownCraft = lazy(() => import("./components/ui/dropdown").then(m => ({ default: m.DropdownCraft })));
-const ChatBubbleCraft = lazy(() => import("./components/ui/chat-bubble").then(m => ({ default: m.ChatBubbleCraft })));
-const CommandPalette = lazy(() => import("./components/ui/command-palette").then(m => ({ default: m.CommandPalette })));
-const SidebarCraft = lazy(() => import("./components/ui/sidebar").then(m => ({ default: m.SidebarCraft })));
-const MultiStepForm = lazy(() => import("./components/ui/multi-step-form").then(m => ({ default: m.MultiStepForm })));
-const Checkout = lazy(() => import("./components/ui/checkout").then(m => ({ default: m.Checkout })));
-const Toast = lazy(() => import("./components/ui/toast").then(m => ({ default: m.Toast })));
-const Label = lazy(() => import("./components/ui/label").then(m => ({ default: m.Label })));
-const AlertShowcase = lazy(() => import("./components/ui/alert").then(m => ({ default: m.AlertShowcase })));
-const AccordionCraft = lazy(() => import("./components/ui/accordion").then(m => ({ default: m.AccordionCraft })));
-const NavbarCraft = lazy(() => import("./components/ui/navbar").then(m => ({ default: m.NavbarCraft })));
-const MobileChat = lazy(() => import("./components/ui/mobile-chat").then(m => ({ default: m.MobileChat })));
+import { UI } from "./pages/Ui";
+import { LLMChatInput } from "./components/ui/llm-chat-input";
+import { ButtonCraft } from "./components/ui/button";
+import { DropdownCraft } from "./components/ui/dropdown";
+import { ChatBubbleCraft } from "./components/ui/chat-bubble";
+import { CommandPalette } from "./components/ui/command-palette";
+import { SidebarCraft } from "./components/ui/sidebar";
+import { MultiStepForm } from "./components/ui/multi-step-form";
+import { Checkout } from "./components/ui/checkout";
+import { Toast } from "./components/ui/toast";
+import { Label } from "./components/ui/label";
+import { AlertShowcase } from "./components/ui/alert";
+import { AccordionCraft } from "./components/ui/accordion";
+import { NavbarCraft } from "./components/ui/navbar";
 
 // Loading component
 const PageLoader = () => (
@@ -50,6 +49,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/talks" element={<Talks />} />
+          <Route path="/spotify" element={<Spotify />} />
           <Route path="/links" element={<Social />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/meet" element={<Meet />} />
@@ -63,8 +63,6 @@ export default function App() {
             <Route path="sidebar" element={<SidebarCraft />} />
             <Route path="multipage-form" element={<MultiStepForm />} />
             <Route path="checkout" element={<Checkout />} />
-            <Route path="mobile-chat" element={<MobileChat />} />
-
             <Route path="toast" element={<Toast />} />
             <Route path="label" element={<Label />} />
             <Route path="alert" element={<AlertShowcase />} />
@@ -77,4 +75,3 @@ export default function App() {
     </Router>
   );
 }
-

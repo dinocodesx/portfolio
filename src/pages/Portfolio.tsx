@@ -192,6 +192,13 @@ export function Portfolio() {
           >
             View all socials <ArrowUpRight className="w-4 h-4 opacity-50" />
           </Link>
+          <br />
+          <Link
+            to="/spotify"
+            className="inline-flex items-center gap-2 text-white hover:underline underline-offset-4 text-[15px]"
+          >
+            Musical Taste <ArrowUpRight className="w-4 h-4 opacity-50" />
+          </Link>
         </div>
       </motion.section>
 

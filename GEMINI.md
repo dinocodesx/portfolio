@@ -12,6 +12,7 @@ This document provides a comprehensive overview of the project structure and the
 
 ### 2. State & Architecture
 - **Source of Truth:** All content (Experience, Projects, Skills) MUST be managed in `src/constants/data.ts`. Do not hardcode content in components.
+- **UI Data:** `UI_DATA` in `src/constants/data.ts` MUST be a flat array of `UIItem`. DO NOT create separate sections for apps, components, or elements.
 - **Animations:** Use `motion/react` (Framer Motion) exclusively. Reference shared variants in `src/constants/animations.ts` before creating new ones.
 - **Routing:** All new pages must be `lazy` loaded in `src/App.tsx`.
 - **Styling:** Use Tailwind CSS 4 utility classes. Avoid external CSS files.
@@ -77,6 +78,7 @@ Top-level route components that orchestrate the layout and portfolio/UI sections
 
 - **`Portfolio.tsx`**: The home page, aggregating Experience, Skills, and Building sections.
 - **`Ui.tsx`**: The catalog of all available UI crafts.
+- **`Spotify.tsx`**: A dedicated music page showcasing live status, curated playlists, and top artists.
 - **`About.tsx`**: Personal background and philosophy.
 - **`Projects.tsx`**: Full list of technical projects.
 - **`Blogs.tsx`**, **`Talks.tsx`**, **`Socials.tsx`**: Dedicated archive pages.
