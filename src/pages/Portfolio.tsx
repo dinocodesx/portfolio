@@ -90,7 +90,7 @@ export function Portfolio() {
           <div className="space-y-8">
             <Building
               title="Cool Stuff"
-              description="All my projects are cool by nature."
+              description="All my projects are cool by nature. Check them out on GitHub."
               link="https://github.com/dinocodesx?tab=repositories"
             />
             <Building
