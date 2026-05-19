@@ -89,12 +89,12 @@ export function Portfolio() {
           <SectionHeading title="Building" />
           <div className="space-y-8">
             <Building
-              title="OAlpaca Studio"
-              description="Memory and Canvas based interface for LLM chating."
-              link="https://github.com/dinocodesx/oalpaca-studio"
+              title="Cool Stuff"
+              description="All my projects are cool by nature."
+              link="https://github.com/dinocodesx?tab=repositories"
             />
             <Building
-              title="UI"
+              title="Craft"
               description="A Collection of UI components for building LLM chat apps."
               link="/ui"
             />
@@ -146,14 +146,14 @@ export function Portfolio() {
       </motion.section>
 
       {/* Skills */}
-      <motion.section variants={itemVariants} className="space-y-8">
+      {/*<motion.section variants={itemVariants} className="space-y-8">
         <SectionHeading title="Skills" />
         <div className="space-y-4">
           {SKILLS_DATA.map((skill, index) => (
             <SkillCategory key={index} {...skill} />
           ))}
         </div>
-      </motion.section>
+      </motion.section>*/}
 
       {/* Talks */}
       <motion.section variants={itemVariants} className="space-y-8">

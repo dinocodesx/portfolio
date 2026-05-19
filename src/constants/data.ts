@@ -273,6 +273,46 @@ export const PROJECTS_DATA: Project[] = [
     ],
     github: "https://github.com/dinocodesx/spring-microservice",
   },
+  {
+    id: 7,
+    title: "Dinoe Compiler",
+    description:
+      "A educational, multi-stage compiler for the .dinoe programming language, built from scratch in Rust.",
+    technologies: ["Rust", "Compiler", "LLVM", "Language Design"],
+    github: "https://github.com/dinocodesx/DINOE-COMPILER",
+  },
+  {
+    id: 8,
+    title: "Basic Firewall",
+    description:
+      "Building a basic firewall from scratch using Rust to filter and manage network traffic.",
+    technologies: ["Rust", "Networking", "Security", "Linux"],
+    github: "https://github.com/dinocodesx/BASIC-FIREWALL",
+  },
+  {
+    id: 9,
+    title: "Custom Email Protocol",
+    description:
+      "Designing and implementing a custom email protocol for secure and efficient message delivery.",
+    technologies: ["Go", "Networking", "TCP/IP", "Security"],
+    github: "https://github.com/dinocodesx/CUSTOM-EMAIL-PROTOCOL",
+  },
+  {
+    id: 10,
+    title: "Motia",
+    description:
+      "Polyglot backend framework that unifies API, Background Jobs & AI Agents into a single developer experience.",
+    technologies: ["TypeScript", "Node.js", "AI Agents", "Architecture"],
+    github: "https://github.com/dinocodesx/MOTIA-DEMO",
+  },
+  {
+    id: 11,
+    title: "Poketoons",
+    description:
+      "Catch pokemons by guessing their names. A fun, locally running game without external API dependencies.",
+    technologies: ["TypeScript", "React", "Vite", "Web Design"],
+    github: "https://github.com/dinocodesx/POKETOONS",
+  },
 ];
 
 export interface Blog {
