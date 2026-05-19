@@ -37,6 +37,8 @@ export function Portfolio() {
             <span className="text-white italic">
               how the world of technology works.
             </span>{" "}
+          </p>
+          <p>
             Get to know more{" "}
             <Link
               to="/about"

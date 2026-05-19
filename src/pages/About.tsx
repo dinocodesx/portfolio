@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { SidebarLink } from "../components/layout/SidebarLink";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
@@ -23,16 +22,7 @@ export function About() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
-        {/* Sidebar */}
-        <motion.div variants={itemVariants}>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-lg sticky top-32"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Index
-          </Link>
-        </motion.div>
+        <SidebarLink />
 
         {/* Modular Sections */}
         <div className="space-y-16">

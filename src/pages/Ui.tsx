@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { SidebarLink } from "../components/layout/SidebarLink";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { itemVariants, containerVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
@@ -75,15 +76,7 @@ export function UI() {
         description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
       />
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
-        <motion.div variants={itemVariants}>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-lg"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Index
-          </Link>
-        </motion.div>
+        <SidebarLink />
 
         <div className="space-y-16">
           <motion.div variants={itemVariants} className="space-y-4">
