@@ -22,7 +22,6 @@ export default defineConfig(({ mode }) => {
             "vendor-react": ["react", "react-dom", "react-router-dom"],
             "vendor-motion": ["motion"],
             "vendor-icons": ["lucide-react"],
-            "vendor-genai": ["@google/genai"],
           },
         },
       },
