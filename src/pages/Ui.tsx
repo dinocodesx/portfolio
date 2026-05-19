@@ -6,59 +6,54 @@ import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import { UI_DATA, UIItem } from "../constants/data";
 
-interface BentoCardProps {
+interface RegistryRowProps {
   item: UIItem;
   index: number;
-  className?: string;
 }
 
-function BentoCard({ item, index, className = "" }: BentoCardProps) {
+function RegistryRow({ item, index }: RegistryRowProps) {
   const displayIndex = (index + 1).toString().padStart(2, "0");
 
-  const spanClasses = {
-    1: "md:col-span-1",
-    2: "md:col-span-2",
-    3: "md:col-span-3",
-  };
-
-  const finalClassName = `${spanClasses[item.gridSpan || 1]} ${className}`;
-
   return (
-    <motion.div variants={itemVariants} className={finalClassName}>
+    <motion.div variants={itemVariants}>
       <Link
         to={item.link}
-        className="group relative flex flex-col h-full min-h-[180px] p-6 bg-[#0A0A0A] border border-white/5 rounded-2xl hover:border-white/20 transition-all active:scale-[0.98] overflow-hidden"
+        className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[60px_1fr_200px_120px] items-center gap-6 py-6 border-b border-white/5 hover:bg-white/[0.02] transition-colors px-4 -mx-4 rounded-lg"
       >
-        {/* Background Accent */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 blur-[80px] -translate-y-16 translate-x-16 group-hover:bg-white/5 transition-colors" />
+        {/* Index */}
+        <span className="text-[10px] font-mono text-white/20 group-hover:text-white/40 transition-colors uppercase tracking-widest">
+          ID_{displayIndex}
+        </span>
 
-        <div className="relative flex-1 space-y-4">
-          <div className="flex justify-between items-start">
-            <span className="text-[10px] font-mono text-white/20 tracking-widest uppercase">
-              Index_{displayIndex}
-            </span>
-            {item.label && (
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/40 font-medium">
-                {item.label}
-              </span>
-            )}
-          </div>
-
-          <div className="space-y-2">
-            <h3 className="text-white font-medium text-lg flex items-center gap-2 leading-tight">
-              {item.title}
-              <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-            </h3>
-            {item.description && (
-              <p className="text-white/40 text-sm leading-relaxed max-w-[320px]">
-                {item.description}
-              </p>
-            )}
-          </div>
+        {/* Name & Description */}
+        <div className="space-y-1">
+          <h3 className="text-white font-medium group-hover:text-blue-400 transition-colors flex items-center gap-2">
+            {item.title}
+            <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -translate-y-1" />
+          </h3>
+          <p className="text-white/30 text-xs hidden md:block max-w-md line-clamp-1 group-hover:text-white/50 transition-colors">
+            {item.description}
+          </p>
         </div>
 
-        <div className="relative pt-6 flex items-end justify-between">
-          <div className="h-px flex-1 bg-white/5 group-hover:bg-white/10 transition-colors" />
+        {/* Metadata / Tags */}
+        <div className="hidden md:flex flex-wrap gap-2">
+          {item.label ? (
+            <span className="text-[9px] px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-mono uppercase tracking-tighter">
+              {item.label}
+            </span>
+          ) : (
+            <span className="text-[9px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/20 font-mono uppercase tracking-tighter">
+              Standard
+            </span>
+          )}
+        </div>
+
+        {/* Action */}
+        <div className="text-right">
+          <span className="text-[10px] font-mono text-white/10 group-hover:text-white/40 transition-colors uppercase tracking-widest">
+            View_Src
+          </span>
         </div>
       </Link>
     </motion.div>
@@ -69,8 +64,8 @@ export function UI() {
   return (
     <PageLayout maxWidth="max-w-5xl" className="space-y-16">
       <SEO
-        title="UI Lab | Debarshee Chakraborty"
-        description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
+        title="Registry | UI Lab"
+        description="A technical index of experimental UI components and design patterns."
       />
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
         <motion.div variants={itemVariants}>
@@ -83,32 +78,46 @@ export function UI() {
           </Link>
         </motion.div>
 
-        <div className="space-y-16">
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-3xl tracking-tight">
-              UI Lab
-            </h1>
+        <div className="space-y-12">
+          <header className="space-y-4">
+            <motion.div variants={itemVariants} className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <h1 className="text-white font-medium text-3xl tracking-tight">
+                Component Registry
+              </h1>
+            </motion.div>
             <p className="text-white/40 text-lg max-w-xl">
-              A collection of interface experiments focusing on tactile feedback, 
-              asynchronous states, and LLM-centric design patterns.
+              A systematically indexed collection of interface experiments focusing on 
+              tactile feedback and LLM-centric design patterns.
             </p>
-          </motion.div>
+          </header>
 
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr"
-          >
-            {/* All Items in a single flow for better bento packing */}
-            {[...UI_DATA.apps, ...UI_DATA.components, ...UI_DATA.elements].map((item, i) => (
-              <BentoCard 
-                key={item.link} 
-                item={item} 
-                index={i} 
-              />
-            ))}
-          </motion.div>
+          <div className="space-y-px">
+            {/* Table Header */}
+            <motion.div 
+              variants={itemVariants}
+              className="grid grid-cols-[60px_1fr_200px_120px] items-center gap-6 px-4 py-3 border-b border-white/10 text-[10px] font-mono text-white/20 uppercase tracking-[0.2em] hidden md:grid"
+            >
+              <span>Entry</span>
+              <span>Component</span>
+              <span>Classification</span>
+              <span className="text-right">Access</span>
+            </motion.div>
+
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {UI_DATA.map((item, i) => (
+                <RegistryRow 
+                  key={item.link} 
+                  item={item} 
+                  index={i} 
+                />
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </PageLayout>
