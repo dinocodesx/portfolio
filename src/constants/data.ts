@@ -206,12 +206,20 @@ export const UI_DATA: UIItem[] = [
   },
 ];
 
-export interface SpotifyPlaylist {
+export interface SpotifySong {
   id: number;
   title: string;
-  description: string;
+  artist: string;
+  albumArt: string;
   link: string;
+}
+
+export interface SpotifyAlbum {
+  id: number;
+  title: string;
+  artist: string;
   coverImage: string;
+  link: string;
 }
 
 export interface SpotifyArtist {
@@ -223,32 +231,94 @@ export interface SpotifyArtist {
 }
 
 export interface SpotifyData {
-  playlists: SpotifyPlaylist[];
+  songs: SpotifySong[];
+  albums: SpotifyAlbum[];
   artists: SpotifyArtist[];
 }
 
 export const SPOTIFY_DATA: SpotifyData = {
-  playlists: [
+  songs: [
     {
       id: 1,
-      title: "Focus Flow",
-      description: "Deep work and systems engineering rhythms.",
-      link: "https://open.spotify.com/playlist/37i9dQZF1DWZeKHA6V9etM",
-      coverImage: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+      title: "Time",
+      artist: "Hans Zimmer",
+      albumArt:
+        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+      link: "https://open.spotify.com/track/6ZFbSTe3vmi2n7p7v29ZpR",
     },
     {
       id: 2,
-      title: "Late Night Go",
-      description: "Atmospheric beats for low-level hacking.",
-      link: "https://open.spotify.com/playlist/37i9dQZF1DX8Ueb9CidzhR",
-      coverImage: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
+      title: "Experience",
+      artist: "Ludovico Einaudi",
+      albumArt:
+        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
+      link: "https://open.spotify.com/track/1Bncf9vYvYn71Y97O41r6I",
     },
     {
       id: 3,
-      title: "Technical Soundtracks",
-      description: "Ambient scores from seminal sci-fi and tech films.",
-      link: "https://open.spotify.com/playlist/37i9dQZF1DX5Ejj07X7zQT",
-      coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      title: "Cornfield Chase",
+      artist: "Hans Zimmer",
+      albumArt:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      link: "https://open.spotify.com/track/6p8RruScckym3BPv4k603Z",
+    },
+    {
+      id: 4,
+      title: "Stay",
+      artist: "Hans Zimmer",
+      albumArt:
+        "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
+      link: "https://open.spotify.com/track/0Yve6U9F172v7X0y0M3pI7",
+    },
+    {
+      id: 5,
+      title: "Luminous",
+      artist: "Max Richter",
+      albumArt:
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+      link: "https://open.spotify.com/track/0UeYly7m67pSbtce8f9FTm",
+    },
+  ],
+  albums: [
+    {
+      id: 1,
+      title: "Inception",
+      artist: "Hans Zimmer",
+      coverImage:
+        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+    },
+    {
+      id: 2,
+      title: "Interstellar",
+      artist: "Hans Zimmer",
+      coverImage:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+    },
+    {
+      id: 3,
+      title: "Divenire",
+      artist: "Ludovico Einaudi",
+      coverImage:
+        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
+      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+    },
+    {
+      id: 4,
+      title: "Elements",
+      artist: "Ludovico Einaudi",
+      coverImage:
+        "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
+      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+    },
+    {
+      id: 5,
+      title: "Memoryhouse",
+      artist: "Max Richter",
+      coverImage:
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
     },
   ],
   artists: [
@@ -257,21 +327,40 @@ export const SPOTIFY_DATA: SpotifyData = {
       name: "Hans Zimmer",
       genre: "Cinematic / Score",
       link: "https://open.spotify.com/artist/0YC192i3ZhyFO9mSPSMhC2",
-      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: 2,
       name: "Ludovico Einaudi",
       genre: "Modern Classical",
       link: "https://open.spotify.com/artist/2uFUBicSJLZ7YPs9A99u2r",
-      image: "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
     },
     {
       id: 3,
       name: "Olafur Arnalds",
       genre: "Ambient / Neoclassical",
       link: "https://open.spotify.com/artist/7pne966Q96I6H8OQ8T76zS",
-      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+    },
+    {
+      id: 4,
+      name: "Max Richter",
+      genre: "Contemporary Classical",
+      link: "https://open.spotify.com/artist/2S9s6p9S9P9S9S9S9S9S9S",
+      image:
+        "https://images.unsplash.com/photo-1514320298574-2c1a6ab43970?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      id: 5,
+      name: "Johann Johannsson",
+      genre: "Experimental / Score",
+      link: "https://open.spotify.com/artist/2S9s6p9S9P9S9S9S9S9S9S",
+      image:
+        "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2070&auto=format&fit=crop",
     },
   ],
 };
