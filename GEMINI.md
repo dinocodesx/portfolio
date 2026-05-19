@@ -5,10 +5,10 @@ This document provides a comprehensive overview of the project structure and the
 ## 🛠 Development Mandates
 
 ### 1. Standard Commands
-- **Dev:** `npm run dev` (Starts Vite on port 3000)
-- **Lint:** `npm run lint` (Runs `tsc --noEmit` to verify types)
-- **Build:** `npm run build`
-- **Clean:** `npm run clean`
+- **Dev:** `pnpm run dev` (Starts Vite on port 3000)
+- **Lint:** `pnpm run lint` (Runs `tsc --noEmit` to verify types)
+- **Build:** `pnpm run build`
+- **Clean:** `pnpm run clean`
 
 ### 2. State & Architecture
 - **Source of Truth:** All content (Experience, Projects, Skills) MUST be managed in `src/constants/data.ts`. Do not hardcode content in components.
@@ -38,7 +38,6 @@ These components form the structural shell of the application.
 - **`SEO.tsx`**: Manages document head metadata (Title, Description, OpenGraph, Canonical) using standard DOM APIs.
 - **`SectionHeading.tsx`**: Consistent styling for section titles within a page.
 - **`LinkCard.tsx`**: A reusable card component for external links with hover effects.
-- **`UICategoryColumn.tsx`**: Layout helper for the UI showcase landing page.
 
 ---
 
@@ -59,7 +58,17 @@ Components specific to the personal portfolio sections.
 ---
 
 ## 3. UI Library (`/src/components/ui`)
-Independent components designed for the `/ui` showcase, emphasizing interaction design.
+Independent components designed for the `/ui` showcase. The landing page (`Ui.tsx`) uses a **Bento Grid** layout with a "laboratory" aesthetic, featuring:
+- **`BentoCard`**: A specialized card with monospaced index prefixes (`Index_01`), varied grid spans, and glassmorphic hover effects.
+- **`button`**: Collection of button varieties (Solid, Ghost, Async, Destructive).
+- **`chat-bubble`**: Modern chat interface elements with status indicators.
+- **`llm-chat-input`**: A complex textarea component with file uploads and model selection.
+- **`command-palette`**: The standalone component used by the global palette.
+- **`sidebar`**: Exploration of different sidebar architectures (Floating, Docked).
+- **`mobile-chat`**: A full iPhone-mockup based mobile chat application showcase.
+- **`navbar`**: Various navigation bar designs (Floating, Minimal).
+- **`accordion`**, **`alert`**, **`dropdown`**, **`label`**, **`toast`**: Standard UI primitives crafted with custom animations and accessibility in mind.
+- **`checkout`**, **`multi-step-form`**: Complex flow-based components.
 
 ---
 
