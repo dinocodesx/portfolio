@@ -20,7 +20,7 @@ export function Spotify() {
         <motion.div variants={itemVariants}>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-lg sticky top-32"
+            className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-lg"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Index
@@ -31,14 +31,7 @@ export function Spotify() {
         <div className="space-y-16">
           {/* Header */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-xl flex items-center gap-4">
-              <Music2 className="w-6 h-6 text-emerald-500" />
-              Spotify
-            </h1>
-            <p className="text-white/40 text-lg max-w-xl">
-              A collection of what's fueling my development sessions and
-              late-night architectural deep-dives.
-            </p>
+            <h1 className="text-white font-medium text-xl">Spotify</h1>
           </motion.div>
 
           {/* 1. Top Songs */}

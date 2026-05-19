@@ -69,7 +69,7 @@ export function UI() {
   const allItems = UI_DATA;
 
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-16">
+    <PageLayout maxWidth="max-w-4xl">
       <SEO
         title="UI Lab | Debarshee Chakraborty"
         description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
@@ -87,25 +87,14 @@ export function UI() {
 
         <div className="space-y-16">
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-3xl tracking-tight">
-              UI Lab
-            </h1>
-            <p className="text-white/40 text-lg max-w-xl">
-              A collection of interface experiments focusing on tactile
-              feedback, asynchronous states, and LLM-centric design patterns.
-            </p>
+            <h1 className="text-white font-medium text-xl">UI Lab</h1>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
             {allItems.map((item, i) => (
               <BentoCard key={item.link} item={item} index={i} />
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </PageLayout>

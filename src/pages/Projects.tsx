@@ -27,12 +27,12 @@ export function Projects() {
         </motion.div>
 
         {/* Main content */}
-        <div className="space-y-10">
-          <motion.div variants={itemVariants} className="space-y-2">
+        <div className="space-y-16">
+          <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-white font-medium text-xl">Projects</h1>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-16">
             {PROJECTS_DATA.map((project, index) => {
               const displayIndex = (index + 1).toString().padStart(2, "0");
               return (
