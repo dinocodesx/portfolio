@@ -7,3 +7,4 @@ export * from "./SectionHeading";
 export * from "./SEO";
 export * from "./SidebarLink";
 export * from "./section-layout";
+export * from "./archive";
