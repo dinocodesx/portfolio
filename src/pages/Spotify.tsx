@@ -50,7 +50,7 @@ export function Spotify() {
                   href={song.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-3 -mx-3 rounded-xl hover:bg-white/3 transition-all active:scale-[0.99]"
+                  className="group flex items-center gap-4 py-2 px-3 -mx-3 rounded-xl transition-all active:scale-[0.99]"
                 >
                   <span className="text-xs font-mono text-white/20 w-4">
                     {(i + 1).toString().padStart(2, "0")}
@@ -70,7 +70,7 @@ export function Spotify() {
                       {song.artist}
                     </p>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover:text-white/40 transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover:text-emerald-400 transition-colors" />
                 </a>
               ))}
             </div>
@@ -86,7 +86,7 @@ export function Spotify() {
                   href={album.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-3 -mx-3 rounded-xl hover:bg-white/3 transition-all active:scale-[0.99]"
+                  className="group flex items-center gap-4 py-2 px-3 -mx-3 rounded-xl transition-all active:scale-[0.99]"
                 >
                   <span className="text-xs font-mono text-white/20 w-4">
                     {(i + 1).toString().padStart(2, "0")}
@@ -106,7 +106,7 @@ export function Spotify() {
                       {album.artist}
                     </p>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover:text-white/40 transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover:text-emerald-400 transition-colors" />
                 </a>
               ))}
             </div>
@@ -115,29 +115,34 @@ export function Spotify() {
           {/* 3. Top Artists */}
           <motion.div variants={itemVariants} className="space-y-8 pb-20">
             <SectionHeading title="03_Top_Artists" />
-            <div className="grid grid-cols-1 gap-1">
-              {SPOTIFY_DATA.artists.map((artist) => (
+            <div className="space-y-2">
+              {SPOTIFY_DATA.artists.map((artist, i) => (
                 <a
                   key={artist.link}
                   href={artist.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-6 p-4 -mx-4 rounded-xl transition-all duration-300 hover:bg-white/2 group/artist active:scale-[0.99]"
+                  className="group flex items-center gap-4 py-2 px-3 -mx-3 rounded-xl transition-all active:scale-[0.99]"
                 >
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10">
+                  <span className="text-xs font-mono text-white/20 w-4">
+                    {(i + 1).toString().padStart(2, "0")}
+                  </span>
+                  <div className="w-12 h-12 rounded-lg overflow-hidden border border-white/10 shrink-0">
                     <img
                       src={artist.image}
                       alt={artist.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-white font-medium">{artist.name}</h3>
-                    <p className="text-white/30 text-[11px] uppercase tracking-widest font-mono">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-white font-medium text-[15px] truncate group-hover:text-emerald-400 transition-colors">
+                      {artist.name}
+                    </h3>
+                    <p className="text-white/30 text-[11px] uppercase tracking-widest font-mono truncate">
                       {artist.genre}
                     </p>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover/artist:text-emerald-400 transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 text-white/10 group-hover:text-emerald-400 transition-colors" />
                 </a>
               ))}
             </div>
