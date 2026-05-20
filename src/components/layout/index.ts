@@ -5,5 +5,6 @@ export * from "./PageLayout";
 export * from "./SectionHeading";
 export * from "./SEO";
 export * from "./SidebarLink";
+export * from "./UiShowcaseLayout";
 export * from "./section-layout";
 export * from "./archive";

@@ -8,7 +8,7 @@ import {
   X,
 } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 import { AlertType } from "../../../types";
 

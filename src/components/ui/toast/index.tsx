@@ -8,7 +8,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 type ToastType = "success" | "error" | "info" | "system";
 

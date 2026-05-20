@@ -10,7 +10,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 export function ButtonCraft() {
   const [isLoading, setIsLoading] = useState(false);

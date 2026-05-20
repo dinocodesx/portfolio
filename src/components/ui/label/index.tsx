@@ -10,7 +10,7 @@ import {
   User,
 } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 export function Label() {
   return (

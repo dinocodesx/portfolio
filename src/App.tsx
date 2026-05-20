@@ -3,9 +3,11 @@ import { Suspense } from "react";
 import { ScrollToTop } from "./components/portfolio/ScrollToTop";
 import { GlobalCommandPalette } from "./components/layout/CommandPalette";
 
-// Direct imports (No Lazy Loading)
 import { Portfolio } from "./pages/Portfolio";
 import { About } from "./pages/About";
+import { GDG } from "./pages/GDG";
+import { Journey } from "./pages/Journey";
+import { Culture } from "./pages/Culture";
 import { Projects } from "./pages/Projects";
 import { Blogs } from "./pages/Blogs";
 import { Talks } from "./pages/Talks";
@@ -43,6 +45,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gdg" element={<GDG />} />
+          <Route path="/journey" element={<Journey />} />
+          <Route path="/culture" element={<Culture />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/talks" element={<Talks />} />

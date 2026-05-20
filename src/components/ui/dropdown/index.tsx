@@ -12,7 +12,7 @@ import {
   Link2,
 } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 export function DropdownCraft() {
   const [showMinimal, setShowMinimal] = useState(false);

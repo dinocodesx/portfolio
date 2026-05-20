@@ -45,7 +45,28 @@ export function Portfolio() {
               to="/about"
               className="text-white hover:underline underline-offset-4"
             >
-              about me and my background.
+              about me,
+            </Link>
+            <Link
+              to="/culture"
+              className="text-white hover:underline underline-offset-4"
+            >
+              {" "}
+              my background,
+            </Link>
+            <Link
+              to="/gdg"
+              className="text-white hover:underline underline-offset-4"
+            >
+              {" "}
+              my community,
+            </Link>
+            <Link
+              to="/journey"
+              className="text-white hover:underline underline-offset-4"
+            >
+              {" "}
+              and my Journey.
             </Link>
           </p>
           <p>

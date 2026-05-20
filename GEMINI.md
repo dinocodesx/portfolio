@@ -34,6 +34,7 @@ This document provides a comprehensive overview of the project structure and the
 These components form the structural shell of the application.
 
 - **`PageLayout.tsx`**: The primary wrapper for all pages. Handles centering, max-width constraints, and the global entrance animation.
+- **`UiShowcaseLayout.tsx`**: A shared layout for all UI craft showcase pages to ensure visual consistency.
 - **`CommandPalette.tsx`**: A global search and navigation tool triggered by `Cmd+K`. Allows users to jump between pages and themes.
 - **`SEO.tsx`**: Manages document head metadata (Title, Description, OpenGraph, Canonical) using standard DOM APIs.
 - **`SectionHeading.tsx`**: Consistent styling for section titles within a page.

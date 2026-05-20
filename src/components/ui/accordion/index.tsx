@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Plus } from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../UiShowcaseLayout";
+import { UiShowcaseLayout } from "../../layout";
 
 const ACCORDION_ITEMS = [
   {
