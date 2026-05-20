@@ -1,6 +1,4 @@
-import { motion } from "motion/react";
 import { SidebarLink } from "../components/layout/SidebarLink";
-import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import {
@@ -8,6 +6,7 @@ import {
   TextSection,
   ImageSingle,
   ImageDouble,
+  PolaroidGallery,
 } from "../components/layout";
 
 export function About() {
@@ -18,7 +17,7 @@ export function About() {
         description="Learn more about Debarshee Chakraborty, a Software Engineer focused on distributed systems and low-level design."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
         <SidebarLink />
 
         {/* Modular Sections */}
@@ -147,6 +146,29 @@ export function About() {
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBPPjgDTsae8qmj6SViYsXMnkFAyUuv9NGx0bf"
               alt="Which way are we heading right now?"
+            />
+          </ContentChapter>
+
+          <ContentChapter title="Moments">
+            <PolaroidGallery
+              items={[
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD",
+                  caption: "SIH Winning Moment",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf",
+                  caption: "GDG Cloud Kolkata",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
+                  caption: "Hack4Bengal",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
+                  caption: "MCKV Session",
+                },
+              ]}
             />
           </ContentChapter>
         </div>
