@@ -9,7 +9,7 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 2,
   },
   {
-    title: "Accessible Accordions",
+    title: "Fluid Accordion",
     link: "/ui/accordion",
     description: "WAI-ARIA compliant expansion panels for documentation.",
     gridSpan: 1,
@@ -21,7 +21,7 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 1,
   },
   {
-    title: "User Onboarding",
+    title: "Progressive Onboarding",
     link: "/ui/multipage-form",
     description: "Frictionless multi-step forms for user signups.",
     gridSpan: 2,
@@ -39,7 +39,7 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 1,
   },
   {
-    title: "System Alerts",
+    title: "Reactive Alert Systems",
     link: "/ui/alert",
     description: "Contextual feedback with subtle motion.",
     gridSpan: 1,
@@ -57,7 +57,7 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 1,
   },
   {
-    title: "Dynamic Labels",
+    title: "Label Varieties",
     link: "/ui/label",
     description: "Context-aware form labeling patterns.",
     gridSpan: 3,

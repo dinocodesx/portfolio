@@ -1,5 +1,14 @@
 import { motion } from "motion/react";
-import { Tag, Hash, Bookmark, Circle } from "lucide-react";
+import {
+  Tag,
+  Hash,
+  Bookmark,
+  Circle,
+  Bell,
+  Zap,
+  Command,
+  User,
+} from "lucide-react";
 import { itemVariants } from "../../../constants/animations";
 import { UiShowcaseLayout } from "../UiShowcaseLayout";
 
@@ -20,9 +29,9 @@ export function Label() {
       {/* Preview Area */}
       <motion.div
         variants={itemVariants}
-        className="relative w-full min-h-125 md:min-h-150 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
+        className="relative w-full min-h-200 md:min-h-250 bg-[#0A0A0A] border border-white/5 rounded-3xl flex items-center justify-center p-8 md:p-16 overflow-hidden"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20 w-full max-w-3xl">
           {/* 1. Status Labels */}
           <div className="space-y-6">
             <h3 className="text-[11px] text-white/20 uppercase tracking-widest font-medium">
@@ -88,9 +97,60 @@ export function Label() {
               </button>
             </div>
           </div>
+
+          {/* 5. Notification Badges */}
+          <div className="space-y-6">
+            <h3 className="text-[11px] text-white/20 uppercase tracking-widest font-medium">
+              Alert Badges
+            </h3>
+            <div className="flex flex-wrap gap-8 items-center">
+              <div className="relative">
+                <Bell className="w-5 h-5 text-white/20" />
+                <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4 items-center justify-center bg-red-500 text-white text-[9px] font-bold rounded-full">
+                  3
+                </span>
+              </div>
+              <div className="relative">
+                <Command className="w-5 h-5 text-white/20" />
+                <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5 bg-blue-500 rounded-full animate-pulse" />
+              </div>
+            </div>
+          </div>
+
+          {/* 6. Stylized Tags */}
+          <div className="space-y-6">
+            <h3 className="text-[11px] text-white/20 uppercase tracking-widest font-medium">
+              Visual Hierarchy
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-linear-to-br from-blue-500/20 to-purple-500/20 border border-white/5 text-white text-[11px] font-medium rounded-lg">
+                <Zap className="w-3 h-3 fill-blue-400 text-blue-400" />
+                Pro
+              </span>
+              <span className="px-3 py-1 border border-white/10 text-white/40 text-[11px] font-medium rounded-full hover:text-white/60 hover:border-white/20 transition-colors cursor-default">
+                Standard
+              </span>
+            </div>
+          </div>
+
+          {/* 7. Identity Labels */}
+          <div className="space-y-6">
+            <h3 className="text-[11px] text-white/20 uppercase tracking-widest font-medium">
+              Metadata
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 pl-1 pr-3 py-1 bg-white/5 border border-white/10 rounded-full">
+                <div className="w-5 h-5 bg-white/10 rounded-full flex items-center justify-center">
+                  <User className="w-3 h-3 text-white/40" />
+                </div>
+                <span className="text-[11px] text-white/70 font-medium">
+                  Alex Rivera
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
-
       <motion.div
         variants={itemVariants}
         className="space-y-6 text-white/60 leading-relaxed max-w-2xl text-[15px]"

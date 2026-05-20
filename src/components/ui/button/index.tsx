@@ -42,9 +42,9 @@ export function ButtonCraft() {
       {/* Preview Area */}
       <motion.div
         variants={itemVariants}
-        className="relative w-full min-h-150 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex items-center justify-center p-8 md:p-12 overflow-hidden"
+        className="relative w-full min-h-175 md:min-h-225 bg-[#0A0A0A] border border-white/5 rounded-3xl flex items-center justify-center p-8 md:p-16 overflow-hidden"
       >
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center w-full max-w-2xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16 items-center justify-items-center w-full max-w-3xl">
           {/* 1. Primary Solid */}
           <div className="space-y-3 flex flex-col items-center">
             <button className="px-6 py-2.5 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-all active:scale-95 text-sm">
@@ -92,7 +92,7 @@ export function ButtonCraft() {
               ) : isSuccess ? (
                 <Check className="w-4 h-4" />
               ) : (
-                "Save Changes"
+                "Save"
               )}
             </button>
             <span className="text-[10px] text-white/20 uppercase tracking-widest">
@@ -140,6 +140,47 @@ export function ButtonCraft() {
             </button>
             <span className="text-[10px] text-white/20 uppercase tracking-widest">
               Success
+            </span>
+          </div>
+
+          {/* 9. Shimmer Effect */}
+          <div className="space-y-3 flex flex-col items-center">
+            <button className="relative group px-6 py-2.5 bg-white/3 border border-white/5 text-white/80 rounded-full text-sm font-medium overflow-hidden transition-all hover:border-white/20 active:scale-95">
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-gradient(to-r, transparent, white/10, transparent) -skew-x-12" />
+              Shimmer
+            </button>
+            <span className="text-[10px] text-white/20 uppercase tracking-widest">
+              Motion
+            </span>
+          </div>
+
+          {/* 10. Skeuomorphic */}
+          <div className="space-y-3 flex flex-col items-center">
+            <button className="px-6 py-2.5 bg-white text-black font-semibold rounded-xl text-sm shadow-[0_1px_0_0_rgba(255,255,255,0.4)_inset,0_2px_4px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.1)] hover:bg-[#f5f5f5] active:shadow-inner active:scale-95 transition-all">
+              Tactile
+            </button>
+            <span className="text-[10px] text-white/20 uppercase tracking-widest">
+              Skeuo
+            </span>
+          </div>
+
+          {/* 11. Caution / Warning */}
+          <div className="space-y-3 flex flex-col items-center">
+            <button className="px-6 py-2.5 bg-amber-500/10 border border-amber-500/20 text-amber-500 font-medium rounded-full hover:bg-amber-500 hover:text-white transition-all active:scale-95 text-sm">
+              Warning
+            </button>
+            <span className="text-[10px] text-white/20 uppercase tracking-widest">
+              Caution
+            </span>
+          </div>
+
+          {/* 12. Link Style */}
+          <div className="space-y-3 flex flex-col items-center">
+            <button className="text-white/60 hover:text-white hover:underline underline-offset-4 decoration-white/30 transition-all text-sm font-medium">
+              Action Link
+            </button>
+            <span className="text-[10px] text-white/20 uppercase tracking-widest">
+              Inline
             </span>
           </div>
         </div>
