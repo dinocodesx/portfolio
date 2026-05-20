@@ -36,7 +36,7 @@ export function PolaroidGallery({ items }: PolaroidGalleryProps) {
           return (
             <div
               key={index}
-              className={`bg-white p-2 md:p-2 pb-4 md:pb-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] border border-black/5 relative ${rotation} inline-block cursor-zoom-in`}
+              className={`bg-white p-2 md:p-2 pb-4 md:pb-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] border border-black/5 relative ${rotation} inline-block cursor-pointer`}
               onClick={() => setSelectedImage(item)}
             >
               {/* Pin / Dot at the top */}
@@ -47,7 +47,7 @@ export function PolaroidGallery({ items }: PolaroidGalleryProps) {
                 <img
                   src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover grayscale-[10%] contrast-[105%]"
+                  className="w-full h-full object-cover grayscale-10 contrast-105"
                 />
               </div>
 

@@ -17,7 +17,7 @@ export function ImageSingle({ imageSrc, alt }: SingleImageProps) {
     <OverflowSection>
       <div className="space-y-4">
         <div
-          className="w-full aspect-video bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-zoom-in"
+          className="w-full aspect-video bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-pointer"
           onClick={() => setIsLightboxOpen(true)}
         >
           <img
