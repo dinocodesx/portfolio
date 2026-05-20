@@ -82,21 +82,41 @@ export function About() {
 
           <ContentChapter title="College">
             <TextSection>
-              My college years were a period of intense learning, where I built
-              a strong foundation in computer science and started experimenting
-              with diverse technologies.
+              As an Electrical Engineering student, my academic path bridges the
+              physical and the digital. While my core coursework covers
+              traditional engineering, my true passion lies in exploring IoT,
+              robotics, machine learning, and backend development. I’ve spent
+              countless hours working with networks, operating systems, and
+              building connected devices.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaldPii4UMdY8KPkAq2O9yIBLvJ6tlFhjguie"
               alt="College Campus"
             />
+            <TextSection>
+              College life for me extends far beyond the classroom. I am deeply
+              involved in extracurriculars and sports, regularly participating
+              in and occasionally winning various competitions and technical
+              events. This active involvement has helped me build a strong
+              rapport with our community, making me a familiar face among the
+              teaching staff, the Director, and the Chairman Trustee as a
+              dedicated and engaged student.
+            </TextSection>
+            <TextSection>
+              All of this takes place on a remarkably beautiful campus that
+              serves as an inspiring backdrop for my work, even if the
+              sweltering summer heat often tests our endurance.
+            </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Sports">
             <TextSection>
-              My college years were a period of intense learning, where I built
-              a strong foundation in computer science and started experimenting
-              with diverse technologies.
+              Sports have always been a source of deep passion and shared joy
+              for me, particularly football and cricket. My journey with FC
+              Barcelona began in 2009; I remember watching them on the bulky,
+              old televisions we had at home, mesmerized by their philosophy on
+              the pitch. That love hasn't faded; I've followed them ever since,
+              trying to circulate that same spirit of excellence and passion.
             </TextSection>
             <ImageDouble
               image1={{
@@ -108,13 +128,22 @@ export function About() {
                 alt: "Chennai Super Kings",
               }}
             />
+            <TextSection>
+              Similarly, my cricket allegiance has always been with the Chennai
+              Super Kings. My memories of the IPL start vividly around the
+              second season, and ever since, watching the Yellow Army has been a
+              ritual that brings back the excitement of those early years of
+              watching the game.
+            </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Games">
             <TextSection>
-              My college years were a period of intense learning, where I built
-              a strong foundation in computer science and started experimenting
-              with diverse technologies.
+              Gaming, for me, is synonymous with a specific era of discovery.
+              There are two titles I hold exceptionally close to my heart:
+              Pokémon Black and Super Mario Galaxy. They represent more than
+              just entertainment; they are windows into a retro vibe that
+              defined my childhood.
             </TextSection>
             <ImageDouble
               image1={{
@@ -126,6 +155,13 @@ export function About() {
                 alt: "Super Mario Galaxy",
               }}
             />
+            <TextSection>
+              The pixelated landscapes of the Unova region and the
+              gravity-defying wonders of the Comet Observatory carry a profound
+              nostalgia. Every time I revisit these worlds, I'm reminded of the
+              simple wonder and the retro charm that first drew me to these
+              stories.
+            </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Engineering">
