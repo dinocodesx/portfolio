@@ -1,10 +1,4 @@
-export interface BlogProps {
-  title: string;
-  date: string;
-  excerpt: string;
-  link: string;
-  readTime: string;
-}
+import { BlogProps } from "../../types";
 
 export function Blogs({ title, date, excerpt, link, readTime }: BlogProps) {
   return (

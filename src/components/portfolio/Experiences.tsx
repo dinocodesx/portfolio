@@ -1,13 +1,4 @@
-export interface ExperienceProps {
-  title: string;
-  company: string;
-  location: string;
-  duration: string;
-  description: string;
-  achievements: Record<string, string>;
-  technologies: string[];
-  [key: string]: any;
-}
+import { ExperienceProps } from "../../types";
 
 export function Experiences({
   title,

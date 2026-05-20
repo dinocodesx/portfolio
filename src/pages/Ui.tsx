@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { itemVariants, containerVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
-import { UI_DATA, UIItem } from "../constants/data";
+import { UI_DATA } from "../data";
+import { UIItem } from "../types";
 
 interface BentoCardProps {
   item: UIItem;

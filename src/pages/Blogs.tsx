@@ -3,7 +3,7 @@ import { SidebarLink } from "../components/layout/SidebarLink";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
-import { BLOGS_DATA } from "../constants/data";
+import { BLOGS_DATA } from "../data";
 
 export function Blogs() {
   return (

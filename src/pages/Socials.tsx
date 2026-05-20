@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { itemVariants } from "../constants/animations";
-import { SOCIAL_LINKS } from "../constants/data";
+import { SOCIAL_LINKS } from "../data";
 import { Socials } from "../components/portfolio/Socials";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";

@@ -1,11 +1,4 @@
-export interface TalkProps {
-  title: string;
-  date: string;
-  location: string;
-  event: string;
-  link: string;
-  description: string;
-}
+import { TalkProps } from "../../types";
 
 export function Talks({ title, date, location, event, link }: TalkProps) {
   return (

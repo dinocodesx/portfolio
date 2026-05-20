@@ -14,7 +14,7 @@ import {
   itemVariants,
 } from "../../../constants/animations";
 
-export type AlertType = "info" | "success" | "error" | "warning";
+import { AlertType } from "../../../types";
 
 interface AlertProps {
   type?: AlertType;

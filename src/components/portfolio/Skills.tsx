@@ -1,8 +1,4 @@
-export interface SkillCategoryProps {
-  category: string;
-  skills: { name: string }[];
-  [key: string]: any;
-}
+import { SkillCategoryProps } from "../../types";
 
 export function SkillCategory({ category, skills }: SkillCategoryProps) {
   return (

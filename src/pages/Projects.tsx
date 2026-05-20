@@ -4,7 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
-import { PROJECTS_DATA } from "../constants/data";
+import { PROJECTS_DATA } from "../data";
 
 export function Projects() {
   return (

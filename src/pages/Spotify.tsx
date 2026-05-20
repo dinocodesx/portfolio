@@ -5,7 +5,7 @@ import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import { SectionHeading } from "../components/layout/SectionHeading";
-import { SPOTIFY_DATA } from "../constants/data";
+import { SPOTIFY_DATA } from "../data";
 
 export function Spotify() {
   return (
@@ -26,7 +26,7 @@ export function Spotify() {
           </motion.div>
 
           {/* Featured Player */}
-          <motion.div variants={itemVariants} className="w-full">
+          {/*<motion.div variants={itemVariants} className="w-full">
             <iframe
               data-testid="embed-iframe"
               style={{ borderRadius: "12px" }}
@@ -38,7 +38,7 @@ export function Spotify() {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-          </motion.div>
+          </motion.div>*/}
 
           {/* 1. Top Songs */}
           <motion.div variants={itemVariants} className="space-y-8">

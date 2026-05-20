@@ -1,13 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export interface SocialsProps {
-  name: string;
-  url: string;
-  description: string;
-  icon: string;
-  [key: string]: any;
-}
+import { SocialsProps } from "../../types";
 
 export function Socials({ name, url, description, icon }: SocialsProps) {
   const isInternal = url.startsWith("/");

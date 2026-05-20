@@ -4,7 +4,7 @@ import { Play, Calendar, MapPin } from "lucide-react";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
-import { TALKS_DATA } from "../constants/data";
+import { TALKS_DATA } from "../data";
 
 export function Talks() {
   return (

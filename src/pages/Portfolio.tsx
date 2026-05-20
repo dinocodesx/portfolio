@@ -17,7 +17,8 @@ import {
   SKILLS_DATA,
   TALKS_DATA,
   BLOGS_DATA,
-} from "../constants/data";
+  BUILDING_DATA,
+} from "../data";
 
 export function Portfolio() {
   return (
