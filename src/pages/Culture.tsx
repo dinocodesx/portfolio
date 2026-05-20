@@ -6,6 +6,7 @@ import {
   TextSection,
   ImageSingle,
   ImageDouble,
+  PolaroidGallery,
 } from "../components/layout";
 
 export function Culture() {
@@ -32,9 +33,6 @@ export function Culture() {
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p"
               alt="Picture by Ardhendu Dhar"
             />
-          </ContentChapter>
-
-          <ContentChapter title="Our Biggest Festivals">
             <TextSection>
               A culture of continuous learning and psychological safety allows
               for innovation to flourish. I strive to foster environments where
@@ -55,6 +53,38 @@ export function Culture() {
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBXQMfAyBRmfCro19wuz75cQ2IDsi4ZAjUkgKy"
               alt="Durga Puja"
             />
+            <TextSection>
+              A culture of continuous learning and psychological safety allows
+              for innovation to flourish. I strive to foster environments where
+              curiosity is encouraged and every failure is treated as a valuable
+              lesson.
+            </TextSection>
+            <PolaroidGallery
+              items={[
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD",
+                  caption: "SIH Winning Moment",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf",
+                  caption: "GDG Cloud Kolkata",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
+                  caption: "Hack4Bengal",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
+                  caption: "MCKV Session",
+                },
+              ]}
+            />
+            <TextSection>
+              A culture of continuous learning and psychological safety allows
+              for innovation to flourish. I strive to foster environments where
+              curiosity is encouraged and every failure is treated as a valuable
+              lesson.
+            </TextSection>
             <ImageDouble
               image1={{
                 src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBEOYvn5XYZgsUq0XhAcomi3V4DTPW6lEGdRCa",

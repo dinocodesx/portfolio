@@ -110,7 +110,7 @@ export function About() {
               modern applications.
             </TextSection>
             <ImageSingle
-              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD"
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBS1g51RjwC5OVfFAJEq6PM3xy9LY7mWpeTrKR"
               alt="SIH Winning Team"
             />
           </ContentChapter>
@@ -125,16 +125,6 @@ export function About() {
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf"
               alt="GDG Cloud Kolkata and GDSC AOT Community"
             />
-            <ImageDouble
-              image1={{
-                src: "https://images.unsplash.com/photo-1528605248644-14dd04322111?q=80&w=2070&auto=format&fit=crop",
-                alt: "GDG Meetup",
-              }}
-              image2={{
-                src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop",
-                alt: "Conference Talk",
-              }}
-            />
           </ContentChapter>
 
           <ContentChapter title="Future">
@@ -146,29 +136,6 @@ export function About() {
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBPPjgDTsae8qmj6SViYsXMnkFAyUuv9NGx0bf"
               alt="Which way are we heading right now?"
-            />
-          </ContentChapter>
-
-          <ContentChapter title="Moments">
-            <PolaroidGallery
-              items={[
-                {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD",
-                  caption: "SIH Winning Moment",
-                },
-                {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf",
-                  caption: "GDG Cloud Kolkata",
-                },
-                {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
-                  caption: "Hack4Bengal",
-                },
-                {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
-                  caption: "MCKV Session",
-                },
-              ]}
             />
           </ContentChapter>
         </div>
