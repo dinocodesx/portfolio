@@ -43,31 +43,32 @@ export function Portfolio() {
             Get to know more{" "}
             <Link
               to="/about"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
-              about me,
+              about me
             </Link>
+            ,{" "}
             <Link
               to="/culture"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
-              {" "}
-              my background,
+              my background
             </Link>
+            ,{" "}
             <Link
               to="/community"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
-              {" "}
-              my community,
+              my community
             </Link>
+            , and{" "}
             <Link
               to="/journey"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
-              {" "}
-              and my journeys.
+              my journeys
             </Link>
+            .
           </p>
           <p>
             I have previously worked on Backend development, mainly with{" "}
@@ -81,21 +82,21 @@ export function Portfolio() {
             Check out my work on{" "}
             <Link
               to="www.github.com/dinocodesx"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
               Github
             </Link>
             , connect with me on{" "}
             <Link
               to="/links"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
               Socials
             </Link>{" "}
             and see my{" "}
             <Link
               to="/resume"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
               Resume.
             </Link>
@@ -195,14 +196,14 @@ export function Portfolio() {
             Reach me at{" "}
             <a
               href="https://twitter.com/dinocodesx"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
               @dinocodesx
             </a>{" "}
             or{" "}
             <a
               href="mailto:debarshee.chakraborty.work@gmail.com"
-              className="text-white hover:underline underline-offset-4"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
             >
               debarshee.chakraborty.work@gmail.com
             </a>
@@ -210,14 +211,14 @@ export function Portfolio() {
           </p>
           <Link
             to="/links"
-            className="inline-flex items-center gap-2 text-white hover:underline underline-offset-4 text-[15px]"
+            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
           >
             View all socials <ArrowUpRight className="w-4 h-4 opacity-50" />
           </Link>
           <br />
           <Link
             to="/spotify"
-            className="inline-flex items-center gap-2 text-white hover:underline underline-offset-4 text-[15px]"
+            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
           >
             Musical Taste <ArrowUpRight className="w-4 h-4 opacity-50" />
           </Link>

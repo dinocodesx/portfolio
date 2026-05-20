@@ -19,20 +19,22 @@ export function Community() {
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-12">
+        <div>
           <ContentChapter title="GDG Cloud Kolkata">
             <TextSection>
               GDG Cloud Kolkata is a Google-supported community for cloud
-              developers and architects across the city — a place to learn,
+              developers and architects across the city a place to learn,
               discuss, and explore the latest in cloud technologies through
               monthly meetups, hands-on workshops, and its flagship annual
-              conference, Cloud Community Days. I first walked into one of their
-              events at the end of 2022, and it didn't take long before I was
-              hooked. Over the next couple of years, I kept showing up — to the
-              regular monthly meetups, to extended CCD prep events, and to Cloud
-              Community Days itself, where thousands of professionals, students,
-              and builders converge for a full day of talks, networking, and
-              collaboration.
+              conference, Cloud Community Days.
+            </TextSection>
+            <TextSection>
+              I first walked into one of their events at the end of 2022, and it
+              didn't take long before I was hooked. Over the next couple of
+              years, I kept showing up to the regular monthly meetups, to
+              extended CCD prep events, and to Cloud Community Days itself,
+              where thousands of professionals, students, and builders converge
+              for a full day of talks, networking, and collaboration.
             </TextSection>
             <PolaroidGallery
               items={[
@@ -57,11 +59,11 @@ export function Community() {
             <TextSection>
               In 2025, I formally joined the GDG Cloud Kolkata team as a Social
               Media Team Member. In that role, I manage and create content for
-              the community's social channels — writing posts, designing
-              graphics, and shaping how the community presents itself online.
-              Beyond social media, I've also contributed to the team's design
-              and development work. It's a community I believe in deeply, and
-              one I intend to keep contributing to actively.
+              the community's social channels writing posts, designing graphics,
+              and shaping how the community presents itself online. Beyond
+              social media, I've also contributed to the team's design and
+              development work. It's a community I believe in deeply, and one I
+              intend to keep contributing to actively.
             </TextSection>
           </ContentChapter>
 
@@ -69,7 +71,7 @@ export function Community() {
             <TextSection>
               GDG On Campus AOT was founded in 2023, and I joined the chapter in
               early 2024. From the very beginning, I was thrown into the thick
-              of it — attending and helping organise events across Kolkata,
+              of it attending and helping organise events across Kolkata,
               travelling to Siliguri and Durgapur for cross-community
               gatherings, and building connections with developers from colleges
               all over the region. By mid-2024, I had grown into a Lead role
@@ -98,7 +100,7 @@ export function Community() {
               ]}
             />
             <TextSection>
-              It's been a fast, full ride — from being a new member figuring out
+              It's been a fast, full ride from being a new member figuring out
               how things work to leading sessions, coordinating with other GDG
               On Campus chapters, and helping newer members find their footing
               the same way I once did.
@@ -108,12 +110,14 @@ export function Community() {
           <ContentChapter title="Hack4Bengal">
             <TextSection>
               Hack4Bengal is a hackathon series born out of a collective effort
-              by students and builders across SNU and several other colleges —
+              by students and builders across SNU and several other colleges,
               one of those rare things that actually works because the people
               behind it genuinely care. I participated in Season 2 and Season 3
               as a competitor, and by Season 4 I had moved to the other side of
-              the table as a co-organiser on the tech team. My primary
-              responsibility was the hackathon website — building it,
+              the table as a co-organiser on the tech team.
+            </TextSection>
+            <TextSection>
+              My primary responsibility was the hackathon website building it,
               maintaining it through the chaos of registrations and live event
               updates, and keeping it standing when traffic spikes hit.
             </TextSection>
@@ -139,7 +143,7 @@ export function Community() {
             />
             <TextSection>
               Beyond the technical work, I also mentored participants throughout
-              the event — helping teams think through their ideas, debug their
+              the event helping teams think through their ideas, debug their
               builds, and stay focused under pressure. There's something
               genuinely energising about walking the floor during a hackathon,
               stopping at tables, and seeing what people are making. It's messy
@@ -149,7 +153,7 @@ export function Community() {
 
           <ContentChapter title="IEEE Students Branch of Academy of Technology">
             <TextSection>
-              IEEE needs no introduction — it is one of the world's largest and
+              IEEE needs no introduction it is one of the world's largest and
               most respected technical professional organisations, and being
               part of its student branch at the Academy of Technology has been
               one of the most formative experiences of my college life. Our
@@ -178,27 +182,29 @@ export function Community() {
               ]}
             />
             <TextSection>
-              The first was Women in Space Engineering — an event celebrating
-              and encouraging women in highly specialised technical fields,
-              bringing together speakers, students, and professionals in a way
-              that felt genuinely meaningful. The second was C3IT, an academic
-              conference where participants submitted and presented research
-              papers — a full-scale, serious conference run entirely by
-              students. Both were enormous undertakings, and being in the room
-              where it all came together was something I won't forget. What made
-              it special wasn't just the scale of the events — it was the
-              people. Working late into the evenings with seniors who were
-              deeply invested in getting every detail right, staying back at
-              college well past 9 PM, troubleshooting and coordinating and
-              building things together — that kind of collaboration leaves a
-              mark. It remains one of the best experiences of my life.
+              The first was Women in Space Engineering an event celebrating and
+              encouraging women in highly specialised technical fields, bringing
+              together speakers, students, and professionals in a way that felt
+              genuinely meaningful. The second was C3IT, an academic conference
+              where participants submitted and presented research papers a a
+              full-scale, serious conference run entirely by students.
+            </TextSection>
+            <TextSection>
+              Both were enormous undertakings, and being in the room where it
+              all came together was something I won't forget. What made it
+              special wasn't just the scale of the events it was the people.
+              Working late into the evenings with seniors who were deeply
+              invested in getting every detail right, staying back at college
+              well past 9 PM, troubleshooting and coordinating and building
+              things together that kind of collaboration leaves a mark. It
+              remains one of the best experiences of my life.
             </TextSection>
           </ContentChapter>
 
           <ContentChapter title="IEI Students Chapter of Electrical Engineering">
             <TextSection>
               The IEI Student Chapter of Electrical Engineering holds a
-              particularly close place for me — it is the only community I have
+              particularly close place for me it is the only community I have
               been a part of since my very first year of college. I was there at
               the beginning, not as the person who formally founded it, but as
               someone who helped lay the groundwork and contributed wherever I
@@ -231,12 +237,12 @@ export function Community() {
               There's also a personal thread woven into this community: my
               father once conducted a PC workshop for the chapter, and that
               session became the spark that eventually gave rise to the IET
-              stream within the chapter — something that has since grown into
-              its own identity. On the event side, I was the primary organiser
+              stream within the chapter something that has since grown into its
+              own identity. On the event side, I was the primary organiser
               behind Season 1 and Season 2 of IoTricity, the chapter's flagship
               IoT-focused event series. I was never formally the convener, but
-              the weight of organising everything — the logistics, the
-              coordination, keeping people aligned and moving — sat largely with
+              the weight of organising everything the logistics, the
+              coordination, keeping people aligned and moving sat largely with
               me. It was unglamorous, demanding work, and I loved every bit of
               it.
             </TextSection>

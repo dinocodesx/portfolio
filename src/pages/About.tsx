@@ -20,7 +20,7 @@ export function About() {
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-4">
+        <div>
           <ContentChapter title="About me">
             <TextSection>
               I am a software engineer based in India, specializing in backend

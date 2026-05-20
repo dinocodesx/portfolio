@@ -21,15 +21,21 @@ export function Culture() {
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-16">
+        <div>
           <ContentChapter title="Roots & Identity">
             <TextSection>
               To be Bengali is to inherit a world shaped by poetry, protest, and
               an unshakeable pride in one's roots. From the literary giants of
               the Bengal Renaissance Tagore, Bankimchandra, Sarat Chandra to the
               revolutionary spirit of a land that has always questioned and
-              created, Bengali identity is layered and deeply alive. At its core
-              is "Adda" the beloved Bengali tradition of unhurried, free-ranging
+              created, Bengali identity is layered and deeply alive.
+            </TextSection>
+            <TextSection>
+              At its core, is{" "}
+              <b>
+                <i>Adda</i>
+              </b>{" "}
+              the beloved Bengali tradition of unhurried, free-ranging
               conversation over tea where philosophy, football, and fish curry
               hold equal weight. It is a culture that feeds the soul as
               generously as it feeds the stomach.
@@ -50,13 +56,22 @@ export function Culture() {
             </TextSection>
             <TextSection>
               Everything begins with Mahalaya, arriving before dawn, when the
-              voice of Birendra Krishna Bhadra reciting "Mahishasura Mardini"
+              voice of Birendra Krishna Bhadra reciting{" "}
+              <b>
+                <i>Mahishasura Mardini</i>
+              </b>{" "}
               crackles through radios and speakers across Bengal. No alarm clock
               is needed that morning the chants do the waking. This marks the
-              "Devipaksha," the fortnight of the Goddess, and the city begins to
-              hum with anticipation. Artisans in Kumartuli put the final touches
-              on clay idols. The smell of "shiuli" flowers fills the morning
-              air. Kolkata starts to dress herself up.
+              <b>
+                <i>Devipaksha</i>
+              </b>
+              , the fortnight of the Goddess, and the city begins to hum with
+              anticipation. Artisans in Kumartuli put the final touches on clay
+              idols. The smell of{" "}
+              <b>
+                <i>shiuli</i>
+              </b>{" "}
+              flowers fills the morning air. Kolkata starts to dress herself up.
             </TextSection>
             <ImageDouble
               image1={{
@@ -70,18 +85,35 @@ export function Culture() {
             />
             <TextSection>
               From Shashti through Navami, life reorganizes itself around the
-              Puja. "Pandal hopping" visiting the elaborately crafted temporary
-              shrines that neighbourhoods construct over months is both a ritual
-              and a sport. Each pandal is a world unto itself: some are
-              breathtaking recreations of temples, others are conceptual art
-              installations that make you stop and think. The thunderous "Dhak"
+              Puja.{" "}
+              <b>
+                <i>Pandal hopping</i>
+              </b>{" "}
+              visiting the elaborately crafted temporary shrines that
+              neighbourhoods construct over months is both a ritual and a sport.
+              Each pandal is a world unto itself: some are breathtaking
+              recreations of temples, others are conceptual art installations
+              that make you stop and think. The thunderous{" "}
+              <b>
+                <i>Dhak</i>
+              </b>{" "}
               the traditional drum beaten by dhakis who travel from rural Bengal
-              sets the tempo for it all. Then comes "Maha Ashtami," the most
-              sacred day. Devotees observe fasts and gather at dawn for
-              "Pushpanjali," offering flowers to the Goddess with Sanskrit
-              mantras that rise like smoke into the morning. At the precise cusp
-              of Ashtami and Navami, 108 lamps are lit for "Sandhi Puja" a
-              moment of such concentrated spiritual energy that the air itself
+              sets the tempo for it all. Then comes{" "}
+              <b>
+                <i>Maha Ashtami</i>
+              </b>
+              , the most sacred day. Devotees observe fasts and gather at dawn
+              for
+              <b>
+                <i>Pushpanjali</i>
+              </b>
+              , offering flowers to the Goddess with Sanskrit mantras that rise
+              like smoke into the morning. At the precise cusp of Ashtami and
+              Navami, 108 lamps are lit for{" "}
+              <b>
+                <i>Sandhi Puja</i>
+              </b>{" "}
+              a moment of such concentrated spiritual energy that the air itself
               seems to hold its breath.
             </TextSection>
             <ImageSingle
@@ -89,11 +121,14 @@ export function Culture() {
               alt="Dashami Celebrations"
             />
             <TextSection>
-              "Dhunuchi Naach" is something you feel in your chest before you
-              understand it with your eyes. Dancers sway with earthen incense
-              burners balanced in their hands and mouths, moving in a trance to
-              the Dhak's insistent beat. It is devotion made physical urgent,
-              ecstatic, and utterly Bengali.
+              <b>
+                <i>Dhunuchi Naach</i>
+              </b>{" "}
+              is something you feel in your chest before you understand it with
+              your eyes. Dancers sway with earthen incense burners balanced in
+              their hands and mouths, moving in a trance to the Dhak's insistent
+              beat. It is devotion made physical urgent, ecstatic, and utterly
+              Bengali.
             </TextSection>
             <PolaroidGallery
               items={[
@@ -118,14 +153,34 @@ export function Culture() {
             <TextSection>
               And then, before you are ready, it ends. Vijaya Dashami arrives
               with a bittersweet weight that every Bengali knows intimately.
-              Women gather for "Sindoor Khela," smearing vermilion on each
-              other's faces and on the Goddess herself, in a farewell that is
-              both joyous and aching. The idol processions wind through streets
-              to the river for "Visarjan" immersion as Durga returns to Kailash
-              until next year. People touch the feet of elders, exchange
-              "Bijoya" greetings, and share sweets like "Nimki" and "Sandesh."
-              There is a particular Bengali word for this feeling "bhalobasha" a
-              love so deep it holds grief inside it.
+              Women gather for{" "}
+              <b>
+                <i>Sindoor Khela</i>
+              </b>
+              , smearing vermilion on each other's faces and on the Goddess
+              herself, in a farewell that is both joyous and aching. The idol
+              processions wind through streets to the river for{" "}
+              <b>
+                <i>Visarjan</i>
+              </b>{" "}
+              immersion as Durga returns to Kailash until next year. People
+              touch the feet of elders, exchange
+              <b>
+                <i>Bijoya</i>
+              </b>{" "}
+              greetings, and share sweets like{" "}
+              <b>
+                <i>Nimki</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>Sandesh</i>
+              </b>
+              . There is a particular Bengali word for this feeling{" "}
+              <b>
+                <i>bhalobasha</i>
+              </b>{" "}
+              a love so deep it holds grief inside it.
             </TextSection>
             <TextSection>
               Growing up embedded in this culture has shaped how I see the
