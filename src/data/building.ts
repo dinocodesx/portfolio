@@ -9,7 +9,7 @@ export const BUILDING_DATA: Building[] = [
   },
   {
     id: 2,
-    title: "UI",
+    title: "Library",
     description: "A Collection of UI components for building LLM chat apps.",
     link: "/ui",
   },

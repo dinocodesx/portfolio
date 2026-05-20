@@ -39,11 +39,11 @@ const COMMANDS: CommandItem[] = [
   },
   {
     id: "g",
-    title: "GDG",
-    description: "Community contributions",
+    title: "Community",
+    description: "Contributions & ecosystems",
     icon: <Code className="w-4 h-4" />,
     category: "General",
-    link: "/gdg",
+    link: "/community",
   },
   {
     id: "j",

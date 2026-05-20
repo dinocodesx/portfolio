@@ -5,7 +5,7 @@ import { GlobalCommandPalette } from "./components/layout/CommandPalette";
 
 import { Portfolio } from "./pages/Portfolio";
 import { About } from "./pages/About";
-import { GDG } from "./pages/GDG";
+import { Community } from "./pages/Community";
 import { Journey } from "./pages/Journey";
 import { Culture } from "./pages/Culture";
 import { Projects } from "./pages/Projects";
@@ -45,7 +45,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
-          <Route path="/gdg" element={<GDG />} />
+          <Route path="/community" element={<Community />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/culture" element={<Culture />} />
           <Route path="/projects" element={<Projects />} />

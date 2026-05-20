@@ -7,21 +7,22 @@ import {
   ContentChapter,
   TextSection,
   ImageSingle,
+  PolaroidGallery,
 } from "../components/layout";
 
 export function Journey() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-24">
+    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
       <SEO
         title="Journey | Debarshee Chakraborty"
         description="The story of my career and evolution as a software engineer."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-16">
+        <div className="space-y-12">
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-white font-medium text-3xl tracking-tight">
               Journey
@@ -52,6 +53,16 @@ export function Journey() {
               has been about continuous improvement.
             </TextSection>
           </ContentChapter>
+
+          <PolaroidGallery 
+            items={[
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD", caption: "Major Milestone" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf", caption: "Community Impact" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm", caption: "Learning Phase" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz", caption: "Speaker Experience" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p", caption: "Growth Journey" }
+            ]}
+          />
         </div>
       </div>
     </PageLayout>

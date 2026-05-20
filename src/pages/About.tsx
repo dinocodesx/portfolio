@@ -1,6 +1,4 @@
-import { motion } from "motion/react";
 import { SidebarLink } from "../components/layout/SidebarLink";
-import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import {
@@ -8,71 +6,173 @@ import {
   TextSection,
   ImageSingle,
   ImageDouble,
+  PolaroidGallery,
 } from "../components/layout";
-
-const LOREM_IPSUM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 export function About() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-24">
+    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
       <SEO
         title="About | Debarshee Chakraborty"
         description="Learn more about Debarshee Chakraborty, a Software Engineer focused on distributed systems and low-level design."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-16">
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-3xl tracking-tight">
-              About
-            </h1>
-            <p className="text-white/40 text-lg max-w-xl">
-              Software Engineer specializing in systems engineering, distributed
-              architectures, and the pursuit of minimalist design.
-            </p>
-          </motion.div>
-
-          <ContentChapter title="The Early Days">
-            <TextSection>{LOREM_IPSUM}</TextSection>
-            <ImageSingle
-              imageSrc="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
-              alt="Workspace Setup"
-            />
+        <div className="space-y-4">
+          <ContentChapter title="About me">
             <TextSection>
-              This is a second paragraph appearing after the first image but
-              still under the same heading. It maintains the same narrow width
-              as the first paragraph.
+              I am a software engineer based in India, specializing in backend
+              development. I also have a deep passion for exploring ML, IoT, and
+              high-performance systems engineering.
             </TextSection>
             <ImageDouble
               image1={{
-                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
-                alt: "Retro Hardware",
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
+                alt: "During Hack4Bengal",
               }}
               image2={{
-                src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop",
-                alt: "Source Code",
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
+                alt: "Session at MCKV",
+              }}
+            />
+          </ContentChapter>
+
+          <ContentChapter title="Upbringing">
+            <TextSection>
+              My childhood was a vibrant mix of academic schooling and a deep
+              dive into extracurricular activities. From the disciplined world
+              of Abacus to the physical rigor of Martial Arts—where I eventually
+              earned a brown belt—I was always looking for ways to challenge
+              myself outside the classroom.
+            </TextSection>
+            <TextSection>
+              Creativity was a de facto part of my daily life. I spent
+              significant time at home working on various creative projects,
+              with art being a constant ritual. Whether it was sketching or
+              building something new, the act of creation was my primary way of
+              exploring the world.
+            </TextSection>
+            <ImageDouble
+              image1={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBIdvHz6E7ycmC6tYEdn2LUTpKOVNF4HZ3RDMG",
+                alt: "With Mother and Father",
+              }}
+              image2={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBtNg262P9DXFHM4T2ygQuj5AkRZpbCnqNBorO",
+                alt: "Martial Arts Gold Medal",
               }}
             />
             <TextSection>
-              You can even have another paragraph here, after a set of double
-              images. The layout is now completely flexible.
+              Sports were another pillar of my upbringing. Football was a
+              constant, played across school teams, our campus community, and
+              local grounds. When I wasn't on the football pitch, I was usually
+              engaged in a game of cricket or badminton, embracing the
+              competitive and collaborative spirit of the game.
+            </TextSection>
+            <TextSection>
+              Parallel to sports and art, I nurtured a strong curiosity for
+              science. I participated in numerous competitions and science
+              fairs, always eager to understand the 'why' behind everything. It
+              was this early drive to learn and compete that eventually paved
+              the way for my journey into engineering.
             </TextSection>
           </ContentChapter>
 
-          <ContentChapter title="Current Focus">
+          <ContentChapter title="College">
             <TextSection>
-              I spend most of my time exploring low-level systems and building
-              high-performance tools that follow first principles.
+              My college years were a period of intense learning, where I built
+              a strong foundation in computer science and started experimenting
+              with diverse technologies.
             </TextSection>
             <ImageSingle
-              imageSrc="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
-              alt="Mountain Landscape"
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaldPii4UMdY8KPkAq2O9yIBLvJ6tlFhjguie"
+              alt="College Campus"
+            />
+            {/*<ImageDouble
+              image1={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHB41PmrbZXwOxsFflKb6teEVCAYka73uJPMZr2",
+                alt: "University Library",
+              }}
+              image2={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBuLnB3uNOLflAhqrpwHPv3TGESdoD1jFBeNzi",
+                alt: "Campus Life",
+              }}
+            />*/}
+          </ContentChapter>
+
+          <ContentChapter title="Engineering">
+            <TextSection>
+              In my professional engineering career, I've focused on building
+              robust backend systems that can scale to meet the demands of
+              modern applications.
+            </TextSection>
+            <ImageSingle
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD"
+              alt="SIH Winning Team"
             />
           </ContentChapter>
+
+          <ContentChapter title="Communities">
+            <TextSection>
+              Being part of developer communities has been incredibly rewarding.
+              I've had the chance to lead workshops, contribute to open-source,
+              and connect with brilliant minds.
+            </TextSection>
+            <ImageSingle
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf"
+              alt="GDG Cloud Kolkata and GDSC AOT Community"
+            />
+            <ImageDouble
+              image1={{
+                src: "https://images.unsplash.com/photo-1528605248644-14dd04322111?q=80&w=2070&auto=format&fit=crop",
+                alt: "GDG Meetup",
+              }}
+              image2={{
+                src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop",
+                alt: "Conference Talk",
+              }}
+            />
+          </ContentChapter>
+
+          <ContentChapter title="Future">
+            <TextSection>
+              Looking ahead, I'm excited about the convergence of systems
+              engineering and intelligent computing. I plan to build tools that
+              are both minimalist and powerful.
+            </TextSection>
+            <ImageSingle
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBPPjgDTsae8qmj6SViYsXMnkFAyUuv9NGx0bf"
+              alt="Which way are we heading right now?"
+            />
+          </ContentChapter>
+
+          <PolaroidGallery
+            items={[
+              {
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD",
+                caption: "SIH Winning Moment",
+              },
+              {
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf",
+                caption: "Community Meetup",
+              },
+              {
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
+                caption: "Hack4Bengal",
+              },
+              {
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
+                caption: "MCKV Session",
+              },
+              {
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p",
+                caption: "Kolkata Vibes",
+              },
+            ]}
+          />
         </div>
       </div>
     </PageLayout>

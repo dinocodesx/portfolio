@@ -1,37 +1,28 @@
-import { motion } from "motion/react";
 import { SidebarLink } from "../components/layout/SidebarLink";
-import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import {
   ContentChapter,
   TextSection,
   ImageSingle,
+  ImageDouble,
+  PolaroidGallery,
 } from "../components/layout";
 
 export function Culture() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-24">
+    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
       <SEO
         title="Culture | Debarshee Chakraborty"
         description="My philosophy on engineering culture, team values, and collaboration."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-16">
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-3xl tracking-tight">
-              Culture
-            </h1>
-            <p className="text-white/40 text-lg max-w-xl">
-              Philosophy, values, and the human side of software engineering.
-            </p>
-          </motion.div>
-
-          <ContentChapter title="Engineering Values">
+        <div className="space-y-12">
+          <ContentChapter title="Indian and Bengali">
             <TextSection>
               I believe that great software is built by teams that value
               clarity, empathy, and collective ownership. It's not just about
@@ -39,19 +30,43 @@ export function Culture() {
               together.
             </TextSection>
             <ImageSingle
-              imageSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-              alt="Team Collaboration"
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p"
+              alt="Picture by Ardhendu Dhar"
             />
           </ContentChapter>
 
-          <ContentChapter title="Mindset & Growth">
+          <ContentChapter title="Our Biggest Festivals">
             <TextSection>
               A culture of continuous learning and psychological safety allows
               for innovation to flourish. I strive to foster environments where
-              curiosity is encouraged and every failure is treated as a
-              valuable lesson.
+              curiosity is encouraged and every failure is treated as a valuable
+              lesson.
             </TextSection>
+            <ImageSingle
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBXQMfAyBRmfCro19wuz75cQ2IDsi4ZAjUkgKy"
+              alt="Durga Puja"
+            />
+            <ImageDouble
+              image1={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBEOYvn5XYZgsUq0XhAcomi3V4DTPW6lEGdRCa",
+                alt: "Team Collaboration",
+              }}
+              image2={{
+                src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaZHWs5UMdY8KPkAq2O9yIBLvJ6tlFhjguieX",
+                alt: "Festival Moments",
+              }}
+            />
           </ContentChapter>
+
+          <PolaroidGallery 
+            items={[
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p", caption: "Kolkata Roots" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBXQMfAyBRmfCro19wuz75cQ2IDsi4ZAjUkgKy", caption: "Durga Puja" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBEOYvn5XYZgsUq0XhAcomi3V4DTPW6lEGdRCa", caption: "Shared Values" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaZHWs5UMdY8KPkAq2O9yIBLvJ6tlFhjguieX", caption: "Team Spirit" },
+              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm", caption: "Celebrations" }
+            ]}
+          />
         </div>
       </div>
     </PageLayout>

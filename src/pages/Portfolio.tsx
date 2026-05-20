@@ -55,7 +55,7 @@ export function Portfolio() {
               my background,
             </Link>
             <Link
-              to="/gdg"
+              to="/community"
               className="text-white hover:underline underline-offset-4"
             >
               {" "}

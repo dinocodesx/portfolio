@@ -10,15 +10,15 @@ export function UI() {
   return (
     <PageLayout maxWidth="max-w-4xl">
       <SEO
-        title="UI Lab | Debarshee Chakraborty"
-        description="A laboratory for experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
+        title="Library | Debarshee Chakraborty"
+        description="A collection of experimental UI components and design patterns built with React, Tailwind CSS, and Framer Motion."
       />
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
         <SidebarLink />
 
         <div className="space-y-16">
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-xl">UI Lab</h1>
+            <h1 className="text-white font-medium text-xl">Library</h1>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
