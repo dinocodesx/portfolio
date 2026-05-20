@@ -5,3 +5,4 @@ export * from "./PageLayout";
 export * from "./SectionHeading";
 export * from "./SEO";
 export * from "./SidebarLink";
+export * from "./section-layout";

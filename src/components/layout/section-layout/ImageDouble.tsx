@@ -1,4 +1,4 @@
-import { AboutOverflow } from "./SectionWrapper";
+import { OverflowSection } from "./SectionLayout";
 
 interface DoubleImageProps {
   image1: { src: string; alt: string };
@@ -8,9 +8,9 @@ interface DoubleImageProps {
 /**
  * Two side-by-side images that overflow the text container.
  */
-export function AboutImageDouble({ image1, image2 }: DoubleImageProps) {
+export function ImageDouble({ image1, image2 }: DoubleImageProps) {
   return (
-    <AboutOverflow>
+    <OverflowSection>
       <div className="grid grid-cols-2 gap-4">
         <div className="aspect-4/5 bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative">
           <img
@@ -33,6 +33,6 @@ export function AboutImageDouble({ image1, image2 }: DoubleImageProps) {
           </div>
         </div>
       </div>
-    </AboutOverflow>
+    </OverflowSection>
   );
 }

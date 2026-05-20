@@ -5,24 +5,17 @@ import { itemVariants } from "../constants/animations";
 import { Projects } from "../components/portfolio/Projects";
 import { Blogs } from "../components/portfolio/Blog";
 import { Experiences } from "../components/portfolio/Experiences";
-import { SkillCategory } from "../components/portfolio/Skills";
 import { Talks } from "../components/portfolio/Talks";
 import { Building } from "../components/portfolio/Building";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SectionHeading } from "../components/layout/SectionHeading";
 import { FooterTime } from "../components/portfolio/FooterTime";
 import { SEO } from "../components/layout/SEO";
-import {
-  EXPERIENCE_DATA,
-  SKILLS_DATA,
-  TALKS_DATA,
-  BLOGS_DATA,
-  BUILDING_DATA,
-} from "../data";
+import { EXPERIENCE_DATA, TALKS_DATA, BLOGS_DATA } from "../data";
 
 export function Portfolio() {
   return (
-    <PageLayout className="space-y-20">
+    <PageLayout className="space-y-12">
       <SEO
         title="Debarshee Chakraborty | Software Engineer"
         description="Junior Software Engineer from Kolkata specialized in Backend development, Distributed Systems, and Low-level system design. Crafting interfaces and exploring technology."
@@ -30,7 +23,7 @@ export function Portfolio() {
       {/* Header */}
       <motion.section variants={itemVariants} className="space-y-8">
         <h1 className="text-white font-medium">Debarshee Chakraborty</h1>
-        <div className="space-y-6 text-[15px] leading-relaxed">
+        <div className="space-y-3 text-[15px] leading-relaxed">
           <p>
             <span className="italic text-white">Architecting Systems.</span>{" "}
             Junior Software Engineer from Kolkata, India. I love to tinker with
@@ -88,9 +81,9 @@ export function Portfolio() {
         className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8"
       >
         {/* Building */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           <SectionHeading title="Building" />
-          <div className="space-y-8">
+          <div className="space-y-4">
             <Building
               title="Cool Stuff"
               description="All my projects are cool by nature. Check them out on GitHub."
@@ -105,9 +98,9 @@ export function Portfolio() {
         </div>
 
         {/* Projects */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           <SectionHeading title="Projects" href="/projects" />
-          <div className="space-y-8">
+          <div className="space-y-4">
             <Projects
               title="Apertre S2 Website"
               description="5000+ daily users — GitHub API for PR and issue tracking."

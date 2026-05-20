@@ -65,11 +65,9 @@ Independent components designed for the `/ui` showcase. The landing page (`Ui.ts
 - **`chat-bubble`**: Modern chat interface elements with status indicators.
 - **`llm-chat-input`**: A complex textarea component with file uploads and model selection.
 - **`command-palette`**: The standalone component used by the global palette.
-- **`sidebar`**: Exploration of different sidebar architectures (Floating, Docked).
 - **`mobile-chat`**: A full iPhone-mockup based mobile chat application showcase.
-- **`navbar`**: Various navigation bar designs (Floating, Minimal).
 - **`accordion`**, **`alert`**, **`dropdown`**, **`label`**, **`toast`**: Standard UI primitives crafted with custom animations and accessibility in mind.
-- **`checkout`**, **`multi-step-form`**: Complex flow-based components.
+- **`multi-step-form`**: Complex flow-based components.
 
 ---
 

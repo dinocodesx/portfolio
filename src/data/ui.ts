@@ -9,30 +9,6 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 2,
   },
   {
-    title: "Sidebar Architectures",
-    link: "/ui/sidebar",
-    description: "Exploration of navigation patterns for complex AI platforms.",
-    gridSpan: 1,
-  },
-  {
-    title: "Checkout Flow",
-    link: "/ui/checkout",
-    description: "A conversion-optimized multi-step payment interface.",
-    gridSpan: 1,
-  },
-  {
-    title: "User Onboarding",
-    link: "/ui/multipage-form",
-    description: "Frictionless multi-step forms for user signups.",
-    gridSpan: 2,
-  },
-  {
-    title: "Navigation Bar",
-    link: "/ui/navbar",
-    description: "Minimalist, glassmorphic headers with responsive behaviors.",
-    gridSpan: 2,
-  },
-  {
     title: "Accessible Accordions",
     link: "/ui/accordion",
     description: "WAI-ARIA compliant expansion panels for documentation.",
@@ -43,6 +19,12 @@ export const UI_DATA: UIItem[] = [
     link: "/ui/button",
     description: "Tactile feedback and async state transitions.",
     gridSpan: 1,
+  },
+  {
+    title: "User Onboarding",
+    link: "/ui/multipage-form",
+    description: "Frictionless multi-step forms for user signups.",
+    gridSpan: 2,
   },
   {
     title: "Dropdown Patterns",
@@ -57,16 +39,16 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 1,
   },
   {
-    title: "Command Palette",
-    link: "/ui/command-palette",
-    description: "Global search and quick actions via Cmd+K.",
-    gridSpan: 2,
-  },
-  {
     title: "System Alerts",
     link: "/ui/alert",
     description: "Contextual feedback with subtle motion.",
     gridSpan: 1,
+  },
+  {
+    title: "Command Palette",
+    link: "/ui/command-palette",
+    description: "Global search and quick actions via Cmd+K.",
+    gridSpan: 2,
   },
   {
     title: "Toast Notifications",
@@ -78,6 +60,6 @@ export const UI_DATA: UIItem[] = [
     title: "Dynamic Labels",
     link: "/ui/label",
     description: "Context-aware form labeling patterns.",
-    gridSpan: 2,
+    gridSpan: 3,
   },
 ];

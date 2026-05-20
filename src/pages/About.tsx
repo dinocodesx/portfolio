@@ -4,11 +4,11 @@ import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SEO } from "../components/layout/SEO";
 import {
-  AboutChapter,
-  AboutText,
-  AboutImageSingle,
-  AboutImageDouble,
-} from "../components/about";
+  ContentChapter,
+  TextSection,
+  ImageSingle,
+  ImageDouble,
+} from "../components/layout";
 
 const LOREM_IPSUM =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
@@ -36,18 +36,18 @@ export function About() {
             </p>
           </motion.div>
 
-          <AboutChapter title="The Early Days">
-            <AboutText>{LOREM_IPSUM}</AboutText>
-            <AboutImageSingle
+          <ContentChapter title="The Early Days">
+            <TextSection>{LOREM_IPSUM}</TextSection>
+            <ImageSingle
               imageSrc="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
               alt="Workspace Setup"
             />
-            <AboutText>
+            <TextSection>
               This is a second paragraph appearing after the first image but
               still under the same heading. It maintains the same narrow width
               as the first paragraph.
-            </AboutText>
-            <AboutImageDouble
+            </TextSection>
+            <ImageDouble
               image1={{
                 src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
                 alt: "Retro Hardware",
@@ -57,22 +57,22 @@ export function About() {
                 alt: "Source Code",
               }}
             />
-            <AboutText>
+            <TextSection>
               You can even have another paragraph here, after a set of double
               images. The layout is now completely flexible.
-            </AboutText>
-          </AboutChapter>
+            </TextSection>
+          </ContentChapter>
 
-          <AboutChapter title="Current Focus">
-            <AboutText>
+          <ContentChapter title="Current Focus">
+            <TextSection>
               I spend most of my time exploring low-level systems and building
               high-performance tools that follow first principles.
-            </AboutText>
-            <AboutImageSingle
+            </TextSection>
+            <ImageSingle
               imageSrc="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
               alt="Mountain Landscape"
             />
-          </AboutChapter>
+          </ContentChapter>
         </div>
       </div>
     </PageLayout>

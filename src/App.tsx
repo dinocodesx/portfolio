@@ -21,14 +21,11 @@ import { ButtonCraft } from "./components/ui/button";
 import { DropdownCraft } from "./components/ui/dropdown";
 import { ChatBubbleCraft } from "./components/ui/chat-bubble";
 import { CommandPalette } from "./components/ui/command-palette";
-import { SidebarCraft } from "./components/ui/sidebar";
 import { MultiStepForm } from "./components/ui/multi-step-form";
-import { Checkout } from "./components/ui/checkout";
 import { Toast } from "./components/ui/toast";
 import { Label } from "./components/ui/label";
 import { AlertShowcase } from "./components/ui/alert";
 import { AccordionCraft } from "./components/ui/accordion";
-import { NavbarCraft } from "./components/ui/navbar";
 
 // Loading component
 const PageLoader = () => (
@@ -60,14 +57,11 @@ export default function App() {
             <Route path="dropdown" element={<DropdownCraft />} />
             <Route path="chat" element={<ChatBubbleCraft />} />
             <Route path="command-palette" element={<CommandPalette />} />
-            <Route path="sidebar" element={<SidebarCraft />} />
             <Route path="multipage-form" element={<MultiStepForm />} />
-            <Route path="checkout" element={<Checkout />} />
             <Route path="toast" element={<Toast />} />
             <Route path="label" element={<Label />} />
             <Route path="alert" element={<AlertShowcase />} />
             <Route path="accordion" element={<AccordionCraft />} />
-            <Route path="navbar" element={<NavbarCraft />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
