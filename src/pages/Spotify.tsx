@@ -25,6 +25,21 @@ export function Spotify() {
             <h1 className="text-white font-medium text-xl">Spotify</h1>
           </motion.div>
 
+          {/* Featured Player */}
+          <motion.div variants={itemVariants} className="w-full">
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/track/2X485T9Z5Ly0xyaghN73ed?utm_source=generator"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </motion.div>
+
           {/* 1. Top Songs */}
           <motion.div variants={itemVariants} className="space-y-8">
             <SectionHeading title="01_Top_Songs" />
@@ -44,7 +59,7 @@ export function Spotify() {
                     <img
                       src={song.albumArt}
                       alt={song.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -80,7 +95,7 @@ export function Spotify() {
                     <img
                       src={album.coverImage}
                       alt={album.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -109,7 +124,7 @@ export function Spotify() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-6 p-4 -mx-4 rounded-xl transition-all duration-300 hover:bg-white/2 group/artist active:scale-[0.99]"
                 >
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 grayscale group-hover/artist:grayscale-0 transition-all">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10">
                     <img
                       src={artist.image}
                       alt={artist.name}

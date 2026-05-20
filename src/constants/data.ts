@@ -240,127 +240,162 @@ export const SPOTIFY_DATA: SpotifyData = {
   songs: [
     {
       id: 1,
-      title: "Time",
-      artist: "Hans Zimmer",
+      title: "All The Stars",
+      artist: "Kendrick Lamar, SZA",
       albumArt:
-        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
-      link: "https://open.spotify.com/track/6ZFbSTe3vmi2n7p7v29ZpR",
+        "https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888",
+      link: "https://open.spotify.com/track/3GCdLUSnKSMJhs4Tj6CV3s",
     },
     {
       id: 2,
-      title: "Experience",
-      artist: "Ludovico Einaudi",
+      title: "Lose My Mind",
+      artist: "Don Toliver ft. Doja Cat",
       albumArt:
-        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
-      link: "https://open.spotify.com/track/1Bncf9vYvYn71Y97O41r6I",
+        "https://i.scdn.co/image/ab67616d0000b273d4c0243b55cdf7394323e710",
+      link: "https://open.spotify.com/track/02BcXEH1zJYbXSabPtNlKf",
     },
     {
       id: 3,
-      title: "Cornfield Chase",
-      artist: "Hans Zimmer",
+      title: "One Last Kiss",
+      artist: "Hikaru Utada",
       albumArt:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-      link: "https://open.spotify.com/track/6p8RruScckym3BPv4k603Z",
+        "https://i.scdn.co/image/ab67616d0000b2735d998a6de7354d31ce48941b",
+      link: "https://open.spotify.com/track/5RhWszHMSKzb7KiXk4Ae0M",
     },
     {
       id: 4,
-      title: "Stay",
-      artist: "Hans Zimmer",
+      title: "Father Stretch My Hands Pt. 1",
+      artist: "Kanye West",
       albumArt:
-        "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
-      link: "https://open.spotify.com/track/0Yve6U9F172v7X0y0M3pI7",
+        "https://i.scdn.co/image/ab67616d0000b2732a7db835b912dc5014bd37f4",
+      link: "https://open.spotify.com/track/4KW1lqgSr8TKrvBII0Brf8",
     },
     {
       id: 5,
-      title: "Luminous",
-      artist: "Max Richter",
+      title: "Beggin'",
+      artist: "Måneskin",
       albumArt:
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
-      link: "https://open.spotify.com/track/0UeYly7m67pSbtce8f9FTm",
+        "https://i.scdn.co/image/ab67616d0000b273fa0ab3a28b5c52d8a5f97045",
+      link: "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e",
+    },
+    {
+      id: 6,
+      title: "Die With A Smile",
+      artist: "Lady Gaga, Bruno Mars",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b27382ea2e9e1858aa012c57cd45",
+      link: "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe",
+    },
+    {
+      id: 7,
+      title: "Let Me Love You",
+      artist: "DJ Snake, Justin Bieber",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b273212d776c31027c511f0ee3bc",
+      link: "https://open.spotify.com/track/0lYBSQXN6rCTvUZvg9S0lU",
+    },
+    {
+      id: 8,
+      title: "Espresso",
+      artist: "Sabrina Carpenter",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
+      link: "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75",
+    },
+    {
+      id: 9,
+      title: "505",
+      artist: "Arctic Monkeys",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b2730c8ac83035e9588e8ad34b90",
+      link: "https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp",
+    },
+    {
+      id: 10,
+      title: "Sex, Drugs, Etc.",
+      artist: "Beach Weather",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b273511b07369101734098b14b0d",
+      link: "https://open.spotify.com/track/7MlDNspYwfqnHxORufupwq",
     },
   ],
   albums: [
     {
       id: 1,
-      title: "Inception",
-      artist: "Hans Zimmer",
+      title: "Black Panther: The Album",
+      artist: "Various Artists",
       coverImage:
-        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
-      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+        "https://i.scdn.co/image/ab67616d0000b2734781a9efdf4e160699009685",
+      link: "https://open.spotify.com/album/3pLidC6p6p0RInS8vE81vG",
     },
     {
       id: 2,
-      title: "Interstellar",
-      artist: "Hans Zimmer",
+      title: "F1: The Album",
+      artist: "Various Artists",
       coverImage:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+        "https://i.scdn.co/image/ab67616d0000b2730248f219159930f305f88463",
+      link: "https://open.spotify.com/album/4r9eUHQpTGU79u6S6C6vve",
     },
     {
       id: 3,
-      title: "Divenire",
-      artist: "Ludovico Einaudi",
+      title: "One Last Kiss",
+      artist: "Hikaru Utada",
       coverImage:
-        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
-      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+        "https://i.scdn.co/image/ab67616d0000b273879207e997f0802c019d08e5",
+      link: "https://open.spotify.com/album/3P6rI6p6p0RInS8vE81vG",
     },
     {
       id: 4,
-      title: "Elements",
-      artist: "Ludovico Einaudi",
+      title: "The Life of Pablo",
+      artist: "Kanye West",
       coverImage:
-        "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2015&auto=format&fit=crop",
-      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+        "https://i.scdn.co/image/ab6761610000e5ebe309f8c3056a59f20d0968ca",
+      link: "https://open.spotify.com/album/7gsmS34p48T6SF37JmuvjT",
     },
     {
       id: 5,
-      title: "Memoryhouse",
-      artist: "Max Richter",
+      title: "Chosen",
+      artist: "Måneskin",
       coverImage:
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
-      link: "https://open.spotify.com/album/2070pSry7LpLpLpLpLpLpL",
+        "https://i.scdn.co/image/ab67616d0000b273fa0ab3a28b5c52d8a5f97045",
+      link: "https://open.spotify.com/album/0Yve6U9F172v7X0y0M3pI7",
     },
   ],
   artists: [
     {
       id: 1,
-      name: "Hans Zimmer",
-      genre: "Cinematic / Score",
-      link: "https://open.spotify.com/artist/0YC192i3ZhyFO9mSPSMhC2",
-      image:
-        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
+      name: "Kendrick Lamar",
+      genre: "Hip Hop",
+      link: "https://open.spotify.com/artist/2YZyLoB8NyoVg9RUnSJF9p",
+      image: "https://i.scdn.co/image/ab6761610000e5eb437b14d45114bc5f9492862d",
     },
     {
       id: 2,
-      name: "Ludovico Einaudi",
-      genre: "Modern Classical",
-      link: "https://open.spotify.com/artist/2uFUBicSJLZ7YPs9A99u2r",
-      image:
-        "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?q=80&w=2072&auto=format&fit=crop",
+      name: "Hikaru Utada",
+      genre: "J-Pop",
+      link: "https://open.spotify.com/artist/7lb969m877mYvWOf9S6p6S",
+      image: "https://i.scdn.co/image/ab6761610000e5eb803566164472d2426372573f",
     },
     {
       id: 3,
-      name: "Olafur Arnalds",
-      genre: "Ambient / Neoclassical",
-      link: "https://open.spotify.com/artist/7pne966Q96I6H8OQ8T76zS",
-      image:
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop",
+      name: "Kanye West",
+      genre: "Hip Hop / Rap",
+      link: "https://open.spotify.com/artist/5K4W6rqBFWDnKzL6p9AFpA",
+      image: "https://i.scdn.co/image/ab6761610000e5eb26d2e616c3746654e7d4d732",
     },
     {
       id: 4,
-      name: "Max Richter",
-      genre: "Contemporary Classical",
-      link: "https://open.spotify.com/artist/2S9s6p9S9P9S9S9S9S9S9S",
-      image:
-        "https://images.unsplash.com/photo-1514320298574-2c1a6ab43970?q=80&w=2070&auto=format&fit=crop",
+      name: "Måneskin",
+      genre: "Rock",
+      link: "https://open.spotify.com/artist/0S0S0S0S0S0S0S0S0S0S0S0S",
+      image: "https://i.scdn.co/image/ab6761610000e5eb009f90647c2c5101684c1f21",
     },
     {
       id: 5,
-      name: "Johann Johannsson",
-      genre: "Experimental / Score",
-      link: "https://open.spotify.com/artist/2S9s6p9S9P9S9S9S9S9S9S",
-      image:
-        "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2070&auto=format&fit=crop",
+      name: "Sabrina Carpenter",
+      genre: "Pop",
+      link: "https://open.spotify.com/artist/7S6S6S6S6S6S6S6S6S6S6S6S",
+      image: "https://i.scdn.co/image/ab6761610000e5ebfd8d7a8d96871e791cb1f626",
     },
   ],
 };
