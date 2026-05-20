@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
-  ArrowLeft,
   X,
   CheckCircle2,
   AlertCircle,
   Info,
-  Bell,
   Terminal,
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../../constants/animations";
+import { itemVariants } from "../../../constants/animations";
+import { UiShowcaseLayout } from "../UiShowcaseLayout";
 
 type ToastType = "success" | "error" | "info" | "system";
 
@@ -55,123 +53,92 @@ export function Toast() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-2 py-24 md:py-32">
-      <motion.main
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full max-w-4xl space-y-16"
+    <UiShowcaseLayout
+      title="Toast Notifications"
+      date="May 2026"
+      description={
+        <p>
+          A notification system exploring{" "}
+          <span className="text-white">temporary persistence</span> and{" "}
+          <span className="text-white">peripheral awareness</span>. These toasts
+          are designed to be informative without disrupting the user's primary
+          focus.
+        </p>
+      }
+    >
+      {/* Preview Area */}
+      <motion.div
+        variants={itemVariants}
+        className="relative w-full min-h-100 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col items-center justify-center p-8 md:p-12 overflow-hidden"
       >
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
-          {/* Sidebar */}
-          <motion.div variants={itemVariants}>
-            <Link
-              to="/ui"
-              className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors group italic font-serif text-[15px]"
-            >
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              UI
-            </Link>
-          </motion.div>
-
-          {/* Content */}
-          <div className="space-y-12">
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-white font-medium text-3xl tracking-tight">
-                Toast Notifications
-              </h1>
-              <p className="text-white/40 text-lg">May 2026</p>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="space-y-6 text-white/60 leading-relaxed max-w-2xl"
-            >
-              <p>
-                A notification system exploring{" "}
-                <span className="text-white">temporary persistence</span> and{" "}
-                <span className="text-white">peripheral awareness</span>. These
-                toasts are designed to be informative without disrupting the
-                user's primary focus.
-              </p>
-            </motion.div>
-
-            {/* Preview Area */}
-            <motion.div
-              variants={itemVariants}
-              className="relative w-full min-h-100 md:min-h-125 lg:min-h-0 lg:aspect-16/10 bg-[#0A0A0A] border border-white/5 rounded-2xl flex flex-col items-center justify-center p-8 md:p-12 overflow-hidden"
-            >
-              <div className="grid grid-cols-2 gap-4 w-full max-w-md">
-                <button
-                  onClick={() => addToast("success")}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
-                >
-                  Trigger Success
-                </button>
-                <button
-                  onClick={() => addToast("error")}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
-                >
-                  Trigger Error
-                </button>
-                <button
-                  onClick={() => addToast("info")}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
-                >
-                  Trigger Info
-                </button>
-                <button
-                  onClick={() => addToast("system")}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
-                >
-                  Trigger System
-                </button>
-              </div>
-
-              {/* Toast Stack - Simulated */}
-              <div className="absolute bottom-8 right-8 flex flex-col gap-3 items-end pointer-events-none w-full max-w-xs">
-                <AnimatePresence mode="popLayout">
-                  {toasts.map((toast) => (
-                    <motion.div
-                      key={toast.id}
-                      layout
-                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{
-                        opacity: 0,
-                        scale: 0.95,
-                        transition: { duration: 0.2 },
-                      }}
-                      className="pointer-events-auto w-full"
-                    >
-                      <ToastItem
-                        toast={toast}
-                        onRemove={() => removeToast(toast.id)}
-                      />
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="space-y-6 text-white/60 leading-relaxed max-w-2xl"
-            >
-              <p>
-                The toast stack uses{" "}
-                <code className="bg-white/10 px-1.5 py-0.5 rounded text-[13px] text-white/80">
-                  popLayout
-                </code>{" "}
-                to ensure smooth transitions as items are added and removed.
-                Each notification features a subtle glassmorphic background to
-                maintain legibility over the interface.
-              </p>
-            </motion.div>
-          </div>
+        <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+          <button
+            onClick={() => addToast("success")}
+            className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
+          >
+            Trigger Success
+          </button>
+          <button
+            onClick={() => addToast("error")}
+            className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
+          >
+            Trigger Error
+          </button>
+          <button
+            onClick={() => addToast("info")}
+            className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
+          >
+            Trigger Info
+          </button>
+          <button
+            onClick={() => addToast("system")}
+            className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[13px] text-white/60 hover:text-white transition-all active:scale-95"
+          >
+            Trigger System
+          </button>
         </div>
-      </motion.main>
-    </div>
+
+        {/* Toast Stack - Simulated */}
+        <div className="absolute bottom-8 right-8 flex flex-col gap-3 items-end pointer-events-none w-full max-w-xs">
+          <AnimatePresence mode="popLayout">
+            {toasts.map((toast) => (
+              <motion.div
+                key={toast.id}
+                layout
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.95,
+                  transition: { duration: 0.2 },
+                }}
+                className="pointer-events-auto w-full"
+              >
+                <ToastItem
+                  toast={toast}
+                  onRemove={() => removeToast(toast.id)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        className="space-y-6 text-white/60 leading-relaxed max-w-2xl text-[15px]"
+      >
+        <p>
+          The toast stack uses{" "}
+          <code className="bg-white/10 px-1.5 py-0.5 rounded text-[13px] text-white/80">
+            popLayout
+          </code>{" "}
+          to ensure smooth transitions as items are added and removed. Each
+          notification features a subtle glassmorphic background to maintain
+          legibility over the interface.
+        </p>
+      </motion.div>
+    </UiShowcaseLayout>
   );
 }
 

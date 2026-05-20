@@ -5,13 +5,20 @@ import { itemVariants } from "../constants/animations";
 import { Projects } from "../components/portfolio/Projects";
 import { Blogs } from "../components/portfolio/Blog";
 import { Experiences } from "../components/portfolio/Experiences";
+import { SkillCategory } from "../components/portfolio/Skills";
 import { Talks } from "../components/portfolio/Talks";
 import { Building } from "../components/portfolio/Building";
 import { PageLayout } from "../components/layout/PageLayout";
 import { SectionHeading } from "../components/layout/SectionHeading";
 import { FooterTime } from "../components/portfolio/FooterTime";
 import { SEO } from "../components/layout/SEO";
-import { EXPERIENCE_DATA, TALKS_DATA, BLOGS_DATA } from "../data";
+import {
+  EXPERIENCE_DATA,
+  TALKS_DATA,
+  BLOGS_DATA,
+  BUILDING_DATA,
+  SKILLS_DATA,
+} from "../data";
 
 export function Portfolio() {
   return (
@@ -84,16 +91,14 @@ export function Portfolio() {
         <div className="space-y-6">
           <SectionHeading title="Building" />
           <div className="space-y-4">
-            <Building
-              title="Cool Stuff"
-              description="All my projects are cool by nature. Check them out on GitHub."
-              link="https://github.com/dinocodesx?tab=repositories"
-            />
-            <Building
-              title="Craft"
-              description="A Collection of UI components for building LLM chat apps."
-              link="/ui"
-            />
+            {BUILDING_DATA.map((item) => (
+              <Building
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                link={item.link}
+              />
+            ))}
           </div>
         </div>
 
@@ -122,9 +127,9 @@ export function Portfolio() {
       </motion.section>
 
       {/* Blogs */}
-      <motion.section variants={itemVariants} className="space-y-8">
+      <motion.section variants={itemVariants} className="space-y-6">
         <SectionHeading title="Blogs" href="/blogs" />
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-6">
           {BLOGS_DATA.map((blog) => (
             <Blogs key={blog.id} {...blog} />
           ))}
@@ -132,9 +137,9 @@ export function Portfolio() {
       </motion.section>
 
       {/* Experience */}
-      <motion.section variants={itemVariants} className="space-y-4">
+      <motion.section variants={itemVariants} className="space-y-6">
         <SectionHeading title="Experience" />
-        <div className="space-y-4">
+        <div className="space-y-6">
           {EXPERIENCE_DATA.map((exp) => (
             <Experiences key={exp.id} {...exp} />
           ))}
@@ -142,9 +147,9 @@ export function Portfolio() {
       </motion.section>
 
       {/* Skills */}
-      {/*<motion.section variants={itemVariants} className="space-y-8">
+      {/*<motion.section variants={itemVariants} className="space-y-6">
         <SectionHeading title="Skills" />
-        <div className="space-y-4">
+        <div className="space-y-5">
           {SKILLS_DATA.map((skill, index) => (
             <SkillCategory key={index} {...skill} />
           ))}
@@ -152,7 +157,7 @@ export function Portfolio() {
       </motion.section>*/}
 
       {/* Talks */}
-      <motion.section variants={itemVariants} className="space-y-8">
+      <motion.section variants={itemVariants} className="space-y-6">
         <SectionHeading title="Talks" href="/talks" />
         <div className="space-y-6">
           {TALKS_DATA.map((talk) => (

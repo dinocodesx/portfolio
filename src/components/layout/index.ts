@@ -1,7 +1,6 @@
 export * from "./CommandPalette";
 export * from "./BentoCard";
 export * from "./LinkCard";
-export * from "./PageHeader";
 export * from "./PageLayout";
 export * from "./SectionHeading";
 export * from "./SEO";
