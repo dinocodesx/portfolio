@@ -11,7 +11,7 @@ import {
 
 export function Culture() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
+    <PageLayout maxWidth="max-w-4xl" className="space-y-12">
       <SEO
         title="Culture | Debarshee Chakraborty"
         description="My philosophy on engineering culture, team values, and collaboration."
@@ -42,11 +42,11 @@ export function Culture() {
             <ImageDouble
               image1={{
                 src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBoCRXc2aDfiQ5jHoRX9Jmb7E8rFxl6wG3I2tv",
-                alt: "Team Collaboration",
+                alt: "North Kolkata Durga Puja 2024",
               }}
               image2={{
                 src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBEhYrsQXYZgsUq0XhAcomi3V4DTPW6lEGdRCa",
-                alt: "Festival Moments",
+                alt: "North Kolkata Durga Puja 2025",
               }}
             />
             <ImageSingle
@@ -62,20 +62,20 @@ export function Culture() {
             <PolaroidGallery
               items={[
                 {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD",
-                  caption: "SIH Winning Moment",
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBzVnVsHrBXixRnIfr5Q7ZcdsMS8eUCqjmv9hA",
+                  caption: "Pandel Hopping 2023",
                 },
                 {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf",
-                  caption: "GDG Cloud Kolkata",
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBnmKXPlb35KO2osHL7UyuXevnakiGf6x1zwqc",
+                  caption: "Pandel Hopping 2025",
                 },
                 {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm",
-                  caption: "Hack4Bengal",
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBU99CRXady7qHhWr0b18O5oQt63FIKgZeYX9A",
+                  caption: "Pandel Hopping 2024",
                 },
                 {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
-                  caption: "MCKV Session",
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBoBkpGxDfiQ5jHoRX9Jmb7E8rFxl6wG3I2tvZ",
+                  caption: "Puja at Friend's House",
                 },
               ]}
             />
@@ -88,11 +88,11 @@ export function Culture() {
             <ImageDouble
               image1={{
                 src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBEOYvn5XYZgsUq0XhAcomi3V4DTPW6lEGdRCa",
-                alt: "Team Collaboration",
+                alt: "South Kolkata Durga Puja 2024",
               }}
               image2={{
                 src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaZHWs5UMdY8KPkAq2O9yIBLvJ6tlFhjguieX",
-                alt: "Festival Moments",
+                alt: "South Kolkata Durga Puja 2025",
               }}
             />
           </ContentChapter>

@@ -9,7 +9,7 @@ import {
 
 export function Community() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
+    <PageLayout maxWidth="max-w-4xl" className="space-y-12">
       <SEO
         title="Community | Debarshee Chakraborty"
         description="My contributions to the developer community and Google Developer Groups (GDG)."

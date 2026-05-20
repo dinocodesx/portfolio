@@ -6,7 +6,6 @@ import {
   TextSection,
   ImageSingle,
   ImageDouble,
-  PolaroidGallery,
 } from "../components/layout";
 
 export function About() {
@@ -91,16 +90,6 @@ export function About() {
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaldPii4UMdY8KPkAq2O9yIBLvJ6tlFhjguie"
               alt="College Campus"
             />
-            {/*<ImageDouble
-                      image1={{
-                        src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHB41PmrbZXwOxsFflKb6teEVCAYka73uJPMZr2",
-                        alt: "University Library",
-                      }}
-                      image2={{
-                        src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBuLnB3uNOLflAhqrpwHPv3TGESdoD1jFBeNzi",
-                        alt: "Campus Life",
-                      }}
-                    />*/}
           </ContentChapter>
 
           <ContentChapter title="Engineering">
