@@ -9,7 +9,7 @@ export const TALKS_DATA: Talk[] = [
     location: "Academy of Technology . Hooghly, WB",
     description:
       "A comprehensive discussion on the best practices for deploying and maintaining machine learning models in production environments.",
-    link: "#",
+    link: "",
   },
   {
     id: 2,

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Calendar, Clock } from "lucide-react";
 import { SidebarLink } from "../components/layout/SidebarLink";
 import { itemVariants } from "../constants/animations";
 import { PageLayout } from "../components/layout/PageLayout";
@@ -7,7 +8,7 @@ import { BLOGS_DATA } from "../data";
 
 export function Blogs() {
   return (
-    <PageLayout maxWidth="max-w-4xl">
+    <PageLayout maxWidth="max-w-3xl">
       <SEO
         title="Blogs | Debarshee Chakraborty"
         description="Reading list and technical blog posts by Debarshee Chakraborty. Deep dives into backend systems, machine learning, and software engineering."
@@ -24,17 +25,22 @@ export function Blogs() {
 
           <div className="space-y-16">
             {BLOGS_DATA.map((blog) => (
-              <motion.div
+              <motion.a
                 key={blog.id}
                 variants={itemVariants}
-                className="space-y-4 group cursor-pointer"
+                href={blog.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block space-y-4 group cursor-pointer"
               >
                 <div className="space-y-1">
-                  <div className="flex items-center justify-between text-[11px] uppercase tracking-widest text-white/40">
+                  <div className="flex items-center space-x-2 text-[11px] uppercase tracking-widest text-white/40">
+                    <Calendar className="w-3 h-3" />
                     <span>{blog.date}</span>
+                    <Clock className="w-3 h-3" />
                     <span>{blog.readTime}</span>
                   </div>
-                  <h2 className="text-white font-medium text-lg group-hover:text-white/80 transition-colors">
+                  <h2 className="text-white/80 font-medium text-lg group-hover:text-white transition-colors">
                     {blog.title}
                   </h2>
                 </div>
@@ -48,7 +54,7 @@ export function Blogs() {
                     Read more —&gt;
                   </span>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
