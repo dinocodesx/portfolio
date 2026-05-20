@@ -7,9 +7,7 @@ import { itemVariants } from "../../../constants/animations";
 export function TextSection({ children }: { children: React.ReactNode }) {
   return (
     <div className="max-w-2xl space-y-4">
-      <p className="text-white/60 leading-relaxed text-[15px]">
-        {children}
-      </p>
+      <p className="text-white/60 leading-relaxed text-[15px]">{children}</p>
     </div>
   );
 }
@@ -30,13 +28,22 @@ export function OverflowSection({ children }: { children: React.ReactNode }) {
  * A top-level container for a chapter or section.
  * Provides consistent vertical spacing and an optional heading.
  */
-export function ContentChapter({ title, children }: { title?: string; children: React.ReactNode }) {
+export function ContentChapter({
+  title,
+  children,
+}: {
+  title?: string;
+  children: React.ReactNode;
+}) {
   return (
-    <motion.section variants={itemVariants} className="space-y-8 py-8 first:pt-0">
-      {title && <h2 className="text-white font-medium text-lg mb-6">{title}</h2>}
-      <div className="space-y-8">
-        {children}
-      </div>
+    <motion.section
+      variants={itemVariants}
+      className="space-y-8 py-8 first:pt-0"
+    >
+      {title && (
+        <h2 className="text-white font-medium text-lg mb-6">{title}</h2>
+      )}
+      <div className="space-y-8">{children}</div>
     </motion.section>
   );
 }

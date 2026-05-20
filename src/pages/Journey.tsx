@@ -7,62 +7,72 @@ import {
   ContentChapter,
   TextSection,
   ImageSingle,
-  PolaroidGallery,
+  ImageDouble,
 } from "../components/layout";
+
+const LOREM_IPSUM =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 export function Journey() {
   return (
-    <PageLayout maxWidth="max-w-5xl" className="space-y-12">
+    <PageLayout maxWidth="max-w-5xl" className="space-y-24">
       <SEO
         title="Journey | Debarshee Chakraborty"
-        description="The story of my career and evolution as a software engineer."
+        description="Learn more about Debarshee Chakraborty, a Software Engineer focused on distributed systems and low-level design."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-white font-medium text-3xl tracking-tight">
               Journey
             </h1>
             <p className="text-white/40 text-lg max-w-xl">
-              A timeline of my evolution, from early curiosity to building
-              complex systems.
+              Software Engineer specializing in systems engineering, distributed
+              architectures, and the pursuit of minimalist design.
             </p>
           </motion.div>
 
-          <ContentChapter title="Beginnings">
+          <ContentChapter title="The Early Days">
+            <TextSection>{LOREM_IPSUM}</TextSection>
+            <ImageSingle
+              imageSrc="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
+              alt="Workspace Setup"
+            />
             <TextSection>
-              Every engineer has a starting point. For me, it was the curiosity
-              of how things work behind the screen. This curiosity led me to
-              my first lines of code and a lifelong pursuit of knowledge.
+              This is a second paragraph appearing after the first image but
+              still under the same heading. It maintains the same narrow width
+              as the first paragraph.
+            </TextSection>
+            <ImageDouble
+              image1={{
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
+                alt: "Retro Hardware",
+              }}
+              image2={{
+                src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop",
+                alt: "Source Code",
+              }}
+            />
+            <TextSection>
+              You can even have another paragraph here, after a set of double
+              images. The layout is now completely flexible.
+            </TextSection>
+          </ContentChapter>
+
+          <ContentChapter title="Current Focus">
+            <TextSection>
+              I spend most of my time exploring low-level systems and building
+              high-performance tools that follow first principles.
             </TextSection>
             <ImageSingle
-              imageSrc="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
-              alt="Early Programming"
+              imageSrc="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
+              alt="Mountain Landscape"
             />
           </ContentChapter>
-
-          <ContentChapter title="Professional Growth">
-            <TextSection>
-              Over the years, I've navigated through various roles and
-              technologies, each providing unique challenges and learning
-              opportunities. From startups to established firms, the journey
-              has been about continuous improvement.
-            </TextSection>
-          </ContentChapter>
-
-          <PolaroidGallery 
-            items={[
-              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBrcFUUfome6jd7GXxhwVOUTyZLHAo4ikFB3pD", caption: "Major Milestone" },
-              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf", caption: "Community Impact" },
-              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBeo0IK2CqR7UO68w0blMSgWBfTdtFQriDHjJm", caption: "Learning Phase" },
-              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBb7xNMoFGToRrynm8aIQ5pVLwtcDJxeFWfhdz", caption: "Speaker Experience" },
-              { src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p", caption: "Growth Journey" }
-            ]}
-          />
         </div>
       </div>
     </PageLayout>
