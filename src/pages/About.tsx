@@ -23,9 +23,19 @@ export function About() {
         <div>
           <ContentChapter title="About me">
             <TextSection>
-              I am a software engineer based in India, specializing in backend
-              development. I also have a deep passion for exploring ML, IoT, and
-              high-performance systems engineering.
+              I am a Software Engineer based in India, specializing in the
+              design and implementation of high-performance backend systems. My
+              technical journey is driven by a deep curiosity for how
+              large-scale distributed architectures operate, and I actively
+              explore the intersections of Machine Learning, IoT, and low-level
+              systems engineering.
+            </TextSection>
+            <TextSection>
+              I focus on creating efficient, scalable solutions that solve
+              complex problems. Whether I'm architecting microservices,
+              optimizing database performance, or experimenting with
+              hardware-software integration, I strive for technical excellence
+              and minimalist design in every project I undertake.
             </TextSection>
             <ImageDouble
               image1={{
@@ -166,30 +176,64 @@ export function About() {
 
           <ContentChapter title="Engineering">
             <TextSection>
-              In my professional engineering career, I've focused on building
-              robust backend systems that can scale to meet the demands of
-              modern applications.
+              My approach to engineering is grounded in a relentless drive to
+              compete and build. From winning at the college level in Smart
+              India Hackathon (SIH) to participating in Hack4Bengal and tackling
+              the AI/ML track, I have consistently thrown myself into technical
+              competitions, quizzes, and hackathons. Every event has been a
+              crucible for my skills, pushing me to raise my engineering
+              standards with every line of code I write, both inside and outside
+              the classroom.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBS1g51RjwC5OVfFAJEq6PM3xy9LY7mWpeTrKR"
               alt="SIH Winning Team"
             />
+            <TextSection>
+              Beyond competitions, my eyes were opened to the broader spectrum
+              of engineering by visiting and engaging with the vibrant tech
+              showcases at institutions like IIEST Shibpur, Jadavpur University,
+              and IIT Kharagpur. Seeing their engineering fests and technical
+              fests firsthand gave me a profound perspective on how communities
+              of builders innovate.
+            </TextSection>
+            <TextSection>
+              I’ve also been a student of industry excellence, studying the
+              engineering cultures of giants like Netflix and Amazon to
+              understand how they solve problems at scale. This blend of
+              competitive fire, community involvement, and academic curiosity
+              has shaped my vision: to build systems that aren’t just
+              functional, but are engineered to the highest possible standard.
+            </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Communities">
             <TextSection>
-              Being part of developer communities has been incredibly rewarding.
-              I've had the chance to lead workshops, contribute to open-source,
-              and connect with brilliant minds.
+              My journey in tech communities has been a path of steady growth
+              and deepening impact. It all began with Resource here and the
+              Electrical Students of Electrical Engineering, where I first
+              discovered the power of collective learning. From there, I
+              expanded my horizons by joining GDG, eventually stepping up as a
+              Community Lead at GDSC AOT, where I focused on bridging the gap
+              between academic learning and industry practice.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf"
               alt="GDG Cloud Kolkata and GDSC AOT Community"
             />
             <TextSection>
-              Looking ahead, I'm excited about the convergence of systems
-              engineering and intelligent computing. I plan to build tools that
-              are both minimalist and powerful.
+              My involvement then grew to the city-wide level with IEEE and GDG
+              Cloud Kolkata. In these spaces, I’ve been able to contribute
+              through both technical design and leadership support whether it's
+              building digital infrastructure for events like Cloud Community
+              Days or mentoring the next wave of developers.
+            </TextSection>
+            <TextSection>
+              Most recently, I've joined ML Kolkata, continuing my commitment to
+              staying at the forefront of the local tech ecosystem. For me,
+              communities are about more than just networking; they are about
+              building tools and environments that are both minimalist and
+              powerful.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBPPjgDTsae8qmj6SViYsXMnkFAyUuv9NGx0bf"

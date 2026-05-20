@@ -19,6 +19,10 @@ export function UI() {
         <div className="space-y-16">
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-white font-medium text-xl">Library</h1>
+            <p className="text-white/40 text-sm max-w-xl">
+              A collection of experimental UI components and design patterns
+              built with React, Tailwind CSS, and Framer Motion.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
