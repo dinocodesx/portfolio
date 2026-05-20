@@ -66,7 +66,7 @@ export function Portfolio() {
               className="text-white hover:underline underline-offset-4"
             >
               {" "}
-              and my Journey.
+              and my journeys.
             </Link>
           </p>
           <p>

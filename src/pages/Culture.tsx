@@ -14,30 +14,49 @@ export function Culture() {
     <PageLayout maxWidth="max-w-4xl" className="space-y-12">
       <SEO
         title="Culture | Debarshee Chakraborty"
-        description="My philosophy on engineering culture, team values, and collaboration."
+        description="Exploring Bengali culture, the significance of Durga Puja, and the traditions that define my heritage."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
         <SidebarLink />
 
         {/* Modular Sections */}
-        <div className="space-y-12">
-          <ContentChapter title="Indian and Bengali">
+        <div className="space-y-16">
+          <ContentChapter title="Roots & Identity">
             <TextSection>
-              I believe that great software is built by teams that value
-              clarity, empathy, and collective ownership. It's not just about
-              the code we write, but how we support each other and grow
-              together.
+              To be Bengali is to inherit a world shaped by poetry, protest, and
+              an unshakeable pride in one's roots. From the literary giants of
+              the Bengal Renaissance Tagore, Bankimchandra, Sarat Chandra to the
+              revolutionary spirit of a land that has always questioned and
+              created, Bengali identity is layered and deeply alive. At its core
+              is "Adda" the beloved Bengali tradition of unhurried, free-ranging
+              conversation over tea where philosophy, football, and fish curry
+              hold equal weight. It is a culture that feeds the soul as
+              generously as it feeds the stomach.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBreeGzC5ome6jd7GXxhwVOUTyZLHAo4ikFB3p"
-              alt="Picture by Ardhendu Dhar"
+              alt="Dhunuchi Naach picture by Ardhendu Dhar"
             />
             <TextSection>
-              A culture of continuous learning and psychological safety allows
-              for innovation to flourish. I strive to foster environments where
-              curiosity is encouraged and every failure is treated as a valuable
-              lesson.
+              And then there is Durga Puja not merely a festival, but the very
+              pulse of Bengal. For five days every autumn, the entire state
+              exhales in unison. It is the homecoming of Goddess Durga, the
+              ten-armed destroyer of evil, who descends from the Himalayas with
+              her children Lakshmi, Saraswati, Kartik, and Ganesh to bless the
+              mortal world. Beneath the religious devotion, however, lies
+              something even more universal: a celebration of community, art,
+              and the quiet joy of belonging.
+            </TextSection>
+            <TextSection>
+              Everything begins with Mahalaya, arriving before dawn, when the
+              voice of Birendra Krishna Bhadra reciting "Mahishasura Mardini"
+              crackles through radios and speakers across Bengal. No alarm clock
+              is needed that morning the chants do the waking. This marks the
+              "Devipaksha," the fortnight of the Goddess, and the city begins to
+              hum with anticipation. Artisans in Kumartuli put the final touches
+              on clay idols. The smell of "shiuli" flowers fills the morning
+              air. Kolkata starts to dress herself up.
             </TextSection>
             <ImageDouble
               image1={{
@@ -49,15 +68,32 @@ export function Culture() {
                 alt: "North Kolkata Durga Puja 2025",
               }}
             />
+            <TextSection>
+              From Shashti through Navami, life reorganizes itself around the
+              Puja. "Pandal hopping" visiting the elaborately crafted temporary
+              shrines that neighbourhoods construct over months is both a ritual
+              and a sport. Each pandal is a world unto itself: some are
+              breathtaking recreations of temples, others are conceptual art
+              installations that make you stop and think. The thunderous "Dhak"
+              the traditional drum beaten by dhakis who travel from rural Bengal
+              sets the tempo for it all. Then comes "Maha Ashtami," the most
+              sacred day. Devotees observe fasts and gather at dawn for
+              "Pushpanjali," offering flowers to the Goddess with Sanskrit
+              mantras that rise like smoke into the morning. At the precise cusp
+              of Ashtami and Navami, 108 lamps are lit for "Sandhi Puja" a
+              moment of such concentrated spiritual energy that the air itself
+              seems to hold its breath.
+            </TextSection>
             <ImageSingle
-              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBXQMfAyBRmfCro19wuz75cQ2IDsi4ZAjUkgKy"
-              alt="Durga Puja"
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaZHWs5UMdY8KPkAq2O9yIBLvJ6tlFhjguieX"
+              alt="Dashami Celebrations"
             />
             <TextSection>
-              A culture of continuous learning and psychological safety allows
-              for innovation to flourish. I strive to foster environments where
-              curiosity is encouraged and every failure is treated as a valuable
-              lesson.
+              "Dhunuchi Naach" is something you feel in your chest before you
+              understand it with your eyes. Dancers sway with earthen incense
+              burners balanced in their hands and mouths, moving in a trance to
+              the Dhak's insistent beat. It is devotion made physical urgent,
+              ecstatic, and utterly Bengali.
             </TextSection>
             <PolaroidGallery
               items={[
@@ -80,10 +116,23 @@ export function Culture() {
               ]}
             />
             <TextSection>
-              A culture of continuous learning and psychological safety allows
-              for innovation to flourish. I strive to foster environments where
-              curiosity is encouraged and every failure is treated as a valuable
-              lesson.
+              And then, before you are ready, it ends. Vijaya Dashami arrives
+              with a bittersweet weight that every Bengali knows intimately.
+              Women gather for "Sindoor Khela," smearing vermilion on each
+              other's faces and on the Goddess herself, in a farewell that is
+              both joyous and aching. The idol processions wind through streets
+              to the river for "Visarjan" immersion as Durga returns to Kailash
+              until next year. People touch the feet of elders, exchange
+              "Bijoya" greetings, and share sweets like "Nimki" and "Sandesh."
+              There is a particular Bengali word for this feeling "bhalobasha" a
+              love so deep it holds grief inside it.
+            </TextSection>
+            <TextSection>
+              Growing up embedded in this culture has shaped how I see the
+              world: the value of collective effort, the belief that art belongs
+              to everyone, and the understanding that the most meaningful things
+              in life a good conversation, a shared meal, a festival that stops
+              an entire city are always built together.
             </TextSection>
             <ImageDouble
               image1={{
