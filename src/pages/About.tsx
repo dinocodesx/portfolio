@@ -92,6 +92,42 @@ export function About() {
             />
           </ContentChapter>
 
+          <ContentChapter title="Sports">
+            <TextSection>
+              My college years were a period of intense learning, where I built
+              a strong foundation in computer science and started experimenting
+              with diverse technologies.
+            </TextSection>
+            <ImageDouble
+              image1={{
+                src: "https://www.fcbarcelona.com/photo-resources/2019/03/12/304ae4e8-6c40-4e91-a01f-b9c85767bf10/uAnwfqJX.jpg?width=1200&height=750",
+                alt: "Football Club Barcelona",
+              }}
+              image2={{
+                src: "https://cf-images.assettype.com/thequint%2F2023-05%2F3e7deaeb-e046-4b1e-a7e8-48a7d76edd49%2FSPCS5657.JPG?auto=format,compress&fmt=webp&width=720&w=1200",
+                alt: "Chennai Super Kings",
+              }}
+            />
+          </ContentChapter>
+
+          <ContentChapter title="Games">
+            <TextSection>
+              My college years were a period of intense learning, where I built
+              a strong foundation in computer science and started experimenting
+              with diverse technologies.
+            </TextSection>
+            <ImageDouble
+              image1={{
+                src: "https://www.rpgfan.com/wp-content/uploads/2021/04/Pokemon-Black-White-Screenshot-020-320x240_c.jpg",
+                alt: "Pokemon Black and White",
+              }}
+              image2={{
+                src: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_500/store/software/switch/70010000104187/d0800d5bf6dc32451514b6f1118f328bfc7a6c4d4c963d644898312a6c6fb335",
+                alt: "Super Mario Galaxy",
+              }}
+            />
+          </ContentChapter>
+
           <ContentChapter title="Engineering">
             <TextSection>
               In my professional engineering career, I've focused on building
@@ -114,9 +150,6 @@ export function About() {
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf"
               alt="GDG Cloud Kolkata and GDSC AOT Community"
             />
-          </ContentChapter>
-
-          <ContentChapter title="Future">
             <TextSection>
               Looking ahead, I'm excited about the convergence of systems
               engineering and intelligent computing. I plan to build tools that
