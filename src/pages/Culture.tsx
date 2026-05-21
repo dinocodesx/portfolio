@@ -102,8 +102,10 @@ export function Culture() {
               <b>
                 <i>Maha Ashtami</i>
               </b>
-              , the most sacred day. Devotees observe fasts and gather at dawn
-              for
+              , the most sacred day.
+            </TextSection>
+            <TextSection>
+              Devotees observe fasts and gather at dawn for{" "}
               <b>
                 <i>Pushpanjali</i>
               </b>
@@ -117,8 +119,8 @@ export function Culture() {
               seems to hold its breath.
             </TextSection>
             <ImageSingle
-              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaZHWs5UMdY8KPkAq2O9yIBLvJ6tlFhjguieX"
-              alt="Dashami Celebrations"
+              imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBU99CRXady7qHhWr0b18O5oQt63FIKgZeYX9A"
+              alt="Pandel Hopping during Ashtami 2025"
             />
             <TextSection>
               <b>
@@ -141,8 +143,8 @@ export function Culture() {
                   caption: "Pandel Hopping 2025",
                 },
                 {
-                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBU99CRXady7qHhWr0b18O5oQt63FIKgZeYX9A",
-                  caption: "Pandel Hopping 2024",
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBQeOWBn53KGm1nAjBwtJPZDqilreSYuscETHv",
+                  caption: "Raj Bari Pujo 2025",
                 },
                 {
                   src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBoBkpGxDfiQ5jHoRX9Jmb7E8rFxl6wG3I2tvZ",

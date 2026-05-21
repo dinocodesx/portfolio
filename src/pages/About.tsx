@@ -23,19 +23,51 @@ export function About() {
         <div>
           <ContentChapter title="About me">
             <TextSection>
-              I am a Software Engineer based in India, specializing in the
-              design and implementation of high-performance backend systems. My
-              technical journey is driven by a deep curiosity for how
-              large-scale distributed architectures operate, and I actively
-              explore the intersections of Machine Learning, IoT, and low-level
-              systems engineering.
+              I am a{" "}
+              <b>
+                <i>Software Engineer</i>
+              </b>{" "}
+              based in India, specializing in the design and implementation of{" "}
+              <b>
+                <i>high-performance backend systems</i>
+              </b>
+              . My technical journey is driven by a deep curiosity for how{" "}
+              <b>
+                <i>large-scale distributed architectures</i>
+              </b>{" "}
+              operate, and I actively explore the intersections of{" "}
+              <b>
+                <i>Machine Learning</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>IoT</i>
+              </b>
+              , and{" "}
+              <b>
+                <i>low-level systems engineering</i>
+              </b>
+              .
             </TextSection>
             <TextSection>
-              I focus on creating efficient, scalable solutions that solve
-              complex problems. Whether I'm architecting microservices,
-              optimizing database performance, or experimenting with
-              hardware-software integration, I strive for technical excellence
-              and minimalist design in every project I undertake.
+              I focus on creating{" "}
+              <b>
+                <i>efficient, scalable solutions</i>
+              </b>{" "}
+              that solve complex problems. Whether I'm architecting{" "}
+              <b>
+                <i>microservices</i>
+              </b>
+              , optimizing database performance, or experimenting with
+              hardware-software integration, I strive for{" "}
+              <b>
+                <i>technical excellence</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>minimalist design</i>
+              </b>{" "}
+              in every project I undertake.
             </TextSection>
             <ImageDouble
               image1={{
@@ -53,12 +85,23 @@ export function About() {
             <TextSection>
               My childhood was a vibrant mix of academic schooling and a deep
               dive into extracurricular activities. From the disciplined world
-              of Abacus to the physical rigor of Martial Arts—where I eventually
-              earned a brown belt—I was always looking for ways to challenge
-              myself outside the classroom.
+              of{" "}
+              <b>
+                <i>Abacus</i>
+              </b>{" "}
+              to the physical rigor of{" "}
+              <b>
+                <i>Martial Arts</i>
+              </b>
+              , where I eventually earned a{" "}
+              <b>
+                <i>brown belt</i>
+              </b>
+              . I was always looking for ways to challenge myself outside the
+              classroom.
             </TextSection>
             <TextSection>
-              Creativity was a de facto part of my daily life. I spent
+              Creativity was a de-facto part of my daily life. I spent
               significant time at home working on various creative projects,
               with art being a constant ritual. Whether it was sketching or
               building something new, the act of creation was my primary way of
@@ -75,29 +118,67 @@ export function About() {
               }}
             />
             <TextSection>
-              Sports were another pillar of my upbringing. Football was a
-              constant, played across school teams, our campus community, and
-              local grounds. When I wasn't on the football pitch, I was usually
-              engaged in a game of cricket or badminton, embracing the
-              competitive and collaborative spirit of the game.
+              Sports were another pillar of my upbringing.{" "}
+              <b>
+                <i>Football</i>
+              </b>{" "}
+              was a constant, played across school teams, our campus community,
+              and local grounds. When I wasn't on the football pitch, I was
+              usually engaged in a game of{" "}
+              <b>
+                <i>cricket</i>
+              </b>{" "}
+              or{" "}
+              <b>
+                <i>badminton</i>
+              </b>
+              , embracing the competitive and collaborative spirit of the game.
             </TextSection>
             <TextSection>
-              Parallel to sports and art, I nurtured a strong curiosity for
-              science. I participated in numerous competitions and science
-              fairs, always eager to understand the 'why' behind everything. It
-              was this early drive to learn and compete that eventually paved
-              the way for my journey into engineering.
+              Parallel to sports and art, I nurtured a strong curiosity for{" "}
+              <b>
+                <i>science</i>
+              </b>
+              . I participated in numerous competitions and science fairs,
+              always eager to understand the 'why' behind everything. It was
+              this early drive to learn and compete that eventually paved the
+              way for my journey into engineering.
             </TextSection>
           </ContentChapter>
 
           <ContentChapter title="College">
             <TextSection>
-              As an Electrical Engineering student, my academic path bridges the
-              physical and the digital. While my core coursework covers
-              traditional engineering, my true passion lies in exploring IoT,
-              robotics, machine learning, and backend development. I’ve spent
-              countless hours working with networks, operating systems, and
-              building connected devices.
+              As an{" "}
+              <b>
+                <i>Engineering student</i>
+              </b>
+              , my academic path bridges the physical and the digital. While my
+              core coursework covers traditional engineering, my true passion
+              lies in exploring{" "}
+              <b>
+                <i>IoT</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>robotics</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>machine learning</i>
+              </b>
+              , and{" "}
+              <b>
+                <i>backend development</i>
+              </b>
+              . I’ve spent countless hours working with{" "}
+              <b>
+                <i>networks</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>operating systems</i>
+              </b>
+              , and building connected devices.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBaldPii4UMdY8KPkAq2O9yIBLvJ6tlFhjguie"
@@ -109,8 +190,15 @@ export function About() {
               in and occasionally winning various competitions and technical
               events. This active involvement has helped me build a strong
               rapport with our community, making me a familiar face among the
-              teaching staff, the Director, and the Chairman Trustee as a
-              dedicated and engaged student.
+              teaching staff, the{" "}
+              <b>
+                <i>Director</i>
+              </b>
+              , and the{" "}
+              <b>
+                <i>Chairman Trustee</i>
+              </b>{" "}
+              as a dedicated and engaged student.
             </TextSection>
             <TextSection>
               All of this takes place on a remarkably beautiful campus that
@@ -122,11 +210,25 @@ export function About() {
           <ContentChapter title="Sports">
             <TextSection>
               Sports have always been a source of deep passion and shared joy
-              for me, particularly football and cricket. My journey with FC
-              Barcelona began in 2009; I remember watching them on the bulky,
-              old televisions we had at home, mesmerized by their philosophy on
-              the pitch. That love hasn't faded; I've followed them ever since,
-              trying to circulate that same spirit of excellence and passion.
+              for me, particularly{" "}
+              <b>
+                <i>football</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>cricket</i>
+              </b>
+              . My journey with{" "}
+              <b>
+                <i>FC Barcelona</i>
+              </b>{" "}
+              began in 2009; I remember watching them on the bulky, old
+              televisions we had at home, mesmerized by their{" "}
+              <b>
+                <i>philosophy on the pitch</i>
+              </b>
+              . That love hasn't faded; I've followed them ever since, trying to
+              circulate that same spirit of excellence and passion.
             </TextSection>
             <ImageDouble
               image1={{
@@ -139,21 +241,37 @@ export function About() {
               }}
             />
             <TextSection>
-              Similarly, my cricket allegiance has always been with the Chennai
-              Super Kings. My memories of the IPL start vividly around the
-              second season, and ever since, watching the Yellow Army has been a
-              ritual that brings back the excitement of those early years of
-              watching the game.
+              Similarly, my cricket allegiance has always been with the{" "}
+              <b>
+                <i>Chennai Super Kings</i>
+              </b>
+              . My memories of the IPL start vividly around the second season,
+              and ever since, watching the{" "}
+              <b>
+                <i>Yellow Army</i>
+              </b>{" "}
+              has been a ritual that brings back the excitement of those early
+              years of watching the game.
             </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Games">
             <TextSection>
               Gaming, for me, is synonymous with a specific era of discovery.
-              There are two titles I hold exceptionally close to my heart:
-              Pokémon Black and Super Mario Galaxy. They represent more than
-              just entertainment; they are windows into a retro vibe that
-              defined my childhood.
+              There are two titles I hold exceptionally close to my heart:{" "}
+              <b>
+                <i>Pokémon Black and White</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>Super Mario Galaxy</i>
+              </b>
+              . They represent more than just entertainment; they are windows
+              into a{" "}
+              <b>
+                <i>retro vibe</i>
+              </b>{" "}
+              that defined my childhood.
             </TextSection>
             <ImageDouble
               image1={{
@@ -166,24 +284,45 @@ export function About() {
               }}
             />
             <TextSection>
-              The pixelated landscapes of the Unova region and the
-              gravity-defying wonders of the Comet Observatory carry a profound
-              nostalgia. Every time I revisit these worlds, I'm reminded of the
-              simple wonder and the retro charm that first drew me to these
-              stories.
+              The pixelated landscapes of the{" "}
+              <b>
+                <i>Unova region</i>
+              </b>{" "}
+              and the gravity-defying wonders of the{" "}
+              <b>
+                <i>Comet Observatory</i>
+              </b>{" "}
+              carry a profound nostalgia. Every time I revisit these worlds, I'm
+              reminded of the simple wonder and the{" "}
+              <b>
+                <i>retro charm</i>
+              </b>{" "}
+              that first drew me to these stories.
             </TextSection>
           </ContentChapter>
 
           <ContentChapter title="Engineering">
             <TextSection>
-              My approach to engineering is grounded in a relentless drive to
-              compete and build. From winning at the college level in Smart
-              India Hackathon (SIH) to participating in Hack4Bengal and tackling
-              the AI/ML track, I have consistently thrown myself into technical
-              competitions, quizzes, and hackathons. Every event has been a
-              crucible for my skills, pushing me to raise my engineering
-              standards with every line of code I write, both inside and outside
-              the classroom.
+              My approach to engineering is grounded in a relentless drive to{" "}
+              <b>
+                <i>compete and build</i>
+              </b>
+              . From winning at the college level in{" "}
+              <b>
+                <i>Smart India Hackathon (SIH)</i>
+              </b>{" "}
+              to participating in{" "}
+              <b>
+                <i>Hack4Bengal</i>
+              </b>{" "}
+              and tackling the{" "}
+              <b>
+                <i>AI/ML track</i>
+              </b>
+              , I have consistently thrown myself into technical competitions,
+              quizzes, and hackathons. Every event has been a crucible for my
+              skills, pushing me to raise my engineering standards with every
+              line of code I write, both inside and outside the classroom.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBS1g51RjwC5OVfFAJEq6PM3xy9LY7mWpeTrKR"
@@ -192,15 +331,33 @@ export function About() {
             <TextSection>
               Beyond competitions, my eyes were opened to the broader spectrum
               of engineering by visiting and engaging with the vibrant tech
-              showcases at institutions like IIEST Shibpur, Jadavpur University,
-              and IIT Kharagpur. Seeing their engineering fests and technical
-              fests firsthand gave me a profound perspective on how communities
-              of builders innovate.
+              showcases at institutions like{" "}
+              <b>
+                <i>IIEST Shibpur</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>Jadavpur University</i>
+              </b>
+              , and{" "}
+              <b>
+                <i>IIT Kharagpur</i>
+              </b>
+              . Seeing their engineering fests and technical fests firsthand
+              gave me a profound perspective on how communities of builders
+              innovate.
             </TextSection>
             <TextSection>
               I’ve also been a student of industry excellence, studying the
-              engineering cultures of giants like Netflix and Amazon to
-              understand how they solve problems at scale. This blend of
+              engineering cultures of giants like{" "}
+              <b>
+                <i>Netflix</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>Amazon</i>
+              </b>{" "}
+              to understand how they solve problems at scale. This blend of
               competitive fire, community involvement, and academic curiosity
               has shaped my vision: to build systems that aren’t just
               functional, but are engineered to the highest possible standard.
@@ -213,27 +370,51 @@ export function About() {
               and deepening impact. It all began with Resource here and the
               Electrical Students of Electrical Engineering, where I first
               discovered the power of collective learning. From there, I
-              expanded my horizons by joining GDG, eventually stepping up as a
-              Community Lead at GDSC AOT, where I focused on bridging the gap
-              between academic learning and industry practice.
+              expanded my horizons by joining GDG, eventually stepping up as a{" "}
+              <b>
+                <i>Community Lead</i>
+              </b>{" "}
+              at{" "}
+              <b>
+                <i>GDSC AOT</i>
+              </b>
+              , where I focused on bridging the gap between academic learning
+              and industry practice.
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBJ8yxnEH9okxYKg58u4AHl7yXJdMb10tmehrf"
               alt="GDG Cloud Kolkata and GDSC AOT Community"
             />
             <TextSection>
-              My involvement then grew to the city-wide level with IEEE and GDG
-              Cloud Kolkata. In these spaces, I’ve been able to contribute
-              through both technical design and leadership support whether it's
-              building digital infrastructure for events like Cloud Community
-              Days or mentoring the next wave of developers.
+              My involvement then grew to the city-wide level with{" "}
+              <b>
+                <i>IEEE</i>
+              </b>{" "}
+              and{" "}
+              <b>
+                <i>GDG Cloud Kolkata</i>
+              </b>
+              . In these spaces, I’ve been able to contribute through both
+              technical design and leadership support whether it's building
+              digital infrastructure for events like{" "}
+              <b>
+                <i>Cloud Community Days</i>
+              </b>{" "}
+              or mentoring the next wave of developers.
             </TextSection>
             <TextSection>
-              Most recently, I've joined ML Kolkata, continuing my commitment to
-              staying at the forefront of the local tech ecosystem. For me,
-              communities are about more than just networking; they are about
-              building tools and environments that are both minimalist and
-              powerful.
+              Most recently, I've joined{" "}
+              <b>
+                <i>ML Kolkata</i>
+              </b>
+              , continuing my commitment to staying at the forefront of the
+              local tech ecosystem. For me, communities are about more than just
+              networking; they are about building tools and environments that
+              are both{" "}
+              <b>
+                <i>minimalist and powerful</i>
+              </b>
+              .
             </TextSection>
             <ImageSingle
               imageSrc="https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBPPjgDTsae8qmj6SViYsXMnkFAyUuv9NGx0bf"
