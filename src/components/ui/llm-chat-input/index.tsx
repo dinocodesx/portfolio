@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { containerVariants, itemVariants } from "@/constants/animations";
 import {
   ArrowLeft,
-  Plus,
-  Send,
   ChevronDown,
   FileText,
   Image as ImageIcon,
   Link as LinkIcon,
+  Plus,
+  Send,
 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../../constants/animations";
 
 const models = ["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Llama 3"];
 

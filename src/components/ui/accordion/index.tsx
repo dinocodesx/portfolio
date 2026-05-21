@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import { Plus } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
 const ACCORDION_ITEMS = [
   {
@@ -34,8 +34,8 @@ export function AccordionCraft() {
       date="May 2026"
       description={
         <p>
-          A study on <span className="text-white">spatial continuity</span>. This
-          accordion utilizes Framer Motion's automatic layout animations to
+          A study on <span className="text-white">spatial continuity</span>.
+          This accordion utilizes Framer Motion's automatic layout animations to
           provide a tactile, physical feel when expanding content.
         </p>
       }
@@ -79,7 +79,9 @@ export function AccordionCraft() {
                 </div>
                 <div
                   className={`transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-                    openId === item.id ? "rotate-45 text-white" : "text-white/20"
+                    openId === item.id
+                      ? "rotate-45 text-white"
+                      : "text-white/20"
                   }`}
                 >
                   <Plus className="w-4 h-4" />
@@ -120,7 +122,8 @@ export function AccordionCraft() {
             custom cubic-bezier
           </code>{" "}
           curve to mimic physical weight. The numbering and icons shift color to
-          provide clear <span className="text-white">active-state hierarchy</span>.
+          provide clear{" "}
+          <span className="text-white">active-state hierarchy</span>.
         </p>
       </motion.div>
     </UiShowcaseLayout>

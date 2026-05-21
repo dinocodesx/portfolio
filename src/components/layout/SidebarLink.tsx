@@ -1,7 +1,7 @@
+import { itemVariants } from "@/constants/animations";
+import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import { itemVariants } from "../../constants/animations";
 
 /**
  * A sidebar navigation link that points back to the index page.

@@ -1,4 +1,4 @@
-import { ExperienceProps } from "../../types";
+import { ExperienceProps } from "@/types";
 
 export function Experiences({
   title,

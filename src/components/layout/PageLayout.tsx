@@ -1,5 +1,5 @@
+import { containerVariants } from "@/constants/animations";
 import { motion } from "motion/react";
-import { containerVariants } from "../../constants/animations";
 
 interface PageLayoutProps {
   children: React.ReactNode;

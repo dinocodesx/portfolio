@@ -1,6 +1,5 @@
-import { LinkCard } from "../layout/LinkCard";
-
-import { ProjectProps } from "../../types";
+import { LinkCard } from "@/components/layout/LinkCard";
+import { ProjectProps } from "@/types";
 
 export function Projects({ title, description, github, live }: ProjectProps) {
   const link = live || github;

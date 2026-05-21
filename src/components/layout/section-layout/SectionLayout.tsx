@@ -1,5 +1,5 @@
+import { itemVariants } from "@/constants/animations";
 import { motion } from "motion/react";
-import { itemVariants } from "../../../constants/animations";
 
 /**
  * Renders a standard narrow text block.

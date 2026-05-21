@@ -1,7 +1,7 @@
-import { motion } from "motion/react";
+import { containerVariants, itemVariants } from "@/constants/animations";
 import { ArrowLeft, Sparkles, User } from "lucide-react";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../../constants/animations";
 
 export function ChatBubbleCraft() {
   return (

@@ -1,16 +1,16 @@
-import { motion } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import {
-  Tag,
-  Hash,
+  Bell,
   Bookmark,
   Circle,
-  Bell,
-  Zap,
   Command,
+  Hash,
+  Tag,
   User,
+  Zap,
 } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { motion } from "motion/react";
 
 export function Label() {
   return (

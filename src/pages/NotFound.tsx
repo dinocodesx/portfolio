@@ -1,8 +1,8 @@
-import { motion } from "motion/react";
+import { SEO } from "@/components/layout/SEO";
+import { containerVariants, itemVariants } from "@/constants/animations";
 import { ArrowLeft } from "lucide-react";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../constants/animations";
-import { SEO } from "../components/layout/SEO";
 
 export function NotFound() {
   return (

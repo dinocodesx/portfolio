@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { motion } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import {
-  Loader2,
-  Check,
   ArrowRight,
+  Check,
+  CheckCircle2,
+  Loader2,
   Play,
   Plus,
   Trash2,
-  CheckCircle2,
 } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { motion } from "motion/react";
+import { useState } from "react";
 
 export function ButtonCraft() {
   const [isLoading, setIsLoading] = useState(false);

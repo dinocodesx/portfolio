@@ -1,8 +1,8 @@
-import { SidebarLink } from "../SidebarLink";
-import { PageLayout } from "../PageLayout";
-import { SEO } from "../SEO";
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { SidebarLink } from "@/components/layout/SidebarLink";
+import { itemVariants } from "@/constants/animations";
 import { motion } from "motion/react";
-import { itemVariants } from "../../../constants/animations";
 
 interface ArchiveLayoutProps {
   title: string;

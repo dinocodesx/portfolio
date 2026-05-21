@@ -1,4 +1,4 @@
-import { SpotifyData } from "../types";
+import { SpotifyData } from "@/types";
 
 export const SPOTIFY_DATA: SpotifyData = {
   songs: [

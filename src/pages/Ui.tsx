@@ -1,8 +1,8 @@
+import { BentoCard, PageLayout, SEO } from "@/components/layout";
+import { SidebarLink } from "@/components/layout/SidebarLink";
+import { itemVariants } from "@/constants/animations";
+import { UI_DATA } from "@/data";
 import { motion } from "motion/react";
-import { SidebarLink } from "../components/layout/SidebarLink";
-import { itemVariants } from "../constants/animations";
-import { PageLayout, SEO, BentoCard } from "../components/layout";
-import { UI_DATA } from "../data";
 
 export function UI() {
   const allItems = UI_DATA;

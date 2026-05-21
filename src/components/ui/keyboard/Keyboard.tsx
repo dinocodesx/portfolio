@@ -1,6 +1,6 @@
-import React from "react";
+import { Shortcut } from "@/types";
 import { motion } from "motion/react";
-import { Shortcut } from "../../../types";
+import React from "react";
 
 interface KeyboardProps {
   shortcuts: Shortcut[];

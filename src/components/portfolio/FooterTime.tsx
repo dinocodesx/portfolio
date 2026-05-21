@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * Displays the current IST (Kolkata) time on hover, otherwise shows the year.

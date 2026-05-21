@@ -1,10 +1,10 @@
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { SidebarLink } from "@/components/layout/SidebarLink";
+import { itemVariants } from "@/constants/animations";
+import { PROJECTS_DATA } from "@/data";
+import { ExternalLink, Github } from "lucide-react";
 import { motion } from "motion/react";
-import { SidebarLink } from "../components/layout/SidebarLink";
-import { Github, ExternalLink } from "lucide-react";
-import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/layout/PageLayout";
-import { SEO } from "../components/layout/SEO";
-import { PROJECTS_DATA } from "../data";
 
 export function Projects() {
   return (

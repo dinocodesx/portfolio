@@ -1,6 +1,6 @@
-import { motion } from "motion/react";
+import { itemVariants } from "@/constants/animations";
 import { Play } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
+import { motion } from "motion/react";
 
 interface MetaItem {
   icon: React.ReactNode;

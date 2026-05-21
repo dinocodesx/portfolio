@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import {
-  ChevronDown,
-  User,
-  Settings,
-  LogOut,
   Bell,
+  ChevronDown,
+  Link2,
+  LogOut,
   Mail,
   MessageSquare,
+  Settings,
   Share2,
-  Link2,
+  User,
 } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
 export function DropdownCraft() {
   const [showMinimal, setShowMinimal] = useState(false);

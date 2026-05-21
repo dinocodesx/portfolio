@@ -1,4 +1,4 @@
-import { Talk } from "../types";
+import { Talk } from "@/types";
 
 export const TALKS_DATA: Talk[] = [
   {

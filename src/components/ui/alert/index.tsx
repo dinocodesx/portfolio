@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import {
-  ShieldIcon,
   RotateCcw,
   ShieldAlert,
   ShieldCheck,
+  ShieldIcon,
   X,
 } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { AnimatePresence, motion } from "motion/react";
+import React, { useState } from "react";
 
-import { AlertType } from "../../../types";
+import { AlertType } from "@/types";
 
 interface AlertProps {
   type?: AlertType;
@@ -202,4 +202,3 @@ export function AlertShowcase() {
     </UiShowcaseLayout>
   );
 }
-

@@ -1,17 +1,17 @@
-import { motion } from "motion/react";
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { PrintStyles } from "@/components/portfolio/PrintStyles";
+import { itemVariants } from "@/constants/animations";
 import {
   ArrowLeft,
   Download,
+  Github,
+  Linkedin,
   Mail,
   MapPin,
-  Linkedin,
-  Github,
 } from "lucide-react";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/layout/PageLayout";
-import { PrintStyles } from "../components/portfolio/PrintStyles";
-import { SEO } from "../components/layout/SEO";
 
 const RESUME_DATA = {
   name: "Debarshee Chakraborty",

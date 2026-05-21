@@ -1,6 +1,6 @@
+import { Lightbox } from "@/components/layout/section-layout/Lightbox";
+import { OverflowSection } from "@/components/layout/section-layout/SectionLayout";
 import { useState } from "react";
-import { OverflowSection } from "./SectionLayout";
-import { Lightbox } from "./Lightbox";
 
 interface SingleImageProps {
   imageSrc: string;

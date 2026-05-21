@@ -1,4 +1,4 @@
-import { BlogProps } from "../../types";
+import { BlogProps } from "@/types";
 
 export function Blogs({ title, date, excerpt, link, readTime }: BlogProps) {
   return (

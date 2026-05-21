@@ -1,8 +1,8 @@
+import { itemVariants } from "@/constants/animations";
+import { UIItem } from "@/types";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import { itemVariants } from "../../constants/animations";
-import { UIItem } from "../../types";
 
 interface BentoCardProps {
   item: UIItem;

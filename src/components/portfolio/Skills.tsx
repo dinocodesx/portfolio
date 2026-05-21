@@ -1,4 +1,4 @@
-import { SkillCategoryProps } from "../../types";
+import { SkillCategoryProps } from "@/types";
 
 export function SkillCategory({ category, skills }: SkillCategoryProps) {
   return (
@@ -10,7 +10,7 @@ export function SkillCategory({ category, skills }: SkillCategoryProps) {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="inline-flex items-center px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/5 text-[13px] text-white/60 hover:text-white hover:border-white/20 transition-all cursor-default"
+            className="inline-flex items-center px-2.5 py-1 rounded-lg bg-white/3 border border-white/5 text-[13px] text-white/60 hover:text-white hover:border-white/20 transition-all cursor-default"
           >
             <span className="font-medium">{skill.name}</span>
           </div>

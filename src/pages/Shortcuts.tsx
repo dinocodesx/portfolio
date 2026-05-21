@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { PageLayout } from "../components/layout/PageLayout";
-import { SidebarLink } from "../components/layout/SidebarLink";
-import { SEO } from "../components/layout/SEO";
-import { OverflowSection } from "../components/layout/section-layout";
-import { Keyboard } from "../components/ui/keyboard/Keyboard";
-import { shortcuts } from "../data/shortcuts";
-import { motion, AnimatePresence } from "motion/react";
-import { itemVariants } from "../constants/animations";
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { SidebarLink } from "@/components/layout/SidebarLink";
+import { OverflowSection } from "@/components/layout/section-layout";
+import { Keyboard } from "@/components/ui/keyboard/Keyboard";
+import { itemVariants } from "@/constants/animations";
+import { shortcuts } from "@/data/shortcuts";
+import { AnimatePresence, motion } from "motion/react";
+import React, { useEffect, useState } from "react";
 
 export function Shortcuts() {
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -29,24 +29,28 @@ export function Shortcuts() {
   }, []);
 
   const categories = ["All", ...new Set(shortcuts.map((s) => s.category))];
-  const filteredShortcuts = selectedCategory === "All" 
-    ? shortcuts 
-    : shortcuts.filter((s) => s.category === selectedCategory);
+  const filteredShortcuts =
+    selectedCategory === "All"
+      ? shortcuts
+      : shortcuts.filter((s) => s.category === selectedCategory);
 
   // Group filtered shortcuts by category for the table view
-  const groupedShortcuts = filteredShortcuts.reduce((acc, shortcut) => {
-    if (!acc[shortcut.category]) {
-      acc[shortcut.category] = [];
-    }
-    acc[shortcut.category].push(shortcut);
-    return acc;
-  }, {} as Record<string, typeof shortcuts>);
+  const groupedShortcuts = filteredShortcuts.reduce(
+    (acc, shortcut) => {
+      if (!acc[shortcut.category]) {
+        acc[shortcut.category] = [];
+      }
+      acc[shortcut.category].push(shortcut);
+      return acc;
+    },
+    {} as Record<string, typeof shortcuts>,
+  );
 
   return (
     <PageLayout maxWidth="max-w-4xl">
-      <SEO 
-        title="Shortcuts | Debarshee Chakraborty" 
-        description="Keyboard shortcuts for navigating the portfolio of Debarshee Chakraborty." 
+      <SEO
+        title="Shortcuts | Debarshee Chakraborty"
+        description="Keyboard shortcuts for navigating the portfolio of Debarshee Chakraborty."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
@@ -55,9 +59,12 @@ export function Shortcuts() {
         <div className="space-y-16">
           {/* Header */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-xl tracking-tight">Keyboard Shortcuts</h1>
+            <h1 className="text-white font-medium text-xl tracking-tight">
+              Keyboard Shortcuts
+            </h1>
             <p className="text-white/60 text-[15px] max-w-xl leading-relaxed">
-              Experience the site at full speed. Use these physical keys to navigate instantly between sections.
+              Experience the site at full speed. Use these physical keys to
+              navigate instantly between sections.
             </p>
           </motion.div>
 
@@ -117,14 +124,16 @@ export function Shortcuts() {
                               {shortcut.description}
                             </p>
                           </div>
-                          <div className="flex-shrink-0 flex items-center gap-1.5">
+                          <div className="shrink-0 flex items-center gap-1.5">
                             {shortcut.keys.map((key, kIdx) => (
                               <React.Fragment key={kIdx}>
-                                <div className="min-w-[32px] h-8 px-2.5 rounded bg-white/[0.03] border border-white/10 text-white/60 font-mono text-[11px] font-bold flex items-center justify-center shadow-sm group-hover:border-white/30 group-hover:text-white group-hover:bg-white/[0.08] transition-all">
+                                <div className="min-w-8 h-8 px-2.5 rounded bg-white/3 border border-white/10 text-white/60 font-mono text-[11px] font-bold flex items-center justify-center shadow-sm group-hover:border-white/30 group-hover:text-white group-hover:bg-white/8 transition-all">
                                   {key}
                                 </div>
                                 {kIdx < shortcut.keys.length - 1 && (
-                                  <span className="text-white/20 text-[10px] font-bold">+</span>
+                                  <span className="text-white/20 text-[10px] font-bold">
+                                    +
+                                  </span>
                                 )}
                               </React.Fragment>
                             ))}

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { motion } from "motion/react";
+import { SEO } from "@/components/layout/SEO";
+import { containerVariants, itemVariants } from "@/constants/animations";
 import { Loader2 } from "lucide-react";
-import { containerVariants, itemVariants } from "../constants/animations";
-import { SEO } from "../components/layout/SEO";
+import { motion } from "motion/react";
+import { useEffect } from "react";
 
 export function Meet() {
   useEffect(() => {

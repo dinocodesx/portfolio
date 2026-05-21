@@ -1,4 +1,4 @@
-import { UIItem } from "../types";
+import { UIItem } from "@/types";
 
 export const UI_DATA: UIItem[] = [
   {

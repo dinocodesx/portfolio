@@ -1,4 +1,4 @@
-import { Shortcut } from "../types";
+import { Shortcut } from "@/types";
 
 export const shortcuts: Shortcut[] = [
   {

@@ -1,11 +1,11 @@
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { SectionHeading } from "@/components/layout/SectionHeading";
+import { SidebarLink } from "@/components/layout/SidebarLink";
+import { itemVariants } from "@/constants/animations";
+import { SPOTIFY_DATA } from "@/data";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import { SidebarLink } from "../components/layout/SidebarLink";
-import { Music2, ArrowUpRight } from "lucide-react";
-import { itemVariants } from "../constants/animations";
-import { PageLayout } from "../components/layout/PageLayout";
-import { SEO } from "../components/layout/SEO";
-import { SectionHeading } from "../components/layout/SectionHeading";
-import { SPOTIFY_DATA } from "../data";
 
 export function Spotify() {
   return (

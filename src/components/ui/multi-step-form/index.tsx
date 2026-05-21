@@ -1,18 +1,17 @@
-import { useState } from "react";
-import React from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
 import {
-  User,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   Mail,
   MapPin,
   Phone,
-  CheckCircle2,
-  ChevronRight,
-  ChevronLeft,
   ShieldCheck,
+  User,
 } from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { AnimatePresence, motion } from "motion/react";
+import React, { useState } from "react";
 
 type FormData = {
   fullName: string;
@@ -154,13 +153,22 @@ export function MultiStepForm() {
                       className="space-y-3.5"
                     >
                       {step === 1 && (
-                        <Step1 formData={formData} updateFields={updateFields} />
+                        <Step1
+                          formData={formData}
+                          updateFields={updateFields}
+                        />
                       )}
                       {step === 2 && (
-                        <Step2 formData={formData} updateFields={updateFields} />
+                        <Step2
+                          formData={formData}
+                          updateFields={updateFields}
+                        />
                       )}
                       {step === 3 && (
-                        <Step3 formData={formData} updateFields={updateFields} />
+                        <Step3
+                          formData={formData}
+                          updateFields={updateFields}
+                        />
                       )}
                     </motion.div>
                   </AnimatePresence>

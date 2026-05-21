@@ -1,24 +1,17 @@
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SectionHeading } from "@/components/layout/SectionHeading";
+import { SEO } from "@/components/layout/SEO";
+import { Blogs } from "@/components/portfolio/Blog";
+import { Building } from "@/components/portfolio/Building";
+import { Experiences } from "@/components/portfolio/Experiences";
+import { FooterTime } from "@/components/portfolio/FooterTime";
+import { Projects } from "@/components/portfolio/Projects";
+import { Talks } from "@/components/portfolio/Talks";
+import { itemVariants } from "@/constants/animations";
+import { BLOGS_DATA, BUILDING_DATA, EXPERIENCE_DATA, TALKS_DATA } from "@/data";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { itemVariants } from "../constants/animations";
-import { Projects } from "../components/portfolio/Projects";
-import { Blogs } from "../components/portfolio/Blog";
-import { Experiences } from "../components/portfolio/Experiences";
-import { SkillCategory } from "../components/portfolio/Skills";
-import { Talks } from "../components/portfolio/Talks";
-import { Building } from "../components/portfolio/Building";
-import { PageLayout } from "../components/layout/PageLayout";
-import { SectionHeading } from "../components/layout/SectionHeading";
-import { FooterTime } from "../components/portfolio/FooterTime";
-import { SEO } from "../components/layout/SEO";
-import {
-  EXPERIENCE_DATA,
-  TALKS_DATA,
-  BLOGS_DATA,
-  BUILDING_DATA,
-  SKILLS_DATA,
-} from "../data";
 
 export function Portfolio() {
   return (

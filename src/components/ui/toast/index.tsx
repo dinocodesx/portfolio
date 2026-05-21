@@ -1,14 +1,8 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import {
-  X,
-  CheckCircle2,
-  AlertCircle,
-  Info,
-  Terminal,
-} from "lucide-react";
-import { itemVariants } from "../../../constants/animations";
-import { UiShowcaseLayout } from "../../layout";
+import { UiShowcaseLayout } from "@/components/layout";
+import { itemVariants } from "@/constants/animations";
+import { AlertCircle, CheckCircle2, Info, Terminal, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 type ToastType = "success" | "error" | "info" | "system";
 

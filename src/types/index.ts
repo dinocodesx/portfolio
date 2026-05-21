@@ -172,4 +172,3 @@ export interface Shortcut {
   description: string;
   category: "Navigation" | "General" | "System" | "Apps" | "Other";
 }
-

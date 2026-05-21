@@ -1,13 +1,13 @@
-import { SidebarLink } from "../components/layout/SidebarLink";
-import { PageLayout } from "../components/layout/PageLayout";
-import { SEO } from "../components/layout/SEO";
 import {
   ContentChapter,
-  TextSection,
-  ImageSingle,
   ImageDouble,
+  ImageSingle,
   PolaroidGallery,
-} from "../components/layout";
+  TextSection,
+} from "@/components/layout";
+import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/layout/SEO";
+import { SidebarLink } from "@/components/layout/SidebarLink";
 
 export function Culture() {
   return (

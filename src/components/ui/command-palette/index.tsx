@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { motion } from "motion/react";
+import { containerVariants, itemVariants } from "@/constants/animations";
 import {
   ArrowLeft,
-  Search,
-  Command,
-  Sparkles,
-  History,
   ArrowRight,
+  Command,
+  History,
+  Search,
+  Sparkles,
 } from "lucide-react";
+import { motion } from "motion/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { containerVariants, itemVariants } from "../../../constants/animations";
 
 export function CommandPalette() {
   const [searchValue, setSearchValue] = useState("");

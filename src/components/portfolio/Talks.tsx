@@ -1,4 +1,4 @@
-import { TalkProps } from "../../types";
+import { TalkProps } from "@/types";
 
 export function Talks({ title, date, location, event, link }: TalkProps) {
   return (

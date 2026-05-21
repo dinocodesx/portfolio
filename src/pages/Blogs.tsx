@@ -1,6 +1,6 @@
+import { ArchiveLayout, ContentListItem } from "@/components/layout";
+import { BLOGS_DATA } from "@/data";
 import { Calendar, Clock } from "lucide-react";
-import { ArchiveLayout, ContentListItem } from "../components/layout";
-import { BLOGS_DATA } from "../data";
 
 export function Blogs() {
   return (

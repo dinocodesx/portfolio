@@ -1,35 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GlobalCommandPalette } from "@/components/layout/CommandPalette";
+import { ScrollToTop } from "@/components/portfolio/ScrollToTop";
 import { Suspense } from "react";
-import { ScrollToTop } from "./components/portfolio/ScrollToTop";
-import { GlobalCommandPalette } from "./components/layout/CommandPalette";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Portfolio } from "./pages/Portfolio";
-import { About } from "./pages/About";
-import { Community } from "./pages/Community";
-import { Journey } from "./pages/Journey";
-import { Culture } from "./pages/Culture";
-import { Projects } from "./pages/Projects";
-import { Blogs } from "./pages/Blogs";
-import { Talks } from "./pages/Talks";
-import { Social } from "./pages/Socials";
-import { Spotify } from "./pages/Spotify";
-import { Resume } from "./pages/Resume";
-import { Meet } from "./pages/Meet";
-import { Shortcuts } from "./pages/Shortcuts";
-import { NotFound } from "./pages/NotFound";
+import { AccordionCraft } from "@/components/ui/accordion";
+import { AlertShowcase } from "@/components/ui/alert";
+import { ButtonCraft } from "@/components/ui/button";
+import { ChatBubbleCraft } from "@/components/ui/chat-bubble";
+import { CommandPalette } from "@/components/ui/command-palette";
+import { DropdownCraft } from "@/components/ui/dropdown";
+import { KeyboardCraft } from "@/components/ui/keyboard";
+import { Label } from "@/components/ui/label";
+import { LLMChatInput } from "@/components/ui/llm-chat-input";
+import { MultiStepForm } from "@/components/ui/multi-step-form";
+import { Toast } from "@/components/ui/toast";
 
-import { UI } from "./pages/Ui";
-import { LLMChatInput } from "./components/ui/llm-chat-input";
-import { ButtonCraft } from "./components/ui/button";
-import { DropdownCraft } from "./components/ui/dropdown";
-import { ChatBubbleCraft } from "./components/ui/chat-bubble";
-import { CommandPalette } from "./components/ui/command-palette";
-import { MultiStepForm } from "./components/ui/multi-step-form";
-import { Toast } from "./components/ui/toast";
-import { Label } from "./components/ui/label";
-import { AlertShowcase } from "./components/ui/alert";
-import { AccordionCraft } from "./components/ui/accordion";
-import { KeyboardCraft } from "./components/ui/keyboard";
+import { About } from "@/pages/About";
+import { Blogs } from "@/pages/Blogs";
+import { Community } from "@/pages/Community";
+import { Culture } from "@/pages/Culture";
+import { Journey } from "@/pages/Journey";
+import { Meet } from "@/pages/Meet";
+import { NotFound } from "@/pages/NotFound";
+import { Portfolio } from "@/pages/Portfolio";
+import { Projects } from "@/pages/Projects";
+import { Resume } from "@/pages/Resume";
+import { Shortcuts } from "@/pages/Shortcuts";
+import { Social } from "@/pages/Socials";
+import { Spotify } from "@/pages/Spotify";
+import { Talks } from "@/pages/Talks";
+import { UI } from "@/pages/Ui";
 
 // Loading component
 const PageLoader = () => (

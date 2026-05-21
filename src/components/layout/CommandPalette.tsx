@@ -1,14 +1,14 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import {
-  Search,
-  FileText,
-  User,
-  Layout,
   Briefcase,
   Code,
+  FileText,
+  Layout,
   Link as LinkIcon,
+  Search,
+  User,
 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface CommandItem {

@@ -1,6 +1,6 @@
+import { ArchiveLayout, ContentListItem } from "@/components/layout";
+import { TALKS_DATA } from "@/data";
 import { Calendar, MapPin } from "lucide-react";
-import { ArchiveLayout, ContentListItem } from "../components/layout";
-import { TALKS_DATA } from "../data";
 
 export function Talks() {
   return (
