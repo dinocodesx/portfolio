@@ -45,7 +45,8 @@ const ROW_5: KeyInfo[] = [
 const ALL_ROWS = [ROW_0, ROW_1, ROW_2, ROW_3, ROW_4, ROW_5];
 
 export const Keyboard: React.FC<KeyboardProps> = ({ shortcuts, activeKey }) => {
-  const shortcutKeys = new Set(shortcuts.map((s) => s.key.toUpperCase()));
+  const shortcutKeys = new Set(shortcuts.flatMap((s) => s.keys).map((k) => k.toUpperCase()));
+  if (shortcutKeys.has("+")) shortcutKeys.add("=");
 
   const isKeyActive = (key: string) => {
     if (!activeKey) return false;
@@ -53,6 +54,8 @@ export const Keyboard: React.FC<KeyboardProps> = ({ shortcuts, activeKey }) => {
     const upActive = activeKey.toUpperCase();
     if (upKey === upActive) return true;
     if (key === "Space" && activeKey === " ") return true;
+    if (key === "Caps" && activeKey === "★") return true; // Hyper key visual mapping
+    if (key === "=" && activeKey === "+") return true; // Plus key visual mapping
     if (key === "cmd" && activeKey === "Meta") return true;
     if (key === "opt" && activeKey === "Alt") return true;
     if (key === "ctrl" && activeKey === "Control") return true;
@@ -80,7 +83,7 @@ export const Keyboard: React.FC<KeyboardProps> = ({ shortcuts, activeKey }) => {
                     h-full rounded flex flex-col items-center justify-center text-[8px] md:text-[11px] font-semibold transition-all duration-75 relative
                     ${isShortcut 
                       ? "bg-[#141414] text-white border border-white/20 shadow-[0_0_25px_rgba(255,255,255,0.02)]" 
-                      : "bg-[#080808] text-white/30 border border-white/10"}
+                      : "bg-[#080808] text-white/40 border border-white/20"}
                     ${isActive 
                       ? "bg-[#222] border-white/40 translate-y-[1px] scale-[0.98] shadow-inner text-white" 
                       : "shadow-[0_2px_0_rgba(0,0,0,0.8),0_1px_1px_rgba(255,255,255,0.01)]"}

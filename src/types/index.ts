@@ -167,9 +167,9 @@ export interface TalkProps {
 
 export interface Shortcut {
   id: number;
-  key: string;
+  keys: string[];
   command: string;
   description: string;
-  category: "Navigation" | "General" | "System" | "Other";
+  category: "Navigation" | "General" | "System" | "Apps" | "Other";
 }
 
