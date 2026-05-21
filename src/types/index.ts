@@ -165,3 +165,11 @@ export interface TalkProps {
   description: string;
 }
 
+export interface Shortcut {
+  id: number;
+  key: string;
+  command: string;
+  description: string;
+  category: "Navigation" | "General" | "System" | "Other";
+}
+

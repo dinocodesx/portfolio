@@ -15,6 +15,7 @@ import { Social } from "./pages/Socials";
 import { Spotify } from "./pages/Spotify";
 import { Resume } from "./pages/Resume";
 import { Meet } from "./pages/Meet";
+import { Shortcuts } from "./pages/Shortcuts";
 import { NotFound } from "./pages/NotFound";
 
 import { UI } from "./pages/Ui";
@@ -28,6 +29,7 @@ import { Toast } from "./components/ui/toast";
 import { Label } from "./components/ui/label";
 import { AlertShowcase } from "./components/ui/alert";
 import { AccordionCraft } from "./components/ui/accordion";
+import { KeyboardCraft } from "./components/ui/keyboard";
 
 // Loading component
 const PageLoader = () => (
@@ -55,6 +57,7 @@ export default function App() {
           <Route path="/links" element={<Social />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/meet" element={<Meet />} />
+          <Route path="/shortcuts" element={<Shortcuts />} />
           <Route path="/ui">
             <Route index element={<UI />} />
             <Route path="chat-input" element={<LLMChatInput />} />
@@ -67,6 +70,7 @@ export default function App() {
             <Route path="label" element={<Label />} />
             <Route path="alert" element={<AlertShowcase />} />
             <Route path="accordion" element={<AccordionCraft />} />
+            <Route path="keyboard" element={<KeyboardCraft />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

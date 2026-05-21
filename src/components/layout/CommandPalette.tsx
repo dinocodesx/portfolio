@@ -109,6 +109,14 @@ const COMMANDS: CommandItem[] = [
     category: "General",
     link: "/resume",
   },
+  {
+    id: "ks",
+    title: "Shortcuts",
+    description: "Keyboard shortcuts",
+    icon: <Code className="w-4 h-4" />,
+    category: "General",
+    link: "/shortcuts",
+  },
 ];
 
 export function GlobalCommandPalette() {

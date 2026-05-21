@@ -1,0 +1,81 @@
+import { Shortcut } from "../types";
+
+export const shortcuts: Shortcut[] = [
+  {
+    id: 1,
+    key: "K",
+    command: "Command Palette",
+    description: "Open the global command palette to navigate the site.",
+    category: "Navigation",
+  },
+  {
+    id: 2,
+    key: "H",
+    command: "Go to Home",
+    description: "Navigate back to the home page.",
+    category: "Navigation",
+  },
+  {
+    id: 3,
+    key: "A",
+    command: "Go to About",
+    description: "Navigate to the about page.",
+    category: "Navigation",
+  },
+  {
+    id: 4,
+    key: "P",
+    command: "Go to Projects",
+    description: "View my featured projects.",
+    category: "Navigation",
+  },
+  {
+    id: 5,
+    key: "B",
+    command: "Go to Blogs",
+    description: "Read my latest blog posts.",
+    category: "Navigation",
+  },
+  {
+    id: 6,
+    key: "L",
+    command: "Go to Links",
+    description: "Quick access to my social profiles and external links.",
+    category: "Navigation",
+  },
+  {
+    id: 7,
+    key: "R",
+    command: "Go to Resume",
+    description: "View and download my professional resume.",
+    category: "Navigation",
+  },
+  {
+    id: 8,
+    key: "S",
+    command: "Go to Spotify",
+    description: "See what I'm listening to and my music preferences.",
+    category: "Navigation",
+  },
+  {
+    id: 9,
+    key: "U",
+    command: "Go to UI Showcase",
+    description: "Explore the custom UI components I've built.",
+    category: "Navigation",
+  },
+  {
+    id: 10,
+    key: "Esc",
+    command: "Close",
+    description: "Close any open modals or overlays.",
+    category: "General",
+  },
+  {
+    id: 11,
+    key: "?",
+    command: "Shortcuts Help",
+    description: "Open the shortcuts help page.",
+    category: "General",
+  },
+];

@@ -8,3 +8,4 @@ export * from "./label";
 export * from "./llm-chat-input";
 export * from "./multi-step-form";
 export * from "./toast";
+export * from "./keyboard";

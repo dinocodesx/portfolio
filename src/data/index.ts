@@ -7,3 +7,4 @@ export * from "./projects";
 export * from "./blogs";
 export * from "./talks";
 export * from "./socials";
+export * from "./shortcuts";

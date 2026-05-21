@@ -222,6 +222,13 @@ export function Portfolio() {
           >
             Musical Taste <ArrowUpRight className="w-4 h-4 opacity-50" />
           </Link>
+          <br />
+          <Link
+            to="/shortcuts"
+            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
+          >
+            Keyboard Shortcuts <ArrowUpRight className="w-4 h-4 opacity-50" />
+          </Link>
         </div>
       </motion.section>
 

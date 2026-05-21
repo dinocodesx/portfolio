@@ -62,4 +62,10 @@ export const UI_DATA: UIItem[] = [
     description: "Context-aware form labeling patterns.",
     gridSpan: 3,
   },
+  {
+    title: "Keyboard Craft",
+    link: "/ui/keyboard",
+    description: "Interactive MacBook-style keyboard with real-time feedback.",
+    gridSpan: 2,
+  },
 ];
