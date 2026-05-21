@@ -4,7 +4,7 @@ export const TALKS_DATA: Talk[] = [
   {
     id: 1,
     title: "Machine Learning in Production: Best Practices",
-    event: "Guest Lecture",
+    event: "Workshop",
     date: "April 20, 2025",
     location: "Academy of Technology . Hooghly, WB",
     description:
@@ -14,7 +14,7 @@ export const TALKS_DATA: Talk[] = [
   {
     id: 2,
     title: "Gemini Genkit API",
-    event: "Workshop",
+    event: "Guest Lecture",
     date: "October 21, 2025",
     location: "MCKV Institute of Engineering . Howrah, WB",
     description:

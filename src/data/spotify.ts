@@ -8,7 +8,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       artist: "Kendrick Lamar, SZA",
       albumArt:
         "https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888",
-      link: "https://open.spotify.com/track/3GCdL3m6sMvU24VEvUAfFc",
+      link: "https://open.spotify.com/track/3GCdLUSnKSMJhs4Tj6CV3s",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       artist: "Kanye West",
       albumArt:
         "https://i.scdn.co/image/ab67616d0000b2732a7db835b912dc5014bd37f4",
-      link: "https://open.spotify.com/track/4KW1lq0Sr8IBv4v0aYv336",
+      link: "https://open.spotify.com/track/4KW1lqgSr8TKrvBII0Brf8",
     },
     {
       id: 5,
@@ -64,7 +64,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       artist: "Sabrina Carpenter",
       albumArt:
         "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
-      link: "https://open.spotify.com/track/2qSkIjgUo9hvlZ8WSUi0vY",
+      link: "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75",
     },
     {
       id: 9,

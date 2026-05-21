@@ -21,9 +21,9 @@ export const UI_DATA: UIItem[] = [
     gridSpan: 1,
   },
   {
-    title: "Progressive Onboarding",
-    link: "/ui/multipage-form",
-    description: "Frictionless multi-step forms for user signups.",
+    title: "Keyboard Craft",
+    link: "/ui/keyboard",
+    description: "Interactive MacBook-style keyboard with real-time feedback.",
     gridSpan: 2,
   },
   {
@@ -60,12 +60,12 @@ export const UI_DATA: UIItem[] = [
     title: "Label Varieties",
     link: "/ui/label",
     description: "Context-aware form labeling patterns.",
-    gridSpan: 3,
+    gridSpan: 1,
   },
   {
-    title: "Keyboard Craft",
-    link: "/ui/keyboard",
-    description: "Interactive MacBook-style keyboard with real-time feedback.",
+    title: "Progressive Onboarding",
+    link: "/ui/multipage-form",
+    description: "Frictionless multi-step forms for user signups.",
     gridSpan: 2,
   },
 ];
