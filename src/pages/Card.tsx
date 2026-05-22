@@ -23,14 +23,14 @@ export function Card() {
     >
       {/* Lanyard / Strap */}
       <div
-        className="flex flex-col items-center z-20"
-        style={{ marginBottom: "-2px" }}
+        className="flex flex-col items-center"
+        style={{ marginBottom: "-26px", zIndex: 50, position: "relative" }}
       >
         {/* Strap */}
         <div
           className="w-10 rounded-b-lg shadow-lg relative"
           style={{
-            height: "96px",
+            height: "130px",
             background: "linear-gradient(to bottom, #1a1a1a, #2563eb)",
           }}
         >
@@ -44,7 +44,7 @@ export function Card() {
             border: "3px solid #9ca3af",
             borderRadius: "999px",
             background: "#e5e7eb",
-            marginTop: "-8px",
+            marginTop: "-4px",
           }}
         >
           <div
