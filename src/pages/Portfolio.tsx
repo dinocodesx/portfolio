@@ -33,6 +33,37 @@ export function Portfolio() {
             </span>{" "}
           </p>
           <p>
+            Currently contributing to{" "}
+            <Link
+              to="https://github.com/helm/helm"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
+            >
+              helm
+            </Link>
+            ,{" "}
+            <Link
+              to="https://github.com/prometheus/prometheus"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
+            >
+              prometheus
+            </Link>
+            ,{" "}
+            <Link
+              to="https://github.com/go-gitea/gitea"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
+            >
+              gitea
+            </Link>
+            , and{" "}
+            <Link
+              to="https://github.com/argoproj/argo-cd"
+              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
+            >
+              argo-cd
+            </Link>
+            .<Link to="/disclaimer">*</Link>
+          </p>
+          <p>
             Get to know more{" "}
             <Link
               to="/about"

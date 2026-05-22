@@ -7,6 +7,7 @@ export const EXPERIENCE_DATA: Experience[] = [
     company: "Resourcio",
     location: "Kolkata, India",
     duration: "2022 - 2025",
+    link: "https://www.resourcio.in/",
     description:
       "Lead backend developer for Apertre Season 2 website, where we use GitHub API and other social media platform for data fetching and integration. This was used to calculate points for the Open Source Contribution tracking system.",
     achievements: {
@@ -29,6 +30,7 @@ export const EXPERIENCE_DATA: Experience[] = [
     company: "Olake by Datazip",
     location: "Remote",
     duration: "April 2025",
+    link: "https://datazip.io/",
     description:
       "Enhanced MongoDB splitVector operation by implementing retry logic with exponential backoff, improved reliability of data chunking under transient failures, applying principles of fault tolerance, operating systems, and algorithmic optimization.",
     achievements: {

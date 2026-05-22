@@ -7,6 +7,7 @@ export interface Experience {
   description: string;
   achievements: Record<string, string>;
   technologies: string[];
+  link?: string;
 }
 
 export interface Skill {
@@ -132,6 +133,7 @@ export interface ExperienceProps {
   description: string;
   achievements: Record<string, string>;
   technologies: string[];
+  link?: string;
   [key: string]: any;
 }
 

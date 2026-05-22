@@ -19,6 +19,7 @@ import { About } from "@/pages/About";
 import { Blogs } from "@/pages/Blogs";
 import { Community } from "@/pages/Community";
 import { Culture } from "@/pages/Culture";
+import { Disclaimer } from "@/pages/Disclaimer";
 import { Journey } from "@/pages/Journey";
 import { Meet } from "@/pages/Meet";
 import { NotFound } from "@/pages/NotFound";
@@ -47,6 +48,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/community" element={<Community />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/culture" element={<Culture />} />

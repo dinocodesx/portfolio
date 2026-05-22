@@ -8,12 +8,15 @@ export function Experiences({
   description,
   achievements,
   technologies,
+  link,
 }: ExperienceProps) {
-  return (
-    <div className="space-y-4">
+  const content = (
+    <div className="space-y-4 group">
       <div className="flex justify-between items-baseline gap-4">
         <div>
-          <h3 className="text-white font-medium">{title}</h3>
+          <h3 className="text-white font-medium group-hover:underline underline-offset-4 transition-all">
+            {title}
+          </h3>
           <p className="text-sm opacity-50">
             {company} · {location}
           </p>
@@ -46,4 +49,19 @@ export function Experiences({
       </div>*/}
     </div>
   );
+
+  if (link) {
+    return (
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block no-underline"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return content;
 }
