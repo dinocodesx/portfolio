@@ -25,7 +25,9 @@ export function Card() {
       {/* ── Lanyard / Strap ── */}
       <div className="flex flex-col items-center z-50 relative -mb-6.5">
         {/* Strap */}
-        <div className="w-10 h-24 bg-linear-to-b from-[#111] to-blue-600 rounded-b-lg relative shadow-[0_2px_16px_rgba(37,99,235,0.25)]">
+        <div className="w-10 h-24 bg-linear-to-b from-[#111] to-blue-600 rounded-b-lg relative">
+          {/* Gradient Shadow */}
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-blue-600 blur-xl opacity-40 -z-10 translate-y-2 rounded-b-lg" />
           <div className="absolute left-1/2 -translate-x-1/2 bottom-3 w-2.5 h-2.5 bg-[#1a1a1a] rounded-full border border-white/10" />
         </div>
         {/* Clip */}
