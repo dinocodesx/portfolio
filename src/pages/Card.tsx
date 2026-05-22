@@ -13,38 +13,56 @@ const DATA = {
   year: "2026",
 };
 
+/* Shared card background: deep black base + vivid blue orb in the center */
+const ORB_GRADIENT =
+  "radial-gradient(ellipse 75% 60% at 50% 52%, #2a50f5 0%, #1a30c4 25%, #0a0a0f 70%)";
+
 export function Card() {
   const [flipped, setFlipped] = useState(false);
 
   return (
     <div
-      className="fixed inset-0 w-full bg-[#111] flex flex-col items-center justify-center font-sans antialiased overflow-hidden select-none overscroll-none"
+      className="fixed inset-0 bg-[#111] w-full flex flex-col items-center justify-center antialiased overflow-hidden select-none overscroll-none"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
-      {/* Lanyard / Strap */}
+      {/* ── Lanyard / Strap ── */}
       <div
-        className="flex flex-col items-center"
+        className="flex flex-col items-center z-20"
         style={{ marginBottom: "-26px", zIndex: 50, position: "relative" }}
       >
         {/* Strap */}
         <div
-          className="w-10 rounded-b-lg shadow-lg relative"
+          className="rounded-b-lg relative"
           style={{
-            height: "130px",
-            background: "linear-gradient(to bottom, #1a1a1a, #2563eb)",
+            width: "40px",
+            height: "96px",
+            background: "linear-gradient(to bottom, #111, #2563eb)",
+            boxShadow: "0 2px 16px rgba(37,99,235,0.25)",
           }}
         >
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-zinc-800 rounded-full border border-white/10" />
+          <div
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{
+              bottom: "12px",
+              width: "10px",
+              height: "10px",
+              background: "#1a1a1a",
+              borderRadius: "50%",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+          />
         </div>
         {/* Clip */}
         <div
-          className="w-10 flex items-center justify-center relative shadow-sm"
+          className="relative flex items-center justify-center"
           style={{
+            width: "40px",
             height: "20px",
             border: "3px solid #9ca3af",
             borderRadius: "999px",
             background: "#e5e7eb",
-            marginTop: "-4px",
+            marginTop: "-8px",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.4)",
           }}
         >
           <div
@@ -69,9 +87,9 @@ export function Card() {
         </div>
       </div>
 
-      {/* Card stack wrapper */}
+      {/* ── Card Stack ── */}
       <div className="relative" style={{ width: "280px", height: "420px" }}>
-        {/* Blue background card — subtle peek, bottom-right only */}
+        {/* Background peek card — same orb gradient, rotated */}
         <motion.div
           initial={{ opacity: 0, rotate: 3, x: 6, y: 8 }}
           animate={{ opacity: 1, rotate: 6, x: 12, y: 14 }}
@@ -79,13 +97,14 @@ export function Card() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(135deg, #1d4ed8, #2563eb)",
+            background: ORB_GRADIENT,
             borderRadius: "2rem",
+            border: "1px solid rgba(255,255,255,0.08)",
             zIndex: 0,
           }}
         />
 
-        {/* 3D flip scene */}
+        {/* ── 3D flip scene ── */}
         <div
           style={{
             position: "absolute",
@@ -106,7 +125,7 @@ export function Card() {
               cursor: "pointer",
             }}
           >
-            {/* ── FRONT FACE ── */}
+            {/* ══ FRONT FACE ══ */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -116,9 +135,9 @@ export function Card() {
                 inset: 0,
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
-                background: "#111",
+                background: ORB_GRADIENT,
                 borderRadius: "2rem",
-                border: "1px solid rgba(255,255,255,0.15)",
+                border: "1px solid rgba(255,255,255,0.12)",
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
@@ -126,81 +145,76 @@ export function Card() {
             >
               {/* Punch hole */}
               <div
-                className="absolute left-1/2 -translate-x-1/2 z-20"
+                className="absolute left-1/2 -translate-x-1/2"
                 style={{
                   top: "16px",
                   width: "32px",
                   height: "6px",
-                  background: "#000",
+                  background: "rgba(0,0,0,0.8)",
                   borderRadius: "999px",
+                  zIndex: 10,
                 }}
               />
 
-              {/* Blue radial glow */}
+              {/* Noise / grain texture overlay */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                  top: "40%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  width: "150%",
-                  height: "100%",
-                  background:
-                    "radial-gradient(circle at center, rgba(37,99,235,0.45) 0%, transparent 60%)",
-                  mixBlendMode: "screen",
-                  zIndex: 0,
+                  backgroundImage:
+                    "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+                  backgroundSize: "180px",
+                  opacity: 0.035,
+                  zIndex: 1,
                 }}
               />
-
-              {/* Domain label */}
-              <p
-                className="absolute left-1/2 -translate-x-1/2 z-10 whitespace-nowrap"
-                style={{
-                  top: "44px",
-                  fontSize: "9px",
-                  fontWeight: 700,
-                  color: "rgba(255,255,255,0.35)",
-                  letterSpacing: "0.3em",
-                  textTransform: "uppercase",
-                }}
-              >
-                dinocodes.in
-              </p>
 
               {/* Bottom info section */}
-              <div className="mt-auto z-10" style={{ padding: "2rem" }}>
+              <div
+                className="mt-auto"
+                style={{ padding: "2rem", position: "relative", zIndex: 5 }}
+              >
                 {/* Social icons */}
                 <div
-                  className="flex"
-                  style={{ gap: "14px", opacity: 0.4, marginBottom: "1.5rem" }}
+                  style={{
+                    display: "flex",
+                    gap: "14px",
+                    opacity: 0.45,
+                    marginBottom: "1.4rem",
+                  }}
                 >
                   <a
                     href={`mailto:${DATA.email}`}
-                    className="hover:opacity-100 transition-opacity"
+                    style={{ display: "flex", alignItems: "center" }}
                   >
-                    <Mail size={14} color="white" />
+                    <Mail size={13} color="white" />
                   </a>
                   <a
                     href={DATA.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:opacity-100 transition-opacity"
+                    style={{ display: "flex", alignItems: "center" }}
                   >
-                    <Linkedin size={14} color="white" />
+                    <Linkedin size={13} color="white" />
                   </a>
                   <a
                     href={DATA.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:opacity-100 transition-opacity"
+                    style={{ display: "flex", alignItems: "center" }}
                   >
-                    <Github size={14} color="white" />
+                    <Github size={13} color="white" />
                   </a>
                 </div>
 
                 {/* Name + year */}
-                <div className="flex justify-between items-end">
-                  <div style={{ lineHeight: 1 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <div>
                     <h1
                       style={{
                         fontSize: "22px",
@@ -219,7 +233,7 @@ export function Card() {
                       style={{
                         fontSize: "9px",
                         fontWeight: 700,
-                        color: "rgba(255,255,255,0.3)",
+                        color: "rgba(255,255,255,0.35)",
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         margin: 0,
@@ -228,7 +242,7 @@ export function Card() {
                       {DATA.role}
                     </p>
                   </div>
-                  <div className="text-right">
+                  <div style={{ textAlign: "right" }}>
                     <p
                       style={{
                         color: "white",
@@ -253,23 +267,9 @@ export function Card() {
                   </div>
                 </div>
               </div>
-
-              {/* Tap hint */}
-              <p
-                className="absolute"
-                style={{
-                  bottom: "10px",
-                  right: "14px",
-                  fontSize: "9px",
-                  color: "rgba(255,255,255,0.15)",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                tap to flip →
-              </p>
             </motion.div>
 
-            {/* ── BACK FACE ── */}
+            {/* ══ BACK FACE ══ */}
             <div
               style={{
                 position: "absolute",
@@ -277,15 +277,15 @@ export function Card() {
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
                 transform: "rotateY(180deg)",
-                background: "#0f0f1a",
+                background: ORB_GRADIENT,
                 borderRadius: "2rem",
-                border: "1px solid rgba(255,255,255,0.15)",
+                border: "1px solid rgba(255,255,255,0.12)",
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "1.5rem",
+                gap: "1.4rem",
               }}
             >
               {/* Punch hole */}
@@ -295,19 +295,21 @@ export function Card() {
                   top: "16px",
                   width: "32px",
                   height: "6px",
-                  background: "#000",
+                  background: "rgba(0,0,0,0.8)",
                   borderRadius: "999px",
                   zIndex: 5,
                 }}
               />
 
-              {/* Blue radial glow */}
+              {/* Grain overlay */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                  inset: 0,
-                  background:
-                    "radial-gradient(circle at 50% 50%, rgba(37,99,235,0.3) 0%, transparent 70%)",
+                  backgroundImage:
+                    "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+                  backgroundSize: "180px",
+                  opacity: 0.035,
+                  zIndex: 1,
                 }}
               />
 
@@ -315,10 +317,11 @@ export function Card() {
                 style={{
                   fontSize: "9px",
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.35)",
+                  color: "rgba(255,255,255,0.4)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   zIndex: 2,
+                  margin: 0,
                 }}
               >
                 scan to visit
@@ -332,7 +335,8 @@ export function Card() {
                   background: "white",
                   borderRadius: "16px",
                   padding: "8px",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                  boxShadow:
+                    "0 0 40px rgba(37,99,235,0.4), 0 8px 32px rgba(0,0,0,0.6)",
                   zIndex: 2,
                 }}
               >
@@ -345,27 +349,14 @@ export function Card() {
 
               <p
                 style={{
-                  fontSize: "13px",
-                  color: "rgba(255,255,255,0.5)",
-                  letterSpacing: "0.05em",
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.45)",
+                  letterSpacing: "0.06em",
                   zIndex: 2,
+                  margin: 0,
                 }}
               >
                 dinocodes.in
-              </p>
-
-              {/* Tap hint */}
-              <p
-                className="absolute"
-                style={{
-                  bottom: "10px",
-                  right: "14px",
-                  fontSize: "9px",
-                  color: "rgba(255,255,255,0.15)",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                tap to flip →
               </p>
             </div>
           </motion.div>
