@@ -10,7 +10,6 @@ const DATA = {
   portfolio: "https://www.dinocodes.in",
   github: "https://github.com/dinocodesx",
   linkedin: "https://linkedin.com/in/dinocodesx",
-  year: "2026",
 };
 
 const ORB_GRADIENT =
@@ -109,12 +108,6 @@ export function Card() {
                     <p className="text-[9px] font-bold text-white/35 tracking-widest uppercase m-0">
                       {DATA.role}
                     </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-white text-xl font-bold tracking-[-0.04em] m-0">
-                      {DATA.year}
-                    </p>
-                    <p className="text-white/30 text-[9px] font-bold m-0">©</p>
                   </div>
                 </div>
               </div>

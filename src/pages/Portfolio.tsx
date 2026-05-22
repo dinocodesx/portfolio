@@ -1,3 +1,4 @@
+import { StyledLink } from "@/components/layout";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { SEO } from "@/components/layout/SEO";
@@ -7,7 +8,6 @@ import { Experiences } from "@/components/portfolio/Experiences";
 import { FooterTime } from "@/components/portfolio/FooterTime";
 import { Projects } from "@/components/portfolio/Projects";
 import { Talks } from "@/components/portfolio/Talks";
-import { StyledLink } from "@/components/ui";
 import { itemVariants } from "@/constants/animations";
 import { BLOGS_DATA, BUILDING_DATA, EXPERIENCE_DATA, TALKS_DATA } from "@/data";
 import { motion } from "motion/react";
@@ -159,26 +159,32 @@ export function Portfolio() {
         <div className="space-y-4">
           <p className="text-[15px]">
             Reach me at{" "}
-            <StyledLink to="https://twitter.com/dinocodesx">
+            <StyledLink to="https://twitter.com/dinocodesx" showIcon>
               @dinocodesx
             </StyledLink>{" "}
             or{" "}
-            <StyledLink to="mailto:debarshee.chakraborty.work@gmail.com">
+            <StyledLink
+              to="mailto:debarshee.chakraborty.work@gmail.com"
+              showIcon
+            >
               debarshee.chakraborty.work@gmail.com
             </StyledLink>
             .
           </p>
-          <StyledLink to="/links" showIcon className="text-[15px]">
-            View all socials
-          </StyledLink>
-          <br />
-          <StyledLink to="/spotify" showIcon className="text-[15px]">
-            Musical Taste
-          </StyledLink>
-          <br />
-          <StyledLink to="/shortcuts" showIcon className="text-[15px]">
-            Keyboard Shortcuts
-          </StyledLink>
+          <div className="flex flex-wrap gap-4 items-center">
+            <StyledLink to="/links" showIcon className="text-[15px]">
+              View all socials
+            </StyledLink>
+            <StyledLink to="/spotify" showIcon className="text-[15px]">
+              Musical Taste
+            </StyledLink>
+            <StyledLink to="/shortcuts" showIcon className="text-[15px]">
+              Keyboard Shortcuts
+            </StyledLink>
+            <StyledLink to="/card" showIcon className="text-[15px]">
+              Id Card?
+            </StyledLink>
+          </div>
         </div>
       </motion.section>
 
