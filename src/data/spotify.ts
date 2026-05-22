@@ -20,6 +20,14 @@ export const SPOTIFY_DATA: SpotifyData = {
     },
     {
       id: 3,
+      title: "505",
+      artist: "Arctic Monkeys",
+      albumArt:
+        "https://i.scdn.co/image/ab67616d0000b2730c8ac83035e9588e8ad34b90",
+      link: "https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp",
+    },
+    {
+      id: 4,
       title: "One Last Kiss",
       artist: "Hikaru Utada",
       albumArt:
@@ -27,7 +35,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       link: "https://open.spotify.com/track/5RhWszHMSKzb7KiXk4Ae0M",
     },
     {
-      id: 4,
+      id: 5,
       title: "Father Stretch My Hands Pt. 1",
       artist: "Kanye West",
       albumArt:
@@ -35,7 +43,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       link: "https://open.spotify.com/track/4KW1lqgSr8TKrvBII0Brf8",
     },
     {
-      id: 5,
+      id: 6,
       title: "Beggin'",
       artist: "Måneskin",
       albumArt:
@@ -43,7 +51,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       link: "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e",
     },
     {
-      id: 6,
+      id: 7,
       title: "Die With A Smile",
       artist: "Lady Gaga, Bruno Mars",
       albumArt:
@@ -51,7 +59,7 @@ export const SPOTIFY_DATA: SpotifyData = {
       link: "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe",
     },
     {
-      id: 7,
+      id: 8,
       title: "Let Me Love You",
       artist: "DJ Snake, Justin Bieber",
       albumArt:
@@ -59,20 +67,12 @@ export const SPOTIFY_DATA: SpotifyData = {
       link: "https://open.spotify.com/track/0lYBSQXN6rCTvUZvg9S0lU",
     },
     {
-      id: 8,
+      id: 9,
       title: "Espresso",
       artist: "Sabrina Carpenter",
       albumArt:
         "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
       link: "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75",
-    },
-    {
-      id: 9,
-      title: "505",
-      artist: "Arctic Monkeys",
-      albumArt:
-        "https://i.scdn.co/image/ab67616d0000b2730c8ac83035e9588e8ad34b90",
-      link: "https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp",
     },
     {
       id: 10,
@@ -102,11 +102,11 @@ export const SPOTIFY_DATA: SpotifyData = {
     },
     {
       id: 3,
-      title: "The Idol",
-      artist: "The Weeknd and Jennie",
+      title: "AM",
+      artist: "Arctic Monkeys",
       coverImage:
-        "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
-      link: "https://open.spotify.com/album/7tzVd1fwkxsorytCBjEJkU",
+        "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+      link: "https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu",
     },
     {
       id: 4,
@@ -143,11 +143,10 @@ export const SPOTIFY_DATA: SpotifyData = {
     },
     {
       id: 3,
-      name: "Ed Sheeran",
-      genre: "Pop",
-      link: "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V",
-      image:
-        "https://i2o.scdn.co/image/ab6761860000166720e830f5a7ba2458b1c94ae8",
+      name: "Arctic Monkeys",
+      genre: "EDM / Pop",
+      link: "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH",
+      image: "https://i.scdn.co/image/ab6761670000ecd4c35db22d2c52ffa9bc8d5684",
     },
     {
       id: 4,
@@ -158,10 +157,11 @@ export const SPOTIFY_DATA: SpotifyData = {
     },
     {
       id: 5,
-      name: "The Chainsmokers",
-      genre: "EDM / Pop",
-      link: "https://open.spotify.com/artist/69GGBxA162lTqCwzJG5jLp",
-      image: "https://i.scdn.co/image/ab6761670000ecd4b1d6bc35846919fb580581ca",
+      name: "Ed Sheeran",
+      genre: "Pop",
+      link: "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V",
+      image:
+        "https://i2o.scdn.co/image/ab6761860000166720e830f5a7ba2458b1c94ae8",
     },
   ],
 };

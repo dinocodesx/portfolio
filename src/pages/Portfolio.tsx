@@ -7,9 +7,9 @@ import { Experiences } from "@/components/portfolio/Experiences";
 import { FooterTime } from "@/components/portfolio/FooterTime";
 import { Projects } from "@/components/portfolio/Projects";
 import { Talks } from "@/components/portfolio/Talks";
+import { StyledLink } from "@/components/ui";
 import { itemVariants } from "@/constants/animations";
 import { BLOGS_DATA, BUILDING_DATA, EXPERIENCE_DATA, TALKS_DATA } from "@/data";
-import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
@@ -33,62 +33,23 @@ export function Portfolio() {
             </span>{" "}
           </p>
           <p>
-            Get to know more{" "}
-            <Link
-              to="/about"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              about me
-            </Link>
-            ,{" "}
-            <Link
-              to="/culture"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              my background
-            </Link>
-            ,{" "}
-            <Link
-              to="/community"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              my community
-            </Link>
-            , and{" "}
-            <Link
-              to="/journey"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              my journeys
-            </Link>
-            . Currently contributing to{" "}
-            <Link
-              to="https://github.com/helm/helm"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              helm
-            </Link>
-            ,{" "}
-            <Link
-              to="https://github.com/prometheus/prometheus"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
+            Get to know more <StyledLink to="/about">about me</StyledLink>,{" "}
+            <StyledLink to="/culture">my background</StyledLink>,{" "}
+            <StyledLink to="/community">my community</StyledLink>, and{" "}
+            <StyledLink to="/journey">my journeys</StyledLink>. Currently
+            contributing to{" "}
+            <StyledLink to="https://github.com/helm/helm">helm</StyledLink>,{" "}
+            <StyledLink to="https://github.com/prometheus/prometheus">
               prometheus
-            </Link>
+            </StyledLink>
             ,{" "}
-            <Link
-              to="https://github.com/go-gitea/gitea"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
+            <StyledLink to="https://github.com/go-gitea/gitea">
               gitea
-            </Link>
+            </StyledLink>
             , and{" "}
-            <Link
-              to="https://github.com/argoproj/argo-cd"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
+            <StyledLink to="https://github.com/argoproj/argo-cd">
               argo-cd
-            </Link>
+            </StyledLink>
             .<Link to="/disclaimer">*</Link>
           </p>
           <p>
@@ -101,26 +62,9 @@ export function Portfolio() {
               Gin, Express(NestJS), and Spring Boot.
             </span>{" "}
             Check out my work on{" "}
-            <Link
-              to="www.github.com/dinocodesx"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              Github
-            </Link>
-            , connect with me on{" "}
-            <Link
-              to="/links"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              Socials
-            </Link>{" "}
-            and see my{" "}
-            <Link
-              to="/resume"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
-              Resume.
-            </Link>
+            <StyledLink to="www.github.com/dinocodesx">Github</StyledLink>,
+            connect with me on <StyledLink to="/links">Socials</StyledLink> and
+            see my <StyledLink to="/resume">Resume.</StyledLink>
           </p>
         </div>
       </motion.section>
@@ -215,41 +159,26 @@ export function Portfolio() {
         <div className="space-y-4">
           <p className="text-[15px]">
             Reach me at{" "}
-            <a
-              href="https://twitter.com/dinocodesx"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
+            <StyledLink to="https://twitter.com/dinocodesx">
               @dinocodesx
-            </a>{" "}
+            </StyledLink>{" "}
             or{" "}
-            <a
-              href="mailto:debarshee.chakraborty.work@gmail.com"
-              className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
-            >
+            <StyledLink to="mailto:debarshee.chakraborty.work@gmail.com">
               debarshee.chakraborty.work@gmail.com
-            </a>
+            </StyledLink>
             .
           </p>
-          <Link
-            to="/links"
-            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
-          >
-            View all socials <ArrowUpRight className="w-4 h-4 opacity-50" />
-          </Link>
+          <StyledLink to="/links" showIcon className="text-[15px]">
+            View all socials
+          </StyledLink>
           <br />
-          <Link
-            to="/spotify"
-            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
-          >
-            Musical Taste <ArrowUpRight className="w-4 h-4 opacity-50" />
-          </Link>
+          <StyledLink to="/spotify" showIcon className="text-[15px]">
+            Musical Taste
+          </StyledLink>
           <br />
-          <Link
-            to="/shortcuts"
-            className="inline-flex items-center gap-2 text-white underline decoration-white/30 hover:decoration-white underline-offset-4 text-[15px] transition-colors"
-          >
-            Keyboard Shortcuts <ArrowUpRight className="w-4 h-4 opacity-50" />
-          </Link>
+          <StyledLink to="/shortcuts" showIcon className="text-[15px]">
+            Keyboard Shortcuts
+          </StyledLink>
         </div>
       </motion.section>
 
