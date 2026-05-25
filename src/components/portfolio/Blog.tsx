@@ -8,12 +8,12 @@ export function Blogs({ title, date, excerpt, link, readTime }: BlogProps) {
           {title}
         </h3>
         <span className="hidden md:block text-[10px] uppercase tracking-wider opacity-50 whitespace-nowrap">
-          {date} · {readTime}
+          {readTime}
         </span>
       </div>
-      <p className="text-sm opacity-50">{excerpt}</p>
+      {/*<p className="text-sm opacity-50">{excerpt}</p>*/}
       <span className="md:hidden text-[10px] uppercase tracking-wider opacity-50 pt-1">
-        {date} · {readTime}
+        {readTime}
       </span>
     </a>
   );

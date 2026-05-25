@@ -37,7 +37,7 @@ export function Portfolio() {
             <StyledLink to="/culture">my background</StyledLink>,{" "}
             <StyledLink to="/community">my community</StyledLink>, and{" "}
             <StyledLink to="/journey">my journeys</StyledLink>. Currently
-            contributing to{" "}
+            checking out and contributing to{" "}
             <StyledLink to="https://github.com/helm/helm">helm</StyledLink>,{" "}
             <StyledLink to="https://github.com/prometheus/prometheus">
               prometheus
