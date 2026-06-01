@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { SocialsProps } from "@/types";
@@ -13,25 +12,28 @@ export function Socials({ name, url, description, icon }: SocialsProps) {
   return (
     <Component
       {...(props as any)}
-      className="group block p-4 bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.05] hover:border-white/[0.1] rounded-2xl backdrop-blur-md transition-all duration-300"
+      className="group block p-3 bg-white hover:bg-gray-50 rounded-[20px] shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
     >
       <div className="flex items-center gap-4">
-        <div className="w-10 h-10 shrink-0 bg-white/[0.05] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm">
+        <div className="w-11 h-11 shrink-0 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
           <svg
             viewBox="0 0 24 24"
-            className="w-5 h-5 fill-white/70 group-hover:fill-white transition-colors"
+            className="w-6 h-6 fill-gray-700 group-hover:fill-gray-900 transition-colors"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d={icon} />
           </svg>
         </div>
-        <div className="grow min-w-0">
-          <h3 className="text-white font-medium text-[15px] truncate">
+        <div className="grow min-w-0 text-center pr-11">
+          <h3 className="text-gray-900 font-bold text-[15px] leading-tight">
             {name}
           </h3>
-          <p className="text-xs opacity-50 truncate">{description}</p>
+          {description && (
+            <p className="text-[11px] text-gray-500 font-medium truncate mt-0.5">
+              {description}
+            </p>
+          )}
         </div>
-        <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-30 transition-opacity shrink-0" />
       </div>
     </Component>
   );
