@@ -30,7 +30,7 @@ export function Community() {
               the latest in cloud technologies through monthly meetups, hands-on
               workshops, and its flagship annual conference,{" "}
               <b>
-                <i>Cloud Community Days</i>
+                <i>Google Cloud Community Days</i>
               </b>
               .
             </TextSection>
