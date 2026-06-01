@@ -86,6 +86,75 @@ export function Community() {
             </TextSection>
           </ContentChapter>
 
+          <ContentChapter title="ML Kolkata">
+            <TextSection>
+              <b>
+                <i>ML Kolkata</i>
+              </b>{" "}
+              is a sister community under the{" "}
+              <b>
+                <i>GDG</i>
+              </b>{" "}
+              umbrella, primarily organized by members of{" "}
+              <b>
+                <i>GDG Cloud Kolkata</i>
+              </b>{" "}
+              and various{" "}
+              <b>
+                <i>GDG on-campus leads</i>
+              </b>
+              . It serves as a dedicated hub for developers in the city to dive
+              deep into the world of Artificial Intelligence and Machine
+              Learning.
+            </TextSection>
+            <PolaroidGallery
+              items={[
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBCYUxBbBT4rTsV26QpAiEuI8fqlUxB5wZR1me",
+                  caption: "Team Dinner",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHB4b5SFJZXwOxsFflKb6teEVCAYka73uJPMZr2",
+                  caption: "Opening Session",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBiAVb3KhN0GxKJzspR89SEYUdBMQOwc1g4CmX",
+                  caption: "Session by GDG AOT Lead",
+                },
+                {
+                  src: "https://baos70mga7.ufs.sh/f/FIOeDmU4bLHBbjHW5DFGToRrynm8aIQ5pVLwtcDJxeFWfhdz",
+                  caption: "Post Event Photo Shoot",
+                },
+              ]}
+            />
+            <TextSection>
+              Our work revolves around exploring and implementing cutting-edge
+              technologies like{" "}
+              <b>
+                <i>TensorFlow</i>
+              </b>
+              ,{" "}
+              <b>
+                <i>PyTorch</i>
+              </b>
+              , and{" "}
+              <b>
+                <i>Gemini</i>
+              </b>
+              . We focus on a wide range of{" "}
+              <b>
+                <i>AI and LLM-based community initiatives</i>
+              </b>
+              , from conducting specialized technical sessions and workshops to
+              actively participating in and organizing{" "}
+              <b>
+                <i>technical hackathons</i>
+              </b>{" "}
+              that push the boundaries of what's possible with intelligent
+              systems.
+            </TextSection>
+          </ContentChapter>
+
           <ContentChapter title="GDG On Campus AOT">
             <TextSection>
               <b>

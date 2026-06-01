@@ -3,9 +3,9 @@ import { Building } from "@/types";
 export const BUILDING_DATA: Building[] = [
   {
     id: 1,
-    title: "OAlpaca Studio",
-    description: "Memory and Canvas based interface for LLM chating.",
-    link: "https://github.com/dinocodesx/oalpaca-studio",
+    title: "GoMigrate",
+    description: "High-performance, concurrent database migration and based backup tool.",
+    link: "https://github.com/dinocodesx/gomigrate",
   },
   {
     id: 2,
