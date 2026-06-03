@@ -30,6 +30,7 @@ import { Resume } from "@/pages/Resume";
 import { Shortcuts } from "@/pages/Shortcuts";
 import { Social } from "@/pages/Socials";
 import { Spotify } from "@/pages/Spotify";
+import { Stuffs } from "@/pages/Stuffs";
 import { Talks } from "@/pages/Talks";
 import { UI } from "@/pages/Ui";
 
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/journey" element={<Journey />} />
           <Route path="/culture" element={<Culture />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/stuffs" element={<Stuffs />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/talks" element={<Talks />} />
           <Route path="/spotify" element={<Spotify />} />

@@ -70,6 +70,14 @@ const COMMANDS: CommandItem[] = [
     link: "/projects",
   },
   {
+    id: "st",
+    title: "Stuffs",
+    description: "Experiments & random things",
+    icon: <Code className="w-4 h-4" />,
+    category: "General",
+    link: "/stuffs",
+  },
+  {
     id: "u",
     title: "UI Lab",
     description: "Browse components",

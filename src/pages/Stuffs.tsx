@@ -2,16 +2,16 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { SEO } from "@/components/layout/SEO";
 import { SidebarLink } from "@/components/layout/SidebarLink";
 import { itemVariants } from "@/constants/animations";
-import { PROJECTS_DATA } from "@/data";
+import { STUFFS_DATA } from "@/data";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "motion/react";
 
-export function Projects() {
+export function Stuffs() {
   return (
     <PageLayout maxWidth="max-w-3xl">
       <SEO
-        title="Projects | Debarshee Chakraborty"
-        description="A showcase of technical projects ranging from distributed systems in Go to cloud-native applications and AI experiments."
+        title="Stuffs | Debarshee Chakraborty"
+        description="A collection of various things, experiments, and random cool stuff I've built."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
@@ -20,19 +20,19 @@ export function Projects() {
         {/* Main content */}
         <div className="space-y-8">
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-white font-medium text-xl">Projects</h1>
+            <h1 className="text-white font-medium text-xl">Some Cool Stuffs</h1>
             <p className="text-white/60 text-sm">
-              Some cool and goofy thing i am upto while everyone is having fun
-              with their family.
+              A collection of random experiments, tools, and things that don't
+              quite fit into the projects category but are still worth sharing.
             </p>
           </motion.div>
 
           <div className="space-y-8">
-            {PROJECTS_DATA.map((project, index) => {
+            {STUFFS_DATA.map((stuff, index) => {
               const displayIndex = (index + 1).toString().padStart(2, "0");
               return (
                 <motion.div
-                  key={project.id}
+                  key={stuff.id}
                   variants={itemVariants}
                   className="group cursor-pointer"
                 >
@@ -42,28 +42,28 @@ export function Projects() {
                         [{displayIndex}]
                       </span>
                       <h2 className="text-white group-hover:text-white/80 transition-colors">
-                        {project.title}
+                        {stuff.title}
                       </h2>
                     </div>
                     <div className="flex gap-4 text-white/40">
-                      {project.github && (
+                      {stuff.github && (
                         <a
-                          href={project.github}
+                          href={stuff.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:text-white transition-colors"
-                          aria-label={`View ${project.title} on GitHub`}
+                          aria-label={`View ${stuff.title} on GitHub`}
                         >
                           <Github className="w-4 h-4" />
                         </a>
                       )}
-                      {project.live && (
+                      {stuff.live && (
                         <a
-                          href={project.live}
+                          href={stuff.live}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:text-white transition-colors"
-                          aria-label={`Visit ${project.title} live website`}
+                          aria-label={`Visit ${stuff.title} live website`}
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>
@@ -72,7 +72,7 @@ export function Projects() {
                   </div>
 
                   <p className="text-[14px] text-white/60 leading-relaxed max-w-xl">
-                    {project.description}
+                    {stuff.description}
                   </p>
                 </motion.div>
               );

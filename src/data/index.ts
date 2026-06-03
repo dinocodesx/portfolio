@@ -6,5 +6,6 @@ export * from "./shortcuts";
 export * from "./skills";
 export * from "./socials";
 export * from "./spotify";
+export * from "./stuffs";
 export * from "./talks";
 export * from "./ui";
