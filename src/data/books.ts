@@ -36,7 +36,7 @@ export const BOOKS_DATA: Book[] = [
     authors: "Laurence Moroney",
     description:
       "A programmer's guide to artificial intelligence and machine learning.",
-    link: "https://www.oreilly.com/library/view/ai-and-machine/9781492075721/",
+    link: "https://www.oreilly.com/library/view/ai-and-machine/9781492078180/",
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const BOOKS_DATA: Book[] = [
     authors: "OccupyTheWeb",
     description:
       "Getting started with networking, scripting, and security in Linux.",
-    link: "https://nostarch.com/linuxbasicsforhackers",
+    link: "https://nostarch.com/linux-basics-hackers-2nd-edition",
   },
   {
     id: 12,

@@ -21,7 +21,7 @@ export function ImageDouble({ image1, image2 }: DoubleImageProps) {
       <div className="grid grid-cols-2 gap-2 md:gap-6">
         <div className="space-y-4">
           <div
-            className="aspect-4/5 bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-pointer"
+            className="aspect-8/7 bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-pointer"
             onClick={() => setSelectedImage(image1)}
           >
             <img
@@ -37,7 +37,7 @@ export function ImageDouble({ image1, image2 }: DoubleImageProps) {
 
         <div className="space-y-4">
           <div
-            className="aspect-4/5 bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-pointer"
+            className="aspect-8/7 bg-white/5 rounded-2xl overflow-hidden border border-white/10 group relative cursor-pointer"
             onClick={() => setSelectedImage(image2)}
           >
             <img
