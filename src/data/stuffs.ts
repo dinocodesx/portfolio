@@ -28,4 +28,13 @@ export const STUFFS_DATA: Project[] = [
     github: "https://github.com/dinocodesx/poketoons",
     live: "https://poketoons.dinocodes.in/",
   },
+  {
+    id: 4,
+    title: "Shader-Studio",
+    description:
+      "Building a shader editor for the web using WebGL and can be exported into popular Frontend frameworks.",
+    technologies: ["WebGL", "WebAssembly", "React", "TypeScript", "Tanstack"],
+    github: "https://github.com/dinocodesx/shader-studio",
+    live: "https://shaderstudio.dinocodes.in/",
+  },
 ];

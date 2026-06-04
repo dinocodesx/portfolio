@@ -178,6 +178,9 @@ export function Portfolio() {
             <StyledLink to="/spotify" showIcon className="text-[15px]">
               Musical Taste
             </StyledLink>
+            <StyledLink to="/books" showIcon className="text-[15px]">
+              Reading List
+            </StyledLink>
             <StyledLink to="/shortcuts" showIcon className="text-[15px]">
               Keyboard Shortcuts
             </StyledLink>

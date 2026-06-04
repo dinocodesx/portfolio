@@ -73,6 +73,14 @@ export interface Project {
   live?: string;
 }
 
+export interface Book {
+  id: number;
+  title: string;
+  authors: string;
+  description: string;
+  link: string;
+}
+
 export interface Blog {
   id: number;
   title: string;

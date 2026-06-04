@@ -17,6 +17,7 @@ import { Toast } from "@/components/ui/toast";
 
 import { About } from "@/pages/About";
 import { Blogs } from "@/pages/Blogs";
+import { Books } from "@/pages/Books";
 import { Card } from "@/pages/Card";
 import { Community } from "@/pages/Community";
 import { Culture } from "@/pages/Culture";
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/talks" element={<Talks />} />
           <Route path="/spotify" element={<Spotify />} />
           <Route path="/links" element={<Social />} />
+          <Route path="/books" element={<Books />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/meet" element={<Meet />} />
           <Route path="/shortcuts" element={<Shortcuts />} />

@@ -94,6 +94,14 @@ const COMMANDS: CommandItem[] = [
     link: "/blogs",
   },
   {
+    id: "bk",
+    title: "Books",
+    description: "My reading list",
+    icon: <FileText className="w-4 h-4" />,
+    category: "General",
+    link: "/books",
+  },
+  {
     id: "t",
     title: "Talks",
     description: "Speaking engagements",
