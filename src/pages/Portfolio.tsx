@@ -55,12 +55,14 @@ export function Portfolio() {
           <p>
             I have previously worked on Backend development, mainly with{" "}
             <span className="text-white italic">
-              Golang, Typescript and Java
+              Golang, Typescript, Java and Python
             </span>{" "}
             with frameworks like{" "}
             <span className="text-white italic">
-              Gin, Express(NestJS), and Spring Boot.
-            </span>{" "}
+              Gin, Express(NestJS), Fastify, Spring Boot and FastAPI.
+            </span>
+          </p>
+          <p>
             Check out my work on{" "}
             <StyledLink to="www.github.com/dinocodesx">Github</StyledLink>,
             connect with me on <StyledLink to="/links">Socials</StyledLink> and

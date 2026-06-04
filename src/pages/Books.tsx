@@ -9,6 +9,7 @@ export function Books() {
       description="My reading list and library of books that have shaped my engineering and thinking."
       seoTitle="Books | Debarshee Chakraborty"
       seoDescription="A curated list of books read and recommended by Debarshee Chakraborty."
+      spacingClassName="space-y-12"
     >
       {BOOKS_DATA.map((book) => (
         <ContentListItem
@@ -16,7 +17,6 @@ export function Books() {
           title={book.title}
           description={book.description}
           link={book.link}
-          actionLabel="View book"
           meta={[
             { icon: <User className="w-3 h-3" />, text: book.authors },
           ]}

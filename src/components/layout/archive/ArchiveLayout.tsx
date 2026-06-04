@@ -10,6 +10,7 @@ interface ArchiveLayoutProps {
   seoTitle: string;
   seoDescription: string;
   children: React.ReactNode;
+  spacingClassName?: string;
 }
 
 /**
@@ -22,6 +23,7 @@ export function ArchiveLayout({
   seoTitle,
   seoDescription,
   children,
+  spacingClassName = "space-y-16",
 }: ArchiveLayoutProps) {
   return (
     <PageLayout maxWidth="max-w-3xl">
@@ -30,7 +32,7 @@ export function ArchiveLayout({
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
         <SidebarLink />
 
-        <div className="space-y-16">
+        <div className={spacingClassName}>
           {/* Header */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-white font-medium text-xl">{title}</h1>
@@ -40,7 +42,7 @@ export function ArchiveLayout({
           </motion.div>
 
           {/* Content List */}
-          <div className="space-y-16">{children}</div>
+          <div className={spacingClassName}>{children}</div>
         </div>
       </div>
     </PageLayout>

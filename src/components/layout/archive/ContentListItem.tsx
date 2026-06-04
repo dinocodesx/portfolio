@@ -25,7 +25,7 @@ export function ContentListItem({
   subtitle,
   description,
   link,
-  actionLabel = "Read more",
+  actionLabel,
   meta,
 }: ContentListItemProps) {
   const isLink = !!link;
@@ -71,7 +71,7 @@ export function ContentListItem({
       </p>
 
       {/* Action Hint */}
-      {isLink && (
+      {isLink && actionLabel && (
         <div className="pt-2">
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-white/40 group-hover:text-white transition-colors group/link">
             <Play className="w-3 h-3 fill-current" />
