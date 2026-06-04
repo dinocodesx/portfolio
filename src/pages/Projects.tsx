@@ -1,9 +1,9 @@
+import { LinkCard } from "@/components/layout/LinkCard";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { SEO } from "@/components/layout/SEO";
 import { SidebarLink } from "@/components/layout/SidebarLink";
 import { itemVariants } from "@/constants/animations";
 import { PROJECTS_DATA } from "@/data";
-import { ExternalLink, Github } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Projects() {
@@ -29,51 +29,17 @@ export function Projects() {
 
           <div className="space-y-8">
             {PROJECTS_DATA.map((project, index) => {
+              const link = project.live || project.github;
               const displayIndex = (index + 1).toString().padStart(2, "0");
               return (
-                <motion.div
-                  key={project.id}
-                  variants={itemVariants}
-                  className="group cursor-pointer"
-                >
-                  <div className="flex items-center justify-between pb-2">
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-[11px] uppercase tracking-widest text-white/40">
-                        [{displayIndex}]
-                      </span>
-                      <h2 className="text-white group-hover:text-white/80 transition-colors">
-                        {project.title}
-                      </h2>
-                    </div>
-                    <div className="flex gap-4 text-white/40">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-white transition-colors"
-                          aria-label={`View ${project.title} on GitHub`}
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-                      )}
-                      {project.live && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-white transition-colors"
-                          aria-label={`Visit ${project.title} live website`}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-
-                  <p className="text-[14px] text-white/60 leading-relaxed max-w-xl">
-                    {project.description}
-                  </p>
+                <motion.div key={project.id} variants={itemVariants}>
+                  <LinkCard
+                    title={project.title}
+                    description={project.description}
+                    link={link}
+                    dimArrow={false}
+                    index={displayIndex}
+                  />
                 </motion.div>
               );
             })}

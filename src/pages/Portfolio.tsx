@@ -1,4 +1,4 @@
-import { StyledLink } from "@/components/layout";
+import { LinkCard, StyledLink } from "@/components/layout";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { SEO } from "@/components/layout/SEO";
@@ -6,7 +6,6 @@ import { Blogs } from "@/components/portfolio/Blog";
 import { Building } from "@/components/portfolio/Building";
 import { Experiences } from "@/components/portfolio/Experiences";
 import { FooterTime } from "@/components/portfolio/FooterTime";
-import { Projects } from "@/components/portfolio/Projects";
 import { Talks } from "@/components/portfolio/Talks";
 import { itemVariants } from "@/constants/animations";
 import { BLOGS_DATA, BUILDING_DATA, EXPERIENCE_DATA, TALKS_DATA } from "@/data";
@@ -95,21 +94,23 @@ export function Portfolio() {
         <div className="space-y-6">
           <SectionHeading title="Projects" href="/projects" />
           <div className="space-y-4">
-            <Projects
+            <LinkCard
               title="Apertre S2 Website"
               description="5000+ daily users — GitHub API for PR and issue tracking."
-              github="https://github.com/apertre"
-              live="https://s2.apertre.resourcio.in"
+              link="https://s2.apertre.resourcio.in"
+              dimArrow={false}
             />
-            <Projects
+            <LinkCard
               title="Redis from scratch"
               description="Fast memory caching from scratch using Go from scratch."
-              github="https://github.com/dinocodesx/goredis"
+              link="https://github.com/dinocodesx/goredis"
+              dimArrow={false}
             />
-            <Projects
+            <LinkCard
               title="Attention is all you need"
               description="Implementation of the Transformer paper from scratch."
-              github="https://github.com/dinocodesx/attention-is-all-you-need"
+              link="https://github.com/dinocodesx/attention-is-all-you-need"
+              dimArrow={false}
             />
           </div>
         </div>
@@ -174,9 +175,9 @@ export function Portfolio() {
             .
           </p>
           <div className="flex flex-wrap gap-4 items-center">
-            <StyledLink to="/links" showIcon className="text-[15px]">
+            {/*<StyledLink to="/links" showIcon className="text-[15px]">
               View all socials
-            </StyledLink>
+            </StyledLink>*/}
             <StyledLink to="/spotify" showIcon className="text-[15px]">
               Musical Taste
             </StyledLink>

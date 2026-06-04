@@ -4,7 +4,6 @@ export * from "./Building";
 export * from "./Experiences";
 export * from "./FooterTime";
 export * from "./PrintStyles";
-export * from "./Projects";
 export * from "./ScrollToTop";
 export * from "./Skills";
 export * from "./Socials";

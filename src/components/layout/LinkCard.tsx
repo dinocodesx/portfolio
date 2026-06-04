@@ -8,6 +8,8 @@ interface LinkCardProps {
   link?: string;
   /** Controls arrow icon opacity when not hovered. Defaults to false (fully visible). */
   dimArrow?: boolean;
+  /** Optional index to display before the title (e.g., [01]) */
+  index?: string;
 }
 
 /**
@@ -20,18 +22,28 @@ export function LinkCard({
   description,
   link,
   dimArrow = true,
+  index,
 }: LinkCardProps) {
   const content = (
     <>
-      <div className="flex items-center gap-1">
-        <h3 className="text-white font-medium group-hover:underline underline-offset-4">
-          {title}
-        </h3>
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          {index && (
+            <span className="font-mono text-[11px] uppercase tracking-widest text-white/40">
+              [{index}]
+            </span>
+          )}
+          <h3 className="text-white font-medium group-hover:underline decoration-white underline-offset-4 transition-all">
+            {title}
+          </h3>
+        </div>
         <ArrowUpRight
           className={`w-4 h-4 ${dimArrow ? "opacity-50 group-hover:opacity-100" : ""} transition-opacity`}
         />
       </div>
-      <p className="text-sm leading-relaxed">{description}</p>
+      <p className="text-sm leading-relaxed text-white/60 group-hover:text-white/80 transition-colors">
+        {description}
+      </p>
     </>
   );
 
