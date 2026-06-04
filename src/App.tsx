@@ -29,7 +29,7 @@ import { Portfolio } from "@/pages/Portfolio";
 import { Projects } from "@/pages/Projects";
 import { Resume } from "@/pages/Resume";
 import { Shortcuts } from "@/pages/Shortcuts";
-import { Social } from "@/pages/Socials";
+import { Socials } from "@/pages/Socials";
 import { Spotify } from "@/pages/Spotify";
 import { Stuffs } from "@/pages/Stuffs";
 import { Talks } from "@/pages/Talks";
@@ -61,7 +61,7 @@ export default function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/talks" element={<Talks />} />
           <Route path="/spotify" element={<Spotify />} />
-          <Route path="/links" element={<Social />} />
+          <Route path="/links" element={<Socials />} />
           <Route path="/books" element={<Books />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/meet" element={<Meet />} />

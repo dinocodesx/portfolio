@@ -126,6 +126,13 @@ export interface BlogProps {
   readTime: string;
 }
 
+export interface BookProps {
+  title: string;
+  authors: string;
+  description: string;
+  link: string;
+}
+
 export interface BuildingProps {
   id?: number;
   title: string;
